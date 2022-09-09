@@ -106,8 +106,6 @@
 <style type="scss">
   @use "../../styles/utils" as *;
 
-
-
   footer {
     padding-block: 2.8rem;
     background-color: var(--clr-secondary-soft-t8);
