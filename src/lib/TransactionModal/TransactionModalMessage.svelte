@@ -3,9 +3,9 @@
 
   export let title: string;
   export let description: string;
-  export let progress: string = "indeterminate";
+  export let progress: string | undefined | false = undefined;
   export let progressMessage: string = "Loading";
-  export let icon: string;
+  export let icon: string | undefined = undefined;
   export let error: boolean = false;
 </script>
 
@@ -19,10 +19,8 @@
 </span>
 <span class="transaction-detail">
   {description}
-</span>  
-{#if progress = "indeterminate"}
-  <progress indeterminate>{progressMessage}</progress>
-{:else if progress}
+</span>
+{#if progress}
   <progress min="0" max="100" value={progress}>{progressMessage}</progress>
 {/if}
 

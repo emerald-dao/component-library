@@ -1,10 +1,8 @@
-<script>
-  import { transactionStatus, transactionInProgress } from "$stores/FlowStore";
+<script type="ts">
   import { fly } from "svelte/transition";
   import TransactionModalMessage from "./TransactionModalMessage.svelte";
-  import {backInOut, linear} from 'svelte/easing';
+  import { backInOut } from 'svelte/easing';
   import { Column } from '@mateoroldos/svelte.bones'
-
 
   let duration = 2000;
   let easing = backInOut;
@@ -24,12 +22,23 @@
 		};
 	}
 
-  export let logoUrl = "/flow-logo.png"
+  interface FlowTransaction {
+    blockId: string,
+    errorMessage: string,
+    events: {}[],
+    status: number | "",
+    statusCode: number | "",
+    statusString: string,
+  }
+
+  export let transactionLogo = "/flow-logo.png"
+  export let dappLogo = "/flog-logo.png"
   export let transactionName = "Flow"
-  export let loading = false;
+  export let transactionStatus: FlowTransaction;
+  export let transactionInProgress = false;
 </script>
 
-{#if $transactionInProgress || loading}
+{#if transactionInProgress }
   <article transition:fly="{{ x: 100, duration: 800 }}">
     <Column gap="medium">
       <Column gap="small">
@@ -38,10 +47,10 @@
       </Column>
       <div class="logos">
         <div class="flow-logo pulse" transition:fly="{{ y: -15, duration: 1800, delay: 200 }}">
-          <img src={logoUrl} alt="Flow Logo">
+          <img src={transactionLogo} alt="Flow Logo">
         </div>
         <div class="touchstone-icon-container rotate" transition:spin={options} >
-          <TouchstoneIcon width="1.6rem"/>
+          <img src={dappLogo} alt="Dapp Logo">
         </div>
       </div>
       <Column align="center" justify="center" gap="medium">
@@ -51,52 +60,52 @@
             description="Uploading your assets to IPFS."
             progressMessage="Uploading..."/>
         {:else if transactionName === "Flow"}
-          {#if $transactionStatus.status < 0}
+          {#if transactionStatus.status < 0}
             <TransactionModalMessage 
               title="Initializing" 
               description="Waiting for transaction approval."
               progressMessage="Initializing..."/>
-          {:else if $transactionStatus.status < 2}
+          {:else if transactionStatus.status < 2}
             <TransactionModalMessage 
               title="Pending" 
               description="The transaction has been received by a collector but not yet finalized in a block."
               progressMessage="Executing"/>
-          {:else if $transactionStatus.status === 2}
+          {:else if transactionStatus.status === 2}
             <TransactionModalMessage 
               title="Finalized" 
               description="The consensus nodes have finalized the block that the transaction is included in."
               progressMessage="Executing..."/>
-          {:else if $transactionStatus.status === 3 && $transactionStatus.statusCode === 0}
+          {:else if transactionStatus.status === 3 && transactionStatus.statusCode === 0}
             <TransactionModalMessage 
               title="Executed" 
               description="The execution nodes have produced a result for the transaction."
               progressMessage="Sealing..."
               progress="80"/>
-          {:else if $transactionStatus.status === 4 && $transactionStatus.statusCode === 0}
+          {:else if transactionStatus.status === 4 && transactionStatus.statusCode === 0}
             <TransactionModalMessage 
               title="Sealed" 
               description="The verification nodes have verified the transaction, and the seal is included in the latest block."
               progressMessage="Sealing..."
               progress="100"
               icon="ion:checkmark-circle"/>
-          {:else if $transactionStatus.status === 5 && $transactionStatus.statusCode === 0}
+          {:else if transactionStatus.status === 5 && transactionStatus.statusCode === 0}
             <TransactionModalMessage 
               title="Expired" 
               description="The transaction was submitted past its expiration block height."
               progress={false}/>
-          {:else if $transactionStatus.errorMessage && $transactionStatus.statusCode === 1}
+          {:else if transactionStatus.errorMessage && transactionStatus.statusCode === 1}
             <TransactionModalMessage 
               title="Failed" 
-              description={$transactionStatus.errorMessage}
+              description={transactionStatus.errorMessage}
               progress={false}
               icon="ion:close-circle"
-              error="true"/>
+              error={true}/>
           {:else}
             <TransactionModalMessage 
               title="Error" 
               description="An error occured."
               progress={false}
-              error="true"/>
+              error={true}/>
           {/if}
         {/if}
       </Column>
