@@ -38,79 +38,88 @@
   export let transactionInProgress = false;
 </script>
 
-{#if transactionInProgress }
-  <article transition:fly="{{ x: 100, duration: 800 }}">
-    <Column gap="medium">
-      <Column gap="small">
-        <h6>{transactionName}</h6>
-        <span class="subtitle">Transaction</span>
-      </Column>
-      <div class="logos">
-        <div class="flow-logo pulse" transition:fly="{{ y: -15, duration: 1800, delay: 200 }}">
-          <img src={transactionLogo} alt="Flow Logo">
-        </div>
-        <div class="touchstone-icon-container rotate" transition:spin={options} >
-          <img src={dappLogo} alt="Dapp Logo">
-        </div>
-      </div>
-      <Column align="center" justify="center" gap="medium">
-        {#if transactionName === "IPFS"}
-          <TransactionModalMessage 
-            title="Uploading Assets" 
-            description="Uploading your assets to IPFS."
-            progressMessage="Uploading..."/>
-        {:else if transactionName === "Flow"}
-          {#if transactionStatus.status < 0}
-            <TransactionModalMessage 
-              title="Initializing" 
-              description="Waiting for transaction approval."
-              progressMessage="Initializing..."/>
-          {:else if transactionStatus.status < 2}
-            <TransactionModalMessage 
-              title="Pending" 
-              description="The transaction has been received by a collector but not yet finalized in a block."
-              progressMessage="Executing"/>
-          {:else if transactionStatus.status === 2}
-            <TransactionModalMessage 
-              title="Finalized" 
-              description="The consensus nodes have finalized the block that the transaction is included in."
-              progressMessage="Executing..."/>
-          {:else if transactionStatus.status === 3 && transactionStatus.statusCode === 0}
-            <TransactionModalMessage 
-              title="Executed" 
-              description="The execution nodes have produced a result for the transaction."
-              progressMessage="Sealing..."
-              progress="80"/>
-          {:else if transactionStatus.status === 4 && transactionStatus.statusCode === 0}
-            <TransactionModalMessage 
-              title="Sealed" 
-              description="The verification nodes have verified the transaction, and the seal is included in the latest block."
-              progressMessage="Sealing..."
-              progress="100"
-              icon="ion:checkmark-circle"/>
-          {:else if transactionStatus.status === 5 && transactionStatus.statusCode === 0}
-            <TransactionModalMessage 
-              title="Expired" 
-              description="The transaction was submitted past its expiration block height."
-              progress={false}/>
-          {:else if transactionStatus.errorMessage && transactionStatus.statusCode === 1}
-            <TransactionModalMessage 
-              title="Failed" 
-              description={transactionStatus.errorMessage}
-              progress={false}
-              icon="ion:close-circle"
-              error={true}/>
-          {:else}
-            <TransactionModalMessage 
-              title="Error" 
-              description="An error occured."
-              progress={false}
-              error={true}/>
-          {/if}
-        {/if}
-      </Column>
-    </Column>
-  </article>
+{#if transactionInProgress}
+	<article transition:fly={{ x: 100, duration: 800 }}>
+		<Column gap="medium">
+			<Column gap="small">
+				<h6>{transactionName}</h6>
+				<span class="subtitle">Transaction</span>
+			</Column>
+			<div class="logos">
+				<div class="flow-logo pulse" transition:fly={{ y: -15, duration: 1800, delay: 200 }}>
+					<img src={transactionLogo} alt="Flow Logo" />
+				</div>
+				<div class="dapp-icon-container rotate" transition:spin={options}>
+					<img src={dappLogo} alt="Dapp Logo" />
+				</div>
+			</div>
+			<Column align="center" justify="center" gap="medium">
+				{#if transactionName === 'IPFS'}
+					<TransactionModalMessage
+						title="Uploading Assets"
+						description="Uploading your assets to IPFS."
+						progressMessage="Uploading..."
+					/>
+				{:else if transactionName === 'Flow'}
+					{#if transactionStatus.status < 0}
+						<TransactionModalMessage
+							title="Initializing"
+							description="Waiting for transaction approval."
+							progressMessage="Initializing..."
+						/>
+					{:else if transactionStatus.status < 2}
+						<TransactionModalMessage
+							title="Pending"
+							description="The transaction has been received by a collector but not yet finalized in a block."
+							progressMessage="Executing"
+						/>
+					{:else if transactionStatus.status === 2}
+						<TransactionModalMessage
+							title="Finalized"
+							description="The consensus nodes have finalized the block that the transaction is included in."
+							progressMessage="Executing..."
+						/>
+					{:else if transactionStatus.status === 3 && transactionStatus.statusCode === 0}
+						<TransactionModalMessage
+							title="Executed"
+							description="The execution nodes have produced a result for the transaction."
+							progressMessage="Sealing..."
+							progress="80"
+						/>
+					{:else if transactionStatus.status === 4 && transactionStatus.statusCode === 0}
+						<TransactionModalMessage
+							title="Sealed"
+							description="The verification nodes have verified the transaction, and the seal is included in the latest block."
+							progressMessage="Sealing..."
+							progress="100"
+							icon="ion:checkmark-circle"
+						/>
+					{:else if transactionStatus.status === 5 && transactionStatus.statusCode === 0}
+						<TransactionModalMessage
+							title="Expired"
+							description="The transaction was submitted past its expiration block height."
+							progress={false}
+						/>
+					{:else if transactionStatus.errorMessage && transactionStatus.statusCode === 1}
+						<TransactionModalMessage
+							title="Failed"
+							description={transactionStatus.errorMessage}
+							progress={false}
+							icon="ion:close-circle"
+							error={true}
+						/>
+					{:else}
+						<TransactionModalMessage
+							title="Error"
+							description="An error occured."
+							progress={false}
+							error={true}
+						/>
+					{/if}
+				{/if}
+			</Column>
+		</Column>
+	</article>
 {/if}
 
 <style type="scss">
@@ -156,7 +165,7 @@
         padding: 0;
       }
 
-      .touchstone-icon-container {
+      .dapp-icon-container {
         border-radius: 9999px;
         position: absolute;
         bottom: -12px;
@@ -164,6 +173,8 @@
         border: 4px var(--clr-primary-main) solid;
         box-sizing: border-box;
         box-shadow: 0 0 10px 1px var(--clr-primary-soft-t7);
+        width: 50px;
+        height: 50px;
       }
     }
   }
