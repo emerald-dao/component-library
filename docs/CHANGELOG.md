@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/emerald-dao/component-library/compare/v1.2.0...v1.3.0) (2022-09-13)
+
+
+### Features
+
+* Add DiscordInvite, EmerladMarquee and TransactionModal components ([a15a7f3](https://github.com/emerald-dao/component-library/commit/a15a7f3ba6d824bf87626ab65a6b5bc02b2cd8f4))
+* Add Storybook ([16056d9](https://github.com/emerald-dao/component-library/commit/16056d943849e74f6399039bfad415c7d1d9fd46))
+
 # [1.2.0](https://github.com/emerald-dao/component-library/compare/v1.1.0...v1.2.0) (2022-09-13)
 
 
