@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/emerald-dao/component-library/compare/v1.4.0...v1.4.1) (2022-09-13)
+
+
+### Bug Fixes
+
+* Fix Header folder ([d1f8a59](https://github.com/emerald-dao/component-library/commit/d1f8a5931b76bb28d7d8d13281b499211c1f85f8))
+
 # [1.4.0](https://github.com/emerald-dao/component-library/compare/v1.3.0...v1.4.0) (2022-09-13)
 
 
