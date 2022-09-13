@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/emerald-dao/component-library/compare/v1.1.0...v1.2.0) (2022-09-13)
+
+
+### Features
+
+* Base TransactionModal component ([ebae3b9](https://github.com/emerald-dao/component-library/commit/ebae3b994369cceb57bbcd401081df384391d703))
+* Make package public ([e46a007](https://github.com/emerald-dao/component-library/commit/e46a007ea9c58fa5fa55d9dc16bb83e14a58803b))
+
 # [1.1.0](https://github.com/emerald-dao/component-library/compare/v1.0.0...v1.1.0) (2022-09-13)
 
 
