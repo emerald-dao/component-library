@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/emerald-dao/component-library/compare/v1.3.0...v1.4.0) (2022-09-13)
+
+
+### Features
+
+* Better Footer component ([0f1ed69](https://github.com/emerald-dao/component-library/commit/0f1ed69bec423a29a485da3fc173fc77b39508e9))
+
 # [1.3.0](https://github.com/emerald-dao/component-library/compare/v1.2.0...v1.3.0) (2022-09-13)
 
 
