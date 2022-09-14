@@ -72,7 +72,9 @@
 				<a class="discord-link" href="https://discord.com/invite/emeraldcity" target="_blank">
 					<Icon icon="akar-icons:discord-fill" />
 				</a>
-				<ThemeToggle {themeStore} />
+				{#if navElements}
+					<ThemeToggle {themeStore} />
+				{/if}
 				<FlowConnect {logIn} {unauthenticate} {getFindProfile} {user} />
 				<div class="hide-on-large">
 					<Hamburger {open} onClick={hamburgerClick} />
