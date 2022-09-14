@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/emerald-dao/component-library/compare/v1.5.1...v1.6.0) (2022-09-14)
+
+
+### Features
+
+* Footer and Header enhancements ([a45ec56](https://github.com/emerald-dao/component-library/commit/a45ec566564d898578de3fcead09d7c0e3dcb093))
+
 ## [1.5.1](https://github.com/emerald-dao/component-library/compare/v1.5.0...v1.5.1) (2022-09-14)
 
 
