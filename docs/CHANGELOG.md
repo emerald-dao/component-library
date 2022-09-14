@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/emerald-dao/component-library/compare/v1.6.0...v1.6.1) (2022-09-14)
+
+
+### Bug Fixes
+
+* Fix ThemeToggle appearing when no nav ([21422f7](https://github.com/emerald-dao/component-library/commit/21422f76f9f02a69024cbe776cbe831d8d4d49a7))
+
 # [1.6.0](https://github.com/emerald-dao/component-library/compare/v1.5.1...v1.6.0) (2022-09-14)
 
 
