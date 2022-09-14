@@ -22,18 +22,7 @@
     icon: string,
   }
 
-  export let navElements: NavElement[] = [
-    {
-      name: 'Page 1',
-      url: '/page1',
-      prefetch: true,
-    },
-    {
-      name: 'Page 2',
-      url: '/page2',
-      prefetch: true,
-    },
-  ];
+  export let navElements: NavElement[];
   export let emeraldTools: EmeraldTool[] = [
     {
       name: "Emerald Academy",
