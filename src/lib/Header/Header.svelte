@@ -66,7 +66,7 @@
 	export let themeStore: 'dark' | 'light';
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
-	export let getFindProfile: () => string;
+	export let getFindProfile: (address: string) => Promise<string>;
 	// TODO: apply user interface
 	export let user: any;
 </script>
@@ -96,21 +96,19 @@
 					<Hamburger {open} onClick={hamburgerClick} />
 				</div>
 
-				<!-- {#if $user?.loggedIn}
-						{#await findProfile then profile}
-							<a href="/my-collections" sveltekit:prefetch>
-								{#if profile}
-									<img class="avatar" src={profile.avatar} alt={`${profile.name} avatar`} />
-								{:else}
-									<img
-										class="avatar"
-										src="https://cdn-icons-png.flaticon.com/512/168/168734.png"
-										alt="default avatar"
-									/>
-								{/if}
-							</a>
-						{/await}
-					{/if} -->
+				{#if user?.loggedIn}
+					<!-- {#await findProfile then profile} -->
+					<!-- {#if profile}
+							<img class="avatar" src={profile.avatar} alt={`${profile.name} avatar`} />
+						{:else} -->
+					<img
+						class="avatar"
+						src="https://cdn-icons-png.flaticon.com/512/168/168734.png"
+						alt="default avatar"
+					/>
+					<!-- {/if} -->
+					<!-- {/await} -->
+				{/if}
 			</Row>
 		</Row>
 	</Container>

@@ -1,15 +1,11 @@
 <script type="ts">
 	import { Button } from '../index';
 
-	interface FlowUser {
-		loggedIn: boolean;
-		addr: string;
-	}
-
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
-	export let user: FlowUser;
-	export let getFindProfile: (userAddress: string) => any;
+	// TODO: apply user interface
+	export let user: any;
+	export let getFindProfile: (address: string) => Promise<string>;
 
 	// let findProfile = getFindProfile(user?.addr);
 </script>
