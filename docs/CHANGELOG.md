@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/emerald-dao/component-library/compare/v1.4.1...v1.5.0) (2022-09-14)
+
+
+### Bug Fixes
+
+* Footer stories corrections ([c3fbfef](https://github.com/emerald-dao/component-library/commit/c3fbfef93d33a8a9df6477325b089fcebae6908b))
+
+
+### Features
+
+* Create basic Button components ([7d6deec](https://github.com/emerald-dao/component-library/commit/7d6deecb789df512f445b1658688034468945c2f))
+* Create basic Header component ([18562e6](https://github.com/emerald-dao/component-library/commit/18562e64fe098969c201fa3129831b755df7cc60))
+
 ## [1.4.1](https://github.com/emerald-dao/component-library/compare/v1.4.0...v1.4.1) (2022-09-13)
 
 
