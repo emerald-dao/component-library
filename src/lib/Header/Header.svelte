@@ -72,13 +72,13 @@
 				<a class="discord-link" href="https://discord.com/invite/emeraldcity" target="_blank">
 					<Icon icon="akar-icons:discord-fill" />
 				</a>
-				{#if navElements}
-					<ThemeToggle {themeStore} />
-				{/if}
+				<ThemeToggle {themeStore} />
 				<FlowConnect {logIn} {unauthenticate} {getFindProfile} {user} />
-				<div class="hide-on-large">
-					<Hamburger {open} onClick={hamburgerClick} />
-				</div>
+				{#if navElements}
+					<div class="hide-on-large">
+						<Hamburger {open} onClick={hamburgerClick} />
+					</div>
+				{/if}
 
 				{#if user?.loggedIn}
 					<!-- {#await findProfile then profile} -->
