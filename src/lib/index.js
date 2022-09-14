@@ -4,3 +4,5 @@ export { default as Header } from './Header/Header.svelte';
 export { default as TransactionModal } from './TransactionModal/TransactionModal.svelte';
 export { default as DiscordInvite } from './DiscordInvite/DiscordInvite.svelte';
 export { default as EmeraldMarquee } from './EmeraldMarquee/EmeraldMarquee.svelte';
+export { default as Button } from './Button/Button.svelte';
+export { default as FlowConnect } from './FlowConnect/FlowConnect.svelte';
