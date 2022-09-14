@@ -21,4 +21,4 @@
 <main>
 	<slot />
 </main>
-<Footer {navElements} />
+<Footer />

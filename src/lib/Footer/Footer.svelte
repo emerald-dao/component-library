@@ -1,86 +1,74 @@
 <script type="ts">
-  import Icon from '@iconify/svelte'
-  import {
-    Container,
-    Column
-  } from "@mateoroldos/svelte.bones";
+	import type { NavElement } from '../../models/navElement.interface';
+	import type { EmeraldTool } from '../../models/emeraldTool.interface';
+	import type { SocialElement } from '../../models/socialElement.interface';
 
-  interface NavElement {
-    name: string,
-    url: string,
-    prefetch: boolean,
-  }
+	import { Container, Column } from '@mateoroldos/svelte.bones';
+	import Icon from '@iconify/svelte';
 
-  interface EmeraldTool {
-    name: string,
-    url: string,
-  }
-
-  interface SocialElement {
-    name: string,
-    url: string,
-    icon: string,
-  }
-
-  export let navElements: NavElement[];
-  export let emeraldTools: EmeraldTool[] = [
-    {
-      name: "Emerald Academy",
-      url: "https://academy.ecdao.org/"
-    },
-    {
-      name: "Touchstone",
-      url: "https://touchstone.city/"
-    },
-    {
-      name: "FLOAT",
-      url: "https://floats.city/"
-    },
-    {
-      name: "Emerald Bot",
-      url: "https://bot.ecdao.org/"
-    },
-    {
-      name: "Geeft",
-      url: "https://geeft.ecdao.org/"
-    },
-    {
-      name: "Drizzle",
-      url: "https://www.drizzle33.app/"
-    },
-  ];
-  export let socials: SocialElement[] = [
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/emerald_dao',
-      icon: 'ion:logo-twitter',
-    },
-    {
-      name: 'GitHub',
-      url: 'https://github.com/emerald-dao',
-      icon: 'ion:logo-github',
-    }
-  ];
+	export let navElements: NavElement[] | undefined = undefined;
+	export let emeraldTools: EmeraldTool[] = [
+		{
+			name: 'Emerald Academy',
+			url: 'https://academy.ecdao.org/'
+		},
+		{
+			name: 'Touchstone',
+			url: 'https://touchstone.city/'
+		},
+		{
+			name: 'FLOAT',
+			url: 'https://floats.city/'
+		},
+		{
+			name: 'Emerald Bot',
+			url: 'https://bot.ecdao.org/'
+		},
+		{
+			name: 'Geeft',
+			url: 'https://geeft.ecdao.org/'
+		},
+		{
+			name: 'Drizzle',
+			url: 'https://www.drizzle33.app/'
+		}
+	];
+	export let socials: SocialElement[] = [
+		{
+			name: 'Twitter',
+			url: 'https://twitter.com/emerald_dao',
+			icon: 'ion:logo-twitter'
+		},
+		{
+			name: 'GitHub',
+			url: 'https://github.com/emerald-dao',
+			icon: 'ion:logo-github'
+		}
+	];
 </script>
 
 <footer>
 	<Container>
 		<Column align="flex-start" gap="small">
-			<slot name="logo">
-				<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
-			</slot>
+			<a href="/">
+				<slot name="logo">
+					<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
+				</slot>
+			</a>
 			<nav>
 				<div class="left-column">
-					<div>
-						<h5>Pages</h5>
-						<ul>
-							{#each navElements as navElement}
-								<a href={navElement.url}>
-									<li>{navElement.name}</li>
-								</a>
-							{/each}
-						</ul>
-					</div>
+					{#if navElements}
+						<div>
+							<h5>Pages</h5>
+							<ul>
+								{#each navElements as navElement}
+									<a href={navElement.url}>
+										<li>{navElement.name}</li>
+									</a>
+								{/each}
+							</ul>
+						</div>
+					{/if}
 					<div>
 						<h5>Emerald City Tools</h5>
 						<ul>
@@ -120,98 +108,96 @@
 </div>
 
 <style type="scss">
-  @use "../../styles/utils" as *;
+	@use '../../styles/utils' as *;
 
-  footer {
-    padding-block: 3.8rem;
-    border-top: 2px var(--clr-primary-main-t8) solid;
+	footer {
+		padding-block: 3.8rem;
+		border-top: 2px var(--clr-primary-main-t8) solid;
 
-    nav {
-      width: 100%;
+		nav {
+			width: 100%;
 
-      @include mq(small) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
+			@include mq(small) {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
 
-      .left-column {
-        @include mq(small) {
-          display: flex;
-          gap: 7rem;
-          flex-direction: row;
-          align-items: flex-start;
-        }
+			.left-column {
+				@include mq(small) {
+					display: flex;
+					gap: 7rem;
+					flex-direction: row;
+					align-items: flex-start;
+				}
 
-        h5 {
-          @include mq(small) {
-            margin-top: 0;
-          }
-        }
-      }
+				h5 {
+					@include mq(small) {
+						margin-top: 0;
+					}
+				}
+			}
 
-      .right-column > div {
-        @include mq(small) {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-        }
-      }
+			.right-column > div {
+				@include mq(small) {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+				}
+			}
 
-      .right-column > :first-child {
-        h5 {
-          @include mq(small) {
-            margin-top: 0;
-          }
-        }
-      }
+			.right-column > :first-child {
+				h5 {
+					@include mq(small) {
+						margin-top: 0;
+					}
+				}
+			}
 
-      h5 {
-        font-size: var(--fs-300);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--clr-primary-main);
-        margin-top: 4rem;
-      }
+			h5 {
+				font-size: var(--fs-300);
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: var(--clr-primary-main);
+				margin-top: 4rem;
+			}
 
-      ul {
-        list-style: none;
-        padding: 0;
-        text-align: left;
+			ul {
+				list-style: none;
+				padding: 0;
+				text-align: left;
 
-        li {
-          margin-top: 1rem;
-        }
-      }
+				li {
+					margin-top: 1rem;
+				}
+			}
 
-      a {
-        color: var(--clr-font-text);
-        text-decoration: none;
-        font-size: var(--fs-300);
-        font-family: var(--ff-mono);
-      }
-    }
-  }
+			a {
+				color: var(--clr-font-text);
+				text-decoration: none;
+				font-size: var(--fs-300);
+				font-family: var(--ff-mono);
+			}
+		}
+	}
 
+	.signature {
+		padding-block: 1rem;
+		background-color: var(--clr-primary-main-t8);
+		border-top: 2px var(--clr-primary-main-t7) solid;
 
-  .signature {
-    padding-block: 1rem;
-    background-color: var(--clr-primary-main-t8);
-    border-top: 2px var(--clr-primary-main-t7) solid;
+		p {
+			font-size: var(--fs-300);
+			font-family: var(--ff-mono);
+			text-align: center;
 
-    p {
-      font-size: var(--fs-300);
-      font-family: var(--ff-mono);
-      text-align: center;
-
-      img {
-        width: 1.2em;
-        height: 1.2em;
-        display: inline;
-        margin-right: -0.3rem;
-        margin-bottom: -0.25rem;
-      }
-    }
-    
-  }
+			img {
+				width: 1.2em;
+				height: 1.2em;
+				display: inline;
+				margin-right: -0.3rem;
+				margin-bottom: -0.25rem;
+			}
+		}
+	}
 </style>

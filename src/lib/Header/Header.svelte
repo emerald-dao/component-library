@@ -1,31 +1,19 @@
 <script type="ts">
 	import { fly } from 'svelte/transition';
-	// import { navigating, page } from '$app/stores';
+	import type { User } from '../../models/user.interface';
+	import type { NavElement } from '../../models/navElement.interface';
+
+	import { navigating } from '$app/stores';
 	import { Container, Row } from '@mateoroldos/svelte.bones';
 	import Hamburger from './Hamburger.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import Icon from '@iconify/svelte';
-	import type { Writable } from 'svelte/store';
-	import { FlowConnect } from '../index';
-
-	// import {
-	//   Container,
-	//   Logo,
-	//   ThemeToggle,
-	//   AnimatedHamburger,
-	//   FlowConnect,
-	//   Stack,
-	//   Select,
-	//   DiscordInvite,
-	// } from "$atoms";
-	// import Navigation from "$components/modules/Navigation.svelte";
-	// import { t, locales, locale } from "$lib/guide/translations";
-	// import { goto } from '$app/navigation';
-	// import { getFindProfile } from "$flow/utils";
-	// import { user } from "$stores/FlowStore";
+	import { FlowConnect } from '$lib/index';
 
 	// let findProfile = getFindProfile($user?.addr);
 
+	// Mobile menu functions
+	let open = false;
 	export let hamburgerClick = () => {
 		open = !open;
 
@@ -35,58 +23,52 @@
 			document.body.style.overflowY = 'scroll';
 		}
 	};
-
-	let open = false;
 	let onPageChange = () => {
 		open = false;
 		document.body.style.overflowY = 'scroll';
 	};
+	$: if ($navigating) onPageChange();
 
-	// $: if ($navigating) onPageChange();
-
-	interface NavElement {
-		name: string;
-		url: string;
-		prefetch: boolean;
-	}
-
-	export let navElements: NavElement[] = [
-		{
-			name: 'Page 1',
-			url: '/page1',
-			prefetch: true
-		},
-		{
-			name: 'Page 2',
-			url: '/page2',
-			prefetch: true
-		}
-	];
-
+	// Props
+	export let navElements: NavElement[] | undefined = undefined;
 	export let themeStore: 'dark' | 'light';
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
 	export let getFindProfile: (address: string) => Promise<string>;
-	// TODO: apply user interface
-	export let user: any;
+	export let user: User;
 </script>
 
 <header>
 	<Container width="full">
 		<Row justify="space-between">
-			<slot name="logo">
-				<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
-			</slot>
-			<nav class:hide-on-mobile={!open}>
-				<ul>
-					{#each navElements as navElement}
-						<a href={navElement.url}>
-							<li>{navElement.name}</li>
-						</a>
-					{/each}
-				</ul>
-			</nav>
-			<Row gap="small">
+			<a href="/">
+				<slot name="logo">
+					<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
+				</slot>
+			</a>
+			{#if open && navElements}
+				<nav class="hide-on-large" transition:fly={{ x: -20, duration: 500 }}>
+					<ul>
+						{#each navElements as navElement}
+							<a href={navElement.url}>
+								<li>{navElement.name}</li>
+							</a>
+						{/each}
+					</ul>
+				</nav>
+			{/if}
+			{#if navElements}
+				<nav class="hide-on-mobile">
+					<ul>
+						{#each navElements as navElement}
+							<a href={navElement.url}>
+								<li>{navElement.name}</li>
+							</a>
+						{/each}
+					</ul>
+				</nav>
+			{/if}
+			<Row gap={0.5}>
 				<a class="discord-link" href="https://discord.com/invite/emeraldcity" target="_blank">
 					<Icon icon="akar-icons:discord-fill" />
 				</a>
@@ -196,15 +178,7 @@
 			height: 38px;
 			width: 38px;
 			border-radius: 0.6rem;
-			border: 2px var(--clr-accent-main) solid;
-			margin-left: 0.4rem;
-			transition: 0.4s;
-		}
-
-		.avatar:hover {
-			box-shadow: var(--clr-accent-main) 4px 4px;
-			color: var(--clr-font-text-inverse);
-			transform: translateY(-3px);
+			border: 2px var(--clr-primary-main) solid;
 		}
 	}
 </style>
