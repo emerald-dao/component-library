@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/emerald-dao/component-library/compare/v1.5.0...v1.5.1) (2022-09-14)
+
+
+### Bug Fixes
+
+* Fix getFindProfile types ([b6e32cf](https://github.com/emerald-dao/component-library/commit/b6e32cf38c207a8ee698d4ae1e767f415b9d483a))
+
 # [1.5.0](https://github.com/emerald-dao/component-library/compare/v1.4.1...v1.5.0) (2022-09-14)
 
 
