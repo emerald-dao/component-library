@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/emerald-dao/component-library/compare/v1.6.2...v1.7.0) (2022-09-19)
+
+
+### Features
+
+* Improve DiscordInvite ([99104b7](https://github.com/emerald-dao/component-library/commit/99104b79caff96da8bee73deb44a7de48446f851))
+
 ## [1.6.2](https://github.com/emerald-dao/component-library/compare/v1.6.1...v1.6.2) (2022-09-14)
 
 
