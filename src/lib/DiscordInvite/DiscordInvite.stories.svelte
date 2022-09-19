@@ -9,4 +9,15 @@
 	<DiscordInvite {...args} />
 </Template>
 
-<Story name="Primary" args={{}} />
+<Story
+	name="No Background"
+	args={{
+		background: false
+	}}
+/>
+<Story
+	name="With Backround"
+	args={{
+		background: true
+	}}
+/>
