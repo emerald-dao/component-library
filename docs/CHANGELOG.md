@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/emerald-dao/component-library/compare/v1.6.1...v1.6.2) (2022-09-14)
+
+
+### Bug Fixes
+
+* Correct fix for Hamburger showing when no nav ([ca4851d](https://github.com/emerald-dao/component-library/commit/ca4851d6217284d8d93bcfe5ee649bc3da9a14d6))
+
 ## [1.6.1](https://github.com/emerald-dao/component-library/compare/v1.6.0...v1.6.1) (2022-09-14)
 
 
