@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/emerald-dao/component-library/compare/v1.7.0...v1.8.0) (2022-09-21)
+
+
+### Features
+
+* Add optional border to TransactionModal ([aeb8c63](https://github.com/emerald-dao/component-library/commit/aeb8c639406a870181efb92b563ca3d56fb5c966))
+
 # [1.7.0](https://github.com/emerald-dao/component-library/compare/v1.6.2...v1.7.0) (2022-09-19)
 
 
