@@ -1,3 +1,16 @@
+# [1.9.0](https://github.com/emerald-dao/component-library/compare/v1.8.2...v1.9.0) (2022-09-22)
+
+
+### Bug Fixes
+
+* Try with previous version of Node ([7b7b4bc](https://github.com/emerald-dao/component-library/commit/7b7b4bc57a349523561acc62d94ab6f5a58b5abe))
+* Typo fix on release.yml ([a2bd157](https://github.com/emerald-dao/component-library/commit/a2bd1573e57f7a96217b687ff6f878e5a9ae7970))
+
+
+### Features
+
+* Add automatic storybook deployment ([2e712bc](https://github.com/emerald-dao/component-library/commit/2e712bcc06dd315745189d95ade90bb0c99fc8f3))
+
 ## [1.8.2](https://github.com/emerald-dao/component-library/compare/v1.8.1...v1.8.2) (2022-09-22)
 
 
