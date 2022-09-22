@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/emerald-dao/component-library/compare/v1.8.0...v1.8.1) (2022-09-22)
+
+
+### Bug Fixes
+
+* Fix mobile menu z-index ([5680eb2](https://github.com/emerald-dao/component-library/commit/5680eb2a4920e6f6b4334ec231152accb726e3b5))
+
 # [1.8.0](https://github.com/emerald-dao/component-library/compare/v1.7.0...v1.8.0) (2022-09-21)
 
 
