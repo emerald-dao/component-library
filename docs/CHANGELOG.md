@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/emerald-dao/component-library/compare/v1.8.1...v1.8.2) (2022-09-22)
+
+
+### Bug Fixes
+
+* Make mobile menu optional ([8f16308](https://github.com/emerald-dao/component-library/commit/8f1630801048acdf25e276f56a1928b2993e6aa5))
+
 ## [1.8.1](https://github.com/emerald-dao/component-library/compare/v1.8.0...v1.8.1) (2022-09-22)
 
 
