@@ -1,5 +1,6 @@
 {
 	"name": "@emerald-dao/component-library",
+	"homepage": "http://emerald-dao.github.io/component-library",
 	"version": "0.0.0-development",
 	"scripts": {
 		"dev": "vite dev",
@@ -12,7 +13,9 @@
 		"format": "prettier --write .",
 		"semantic-release": "semantic-release",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook",
+		"predeploy": "npm run build-storybook",
+		"deploy-storybook": "gh-pages -d storybook-static"
 	},
 	"exports": {
 		".": "./index.js"
@@ -43,6 +46,7 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-storybook": "^0.6.4",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"gh-pages": "^4.0.0",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"sass": "^1.54.9",
