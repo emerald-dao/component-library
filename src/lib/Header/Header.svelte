@@ -36,6 +36,7 @@
 	export let unauthenticate: () => void;
 	export let getFindProfile: (address: string) => Promise<string>;
 	export let user: User;
+	export let mobileMenu = true;
 </script>
 
 <header>
@@ -46,7 +47,7 @@
 					<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
 				</slot>
 			</a>
-			{#if open && navElements}
+			{#if open && navElements && mobileMenu}
 				<nav class="hide-on-large" transition:fly={{ x: -20, duration: 500 }}>
 					<ul>
 						{#each navElements as navElement}
@@ -74,7 +75,7 @@
 				</a>
 				<ThemeToggle {themeStore} />
 				<FlowConnect {logIn} {unauthenticate} {getFindProfile} {user} />
-				{#if navElements}
+				{#if navElements && mobileMenu}
 					<div class="hide-on-large">
 						<Hamburger {open} onClick={hamburgerClick} />
 					</div>
