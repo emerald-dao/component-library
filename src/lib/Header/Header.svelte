@@ -145,6 +145,7 @@
 			background-color: var(--clr-primary-main);
 			align-items: center;
 			justify-content: center;
+			z-index: 9999;
 
 			@include mq(medium) {
 				position: relative;
