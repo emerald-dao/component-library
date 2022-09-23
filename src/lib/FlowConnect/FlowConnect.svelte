@@ -12,7 +12,7 @@
 
 <div class="button-wrapper">
 	{#if user?.loggedIn}
-		<Button type="ghost" size="x-small" on:click={unauthenticate}>
+		<Button type="ghost" size="small" on:click={unauthenticate}>
 			<div class="button-content">
 				<div class="conection-circle pulse" />
 				<span class="user">
@@ -28,7 +28,7 @@
 			</div>
 		</Button>
 	{:else}
-		<Button size="x-small" on:click={logIn}>Connect</Button>
+		<Button size="small" on:click={logIn}><span>Connect</span></Button>
 	{/if}
 </div>
 
@@ -68,16 +68,15 @@
 				animation-delay: 2s;
 			}
 
-			span {
-				font-size: var(--fs-200);
-			}
-
 			.disconnect {
 				display: none;
 			}
 		}
 	}
 
+	span {
+		font-size: var(--fs-300);
+	}
 	.button-wrapper:hover .user {
 		visibility: hidden;
 	}

@@ -65,8 +65,8 @@
 	button,
 	a {
 		font-family: var(--ff-mono);
-		padding: 0.5em 1.7em;
-		border-radius: 0.6em;
+		padding: 0.7em 2.4em;
+		border-radius: 0.5em;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
