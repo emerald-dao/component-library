@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/emerald-dao/component-library/compare/v1.9.0...v1.10.0) (2022-09-23)
+
+
+### Bug Fixes
+
+* Hamburger menu fix ([d618c3c](https://github.com/emerald-dao/component-library/commit/d618c3cfa66b30292d2aa972880dd2a9d15ec868))
+
+
+### Features
+
+* Buttons enhancements ([5ffc68f](https://github.com/emerald-dao/component-library/commit/5ffc68f51c774baae5c1aeecef931fa2b99bb7c8))
+
 # [1.9.0](https://github.com/emerald-dao/component-library/compare/v1.8.2...v1.9.0) (2022-09-22)
 
 
