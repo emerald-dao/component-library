@@ -76,11 +76,10 @@
 				<ThemeToggle {themeStore} />
 				<FlowConnect {logIn} {unauthenticate} {getFindProfile} {user} />
 				{#if navElements && mobileMenu}
-					<div class="hide-on-large">
+					<div class="hide-on-large hamburger-wrapper">
 						<Hamburger {open} onClick={hamburgerClick} />
 					</div>
 				{/if}
-
 				{#if user?.loggedIn}
 					<!-- {#await findProfile then profile} -->
 					<!-- {#if profile}
@@ -108,7 +107,7 @@
 		border-bottom: 2px var(--clr-primary-main-t7) solid;
 
 		@include mq(medium) {
-			z-index: 9999;
+			z-index: 99;
 			position: sticky;
 			backdrop-filter: blur(20px);
 			width: 100%;
@@ -131,6 +130,10 @@
 			}
 		}
 
+		.hamburger-wrapper {
+			z-index: 999;
+		}
+
 		.discord-link {
 			display: flex;
 			align-items: center;
@@ -146,7 +149,7 @@
 			background-color: var(--clr-primary-main);
 			align-items: center;
 			justify-content: center;
-			z-index: 9999;
+			z-index: 99;
 
 			@include mq(medium) {
 				position: relative;
