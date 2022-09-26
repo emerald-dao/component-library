@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/emerald-dao/component-library/compare/v1.11.0...v1.12.0) (2022-09-26)
+
+
+### Features
+
+* Create Tagline component ([bd8b209](https://github.com/emerald-dao/component-library/commit/bd8b209ba148f02cf1f71b1f4d41bc269e2ad2bd))
+
 # [1.11.0](https://github.com/emerald-dao/component-library/compare/v1.10.0...v1.11.0) (2022-09-26)
 
 
