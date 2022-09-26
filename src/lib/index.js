@@ -6,3 +6,4 @@ export { default as DiscordInvite } from './DiscordInvite/DiscordInvite.svelte';
 export { default as EmeraldMarquee } from './EmeraldMarquee/EmeraldMarquee.svelte';
 export { default as Button } from './Button/Button.svelte';
 export { default as FlowConnect } from './FlowConnect/FlowConnect.svelte';
+export { default as Tagline } from './Tagline/Tagline.svelte';
