@@ -65,8 +65,9 @@
 	button,
 	a {
 		font-family: var(--ff-mono);
-		padding: 0.7em 2.4em;
-		border-radius: 0.5em;
+		--font-weight: 500;
+		padding: 0.6em 2.4em;
+		border-radius: 0.7em;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
