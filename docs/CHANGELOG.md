@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/emerald-dao/component-library/compare/v1.12.0...v1.12.1) (2022-09-26)
+
+
+### Bug Fixes
+
+* Fix Tagline export ([8c79655](https://github.com/emerald-dao/component-library/commit/8c7965552ad475a41080012e7145794db165f470))
+
 # [1.12.0](https://github.com/emerald-dao/component-library/compare/v1.11.0...v1.12.0) (2022-09-26)
 
 
