@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/emerald-dao/component-library/compare/v1.10.0...v1.11.0) (2022-09-26)
+
+
+### Features
+
+* Button and Colors adjustments ([8b3c44e](https://github.com/emerald-dao/component-library/commit/8b3c44e2a44458459a07bf19733697e0db983a50))
+
 # [1.10.0](https://github.com/emerald-dao/component-library/compare/v1.9.0...v1.10.0) (2022-09-23)
 
 
