@@ -1,3 +1,10 @@
+## [1.12.2](https://github.com/emerald-dao/component-library/compare/v1.12.1...v1.12.2) (2022-09-27)
+
+
+### Bug Fixes
+
+* Header ThemeToggle fix ([4ac5605](https://github.com/emerald-dao/component-library/commit/4ac560592a9b2260ae975bf102eb2c861c98002d))
+
 ## [1.12.1](https://github.com/emerald-dao/component-library/compare/v1.12.0...v1.12.1) (2022-09-26)
 
 
