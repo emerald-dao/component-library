@@ -1,25 +1,26 @@
 <script type="ts">
 	import { onMount } from 'svelte';
+	import type { Writable } from 'svelte/store';
 	import { draw } from 'svelte/transition';
 
-	export let themeStore: 'dark' | 'light';
+	export let themeStore: Writable<'dark' | 'light'>;
 
 	let toggleTheme: () => void;
 
 	onMount(() => {
 		let html = document.querySelector('html');
-		html.setAttribute('data-theme', themeStore);
+		html.setAttribute('data-theme', $themeStore);
 
 		toggleTheme = () => {
-			let newTheme: 'light' | 'dark' = themeStore === 'light' ? 'dark' : 'light';
-			themeStore = newTheme;
-			html.setAttribute('data-theme', themeStore);
+			let newTheme: 'light' | 'dark' = $themeStore === 'light' ? 'dark' : 'light';
+			$themeStore = newTheme;
+			html.setAttribute('data-theme', $themeStore);
 		};
 	});
 </script>
 
 <a class="theme-toggle" href="/" on:click|preventDefault={toggleTheme}>
-	{#if themeStore === 'light'}
+	{#if $themeStore === 'light'}
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="16"

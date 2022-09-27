@@ -9,12 +9,13 @@
 	import ThemeToggle from './ThemeToggle.svelte';
 	import Icon from '@iconify/svelte';
 	import { FlowConnect } from '$lib/index';
+	import type { Writable } from 'svelte/store';
 
 	// let findProfile = getFindProfile($user?.addr);
 
 	// Mobile menu functions
 	let open = false;
-	export let hamburgerClick = () => {
+	let hamburgerClick = () => {
 		open = !open;
 
 		if (open) {
@@ -31,7 +32,7 @@
 
 	// Props
 	export let navElements: NavElement[] | undefined = undefined;
-	export let themeStore: 'dark' | 'light';
+	export let themeStore: Writable<'dark' | 'light'>;
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
 	export let getFindProfile: (address: string) => Promise<string>;

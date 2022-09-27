@@ -17,7 +17,7 @@
 	];
 </script>
 
-<Header themeStore={$theme} />
+<Header themeStore={theme} />
 <main>
 	<slot />
 </main>
