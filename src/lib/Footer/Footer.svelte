@@ -85,7 +85,7 @@
 						<h5>Follow us</h5>
 						<div>
 							{#each socials as social}
-								<a href="social.url">
+								<a href="{social.url}">
 									<Icon icon={social.icon} width="1.6rem" color="var(--clr-font-text)" />
 								</a>
 							{/each}
