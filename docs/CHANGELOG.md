@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/emerald-dao/component-library/compare/v1.12.2...v1.13.0) (2022-09-29)
+
+
+### Features
+
+* Open social links in new tab ([e4e7818](https://github.com/emerald-dao/component-library/commit/e4e78186a0e57a36618294384318b6b8a5708582))
+
 ## [1.12.2](https://github.com/emerald-dao/component-library/compare/v1.12.1...v1.12.2) (2022-09-27)
 
 
