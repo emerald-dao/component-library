@@ -34,7 +34,7 @@
 	}
 
 	export let transactionLogo = '/flow-logo.png';
-	export let dappLogo = '/flog-logo.png';
+	export let dappLogo = '/flow-logo.png';
 	export let transactionName = 'Flow';
 	export let transactionStatus: FlowTransaction;
 	export let transactionInProgress = false;
