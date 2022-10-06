@@ -61,7 +61,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@mateoroldos/svelte.bones": "1.2.0"
+		"@mateoroldos/svelte.bones": "^1.2.0"
 	},
 	"repository": {
 		"type": "git",
