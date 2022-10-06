@@ -1,3 +1,11 @@
+## [1.13.1](https://github.com/emerald-dao/component-library/compare/v1.13.0...v1.13.1) (2022-10-06)
+
+
+### Bug Fixes
+
+* Typo fix on TransactionModal ([4b8d6cf](https://github.com/emerald-dao/component-library/commit/4b8d6cf7eb40475015058624f19b92d472983c36))
+* Update @mateoroldos/svelte.bones ([1e3f5fb](https://github.com/emerald-dao/component-library/commit/1e3f5fb7bdeb8d12ce82430ff994acf7d1d42ee9))
+
 # [1.13.0](https://github.com/emerald-dao/component-library/compare/v1.12.2...v1.13.0) (2022-09-29)
 
 
