@@ -35,7 +35,7 @@
 	export let themeStore: Writable<'dark' | 'light'>;
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
-	export let getFindProfile: (address: string) => Promise<string>;
+	// export let getFindProfile: (address: string) => Promise<string>;
 	export let user: User;
 	export let mobileMenu = true;
 </script>
@@ -75,7 +75,7 @@
 					<Icon icon="akar-icons:discord-fill" />
 				</a>
 				<ThemeToggle {themeStore} />
-				<FlowConnect {logIn} {unauthenticate} {getFindProfile} {user} />
+				<FlowConnect {logIn} {unauthenticate} {user} />
 				{#if navElements && mobileMenu}
 					<div class="hide-on-large hamburger-wrapper">
 						<Hamburger {open} onClick={hamburgerClick} />

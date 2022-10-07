@@ -5,7 +5,7 @@
 	export let unauthenticate: () => void;
 	// TODO: apply user interface
 	export let user: any;
-	export let getFindProfile: (address: string) => Promise<string>;
+	// export let getFindProfile: (address: string) => Promise<string>;
 
 	// let findProfile = getFindProfile(user?.addr);
 </script>
