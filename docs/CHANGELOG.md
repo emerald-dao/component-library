@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/emerald-dao/component-library/compare/v1.13.1...v1.13.2) (2022-10-07)
+
+
+### Bug Fixes
+
+* Fix FlowConnect issue with getFindProfile ([1c544a2](https://github.com/emerald-dao/component-library/commit/1c544a2e88d5a56484c38bc6bddea1d11c6717fe))
+
 ## [1.13.1](https://github.com/emerald-dao/component-library/compare/v1.13.0...v1.13.1) (2022-10-06)
 
 
