@@ -1,5 +1,5 @@
 <script type="ts">
-	import { Button } from '../index';
+	import { Button } from '../../index';
 
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
