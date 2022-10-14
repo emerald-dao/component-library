@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/emerald-dao/component-library/compare/v1.13.2...v1.14.0) (2022-10-14)
+
+
+### Features
+
+* Change src structure to include types ([67c84f2](https://github.com/emerald-dao/component-library/commit/67c84f267b1c378fdae43a71352a9885006f8771))
+
 ## [1.13.2](https://github.com/emerald-dao/component-library/compare/v1.13.1...v1.13.2) (2022-10-07)
 
 
