@@ -36,11 +36,12 @@
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
 	// export let getFindProfile: (address: string) => Promise<string>;
-	export let user: User;
+	export let user: User | null;
 	export let mobileMenu = true;
+	export let sticky = true;
 </script>
 
-<header>
+<header class:sticky>
 	<Container width="full">
 		<Row justify="space-between">
 			<a href="/">
@@ -106,14 +107,7 @@
 		padding: 0.6rem 0 0.6rem 0;
 		background-color: var(--clr-primary-main-t9);
 		border-bottom: 2px var(--clr-primary-main-t7) solid;
-
-		@include mq(medium) {
-			z-index: 99;
-			position: sticky;
-			backdrop-filter: blur(20px);
-			width: 100%;
-			top: 0;
-		}
+		z-index: 99;
 
 		.hide-on-mobile {
 			display: none;
@@ -187,6 +181,14 @@
 			width: 38px;
 			border-radius: 0.6rem;
 			border: 2px var(--clr-primary-main) solid;
+		}
+	}
+
+	.sticky {
+		@include mq(medium) {
+			position: sticky;
+			backdrop-filter: blur(20px);
+			top: 0;
 		}
 	}
 </style>

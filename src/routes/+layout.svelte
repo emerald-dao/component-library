@@ -1,7 +1,7 @@
 <script type="ts">
 	import { Header, Footer } from '$lib/index';
-	import { theme } from '../store/ThemeStore';
-	import '../styles/app.scss';
+	import { theme } from '$lib/store/ThemeStore';
+	import '$lib/styles/app.scss';
 
 	let navElements = [
 		{
@@ -17,7 +17,7 @@
 	];
 </script>
 
-<Header themeStore={theme} />
+<Header themeStore={theme} {navElements} sticky={true} />
 <main>
 	<slot />
 </main>
