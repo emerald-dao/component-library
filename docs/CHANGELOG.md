@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/emerald-dao/component-library/compare/v1.14.0...v1.15.0) (2022-10-20)
+
+
+### Features
+
+* Make sticky header optional ([768551c](https://github.com/emerald-dao/component-library/commit/768551c17101e960799ce2dc27043d2f09fbd424))
+
 # [1.14.0](https://github.com/emerald-dao/component-library/compare/v1.13.2...v1.14.0) (2022-10-14)
 
 
