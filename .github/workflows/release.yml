@@ -31,4 +31,4 @@ jobs:
           BRANCH: master
           FOLDER: storybook-static
           CLEAN: true
-          TARGET_FOLDER: src/lib/components
+          TARGET_FOLDER: storybook
