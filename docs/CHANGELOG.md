@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/emerald-dao/component-library/compare/v1.15.0...v2.0.0) (2022-11-22)
+
+
+### Performance Improvements
+
+* Introduce ecdao design system ([fc4e151](https://github.com/emerald-dao/component-library/commit/fc4e151b6f5f8fefc81a0362d1ec550ec6ff883e))
+
+
+### BREAKING CHANGES
+
+* New design tokens and css variables
+
 # [1.15.0](https://github.com/emerald-dao/component-library/compare/v1.14.0...v1.15.0) (2022-10-20)
 
 
