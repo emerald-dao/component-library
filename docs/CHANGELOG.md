@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/emerald-dao/component-library/compare/v2.0.1...v2.0.2) (2022-11-22)
+
+
+### Bug Fixes
+
+* More ci fixes ([2f587b0](https://github.com/emerald-dao/component-library/commit/2f587b0d89f88fed94b883a89b4d8ee37d750782))
+
 ## [2.0.1](https://github.com/emerald-dao/component-library/compare/v2.0.0...v2.0.1) (2022-11-22)
 
 
