@@ -5,11 +5,15 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess(),
-
 	kit: {
 		adapter: adapter()
-	}
+	},
+
+	preprocess: preprocess({
+		scss: {
+			prependData: `@import './node_modules/@emerald-dao/design-system/styles/utils/mixins';`
+		}
+	})
 };
 
 export default config;

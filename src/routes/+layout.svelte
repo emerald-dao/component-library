@@ -1,7 +1,10 @@
 <script type="ts">
 	import { Header, Footer } from '$lib/index';
 	import { theme } from '$lib/store/ThemeStore';
-	import '$lib/styles/app.scss';
+	import '@emerald-dao/design-system/build/variables-dark.css';
+	import '@emerald-dao/design-system/build/variables-light.css';
+	import '@emerald-dao/design-system/build/variables.css';
+	import '@emerald-dao/design-system/styles/app.scss';
 
 	let navElements = [
 		{

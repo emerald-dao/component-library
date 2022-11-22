@@ -4,7 +4,7 @@
 	import type { NavElement } from '../../models/navElement.interface';
 
 	import { navigating } from '$app/stores';
-	import { Container, Row } from '@mateoroldos/svelte.bones';
+	import { Row } from '@mateoroldos/svelte.bones';
 	import Hamburger from './Hamburger.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import Icon from '@iconify/svelte';
@@ -41,97 +41,77 @@
 	export let sticky = true;
 </script>
 
-<header class:sticky>
-	<Container width="full">
-		<Row justify="space-between">
-			<a href="/">
-				<slot name="logo">
-					<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
-				</slot>
-			</a>
-			{#if open && navElements && mobileMenu}
-				<nav class="hide-on-large" transition:fly={{ x: -20, duration: 500 }}>
-					<ul>
-						{#each navElements as navElement}
-							<a href={navElement.url}>
-								<li>{navElement.name}</li>
-							</a>
-						{/each}
-					</ul>
-				</nav>
-			{/if}
-			{#if navElements}
-				<nav class="hide-on-mobile">
-					<ul>
-						{#each navElements as navElement}
-							<a href={navElement.url}>
-								<li>{navElement.name}</li>
-							</a>
-						{/each}
-					</ul>
-				</nav>
-			{/if}
-			<Row gap={0.5}>
-				<a class="discord-link" href="https://discord.com/invite/emeraldcity" target="_blank">
-					<Icon icon="akar-icons:discord-fill" />
-				</a>
-				<ThemeToggle {themeStore} />
-				<FlowConnect {logIn} {unauthenticate} {user} />
-				{#if navElements && mobileMenu}
-					<div class="hide-on-large hamburger-wrapper">
-						<Hamburger {open} onClick={hamburgerClick} />
-					</div>
-				{/if}
-				{#if user?.loggedIn}
-					<!-- {#await findProfile then profile} -->
-					<!-- {#if profile}
+<header class:sticky class="container-full">
+	<a href="/">
+		<slot name="logo">
+			<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
+		</slot>
+	</a>
+	{#if open && navElements && mobileMenu}
+		<nav class="hide-on-desktop" transition:fly={{ x: -20, duration: 500 }}>
+			<ul>
+				{#each navElements as navElement}
+					<a href={navElement.url}>
+						<li>{navElement.name}</li>
+					</a>
+				{/each}
+			</ul>
+		</nav>
+	{/if}
+	{#if navElements}
+		<nav class="hide-on-mobile">
+			<ul>
+				{#each navElements as navElement}
+					<a class="menu-link" href={navElement.url}>
+						<li>{navElement.name}</li>
+					</a>
+				{/each}
+			</ul>
+		</nav>
+	{/if}
+	<Row gap={0.5}>
+		<a
+			class="center"
+			href="https://discord.com/invite/emeraldcity"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<Icon icon="tabler:brand-discord" color="var(--clr-text-main)" />
+		</a>
+		<ThemeToggle {themeStore} />
+		<FlowConnect {logIn} {unauthenticate} {user} />
+		{#if navElements && mobileMenu}
+			<div class="hide-on-desktop hamburger-wrapper">
+				<Hamburger {open} onClick={hamburgerClick} />
+			</div>
+		{/if}
+		{#if user?.loggedIn}
+			<!-- {#await findProfile then profile} -->
+			<!-- {#if profile}
 							<img class="avatar" src={profile.avatar} alt={`${profile.name} avatar`} />
 						{:else} -->
-					<img
-						class="avatar"
-						src="https://cdn-icons-png.flaticon.com/512/168/168734.png"
-						alt="default avatar"
-					/>
-					<!-- {/if} -->
-					<!-- {/await} -->
-				{/if}
-			</Row>
-		</Row>
-	</Container>
+			<img
+				class="avatar"
+				src="https://cdn-icons-png.flaticon.com/512/168/168734.png"
+				alt="default avatar"
+			/>
+			<!-- {/if} -->
+			<!-- {/await} -->
+		{/if}
+	</Row>
 </header>
 
 <style type="scss">
-	@use '../../styles/utils' as *;
-
 	header {
 		padding: 0.6rem 0 0.6rem 0;
-		background-color: var(--clr-primary-main-t9);
-		border-bottom: 2px var(--clr-primary-main-t7) solid;
+		background-color: var(--clr-background-primary);
 		z-index: 99;
-
-		.hide-on-mobile {
-			display: none;
-
-			@include mq(medium) {
-				display: flex;
-			}
-		}
-
-		.hide-on-large {
-			display: flex;
-
-			@include mq(medium) {
-				display: none;
-			}
-		}
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 
 		.hamburger-wrapper {
 			z-index: 999;
-		}
-
-		.discord-link {
-			display: flex;
-			align-items: center;
 		}
 
 		nav {
@@ -161,17 +141,6 @@
 
 				@include mq(medium) {
 					flex-direction: row;
-				}
-
-				a {
-					color: var(--clr-font-text);
-					text-decoration: none;
-					font-family: var(--ff-mono);
-					font-size: var(--fs-400);
-
-					@include mq(medium) {
-						font-size: var(--fs-300);
-					}
 				}
 			}
 		}

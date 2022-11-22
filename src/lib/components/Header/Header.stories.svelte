@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
 	import Header from './Header.svelte';
-	import { writable, get } from 'svelte/store';
+	import { theme } from '$lib/store/ThemeStore';
 </script>
 
 <Meta title="Header" component={Header} />
@@ -25,6 +25,6 @@
 				prefetch: true
 			}
 		],
-		themeStore: get(writable('dark'))
+		themeStore: theme
 	}}
 />

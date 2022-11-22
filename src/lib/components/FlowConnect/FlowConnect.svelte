@@ -1,4 +1,5 @@
 <script type="ts">
+	import Icon from '@iconify/svelte';
 	import { Button } from '../../index';
 
 	export let logIn: () => void;
@@ -28,7 +29,9 @@
 			</div>
 		</Button>
 	{:else}
-		<Button size="x-small" on:click={logIn}><span>Connect</span></Button>
+		<Button size="small" color="neutral" on:click={logIn}
+			>Connect<Icon icon="tabler:wallet" /></Button
+		>
 	{/if}
 </div>
 

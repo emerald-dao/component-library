@@ -2,8 +2,6 @@
 	import type { NavElement } from '../../models/navElement.interface';
 	import type { EmeraldTool } from '../../models/emeraldTool.interface';
 	import type { SocialElement } from '../../models/socialElement.interface';
-
-	import { Container, Column } from '@mateoroldos/svelte.bones';
 	import Icon from '@iconify/svelte';
 
 	export let navElements: NavElement[] | undefined = undefined;
@@ -37,166 +35,121 @@
 		{
 			name: 'Twitter',
 			url: 'https://twitter.com/emerald_dao',
-			icon: 'ion:logo-twitter'
+			icon: 'tabler:brand-twitter'
 		},
 		{
 			name: 'GitHub',
 			url: 'https://github.com/emerald-dao',
-			icon: 'ion:logo-github'
+			icon: 'tabler:brand-github'
+		},
+		{
+			name: 'GitHub',
+			url: 'https://github.com/emerald-dao',
+			icon: 'tabler:brand-discord'
 		}
 	];
 </script>
 
-<footer>
-	<Container>
-		<Column align="flex-start" gap="small">
-			<a href="/">
-				<slot name="logo">
-					<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
-				</slot>
-			</a>
-			<nav>
-				<div class="left-column">
-					{#if navElements}
-						<div>
-							<h5>Pages</h5>
-							<ul>
-								{#each navElements as navElement}
-									<a href={navElement.url}>
-										<li>{navElement.name}</li>
-									</a>
-								{/each}
-							</ul>
-						</div>
-					{/if}
-					<div>
-						<h5>Emerald City Tools</h5>
-						<ul>
-							{#each emeraldTools as tool}
-								<a href={tool.url} target="_blank">
-									<li>{tool.name}</li>
-								</a>
-							{/each}
-						</ul>
-					</div>
-				</div>
-				<div class="right-column">
-					<div>
-						<h5>Follow us</h5>
-						<div>
-							{#each socials as social}
-								<a href={social.url} target="_blank">
-									<Icon icon={social.icon} width="1.6rem" color="var(--clr-font-text)" />
-								</a>
-							{/each}
-						</div>
-					</div>
-					<div>
-						<h5>Join us</h5>
-						<a href="https://discord.com/invite/emeraldcity" target="_blank">Emerald City DAO</a>
-					</div>
-				</div>
-			</nav>
-		</Column>
-	</Container>
+<footer class="section">
+	<div class="container">
+		<a href="/">
+			<slot name="logo">
+				<img class="logo" src="/ec-logo.png" alt="Emerald DAO Logo" />
+			</slot>
+		</a>
+		<nav>
+			{#if navElements}
+				<h5 class="text-small">Pages</h5>
+				<ul>
+					{#each navElements as navElement}
+						<a class="menu-link" href={navElement.url}>
+							<li>{navElement.name}</li>
+						</a>
+					{/each}
+				</ul>
+			{/if}
+		</nav>
+		<nav>
+			<h5 class="text-small">Emerald City Tools</h5>
+			<ul>
+				{#each emeraldTools as tool}
+					<a class="menu-link" href={tool.url} target="_blank" rel="noreferrer">
+						<li>{tool.name}</li>
+					</a>
+				{/each}
+			</ul>
+		</nav>
+		<nav>
+			<h5 class="text-small">Emerald City Tools</h5>
+			<ul>
+				{#each emeraldTools as tool}
+					<a class="menu-link" href={tool.url} target="_blank" rel="noreferrer">
+						<li>{tool.name}</li>
+					</a>
+				{/each}
+			</ul>
+		</nav>
+		<div class="socials">
+			{#each socials as social}
+				<a href={social.url} target="_blank" rel="noreferrer">
+					<Icon icon={social.icon} width="1.2rem" color="var(--clr-text-main)" href={social.url} />
+				</a>
+			{/each}
+		</div>
+	</div>
 </footer>
-<div class="signature">
-	<p>
-		Built on <img src="/flow-logo.png" alt="Flow logo" /> Flow by
-		<img src="/ec-logo.png" alt="Emerald logo" /> Emerald City DAO
-	</p>
-</div>
 
 <style type="scss">
-	@use '../../styles/utils' as *;
-
 	footer {
-		padding-block: 3.8rem;
-		border-top: 2px var(--clr-primary-main-t8) solid;
+		background-color: var(--clr-background-secondary);
 
-		nav {
-			width: 100%;
+		.container {
+			@include mq(medium) {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(2, auto);
+				column-gap: 7rem;
+				row-gap: 2rem;
+			}
 
-			@include mq(small) {
+			.logo {
+				width: 3rem;
+			}
+			nav {
+				margin-bottom: 3rem;
+
+				@include mq(medium) {
+					margin-bottom: none;
+				}
+
+				h5 {
+					color: var(--clr-heading-main);
+				}
+
+				ul {
+					list-style: none;
+					padding: 0;
+					text-align: left;
+
+					li {
+						margin-top: 1rem;
+					}
+				}
+			}
+
+			.socials {
 				display: flex;
 				flex-direction: row;
-				justify-content: space-between;
-			}
+				gap: 1rem;
 
-			.left-column {
-				@include mq(small) {
-					display: flex;
-					gap: 7rem;
-					flex-direction: row;
-					align-items: flex-start;
-				}
-
-				h5 {
-					@include mq(small) {
-						margin-top: 0;
-					}
-				}
-			}
-
-			.right-column > div {
-				@include mq(small) {
-					display: flex;
-					flex-direction: column;
-					align-items: flex-end;
-				}
-			}
-
-			.right-column > :first-child {
-				h5 {
-					@include mq(small) {
-						margin-top: 0;
-					}
-				}
-			}
-
-			h5 {
-				font-size: var(--fs-300);
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
-				color: var(--clr-primary-main);
-				margin-top: 4rem;
-			}
-
-			ul {
-				list-style: none;
-				padding: 0;
-				text-align: left;
-
-				li {
-					margin-top: 1rem;
+				@include mq(medium) {
+					justify-content: flex-end;
+					grid-area: 2 / 1 / 3 / 5;
 				}
 			}
 
 			a {
-				color: var(--clr-font-text);
 				text-decoration: none;
-				font-size: var(--fs-300);
-				font-family: var(--ff-mono);
-			}
-		}
-	}
-
-	.signature {
-		padding-block: 1rem;
-		background-color: var(--clr-primary-main-t8);
-		border-top: 2px var(--clr-primary-main-t7) solid;
-
-		p {
-			font-size: var(--fs-300);
-			font-family: var(--ff-mono);
-			text-align: center;
-
-			img {
-				width: 1.2em;
-				height: 1.2em;
-				display: inline;
-				margin-right: -0.3rem;
-				margin-bottom: -0.25rem;
 			}
 		}
 	}
