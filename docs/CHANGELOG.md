@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/emerald-dao/component-library/compare/v2.0.2...v2.0.3) (2022-11-22)
+
+
+### Bug Fixes
+
+* New github pages deploy workflow ([a7c4caf](https://github.com/emerald-dao/component-library/commit/a7c4caf02f2ab5d45f4952716a4b6678293a5664))
+
 ## [2.0.2](https://github.com/emerald-dao/component-library/compare/v2.0.1...v2.0.2) (2022-11-22)
 
 
