@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/emerald-dao/component-library/compare/v2.0.4...v2.0.5) (2022-11-22)
+
+
+### Bug Fixes
+
+* Workaround to fix storybook deployment ([18158a9](https://github.com/emerald-dao/component-library/commit/18158a9c90bb66e0f658a316b57d72ed2bb3891a))
+
 ## [2.0.4](https://github.com/emerald-dao/component-library/compare/v2.0.3...v2.0.4) (2022-11-22)
 
 
