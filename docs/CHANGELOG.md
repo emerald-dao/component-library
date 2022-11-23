@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/emerald-dao/component-library/compare/v2.0.5...v2.1.0) (2022-11-23)
+
+
+### Features
+
+* Add Label component ([557f561](https://github.com/emerald-dao/component-library/commit/557f561c9f0fcca7d0e2102039590a64bd11d765))
+
 ## [2.0.5](https://github.com/emerald-dao/component-library/compare/v2.0.4...v2.0.5) (2022-11-22)
 
 
