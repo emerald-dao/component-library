@@ -1,4 +1,4 @@
-const preprocess = require('svelte-preprocess');
+const sveltePreprocess = require('svelte-preprocess');
 const path = require('path');
 const { loadConfigFromFile, mergeConfig } = require('vite');
 
@@ -11,7 +11,7 @@ module.exports = {
 	addons: [
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
-		// '@storybook/addon-interactions',
+		'@storybook/addon-interactions',
 		'@storybook/addon-svelte-csf',
 		'storybook-addon-theme-switcher'
 	],
@@ -19,8 +19,9 @@ module.exports = {
 	core: {
 		builder: '@storybook/builder-vite'
 	},
+	base: './',
 	svelteOptions: {
-		// preprocess: require('../svelte.config.js').preprocess
+		// preprocess: sveltePreprocess()
 	},
 	features: {
 		storyStoreV7: false
