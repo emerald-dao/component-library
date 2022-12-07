@@ -8,3 +8,4 @@ export { default as Button } from './components/Button/Button.svelte';
 export { default as FlowConnect } from './components/FlowConnect/FlowConnect.svelte';
 export { default as Tagline } from './components/Tagline/Tagline.svelte';
 export { default as Label } from './components/Label/Label.svelte';
+export { default as InputWrapper } from './components/Forms/InputWrapper.svelte';
