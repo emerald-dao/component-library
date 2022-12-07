@@ -54,7 +54,7 @@
 
 <style type="scss">
 	.input-wrapper {
-		width: fit-content;
+		width: 100%;
 	}
 
 	.helper-wrapper {

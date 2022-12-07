@@ -28,7 +28,7 @@
 	</svg>
 </button>
 
-<style>
+<style type="scss">
 	:root {
 		--transition-duration: 400ms;
 	}

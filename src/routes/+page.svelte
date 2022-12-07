@@ -1,7 +1,9 @@
 <script>
+	import DropZone from '$lib/components/DropZone/DropZone.svelte';
 	import InputWrapper from '$lib/components/Forms/InputWrapper.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
-	import { Row } from '@mateoroldos/svelte.bones';
+
+	let logo;
 </script>
 
 <section>
@@ -26,6 +28,15 @@
 		<InputWrapper name="fname" label="name" errors={[]} isValid={false} pending={true}>
 			<input type="text" id="fname" name="fname" placeholder="hola" />
 		</InputWrapper>
+
+		<label for="logo">Logo</label>
+		<DropZone
+			name="logo"
+			accept="image/png"
+			maxAmountOfFiles={20}
+			bind:bindValue={logo}
+			multiple={true}
+		/>
 	</div>
 </section>
 
