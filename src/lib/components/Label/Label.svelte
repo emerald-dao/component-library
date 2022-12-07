@@ -1,7 +1,7 @@
 <script type="ts">
 	import Icon from '@iconify/svelte';
 
-	export let color: 'primary' | 'secondary' | 'neutral' | 'transparent' = 'primary';
+	export let color: 'primary' | 'secondary' | 'tertiary' | 'neutral' | 'transparent' = 'primary';
 	export let size: 'x-small' | 'small' | 'medium' | 'large' = 'medium';
 	export let state: 'on' | 'off' = 'on';
 	export let iconLeft: string | undefined = undefined;
@@ -29,6 +29,7 @@
 	.primary {
 		background-color: var(--clr-primary-badge);
 		color: var(--clr-primary-main);
+		border: 1px var(--clr-primary-main) solid;
 	}
 	.primary.off {
 		color: var(--clr-primary-off);
@@ -37,14 +38,25 @@
 	.secondary {
 		background-color: var(--clr-secondary-badge);
 		color: var(--clr-secondary-main);
+		border: 1px var(--clr-secondary-main) solid;
 	}
 	.secondary.off {
 		color: var(--clr-secondary-off);
 	}
 
+	.tertiary {
+		background-color: var(--clr-tertiary-badge);
+		color: var(--clr-tertiary-main);
+		border: 1px var(--clr-tertiary-main) solid;
+	}
+	.tertiary.off {
+		color: var(--clr-tertiary-off);
+	}
+
 	.neutral {
 		background-color: var(--clr-neutral-badge);
 		color: var(--clr-heading-main);
+		border: 1px var(--clr-border-primary) solid;
 	}
 	.neutral.off {
 		color: var(--clr-heading-off);
