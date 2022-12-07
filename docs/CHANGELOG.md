@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/emerald-dao/component-library/compare/v2.2.0...v2.2.1) (2022-12-07)
+
+
+### Bug Fixes
+
+* Export InputWrapper correctly ([e6a8769](https://github.com/emerald-dao/component-library/commit/e6a876931754b543a5f1ea368ddff7a2c41861e0))
+
 # [2.2.0](https://github.com/emerald-dao/component-library/compare/v2.1.0...v2.2.0) (2022-12-07)
 
 
