@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/emerald-dao/component-library/compare/v2.2.1...v2.3.0) (2022-12-07)
+
+
+### Features
+
+* DropZone component ([f5db3af](https://github.com/emerald-dao/component-library/commit/f5db3af46707595e2736552cf14f99f1391ec0ed))
+
 ## [2.2.1](https://github.com/emerald-dao/component-library/compare/v2.2.0...v2.2.1) (2022-12-07)
 
 
