@@ -1,9 +1,5 @@
 <script>
-	import DropZone from '$lib/components/DropZone/DropZone.svelte';
-	import InputWrapper from '$lib/components/Forms/InputWrapper.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
-
-	let logo;
 </script>
 
 <section>
@@ -25,34 +21,6 @@
 				</p>
 			</div>
 		</div>
-		<InputWrapper name="fname" label="name" errors={[]} isValid={false} pending={true}>
-			<input type="text" id="fname" name="fname" placeholder="hola" />
-		</InputWrapper>
-
-		<InputWrapper
-			name="tokenName"
-			label="Token Name"
-			icon="tabler:currency-dollar"
-			errors={[]}
-			isValid={true}
-		>
-			<input
-				name="tokenName"
-				type="text"
-				placeholder="DAOcoin"
-				bind:value={logo}
-				on:input={() => console.log('a')}
-			/>
-		</InputWrapper>
-
-		<label for="logo">Logo</label>
-		<DropZone
-			name="logo"
-			accept="image/png"
-			maxAmountOfFiles={20}
-			bind:bindValue={logo}
-			multiple={true}
-		/>
 	</div>
 </section>
 

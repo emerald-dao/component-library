@@ -2,6 +2,7 @@
 	import Icon from '@iconify/svelte';
 	import HelperMessage from './HelperMessage.svelte';
 	import { fly } from 'svelte/transition';
+	import TooltipIcon from '../TooltipIcon/TooltipIcon.svelte';
 
 	export let name: string;
 	export let label: string | null = null;
@@ -12,10 +13,16 @@
 	export let pendingMessage: string[] = [];
 	export let errors: string[] | [];
 	export let isValid: boolean;
+	export let tooltip: string | undefined = undefined;
 </script>
 
 {#if label}
-	<label for={name}>{label}</label>
+	<label for={name} class="row-2">
+		{label}
+		{#if tooltip}
+			<TooltipIcon {tooltip} width={0.75} />
+		{/if}
+	</label>
 {/if}
 <div class="input-wrapper">
 	<slot />
@@ -53,6 +60,11 @@
 </div>
 
 <style type="scss">
+	label {
+		padding-bottom: 0.2em;
+		align-items: flex-start;
+	}
+
 	.input-wrapper {
 		width: 100%;
 	}
