@@ -1,4 +1,5 @@
 <script type="ts">
+	import '../app.postcss';
 	import { Header, Footer } from '$lib/index';
 	import { theme } from '$lib/store/ThemeStore';
 	import '@emerald-dao/design-system/build/variables-dark.css';
@@ -20,7 +21,7 @@
 	];
 </script>
 
-<Header themeStore={theme} {navElements} sticky={true} />
+<Header themeStore={theme} {navElements} />
 <main>
 	<slot />
 </main>

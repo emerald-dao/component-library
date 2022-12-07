@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
+import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,11 +10,15 @@ const config = {
 		adapter: adapter()
 	},
 
-	preprocess: preprocess({
-		scss: {
-			prependData: `@import './node_modules/@emerald-dao/design-system/styles/utils/mixins';`
-		}
-	})
+	preprocess: [
+		preprocess({
+			postcss: true,
+			scss: {
+				prependData: `@import './node_modules/@emerald-dao/design-system/styles/utils/mixins';`
+			}
+		}),
+		sveltePreprocess()
+	]
 };
 
 export default config;

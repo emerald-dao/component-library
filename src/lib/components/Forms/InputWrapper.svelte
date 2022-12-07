@@ -14,10 +14,14 @@
 	export let isValid: boolean;
 </script>
 
+<div>
+	<span>a</span>
+</div>
 {#if label}
 	<label for={name}>{label}</label>
 {/if}
 <div class="input-wrapper">
+	<slot />
 	{#if icon || iconUrl || iconText}
 		<div class="icon-wrapper-left solid">
 			{#if icon}
@@ -42,7 +46,6 @@
 			<Icon icon="tabler:loader-2" color="var(--clr-tertiary-main)" class="rotate" width="0.9em" />
 		</div>
 	{/if}
-	<slot />
 </div>
 <div class="helper-wrapper">
 	{#if errors.length > 0}
@@ -100,22 +103,28 @@
 			justify-content: flex-end;
 		}
 
-		.solid {
-			background-color: var(--clr-neutral-400-t8);
-		}
-		.solid.icon-wrapper-left {
-			border-right: 2px var(--clr-neutral-400) solid;
+		:global(input:not(:focus) ~ .solid.icon-wrapper-left) {
 			border-radius: 0.6rem 0 0 0.6rem;
+			border-right: 1px var(--clr-border-primary) solid;
 		}
-		.solid.icon-wrapper-right {
+		:global(input:not(:focus) ~ .solid.icon-wrapper-right) {
 			border-radius: 0 0.6rem 0.6rem 0;
-			border-left: 2px var(--clr-neutral-400) solid;
+			border-left: 1px var(--clr-border-primary) solid;
 		}
 	}
 
+	:global(input:focus ~ .solid) {
+		border-right: 1px var(--clr-text-main) solid;
+	}
+
 	.input-wrapper:has(.icon-wrapper-left) {
-		input {
+		:global(input) {
 			padding-left: 3.6rem;
+		}
+	}
+	.input-wrapper:has(.icon-wrapper-right) {
+		:global(input) {
+			padding-right: 3.6rem;
 		}
 	}
 </style>

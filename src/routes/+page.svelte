@@ -29,6 +29,22 @@
 			<input type="text" id="fname" name="fname" placeholder="hola" />
 		</InputWrapper>
 
+		<InputWrapper
+			name="tokenName"
+			label="Token Name"
+			icon="tabler:currency-dollar"
+			errors={[]}
+			isValid={true}
+		>
+			<input
+				name="tokenName"
+				type="text"
+				placeholder="DAOcoin"
+				bind:value={logo}
+				on:input={() => console.log('a')}
+			/>
+		</InputWrapper>
+
 		<label for="logo">Logo</label>
 		<DropZone
 			name="logo"
