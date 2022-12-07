@@ -10,3 +10,4 @@ export { default as Tagline } from './components/Tagline/Tagline.svelte';
 export { default as Label } from './components/Label/Label.svelte';
 export { default as InputWrapper } from './components/Forms/InputWrapper.svelte';
 export { default as DropZone } from './components/DropZone/DropZone.svelte';
+export { default as Breadcrumbs } from './components/Breadcrumbs/Breadcrumbs.svelte';
