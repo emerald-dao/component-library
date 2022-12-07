@@ -1,0 +1,121 @@
+<script type="ts">
+	import Icon from '@iconify/svelte';
+	import HelperMessage from './HelperMessage.svelte';
+	import { fly } from 'svelte/transition';
+
+	export let name: string;
+	export let label: string | null = null;
+	export let icon: string | null = null;
+	export let iconUrl: string | null = null;
+	export let iconText: string | null = null;
+	export let pending: boolean = false;
+	export let pendingMessage: string[] = [];
+	export let errors: string[] | [];
+	export let isValid: boolean;
+</script>
+
+{#if label}
+	<label for={name}>{label}</label>
+{/if}
+<div class="input-wrapper">
+	{#if icon || iconUrl || iconText}
+		<div class="icon-wrapper-left solid">
+			{#if icon}
+				<Icon {icon} />
+			{:else if iconUrl}
+				<img src={iconUrl} alt="Form helper icon" />
+			{:else if iconText}
+				<span class="icon-text">{iconText}</span>
+			{/if}
+		</div>
+	{/if}
+	{#if errors.length > 0}
+		<div class="icon-wrapper-right" transition:fly|local={{ x: 4, duration: 400 }}>
+			<Icon icon="tabler:alert-circle" color="var(--clr-alert-main)" width="0.9em" />
+		</div>
+	{:else if isValid}
+		<div class="icon-wrapper-right" transition:fly|local={{ x: 4, duration: 400 }}>
+			<Icon icon="tabler:check" color="var(--clr-success-main)" width="0.9em" />
+		</div>
+	{:else if pending}
+		<div class="icon-wrapper-right" transition:fly|local={{ x: 4, duration: 400 }}>
+			<Icon icon="tabler:loader-2" color="var(--clr-tertiary-main)" class="rotate" width="0.9em" />
+		</div>
+	{/if}
+	<slot />
+</div>
+<div class="helper-wrapper">
+	{#if errors.length > 0}
+		<HelperMessage message={errors[0]} type="error" />
+	{:else if pending}
+		<HelperMessage message={pendingMessage} type="loading" />
+	{/if}
+</div>
+
+<style type="scss">
+	.input-wrapper {
+		width: fit-content;
+	}
+
+	.helper-wrapper {
+		min-height: 1.4rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.input-wrapper {
+		position: relative;
+
+		.icon-wrapper-left,
+		.icon-wrapper-right {
+			position: absolute;
+			color: var(--clr-neutral-500);
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: auto;
+			max-width: 3.4rem;
+			min-width: 3rem;
+			top: 0;
+			padding: 0.5rem;
+		}
+
+		.icon-wrapper-left {
+			left: 0;
+
+			.icon-text {
+				font-size: 10px;
+				--font-weight: 700;
+			}
+
+			img {
+				width: 26px;
+			}
+		}
+
+		.icon-wrapper-right {
+			right: 0;
+			padding-right: 0.8rem;
+			justify-content: flex-end;
+		}
+
+		.solid {
+			background-color: var(--clr-neutral-400-t8);
+		}
+		.solid.icon-wrapper-left {
+			border-right: 2px var(--clr-neutral-400) solid;
+			border-radius: 0.6rem 0 0 0.6rem;
+		}
+		.solid.icon-wrapper-right {
+			border-radius: 0 0.6rem 0.6rem 0;
+			border-left: 2px var(--clr-neutral-400) solid;
+		}
+	}
+
+	.input-wrapper:has(.icon-wrapper-left) {
+		input {
+			padding-left: 3.6rem;
+		}
+	}
+</style>

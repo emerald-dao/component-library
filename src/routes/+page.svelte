@@ -1,20 +1,31 @@
 <script>
-	import Button from '$lib/components/Button/Button.svelte';
-	import { Column } from '@mateoroldos/svelte.bones';
+	import InputWrapper from '$lib/components/Forms/InputWrapper.svelte';
+	import Label from '$lib/components/Label/Label.svelte';
+	import { Row } from '@mateoroldos/svelte.bones';
 </script>
 
 <section>
 	<div class="container-small">
 		<h1 class="display-small">Emerald City DAO Components</h1>
-		<p class="large">
-			Here you'll find a collection of the components used in Emerald City Dao projects.
-		</p>
-		<Column>
-			<Button size="x-small">Learn More</Button>
-			<Button size="small">Learn More</Button>
-			<Button size="medium">Learn More</Button>
-			<Button size="large">Learn More</Button>
-		</Column>
+		<div class="row-8">
+			<div class="card column-3">
+				<Label size="x-small" iconLeft="tabler:diamond">Flow Blockchain</Label>
+				<h4 class="w-medium">Emerald City DAO</h4>
+				<p class="small">
+					Here you'll find a collection of the components used in Emerald City Dao projects.
+				</p>
+			</div>
+			<div class="card column-3">
+				<Label size="x-small" iconLeft="tabler:diamond">Flow Blockchain</Label>
+				<h4 class="w-medium">Emerald City DAO</h4>
+				<p class="small">
+					Here you'll find a collection of the components used in Emerald City Dao projects.
+				</p>
+			</div>
+		</div>
+		<InputWrapper name="fname" label="name" errors={[]} isValid={false} pending={true}>
+			<input type="text" id="fname" name="fname" placeholder="hola" />
+		</InputWrapper>
 	</div>
 </section>
 
@@ -23,11 +34,5 @@
 		--font-weight: var(--font-weight-semibold);
 		text-align: center;
 		margin-bottom: 2rem;
-	}
-
-	p {
-		text-align: center;
-		color: #888888;
-		--font-width: 3500;
 	}
 </style>
