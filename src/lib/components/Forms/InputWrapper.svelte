@@ -14,9 +14,6 @@
 	export let isValid: boolean;
 </script>
 
-<div>
-	<span>a</span>
-</div>
 {#if label}
 	<label for={name}>{label}</label>
 {/if}
