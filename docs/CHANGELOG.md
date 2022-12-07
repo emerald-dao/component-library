@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/emerald-dao/component-library/compare/v2.4.0...v2.4.1) (2022-12-07)
+
+
+### Bug Fixes
+
+* InputWrapper cleanup ([3644078](https://github.com/emerald-dao/component-library/commit/3644078ad955d0716f46671962878b6fd567d197))
+
 # [2.4.0](https://github.com/emerald-dao/component-library/compare/v2.3.0...v2.4.0) (2022-12-07)
 
 
