@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/emerald-dao/component-library/compare/v2.4.1...v2.5.0) (2022-12-07)
+
+
+### Features
+
+* Add Breadcrumbs component ([0c11cc4](https://github.com/emerald-dao/component-library/commit/0c11cc40404d7c025da39a45aa38d079603d4e6b))
+
 ## [2.4.1](https://github.com/emerald-dao/component-library/compare/v2.4.0...v2.4.1) (2022-12-07)
 
 
