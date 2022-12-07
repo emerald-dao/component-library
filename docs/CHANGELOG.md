@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/emerald-dao/component-library/compare/v2.5.0...v2.6.0) (2022-12-07)
+
+
+### Features
+
+* Labels styling details ([12115fd](https://github.com/emerald-dao/component-library/commit/12115fd2f86ba5adc755dd0c86f566163905acc8))
+
 # [2.5.0](https://github.com/emerald-dao/component-library/compare/v2.4.1...v2.5.0) (2022-12-07)
 
 
