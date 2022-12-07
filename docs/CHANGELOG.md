@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/emerald-dao/component-library/compare/v2.6.0...v2.7.0) (2022-12-07)
+
+
+### Features
+
+* Add TooltipIcon component and add it to InputWrapper ([05d1f99](https://github.com/emerald-dao/component-library/commit/05d1f99e235ee5732005089767c28649bd8aa16e))
+
 # [2.6.0](https://github.com/emerald-dao/component-library/compare/v2.5.0...v2.6.0) (2022-12-07)
 
 
