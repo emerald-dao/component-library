@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/emerald-dao/component-library/compare/v2.3.0...v2.4.0) (2022-12-07)
+
+
+### Features
+
+* Add postcss and input improvements ([3e7de9f](https://github.com/emerald-dao/component-library/commit/3e7de9f71688379a27712e8b008680b4b56f931b))
+
 # [2.3.0](https://github.com/emerald-dao/component-library/compare/v2.2.1...v2.3.0) (2022-12-07)
 
 
