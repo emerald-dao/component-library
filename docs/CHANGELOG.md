@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/emerald-dao/component-library/compare/v2.1.0...v2.2.0) (2022-12-07)
+
+
+### Features
+
+* Add input components ([750d121](https://github.com/emerald-dao/component-library/commit/750d121f50c567d964bf8b729f509093e41f9c3e))
+
 # [2.1.0](https://github.com/emerald-dao/component-library/compare/v2.0.5...v2.1.0) (2022-11-23)
 
 
