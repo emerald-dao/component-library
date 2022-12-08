@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/emerald-dao/component-library/compare/v3.1.0...v3.2.0) (2022-12-08)
+
+
+### Features
+
+* Add switch element ([99ec82a](https://github.com/emerald-dao/component-library/commit/99ec82a36017658912c6a8052cde4a9efd53866c))
+
 # [3.1.0](https://github.com/emerald-dao/component-library/compare/v3.0.0...v3.1.0) (2022-12-08)
 
 
