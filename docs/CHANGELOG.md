@@ -1,3 +1,15 @@
+# [2.9.0](https://github.com/emerald-dao/component-library/compare/v2.8.0...v2.9.0) (2022-12-08)
+
+
+### Bug Fixes
+
+* Improve ThemeToggle animation ([c7fa3bb](https://github.com/emerald-dao/component-library/commit/c7fa3bb1bc4b2647faa179036238378adf319029))
+
+
+### Features
+
+* Move scss stylesheets from design-system to this project ([877873b](https://github.com/emerald-dao/component-library/commit/877873b179ff2e37a0513d41084488164c45574b))
+
 # [2.8.0](https://github.com/emerald-dao/component-library/compare/v2.7.0...v2.8.0) (2022-12-08)
 
 
