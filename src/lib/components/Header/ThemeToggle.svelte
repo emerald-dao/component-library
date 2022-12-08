@@ -25,7 +25,7 @@
 		class="theme-toggle"
 		href="/"
 		on:click|preventDefault={toggleTheme}
-		in:fly={{ y: 20, duration: 800 }}
+		in:fly={{ y: 10, duration: 500 }}
 	>
 		<Icon icon="tabler:sun" color="var(--clr-text-main)" />
 	</a>
@@ -34,7 +34,7 @@
 		class="theme-toggle"
 		href="/"
 		on:click|preventDefault={toggleTheme}
-		in:fly={{ y: 20, duration: 800 }}
+		in:fly={{ y: 10, duration: 500 }}
 	>
 		<Icon icon="tabler:moon" color="var(--clr-text-main)" />
 	</a>
