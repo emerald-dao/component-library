@@ -2,24 +2,35 @@
 @use '../utils/utility-classes';
 
 label {
-  @extend .text-small;
-  color: var(--clr-text-main);
-  --font-weight: var(--font-weight-medium);
+	@extend .text-small;
+	color: var(--clr-text-main);
+	--font-weight: var(--font-weight-medium);
 }
 
 input,
 textarea {
-  @extend .text-small;
-  @extend .border-primary;
-  width: 100%;
-  background-color: transparent;
-  border-radius: var(--radius-1);
-  padding: var(--space-2) var(--space-3);
-  color: var(--clr-text-main);
-  --font-weight: var(--font-weight-light);
+	@extend .text-small;
+	@extend .border-primary;
+	width: 100%;
+	background-color: transparent;
+	border-radius: var(--radius-1);
+	padding: var(--space-2) var(--space-3);
+	color: var(--clr-text-main);
+	--font-weight: var(--font-weight-light);
 
-  &:focus {
-    border-color: var(--clr-text-main);
-    outline: none;
-  }
+	&:focus {
+		border-color: var(--clr-text-main);
+		outline: none;
+	}
+}
+
+// Hide arrows in number inputs
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	appearance: none;
+}
+/* Firefox */
+input[type='number'] {
+	appearance: textfield;
 }
