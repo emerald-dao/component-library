@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/emerald-dao/component-library/compare/v3.0.0...v3.1.0) (2022-12-08)
+
+
+### Features
+
+* Hide arrows from number inputs ([b004f4a](https://github.com/emerald-dao/component-library/commit/b004f4aff24253bef9878a3d32ba84695c4d356e))
+
 # [3.0.0](https://github.com/emerald-dao/component-library/compare/v2.9.0...v3.0.0) (2022-12-08)
 
 
