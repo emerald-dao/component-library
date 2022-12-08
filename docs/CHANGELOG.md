@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/emerald-dao/component-library/compare/v3.2.0...v3.2.1) (2022-12-08)
+
+
+### Bug Fixes
+
+* Switch import ([c5c581c](https://github.com/emerald-dao/component-library/commit/c5c581c97e31e8d3e300aecf06a724da0de3bbdf))
+
 # [3.2.0](https://github.com/emerald-dao/component-library/compare/v3.1.0...v3.2.0) (2022-12-08)
 
 
