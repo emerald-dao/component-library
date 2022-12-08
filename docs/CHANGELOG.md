@@ -1,3 +1,10 @@
+# [2.8.0](https://github.com/emerald-dao/component-library/compare/v2.7.0...v2.8.0) (2022-12-08)
+
+
+### Features
+
+* Header improvements ([7590229](https://github.com/emerald-dao/component-library/commit/7590229b17ca67d8510d70ae991c434c9f0bd714))
+
 # [2.7.0](https://github.com/emerald-dao/component-library/compare/v2.6.0...v2.7.0) (2022-12-07)
 
 
