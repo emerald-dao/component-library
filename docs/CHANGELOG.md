@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/emerald-dao/component-library/compare/v3.2.1...v3.3.0) (2022-12-08)
+
+
+### Features
+
+* Switch enhancements ([22758bc](https://github.com/emerald-dao/component-library/commit/22758bc3dfc2ed37b71a30113bc9c0e5140a4b9f))
+
 ## [3.2.1](https://github.com/emerald-dao/component-library/compare/v3.2.0...v3.2.1) (2022-12-08)
 
 
