@@ -1,0 +1,25 @@
+@use './typography';
+@use '../utils/utility-classes';
+
+label {
+  @extend .text-small;
+  color: var(--clr-text-main);
+  --font-weight: var(--font-weight-medium);
+}
+
+input,
+textarea {
+  @extend .text-small;
+  @extend .border-primary;
+  width: 100%;
+  background-color: transparent;
+  border-radius: var(--radius-1);
+  padding: var(--space-2) var(--space-3);
+  color: var(--clr-text-main);
+  --font-weight: var(--font-weight-light);
+
+  &:focus {
+    border-color: var(--clr-text-main);
+    outline: none;
+  }
+}

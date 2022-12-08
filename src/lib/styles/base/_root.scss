@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+@use '../utils' as *;
+
+:root {
+  // // Generate font-family variables
+  // @each $font, $type in $fonts {
+  //   --ff-#{$font}: "#{map-get($type, 'name')}", #{map-get($type, 'fallback')};
+  // }
+
+  // // Generate font-size variables
+  // @each $screen-size, $property in $type-scale {
+  //   @if $screen-size == small {
+  //     @each $prop, $value in $property {
+  //       --fs-#{$prop}: #{$value};
+  //     }
+  //   } @else {
+  //     @include mq(small) {
+  //       @each $prop, $value in $property {
+  //         --fs-#{$prop}: #{$value};
+  //       }
+  //     }
+  //   }
+  // }
+}

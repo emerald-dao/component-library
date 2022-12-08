@@ -1,0 +1,17 @@
+@use '../utils/utility-classes';
+
+.card {
+  border-radius: var(--radius-4);
+  padding: var(--space-8);
+  @extend .border-primary;
+
+  &-primary {
+    @extend .card;
+    background-color: var(--clr-surface-primary);
+  }
+
+  &-secondary {
+    @extend .card;
+    background-color: var(--clr-surface-secondary);
+  }
+}

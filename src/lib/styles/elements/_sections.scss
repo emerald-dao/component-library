@@ -1,0 +1,14 @@
+section,
+.section {
+  padding-block: 4rem;
+}
+
+.section {
+  &-small {
+    padding-block: 2rem;
+  }
+
+  &-large {
+    padding-block: 6rem;
+  }
+}

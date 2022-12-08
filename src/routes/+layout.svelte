@@ -5,7 +5,7 @@
 	import '@emerald-dao/design-system/build/variables-dark.css';
 	import '@emerald-dao/design-system/build/variables-light.css';
 	import '@emerald-dao/design-system/build/variables.css';
-	import '@emerald-dao/design-system/styles/app.scss';
+	import '$lib/styles/app.scss';
 
 	let navElements = [
 		{

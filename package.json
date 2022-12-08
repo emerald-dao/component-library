@@ -65,7 +65,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@emerald-dao/design-system": "^1.0.1",
+		"@emerald-dao/design-system": "^2.0.0",
 		"@mateoroldos/svelte.bones": "^1.2.0",
 		"cssnano": "^5.1.14"
 	},

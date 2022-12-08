@@ -14,7 +14,7 @@ const config = {
 		preprocess({
 			postcss: true,
 			scss: {
-				prependData: `@import './node_modules/@emerald-dao/design-system/styles/utils/mixins';`
+				prependData: `@import './src/lib/styles/utils/mixins';`
 			}
 		}),
 		sveltePreprocess()
