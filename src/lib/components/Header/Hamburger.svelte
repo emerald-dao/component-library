@@ -12,8 +12,8 @@
 		class:open
 		viewBox="0 0 100 100"
 		fill="none"
-		stroke={!open ? 'var(--clr-primary-main)' : 'var(--clr-neutral-900)'}
-		stroke-width="5"
+		stroke="var(--clr-heading-main)"
+		stroke-width="3"
 		{width}
 	>
 		<path

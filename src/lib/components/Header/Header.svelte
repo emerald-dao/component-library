@@ -48,10 +48,10 @@
 		</slot>
 	</a>
 	{#if open && navElements && mobileMenu}
-		<nav class="hide-on-desktop" transition:fly={{ x: -20, duration: 500 }}>
+		<nav class="hide-on-desktop-flex" transition:fly={{ x: -20, duration: 500 }}>
 			<ul>
 				{#each navElements as navElement}
-					<a href={navElement.url}>
+					<a class="menu-link" href={navElement.url}>
 						<li>{navElement.name}</li>
 					</a>
 				{/each}
@@ -59,7 +59,7 @@
 		</nav>
 	{/if}
 	{#if navElements}
-		<nav class="hide-on-mobile">
+		<nav class="hide-on-mobile-flex">
 			<ul>
 				{#each navElements as navElement}
 					<a class="menu-link" href={navElement.url}>
@@ -115,16 +115,15 @@
 		}
 
 		nav {
-			display: flex;
 			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: var(--clr-primary-main);
+			background-color: var(--clr-surface-primary);
 			align-items: center;
 			justify-content: center;
-			z-index: 99;
+			z-index: 999;
 
 			@include mq(medium) {
 				position: relative;

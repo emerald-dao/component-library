@@ -49,6 +49,6 @@
 		border-radius: 50%;
 		animation: show 0.5s forwards;
 		animation-delay: 1.5s;
-		z-index: 999;
+		z-index: 99;
 	}
 </style>
