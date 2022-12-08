@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/emerald-dao/component-library/compare/v2.9.0...v3.0.0) (2022-12-08)
+
+
+### Features
+
+* Move stylesheets to this project ([3dd2be5](https://github.com/emerald-dao/component-library/commit/3dd2be563fcfed01d7e7ef0780437a99970042cd))
+
+
+### BREAKING CHANGES
+
+* Now all stylesheets must be imported from component-library
+
 # [2.9.0](https://github.com/emerald-dao/component-library/compare/v2.8.0...v2.9.0) (2022-12-08)
 
 
