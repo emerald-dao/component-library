@@ -1,5 +1,7 @@
 <script>
 	import Label from '$lib/components/Label/Label.svelte';
+
+	let a = false;
 </script>
 
 <section>
@@ -21,6 +23,17 @@
 				</p>
 			</div>
 		</div>
+		<label for="mint-tokens" class="switch">
+			<input
+				type="checkbox"
+				name="mint-tokens"
+				id="mint-tokens"
+				placeholder="e.g. 1.000.000"
+				bind:checked={a}
+			/>
+			<span class="slider" />
+			<span class="label">Mint tokens</span>
+		</label>
 	</div>
 </section>
 
