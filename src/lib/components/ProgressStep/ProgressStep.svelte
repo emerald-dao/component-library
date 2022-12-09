@@ -36,7 +36,8 @@
 
 		.name {
 			color: var(--clr-heading-off);
-			transition: 0.2s;
+			transition: 0.6s;
+			transition-delay: 0.4s;
 
 			&-active {
 				color: var(--clr-heading-main);
@@ -65,26 +66,30 @@
 				background-color: var(--clr-surface-secondary);
 				border: 1.5px var(--clr-surface-primary) solid;
 				transition: 0.6s;
-				transition-delay: 0.2s;
+				transition-delay: 0.4s;
 
 				&-success {
 					background-color: var(--clr-primary-main);
 					transition: 0.6s;
+					transition-delay: 0.4s;
 				}
 
 				&-active {
 					border: 1.5px var(--clr-primary-main) solid;
 					transition: 0.6s;
+					transition-delay: 0.4s;
 				}
 
 				&-loading {
 					border: 1.5px var(--clr-primary-main) solid;
 					transition: 0.6s;
+					transition-delay: 0.4s;
 				}
 
 				&-error {
 					border: 1.5px var(--clr-alert-main) solid;
 					transition: 0.6s;
+					transition-delay: 0.4s;
 				}
 			}
 
