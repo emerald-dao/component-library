@@ -1,3 +1,10 @@
+## [3.4.1](https://github.com/emerald-dao/component-library/compare/v3.4.0...v3.4.1) (2022-12-09)
+
+
+### Bug Fixes
+
+* ProgressSteps types corrections ([b9fd8c9](https://github.com/emerald-dao/component-library/commit/b9fd8c9be6a2481e7a1719041490e2e1cf91e243))
+
 # [3.4.0](https://github.com/emerald-dao/component-library/compare/v3.3.0...v3.4.0) (2022-12-09)
 
 
