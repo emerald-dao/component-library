@@ -1,3 +1,10 @@
+# [3.5.0](https://github.com/emerald-dao/component-library/compare/v3.4.1...v3.5.0) (2022-12-09)
+
+
+### Features
+
+* Add transitions to ProcessSteps ([e189e34](https://github.com/emerald-dao/component-library/commit/e189e34c5aeebe066261e69ef061cc08bc3fe2e4))
+
 ## [3.4.1](https://github.com/emerald-dao/component-library/compare/v3.4.0...v3.4.1) (2022-12-09)
 
 
