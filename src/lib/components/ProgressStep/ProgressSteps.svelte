@@ -9,7 +9,7 @@
 		state: ProgressStates;
 	}
 
-	const getPosition = (i, array) => {
+	const getPosition = (i: number, array: any[]) => {
 		if (i === 0) {
 			return 'first';
 		} else if (i === array.length - 1) {

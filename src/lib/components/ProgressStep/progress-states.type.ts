@@ -1,1 +1,1 @@
-export type ProgressStates = 'done' | 'inactive' | 'active' | 'loading' | 'error';
+export type ProgressStates = 'success' | 'inactive' | 'active' | 'loading' | 'error';

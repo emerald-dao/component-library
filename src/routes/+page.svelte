@@ -1,12 +1,9 @@
-<script>
-	import ProgressStep from './../lib/components/ProgressStep/ProgressStep.svelte';
+<script type="ts">
 	import Label from '$lib/components/Label/Label.svelte';
-
-	let a = false;
 </script>
 
 <section>
-	<ProgressStep stepName="DAO Details" state="inactive" />
+	<ProgressSteps steps={stepss} />
 	<div class="container-small">
 		<h1 class="display-small">Emerald City DAO Components</h1>
 		<div class="row-8">
@@ -25,17 +22,6 @@
 				</p>
 			</div>
 		</div>
-		<label for="mint-tokens" class="switch">
-			<input
-				type="checkbox"
-				name="mint-tokens"
-				id="mint-tokens"
-				placeholder="e.g. 1.000.000"
-				bind:checked={a}
-			/>
-			<span class="slider" />
-			<span class="label">Mint tokens</span>
-		</label>
 	</div>
 </section>
 

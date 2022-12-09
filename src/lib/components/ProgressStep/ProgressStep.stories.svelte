@@ -10,10 +10,10 @@
 </Template>
 
 <Story
-	name="done"
+	name="success"
 	args={{
 		stepName: 'Step 1',
-		state: 'done'
+		state: 'success'
 	}}
 />
 <Story

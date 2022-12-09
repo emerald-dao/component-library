@@ -15,11 +15,11 @@
 		steps: [
 			{
 				name: 'Step 1',
-				state: 'done'
+				state: 'success'
 			},
 			{
 				name: 'Step 2',
-				state: 'done'
+				state: 'success'
 			},
 			{
 				name: 'Step 3',

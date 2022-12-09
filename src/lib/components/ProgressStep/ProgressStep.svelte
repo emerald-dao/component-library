@@ -20,7 +20,7 @@
 		</div>
 		<div
 			class="line"
-			class:line-done={state === 'done'}
+			class:line-success={state === 'success'}
 			class:line-transparent={position === 'last'}
 		/>
 	</div>
@@ -63,7 +63,7 @@
 				border-radius: 100%;
 				background-color: var(--clr-surface-secondary);
 
-				&-done {
+				&-success {
 					background-color: var(--clr-primary-main);
 				}
 
@@ -85,7 +85,7 @@
 				width: 100%;
 				background-color: var(--clr-surface-secondary);
 
-				&-done,
+				&-success,
 				&-active,
 				&-loading,
 				&-error {
