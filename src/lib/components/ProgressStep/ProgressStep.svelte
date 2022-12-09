@@ -36,6 +36,7 @@
 
 		.name {
 			color: var(--clr-heading-off);
+			transition: 0.2s;
 
 			&-active {
 				color: var(--clr-heading-main);
@@ -62,21 +63,28 @@
 				aspect-ratio: 1/1;
 				border-radius: 100%;
 				background-color: var(--clr-surface-secondary);
+				border: 1.5px var(--clr-surface-primary) solid;
+				transition: 0.6s;
+				transition-delay: 0.2s;
 
 				&-success {
 					background-color: var(--clr-primary-main);
+					transition: 0.6s;
 				}
 
 				&-active {
 					border: 1.5px var(--clr-primary-main) solid;
+					transition: 0.6s;
 				}
 
 				&-loading {
 					border: 1.5px var(--clr-primary-main) solid;
+					transition: 0.6s;
 				}
 
 				&-error {
 					border: 1.5px var(--clr-alert-main) solid;
+					transition: 0.6s;
 				}
 			}
 
@@ -84,6 +92,7 @@
 				height: 1.5px;
 				width: 100%;
 				background-color: var(--clr-surface-secondary);
+				transition: 0.6s;
 
 				&-success,
 				&-active,
