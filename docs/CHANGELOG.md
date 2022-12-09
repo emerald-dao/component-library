@@ -1,3 +1,11 @@
+# [3.4.0](https://github.com/emerald-dao/component-library/compare/v3.3.0...v3.4.0) (2022-12-09)
+
+
+### Features
+
+* Add ProgressStep and ProgressSteps components ([278264d](https://github.com/emerald-dao/component-library/commit/278264d7650790d293bdfd6928c974372b5cde3a))
+* Selected texts styling ([0e347fa](https://github.com/emerald-dao/component-library/commit/0e347fa88d8ecff812b09ace43a1a489fc0b2fad))
+
 # [3.3.0](https://github.com/emerald-dao/component-library/compare/v3.2.1...v3.3.0) (2022-12-08)
 
 
