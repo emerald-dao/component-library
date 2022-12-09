@@ -1,10 +1,12 @@
 <script>
+	import ProgressStep from './../lib/components/ProgressStep/ProgressStep.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
 
 	let a = false;
 </script>
 
 <section>
+	<ProgressStep stepName="DAO Details" state="inactive" />
 	<div class="container-small">
 		<h1 class="display-small">Emerald City DAO Components</h1>
 		<div class="row-8">
