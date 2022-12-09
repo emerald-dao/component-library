@@ -12,3 +12,5 @@ export { default as InputWrapper } from './components/Forms/InputWrapper.svelte'
 export { default as DropZone } from './components/DropZone/DropZone.svelte';
 export { default as Breadcrumbs } from './components/Breadcrumbs/Breadcrumbs.svelte';
 export { default as TooltipIcon } from './components/TooltipIcon/TooltipIcon.svelte';
+export { default as ProgressStep } from './components/ProgressStep/ProgressStep.svelte';
+export { default as ProgressSteps } from './components/ProgressStep/ProgressSteps.svelte';
