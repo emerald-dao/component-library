@@ -5,9 +5,10 @@
 	export let stepName: string;
 	export let state: ProgressStates;
 	export let position: 'first' | 'middle' | 'last' = 'middle';
+	export let direction: 'column' | 'row';
 </script>
 
-<div class="main-wrapper">
+<div class={`main-wrapper direction-${direction}`}>
 	<span class={`name name-${state}`}>{stepName}</span>
 	<div class="secondary-wrapper">
 		<div class={`line line-${state}`} class:line-transparent={position === 'first'} />
@@ -29,10 +30,8 @@
 <style type="scss">
 	.main-wrapper {
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 		gap: var(--space-3);
-		width: 100%;
 
 		.name {
 			color: var(--clr-heading-off);
@@ -54,14 +53,14 @@
 
 		.secondary-wrapper {
 			display: flex;
-			flex-direction: row;
 			align-items: center;
-			width: 100%;
 
 			.circle {
-				width: 28px;
-				height: 28px;
-				aspect-ratio: 1/1;
+				min-width: 28px;
+				min-height: 28px;
+				max-width: 28px;
+				max-height: 28px;
+				// aspect-ratio: 1/1;
 				border-radius: 100%;
 				background-color: var(--clr-surface-secondary);
 				border: 1.5px var(--clr-surface-primary) solid;
@@ -94,8 +93,6 @@
 			}
 
 			.line {
-				height: 1.5px;
-				width: 100%;
 				background-color: var(--clr-surface-secondary);
 				transition: 0.6s;
 
@@ -110,6 +107,37 @@
 					background-color: transparent !important;
 				}
 			}
+		}
+	}
+
+	.main-wrapper.direction-row {
+		flex-direction: column;
+		width: 100%;
+
+		.secondary-wrapper {
+			flex-direction: row;
+			width: 100%;
+		}
+
+		.line {
+			height: 1.5px;
+			width: 100%;
+		}
+	}
+
+	.main-wrapper.direction-column {
+		flex-direction: row;
+		height: 100%;
+		width: 100%;
+		justify-content: flex-end;
+
+		.secondary-wrapper {
+			flex-direction: column;
+			height: 100%;
+		}
+		.line {
+			height: 100%;
+			width: 1.5px;
 		}
 	}
 </style>
