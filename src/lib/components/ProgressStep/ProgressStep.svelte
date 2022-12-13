@@ -5,12 +5,20 @@
 	export let stepName: string;
 	export let state: ProgressStates;
 	export let position: 'first' | 'middle' | 'last' = 'middle';
-	export let direction: 'column' | 'row';
+	export let direction: 'column' | 'row' | 'column-reverse' | 'row-reverse';
 	export let diameter: number;
+	export let url: string | null = null;
+	export let fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 </script>
 
-<div class={`main-wrapper direction-${direction}`}>
-	<span class={`name name-${state}`}>{stepName}</span>
+<div class={`main-wrapper direction-${direction}`} style={`flex-direction: ${direction}`}>
+	{#if url}
+		<a href={url}>
+			<span class={`name name-${state} ${fontSize}`}>{stepName}</span>
+		</a>
+	{:else}
+		<span class={`name name-${state} ${fontSize}`}>{stepName}</span>
+	{/if}
 	<div class="secondary-wrapper">
 		<div class={`line line-${state}`} class:line-transparent={position === 'first'} />
 		<div
@@ -52,6 +60,10 @@
 			&-error {
 				color: var(--clr-heading-main);
 			}
+		}
+
+		a {
+			text-decoration: none;
 		}
 
 		.secondary-wrapper {
@@ -104,7 +116,8 @@
 		}
 	}
 
-	.main-wrapper.direction-row {
+	.main-wrapper.direction-column,
+	.main-wrapper.direction-column-reverse {
 		flex-direction: column;
 		width: 100%;
 
@@ -119,8 +132,8 @@
 		}
 	}
 
-	.main-wrapper.direction-column {
-		flex-direction: row;
+	.main-wrapper.direction-row,
+	.main-wrapper.direction-row-reverse {
 		height: 100%;
 		width: 100%;
 		justify-content: flex-end;

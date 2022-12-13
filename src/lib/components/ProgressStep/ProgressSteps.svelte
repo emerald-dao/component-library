@@ -3,13 +3,24 @@
 	import ProgressStep from './ProgressStep.svelte';
 
 	export let steps: Step[];
-	export let direction: 'column' | 'row' = 'row';
+	export let direction: Direction = 'row';
 	export let diameter: number = 1.4;
+	export let fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' = 'medium';
+
+	type Direction = 'column' | 'row' | 'column-reverse' | 'row-reverse';
 
 	interface Step {
 		name: string;
 		state: ProgressStates;
+		url?: string;
 	}
+
+	const swapColumnRow = (): Direction => {
+		return direction
+			.replace(/column/gi, 'temp')
+			.replace(/row/gi, 'column')
+			.replace(/temp/gi, 'row') as Direction;
+	};
 
 	const getPosition = (i: number, array: any[]) => {
 		if (i === 0) {
@@ -26,8 +37,10 @@
 			stepName={step.name}
 			state={step.state}
 			position={getPosition(i, steps)}
-			{direction}
+			url={step.url}
+			direction={swapColumnRow()}
 			{diameter}
+			{fontSize}
 		/>
 	{/each}
 </div>
@@ -38,11 +51,13 @@
 		align-items: center;
 	}
 
-	.main-wrapper.direction-column {
+	.main-wrapper.direction-column,
+	.main-wrapper.direction-column-reverse {
 		flex-direction: column;
 		height: 600px;
 	}
-	.main-wrapper.direction-row {
+	.main-wrapper.direction-row,
+	.main-wrapper.direction-reverse {
 		flex-direction: row;
 		width: 100%;
 	}
