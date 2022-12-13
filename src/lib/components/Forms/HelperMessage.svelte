@@ -29,7 +29,7 @@
 		}
 
 		.loading {
-			color: var(--clr-secondary-main);
+			color: var(--clr-tertiary-main);
 		}
 	}
 </style>
