@@ -6,13 +6,17 @@
 	export let state: ProgressStates;
 	export let position: 'first' | 'middle' | 'last' = 'middle';
 	export let direction: 'column' | 'row';
+	export let diameter: number;
 </script>
 
 <div class={`main-wrapper direction-${direction}`}>
 	<span class={`name name-${state}`}>{stepName}</span>
 	<div class="secondary-wrapper">
 		<div class={`line line-${state}`} class:line-transparent={position === 'first'} />
-		<div class={`circle circle-${state} center`}>
+		<div
+			class={`circle circle-${state} center`}
+			style={`min-width: ${diameter}rem; min-height: ${diameter}rem; max-width: ${diameter}rem; max-height: ${diameter}rem`}
+		>
 			{#if state === 'loading'}
 				<Icon icon="tabler:loader" class="rotate" color="var(--clr-primary-main)" />
 			{:else if state === 'error'}
@@ -35,8 +39,7 @@
 
 		.name {
 			color: var(--clr-heading-off);
-			transition: 0.6s;
-			transition-delay: 0.4s;
+			transition: 0.3s;
 
 			&-active {
 				color: var(--clr-heading-main);
@@ -55,46 +58,37 @@
 			display: flex;
 			align-items: center;
 
+			.circle-transition {
+				transition: 0.3s;
+				transition-delay: 0.3s;
+			}
+
 			.circle {
-				min-width: 28px;
-				min-height: 28px;
-				max-width: 28px;
-				max-height: 28px;
-				// aspect-ratio: 1/1;
 				border-radius: 100%;
 				background-color: var(--clr-surface-secondary);
 				border: 1.5px var(--clr-surface-primary) solid;
-				transition: 0.6s;
-				transition-delay: 0.4s;
+				transition: 0.3s;
 
 				&-success {
 					background-color: var(--clr-primary-main);
-					transition: 0.6s;
-					transition-delay: 0.4s;
 				}
 
 				&-active {
 					border: 1.5px var(--clr-primary-main) solid;
-					transition: 0.6s;
-					transition-delay: 0.4s;
 				}
 
 				&-loading {
 					border: 1.5px var(--clr-primary-main) solid;
-					transition: 0.6s;
-					transition-delay: 0.4s;
 				}
 
 				&-error {
 					border: 1.5px var(--clr-alert-main) solid;
-					transition: 0.6s;
-					transition-delay: 0.4s;
 				}
 			}
 
 			.line {
 				background-color: var(--clr-surface-secondary);
-				transition: 0.6s;
+				transition: 0.3s;
 
 				&-success,
 				&-active,

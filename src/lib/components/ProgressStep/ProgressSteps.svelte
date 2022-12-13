@@ -4,6 +4,7 @@
 
 	export let steps: Step[];
 	export let direction: 'column' | 'row' = 'row';
+	export let diameter: number = 1.4;
 
 	interface Step {
 		name: string;
@@ -26,6 +27,7 @@
 			state={step.state}
 			position={getPosition(i, steps)}
 			{direction}
+			{diameter}
 		/>
 	{/each}
 </div>
