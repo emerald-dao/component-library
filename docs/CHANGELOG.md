@@ -1,3 +1,11 @@
+# [3.6.0](https://github.com/emerald-dao/component-library/compare/v3.5.0...v3.6.0) (2022-12-12)
+
+
+### Features
+
+* Add column/row options to ProgressSteps ([a4cd238](https://github.com/emerald-dao/component-library/commit/a4cd238a64fc519f2a234f18895e527a7612833c))
+* Even better transitions for ProcessSteps ([9b590e9](https://github.com/emerald-dao/component-library/commit/9b590e96f06ba503177eca3e048eb58ca84f6feb))
+
 # [3.5.0](https://github.com/emerald-dao/component-library/compare/v3.4.1...v3.5.0) (2022-12-09)
 
 
