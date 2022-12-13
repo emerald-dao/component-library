@@ -10,21 +10,24 @@
 	export let url: string | null = null;
 	export let fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 	export let gap: number;
+	export let cutLineEnds: boolean;
 </script>
 
 <div class={`main-wrapper direction-${direction}`} style={`flex-direction: ${direction}`}>
-	{#if url}
-		<a href={url}>
+	<div class="text-wrapper">
+		{#if url}
+			<a href={url}>
+				<span class={`name name-${state} ${fontSize}`}>{stepName}</span>
+			</a>
+		{:else}
 			<span class={`name name-${state} ${fontSize}`}>{stepName}</span>
-		</a>
-	{:else}
-		<span class={`name name-${state} ${fontSize}`}>{stepName}</span>
-	{/if}
+		{/if}
+	</div>
 	<div class="secondary-wrapper">
 		<div
 			class={`line line-${state}`}
-			class:line-transparent={position === 'first'}
-			style={`height: ${direction.includes('column') ? `1.5px` : `${gap}rem`}; width:  ${
+			class:line-transparent={position === 'first' && cutLineEnds}
+			style={`min-height: ${direction.includes('column') ? `1.5px` : `${gap}rem`}; min-width:  ${
 				direction.includes('row') ? `1.5px` : `${gap}rem`
 			};`}
 		/>
@@ -41,8 +44,8 @@
 		<div
 			class="line"
 			class:line-success={state === 'success'}
-			class:line-transparent={position === 'last'}
-			style={`height: ${direction.includes('column') ? `1.5px` : `${gap}rem`}; width:  ${
+			class:line-transparent={position === 'last' && cutLineEnds}
+			style={`min-height: ${direction.includes('column') ? `1.5px` : `${gap}rem`}; min-width:  ${
 				direction.includes('row') ? `1.5px` : `${gap}rem`
 			};`}
 		/>
@@ -52,28 +55,33 @@
 <style type="scss">
 	.main-wrapper {
 		display: flex;
-		align-items: center;
 		gap: var(--space-3);
 
-		.name {
-			color: var(--clr-heading-off);
-			transition: 0.3s;
+		.text-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.name {
+				color: var(--clr-heading-off);
+				transition: 0.3s;
+				height: fit-content;
 
-			&-active {
-				color: var(--clr-heading-main);
+				&-active {
+					color: var(--clr-heading-main);
+				}
+
+				&-loading {
+					color: var(--clr-heading-main);
+				}
+
+				&-error {
+					color: var(--clr-heading-main);
+				}
 			}
 
-			&-loading {
-				color: var(--clr-heading-main);
+			a {
+				text-decoration: none;
 			}
-
-			&-error {
-				color: var(--clr-heading-main);
-			}
-		}
-
-		a {
-			text-decoration: none;
 		}
 
 		.secondary-wrapper {
@@ -111,6 +119,7 @@
 			.line {
 				background-color: var(--clr-surface-secondary);
 				transition: 0.3s;
+				display: flex;
 
 				&-success,
 				&-active,
@@ -132,6 +141,10 @@
 
 		.secondary-wrapper {
 			flex-direction: row;
+
+			.line {
+				width: 100%;
+			}
 		}
 	}
 
@@ -142,6 +155,16 @@
 
 		.secondary-wrapper {
 			flex-direction: column;
+
+			.line {
+				height: 100%;
+			}
+		}
+	}
+
+	.main-wrapper.direction-row {
+		span {
+			text-align: right;
 		}
 	}
 </style>

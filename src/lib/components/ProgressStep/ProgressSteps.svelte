@@ -6,7 +6,8 @@
 	export let direction: Direction = 'row';
 	export let diameter: number = 1.4;
 	export let fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' = 'medium';
-	export let gap: number = 4;
+	export let gap: number = 2;
+	export let cutLineEnds = true;
 
 	type Direction = 'column' | 'row' | 'column-reverse' | 'row-reverse';
 
@@ -43,6 +44,7 @@
 			{diameter}
 			{fontSize}
 			{gap}
+			{cutLineEnds}
 		/>
 	{/each}
 </div>
@@ -56,11 +58,18 @@
 	.main-wrapper.direction-column,
 	.main-wrapper.direction-column-reverse {
 		flex-direction: column;
-		height: 600px;
 	}
 	.main-wrapper.direction-row,
-	.main-wrapper.direction-reverse {
+	.main-wrapper.direction-row-reverse {
 		flex-direction: row;
 		width: 100%;
+	}
+
+	.main-wrapper.direction-row {
+		align-items: flex-end;
+	}
+
+	.main-wrapper.direction-row-reverse {
+		align-items: flex-start;
 	}
 </style>
