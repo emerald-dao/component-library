@@ -1,3 +1,11 @@
+# [3.7.0](https://github.com/emerald-dao/component-library/compare/v3.6.0...v3.7.0) (2022-12-13)
+
+
+### Features
+
+* design-system update ([c400cd5](https://github.com/emerald-dao/component-library/commit/c400cd5c344f516e608a94ed1c882f980ce486ab))
+* Progress step enhancements ([df1ed93](https://github.com/emerald-dao/component-library/commit/df1ed93a496ab2c95b982db74ad7289c16637bb4))
+
 # [3.6.0](https://github.com/emerald-dao/component-library/compare/v3.5.0...v3.6.0) (2022-12-12)
 
 
