@@ -6,6 +6,7 @@
 	export let direction: Direction = 'row';
 	export let diameter: number = 1.4;
 	export let fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' = 'medium';
+	export let gap: number = 4;
 
 	type Direction = 'column' | 'row' | 'column-reverse' | 'row-reverse';
 
@@ -41,6 +42,7 @@
 			direction={swapColumnRow()}
 			{diameter}
 			{fontSize}
+			{gap}
 		/>
 	{/each}
 </div>

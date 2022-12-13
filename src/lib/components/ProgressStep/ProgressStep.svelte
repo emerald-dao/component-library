@@ -9,6 +9,7 @@
 	export let diameter: number;
 	export let url: string | null = null;
 	export let fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
+	export let gap: number;
 </script>
 
 <div class={`main-wrapper direction-${direction}`} style={`flex-direction: ${direction}`}>
@@ -20,7 +21,13 @@
 		<span class={`name name-${state} ${fontSize}`}>{stepName}</span>
 	{/if}
 	<div class="secondary-wrapper">
-		<div class={`line line-${state}`} class:line-transparent={position === 'first'} />
+		<div
+			class={`line line-${state}`}
+			class:line-transparent={position === 'first'}
+			style={`height: ${direction.includes('column') ? `1.5px` : `${gap}rem`}; width:  ${
+				direction.includes('row') ? `1.5px` : `${gap}rem`
+			};`}
+		/>
 		<div
 			class={`circle circle-${state} center`}
 			style={`min-width: ${diameter}rem; min-height: ${diameter}rem; max-width: ${diameter}rem; max-height: ${diameter}rem`}
@@ -35,6 +42,9 @@
 			class="line"
 			class:line-success={state === 'success'}
 			class:line-transparent={position === 'last'}
+			style={`height: ${direction.includes('column') ? `1.5px` : `${gap}rem`}; width:  ${
+				direction.includes('row') ? `1.5px` : `${gap}rem`
+			};`}
 		/>
 	</div>
 </div>
@@ -119,32 +129,19 @@
 	.main-wrapper.direction-column,
 	.main-wrapper.direction-column-reverse {
 		flex-direction: column;
-		width: 100%;
 
 		.secondary-wrapper {
 			flex-direction: row;
-			width: 100%;
-		}
-
-		.line {
-			height: 1.5px;
-			width: 100%;
 		}
 	}
 
 	.main-wrapper.direction-row,
 	.main-wrapper.direction-row-reverse {
-		height: 100%;
-		width: 100%;
 		justify-content: flex-end;
+		width: 100%;
 
 		.secondary-wrapper {
 			flex-direction: column;
-			height: 100%;
-		}
-		.line {
-			height: 100%;
-			width: 1.5px;
 		}
 	}
 </style>
