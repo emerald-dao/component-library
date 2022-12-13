@@ -1,3 +1,10 @@
+# [3.9.0](https://github.com/emerald-dao/component-library/compare/v3.8.0...v3.9.0) (2022-12-13)
+
+
+### Features
+
+* Make ProgressSteps with editable ([f4bd2b4](https://github.com/emerald-dao/component-library/commit/f4bd2b43bc6432ffa0f485f135872ca5511bca64))
+
 # [3.8.0](https://github.com/emerald-dao/component-library/compare/v3.7.0...v3.8.0) (2022-12-13)
 
 
