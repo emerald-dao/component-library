@@ -1,203 +1,238 @@
 .column {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  &-space-between {
-    @extend .column;
-    justify-content: space-between;
-  }
-  &-0 {
-    @extend .column;
-    gap: 0;
-  }
-  &-1 {
-    @extend .column;
-    gap: var(--space-1);
-  }
-  &-2 {
-    @extend .column;
-    gap: var(--space-2);
-  }
-  &-3 {
-    @extend .column;
-    gap: var(--space-3);
-  }
-  &-4 {
-    @extend .column;
-    gap: var(--space-4);
-  }
-  &-5 {
-    @extend .column;
-    gap: var(--space-5);
-  }
-  &-6 {
-    @extend .column;
-    gap: var(--space-6);
-  }
-  &-7 {
-    @extend .column;
-    gap: var(--space-7);
-  }
-  &-8 {
-    @extend .column;
-    gap: var(--space-8);
-  }
-  &-9 {
-    @extend .column;
-    gap: var(--space-9);
-  }
-  &-10 {
-    @extend .column;
-    gap: var(--space-10);
-  }
-  &-11 {
-    @extend .column;
-    gap: var(--space-11);
-  }
-  &-12 {
-    @extend .column;
-    gap: var(--space-12);
-  }
-  &-13 {
-    @extend .column;
-    gap: var(--space-13);
-  }
-  &-14 {
-    @extend .column;
-    gap: var(--space-14);
-  }
-  &-15 {
-    @extend .column;
-    gap: var(--space-15);
-  }
-  &-16 {
-    @extend .column;
-    gap: var(--space-16);
-  }
-  &-17 {
-    @extend .column;
-    gap: var(--space-17);
-  }
-  &-18 {
-    @extend .column;
-    gap: var(--space-18);
-  }
-  &-19 {
-    @extend .column;
-    gap: var(--space-19);
-  }
-  &-20 {
-    @extend .column;
-    gap: var(--space-20);
-  }
-  &-21 {
-    @extend .column;
-    gap: var(--space-21);
-  }
-  &-22 {
-    @extend .column;
-    gap: var(--space-22);
-  }
+	&-space-between {
+		@extend .column;
+		justify-content: space-between;
+	}
+	&-0 {
+		@extend .column;
+		gap: 0;
+	}
+	&-1 {
+		@extend .column;
+		gap: var(--space-1);
+	}
+	&-2 {
+		@extend .column;
+		gap: var(--space-2);
+	}
+	&-3 {
+		@extend .column;
+		gap: var(--space-3);
+	}
+	&-4 {
+		@extend .column;
+		gap: var(--space-4);
+	}
+	&-5 {
+		@extend .column;
+		gap: var(--space-5);
+	}
+	&-6 {
+		@extend .column;
+		gap: var(--space-6);
+	}
+	&-7 {
+		@extend .column;
+		gap: var(--space-7);
+	}
+	&-8 {
+		@extend .column;
+		gap: var(--space-8);
+	}
+	&-9 {
+		@extend .column;
+		gap: var(--space-9);
+	}
+	&-10 {
+		@extend .column;
+		gap: var(--space-10);
+	}
+	&-11 {
+		@extend .column;
+		gap: var(--space-11);
+	}
+	&-12 {
+		@extend .column;
+		gap: var(--space-12);
+	}
+	&-13 {
+		@extend .column;
+		gap: var(--space-13);
+	}
+	&-14 {
+		@extend .column;
+		gap: var(--space-14);
+	}
+	&-15 {
+		@extend .column;
+		gap: var(--space-15);
+	}
+	&-16 {
+		@extend .column;
+		gap: var(--space-16);
+	}
+	&-17 {
+		@extend .column;
+		gap: var(--space-17);
+	}
+	&-18 {
+		@extend .column;
+		gap: var(--space-18);
+	}
+	&-19 {
+		@extend .column;
+		gap: var(--space-19);
+	}
+	&-20 {
+		@extend .column;
+		gap: var(--space-20);
+	}
+	&-21 {
+		@extend .column;
+		gap: var(--space-21);
+	}
+	&-22 {
+		@extend .column;
+		gap: var(--space-22);
+	}
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  &-space-between {
-    @extend .row;
-    justify-content: space-between;
-  }
-  &-0 {
-    @extend .row;
-    gap: 0;
-  }
-  &-1 {
-    @extend .row;
-    gap: var(--space-1);
-  }
-  &-2 {
-    @extend .row;
-    gap: var(--space-2);
-  }
-  &-3 {
-    @extend .row;
-    gap: var(--space-3);
-  }
-  &-4 {
-    @extend .row;
-    gap: var(--space-4);
-  }
-  &-5 {
-    @extend .row;
-    gap: var(--space-5);
-  }
-  &-6 {
-    @extend .row;
-    gap: var(--space-6);
-  }
-  &-7 {
-    @extend .row;
-    gap: var(--space-7);
-  }
-  &-8 {
-    @extend .row;
-    gap: var(--space-8);
-  }
-  &-9 {
-    @extend .row;
-    gap: var(--space-9);
-  }
-  &-10 {
-    @extend .row;
-    gap: var(--space-10);
-  }
-  &-11 {
-    @extend .row;
-    gap: var(--space-11);
-  }
-  &-12 {
-    @extend .row;
-    gap: var(--space-12);
-  }
-  &-13 {
-    @extend .row;
-    gap: var(--space-13);
-  }
-  &-14 {
-    @extend .row;
-    gap: var(--space-14);
-  }
-  &-15 {
-    @extend .row;
-    gap: var(--space-15);
-  }
-  &-16 {
-    @extend .row;
-    gap: var(--space-16);
-  }
-  &-17 {
-    @extend .row;
-    gap: var(--space-17);
-  }
-  &-18 {
-    @extend .row;
-    gap: var(--space-18);
-  }
-  &-19 {
-    @extend .row;
-    gap: var(--space-19);
-  }
-  &-20 {
-    @extend .row;
-    gap: var(--space-20);
-  }
-  &-21 {
-    @extend .row;
-    gap: var(--space-21);
-  }
-  &-22 {
-    @extend .row;
-    gap: var(--space-22);
-  }
+	&-space-between {
+		@extend .row;
+		justify-content: space-between;
+	}
+	&-0 {
+		@extend .row;
+		gap: 0;
+	}
+	&-1 {
+		@extend .row;
+		gap: var(--space-1);
+	}
+	&-2 {
+		@extend .row;
+		gap: var(--space-2);
+	}
+	&-3 {
+		@extend .row;
+		gap: var(--space-3);
+	}
+	&-4 {
+		@extend .row;
+		gap: var(--space-4);
+	}
+	&-5 {
+		@extend .row;
+		gap: var(--space-5);
+	}
+	&-6 {
+		@extend .row;
+		gap: var(--space-6);
+	}
+	&-7 {
+		@extend .row;
+		gap: var(--space-7);
+	}
+	&-8 {
+		@extend .row;
+		gap: var(--space-8);
+	}
+	&-9 {
+		@extend .row;
+		gap: var(--space-9);
+	}
+	&-10 {
+		@extend .row;
+		gap: var(--space-10);
+	}
+	&-11 {
+		@extend .row;
+		gap: var(--space-11);
+	}
+	&-12 {
+		@extend .row;
+		gap: var(--space-12);
+	}
+	&-13 {
+		@extend .row;
+		gap: var(--space-13);
+	}
+	&-14 {
+		@extend .row;
+		gap: var(--space-14);
+	}
+	&-15 {
+		@extend .row;
+		gap: var(--space-15);
+	}
+	&-16 {
+		@extend .row;
+		gap: var(--space-16);
+	}
+	&-17 {
+		@extend .row;
+		gap: var(--space-17);
+	}
+	&-18 {
+		@extend .row;
+		gap: var(--space-18);
+	}
+	&-19 {
+		@extend .row;
+		gap: var(--space-19);
+	}
+	&-20 {
+		@extend .row;
+		gap: var(--space-20);
+	}
+	&-21 {
+		@extend .row;
+		gap: var(--space-21);
+	}
+	&-22 {
+		@extend .row;
+		gap: var(--space-22);
+	}
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.justify-around {
+	justify-content: space-around;
+}
+.justify-evenly {
+	justify-content: space-evenly;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+.align-end {
+	align-items: flex-end;
+}
+.align-center {
+	align-items: center;
+}
+.align-baseline {
+	align-items: baseline;
+}
+.align-stretch {
+	align-items: stretch;
 }
