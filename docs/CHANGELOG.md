@@ -1,3 +1,10 @@
+# [3.10.0](https://github.com/emerald-dao/component-library/compare/v3.9.1...v3.10.0) (2022-12-14)
+
+
+### Features
+
+* Add justify and align utility classes ([070195d](https://github.com/emerald-dao/component-library/commit/070195deb18fd28999f8fa7071054c9365dd1fa4))
+
 ## [3.9.1](https://github.com/emerald-dao/component-library/compare/v3.9.0...v3.9.1) (2022-12-13)
 
 
