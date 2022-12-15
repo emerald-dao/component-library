@@ -1,3 +1,10 @@
+# [3.11.0](https://github.com/emerald-dao/component-library/compare/v3.10.0...v3.11.0) (2022-12-15)
+
+
+### Features
+
+* Menu links improvements ([847911a](https://github.com/emerald-dao/component-library/commit/847911a1c0d721e426e2ecdea8930f844657c74f))
+
 # [3.10.0](https://github.com/emerald-dao/component-library/compare/v3.9.1...v3.10.0) (2022-12-14)
 
 
