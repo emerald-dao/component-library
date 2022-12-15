@@ -1,3 +1,10 @@
+# [3.12.0](https://github.com/emerald-dao/component-library/compare/v3.11.0...v3.12.0) (2022-12-15)
+
+
+### Features
+
+* Add Currency component ([6173a17](https://github.com/emerald-dao/component-library/commit/6173a17668eb91abeb11eef58b6f1fb4ba8046dc))
+
 # [3.11.0](https://github.com/emerald-dao/component-library/compare/v3.10.0...v3.11.0) (2022-12-15)
 
 
