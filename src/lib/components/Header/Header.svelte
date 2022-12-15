@@ -51,7 +51,7 @@
 		<nav class="hide-on-desktop-flex" transition:fly={{ x: -20, duration: 500 }}>
 			<ul>
 				{#each navElements as navElement}
-					<a class="menu-link" href={navElement.url}>
+					<a class="header-link" href={navElement.url}>
 						<li>{navElement.name}</li>
 					</a>
 				{/each}
@@ -62,7 +62,7 @@
 		<nav class="hide-on-mobile-flex">
 			<ul>
 				{#each navElements as navElement}
-					<a class="menu-link" href={navElement.url}>
+					<a class="header-link" href={navElement.url}>
 						<li>{navElement.name}</li>
 					</a>
 				{/each}

@@ -62,7 +62,7 @@
 				<h5 class="text-small">Pages</h5>
 				<ul>
 					{#each navElements as navElement}
-						<a class="menu-link" href={navElement.url}>
+						<a class="header-link" href={navElement.url}>
 							<li>{navElement.name}</li>
 						</a>
 					{/each}
@@ -73,7 +73,7 @@
 			<h5 class="text-small">Emerald City Tools</h5>
 			<ul>
 				{#each emeraldTools as tool}
-					<a class="menu-link" href={tool.url} target="_blank" rel="noreferrer">
+					<a class="header-link" href={tool.url} target="_blank" rel="noreferrer">
 						<li>{tool.name}</li>
 					</a>
 				{/each}
@@ -83,7 +83,7 @@
 			<h5 class="text-small">Emerald City Tools</h5>
 			<ul>
 				{#each emeraldTools as tool}
-					<a class="menu-link" href={tool.url} target="_blank" rel="noreferrer">
+					<a class="header-link" href={tool.url} target="_blank" rel="noreferrer">
 						<li>{tool.name}</li>
 					</a>
 				{/each}
@@ -91,8 +91,8 @@
 		</nav>
 		<div class="socials">
 			{#each socials as social}
-				<a href={social.url} target="_blank" rel="noreferrer">
-					<Icon icon={social.icon} width="1.2rem" color="var(--clr-text-main)" href={social.url} />
+				<a href={social.url} target="_blank" rel="noreferrer" class="nav-link">
+					<Icon icon={social.icon} width="1.2rem" href={social.url} />
 				</a>
 			{/each}
 		</div>

@@ -1,16 +1,37 @@
 @use '../utils/mixins' as mxn;
+@use './flex';
 
-.menu-link {
-  color: var(--clr-text-main);
-  text-decoration: none;
-  font-size: var(--font-size-0);
-  transition: 0.2s;
+.nav-link {
+	color: var(--clr-heading-off);
+	text-decoration: none;
+	transition: 0.2s;
 
-  &:hover {
-    color: var(--clr-heading-main);
-  }
+	&:hover {
+		color: var(--clr-heading-main);
+	}
+}
 
-  @include mxn.mq(medium) {
-    font-size: var(--font-size-1);
-  }
+.nav-link.avtive {
+	color: var(--clr-heading-main);
+}
+
+.header-link {
+	@extend .nav-link;
+	font-size: var(--font-size-0);
+
+	@include mxn.mq(medium) {
+		font-size: var(--font-size-1);
+	}
+}
+
+.sidebar-link {
+	@extend .nav-link;
+	@extend .row-2;
+	@extend .align-center;
+	font-size: var(--font-size-4);
+	font-family: var(--font-heading);
+
+	@include mxn.mq(medium) {
+		font-size: var(--font-size-5);
+	}
 }

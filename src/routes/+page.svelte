@@ -1,6 +1,7 @@
 <script type="ts">
 	import ProgressSteps from '$lib/components/ProgressStep/ProgressSteps.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
+	import Icon from '@iconify/svelte';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -16,14 +17,11 @@
 </script>
 
 <section>
-	<ProgressSteps steps={stepss} />
-	<button
-		on:click={() =>
-			stepss[1].state === 'inactive'
-				? (stepss[1].state = 'active')
-				: (stepss[1].state = 'inactive')}>a</button
-	>
 	<div class="container-small">
+		<a href="/" class="sidebar-link">
+			<Icon icon="tabler:home" />
+			Stats
+		</a>
 		<h1 class="display-small">Emerald City DAO Components</h1>
 		<div class="row-8">
 			<div class="card column-3">

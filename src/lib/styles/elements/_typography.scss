@@ -1,5 +1,5 @@
 * {
-	font-variation-settings: 'wght' var(--font-weight, 375), 'wdth' var(--font-width, 80);
+	font-variation-settings: 'wght' var(--font-weight, 370), 'wdth' var(--font-width, 80);
 }
 
 body {
@@ -7,7 +7,6 @@ body {
 }
 
 .text {
-	--font-weight: var(--paragraph-medium-regular-font-weight);
 	line-height: var(--paragraph-medium-regular-line-height);
 	font-family: var(--paragraph-small-regular-font-family);
 	color: var(--clr-text-main);
