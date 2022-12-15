@@ -14,3 +14,4 @@ export { default as Breadcrumbs } from './components/Breadcrumbs/Breadcrumbs.sve
 export { default as TooltipIcon } from './components/TooltipIcon/TooltipIcon.svelte';
 export { default as ProgressStep } from './components/ProgressStep/ProgressStep.svelte';
 export { default as ProgressSteps } from './components/ProgressStep/ProgressSteps.svelte';
+export { default as Currency } from './components/Currency/Currency.svelte';

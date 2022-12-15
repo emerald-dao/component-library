@@ -2,6 +2,7 @@
 	import ProgressSteps from '$lib/components/ProgressStep/ProgressSteps.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
 	import Icon from '@iconify/svelte';
+	import Currency from '$lib/components/Currency/Currency.svelte';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -18,10 +19,7 @@
 
 <section>
 	<div class="container-small">
-		<a href="/" class="sidebar-link">
-			<Icon icon="tabler:home" />
-			Stats
-		</a>
+		<Currency amount={5000} currency="FLOW" fontSize="1.2rem" />
 		<h1 class="display-small">Emerald City DAO Components</h1>
 		<div class="row-8">
 			<div class="card column-3">
