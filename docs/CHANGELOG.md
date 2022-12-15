@@ -1,3 +1,10 @@
+# [3.13.0](https://github.com/emerald-dao/component-library/compare/v3.12.0...v3.13.0) (2022-12-15)
+
+
+### Features
+
+* Upgrade to svelte-kit 1.0.0 ([19f76a1](https://github.com/emerald-dao/component-library/commit/19f76a1f097ad099979f596d228121685a335428))
+
 # [3.12.0](https://github.com/emerald-dao/component-library/compare/v3.11.0...v3.12.0) (2022-12-15)
 
 
