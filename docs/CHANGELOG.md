@@ -1,3 +1,10 @@
+# [3.14.0](https://github.com/emerald-dao/component-library/compare/v3.13.0...v3.14.0) (2022-12-16)
+
+
+### Features
+
+* Label color adjustments ([a03b2f2](https://github.com/emerald-dao/component-library/commit/a03b2f24164df2576b05fdac52882f0601b02a36))
+
 # [3.13.0](https://github.com/emerald-dao/component-library/compare/v3.12.0...v3.13.0) (2022-12-15)
 
 
