@@ -15,3 +15,4 @@ export { default as TooltipIcon } from './components/TooltipIcon/TooltipIcon.sve
 export { default as ProgressStep } from './components/ProgressStep/ProgressStep.svelte';
 export { default as ProgressSteps } from './components/ProgressStep/ProgressSteps.svelte';
 export { default as Currency } from './components/Currency/Currency.svelte';
+export { default as ProgressBar } from './components/ProgressBar/ProgressBar.svelte';

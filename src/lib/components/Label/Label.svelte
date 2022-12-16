@@ -55,7 +55,7 @@
 
 	.neutral {
 		background-color: var(--clr-neutral-badge);
-		color: var(--clr-heading-main);
+		color: var(--clr-text-main);
 		border: 1px var(--clr-border-primary) solid;
 	}
 	.neutral.off {
@@ -64,7 +64,8 @@
 
 	.transparent {
 		background-color: transparent;
-		color: var(--clr-heading-main);
+		color: var(--clr-text-main);
+		border: 1px var(--clr-border-primary) solid;
 	}
 	.transparent.off {
 		color: var(--clr-heading-off);

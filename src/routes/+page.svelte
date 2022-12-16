@@ -1,8 +1,9 @@
 <script type="ts">
-	import ProgressSteps from '$lib/components/ProgressStep/ProgressSteps.svelte';
+	import HelperMessage from './../lib/components/Forms/HelperMessage.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
 	import Icon from '@iconify/svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
+	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -19,7 +20,16 @@
 
 <section>
 	<div class="container-small">
-		<Currency amount={5000} currency="FLOW" fontSize="1.2rem" />
+		<Label iconLeft="tabler:home" color="transparent">Hola</Label>
+		<Label iconLeft="tabler:home" color="neutral">Hola</Label>
+		<Label iconLeft="tabler:home" color="transparent" state="off">Hola</Label>
+		<Label iconLeft="tabler:home" color="neutral" state="off">Hola</Label>
+		<ProgressBar
+			value={20}
+			max={100}
+			labelText="Amount Payed"
+			helperText={`$600 FUSD raised of $3000 FUSD`}
+		/>
 		<h1 class="display-small">Emerald City DAO Components</h1>
 		<div class="row-8">
 			<div class="card column-3">
