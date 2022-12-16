@@ -20,6 +20,7 @@
 
 <section>
 	<div class="container-small">
+		<span class="tagline">Welcome to Emerald City</span>
 		<Label iconLeft="tabler:home" color="transparent">Hola</Label>
 		<Label iconLeft="tabler:home" color="neutral">Hola</Label>
 		<Label iconLeft="tabler:home" color="transparent" state="off">Hola</Label>

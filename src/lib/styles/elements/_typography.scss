@@ -167,3 +167,10 @@ li::selection,
 a::selection {
 	background: var(--clr-primary-900);
 }
+
+.tagline {
+	font-family: var(--font-mono);
+	color: var(--clr-tertiary-main);
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+}
