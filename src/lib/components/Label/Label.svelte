@@ -21,6 +21,7 @@
 <style type="scss">
 	div {
 		width: fit-content;
+		height: fit-content;
 		padding: 0.1em 0.8em;
 		border-radius: var(--radius-1);
 		gap: 0.4em;
