@@ -1,3 +1,10 @@
+## [3.16.1](https://github.com/emerald-dao/component-library/compare/v3.16.0...v3.16.1) (2022-12-19)
+
+
+### Bug Fixes
+
+* Fix Label height ([2da787e](https://github.com/emerald-dao/component-library/commit/2da787e028c7c679eca122c402d3e2d2bdfc3228))
+
 # [3.16.0](https://github.com/emerald-dao/component-library/compare/v3.15.0...v3.16.0) (2022-12-19)
 
 
