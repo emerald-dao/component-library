@@ -19,19 +19,15 @@
 </script>
 
 <section>
-	<div class="container-small">
+	<div class="container-small column-6 align-center">
 		<span class="tagline">Welcome to Emerald City</span>
-		<Label iconLeft="tabler:home" color="transparent">Hola</Label>
-		<Label iconLeft="tabler:home" color="neutral">Hola</Label>
-		<Label iconLeft="tabler:home" color="transparent" state="off">Hola</Label>
-		<Label iconLeft="tabler:home" color="neutral" state="off">Hola</Label>
+		<h1 class="display-small">Emerald City DAO Components</h1>
 		<ProgressBar
 			value={20}
 			max={100}
 			labelText="Amount Payed"
 			helperText={`$600 FUSD raised of $3000 FUSD`}
 		/>
-		<h1 class="display-small">Emerald City DAO Components</h1>
 		<div class="row-8">
 			<div class="card column-3">
 				<Label size="x-small" iconLeft="tabler:diamond">Flow Blockchain</Label>
