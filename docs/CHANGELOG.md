@@ -1,3 +1,10 @@
+# [3.15.0](https://github.com/emerald-dao/component-library/compare/v3.14.0...v3.15.0) (2022-12-16)
+
+
+### Features
+
+* Add tagline class ([e0805b0](https://github.com/emerald-dao/component-library/commit/e0805b0be2ff1daa9cb9d87ae48f162f8037e956))
+
 # [3.14.0](https://github.com/emerald-dao/component-library/compare/v3.13.0...v3.14.0) (2022-12-16)
 
 
