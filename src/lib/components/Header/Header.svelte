@@ -3,7 +3,7 @@
 	import type { User } from '../../models/user.interface';
 	import type { NavElement } from '../../models/navElement.interface';
 
-	import { navigating } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 	import { Row } from '@mateoroldos/svelte.bones';
 	import Hamburger from './Hamburger.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
@@ -39,6 +39,8 @@
 	export let user: User | null;
 	export let mobileMenu = true;
 	export let sticky = true;
+
+	console.log($page);
 </script>
 
 <header class:sticky class="container-full">
@@ -62,7 +64,11 @@
 		<nav class="hide-on-mobile-flex">
 			<ul>
 				{#each navElements as navElement}
-					<a class="header-link" href={navElement.url}>
+					<a
+						class="header-link"
+						href={navElement.url}
+						class:active={navElement.url === $page.url.pathname}
+					>
 						<li>{navElement.name}</li>
 					</a>
 				{/each}
