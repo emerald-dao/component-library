@@ -173,4 +173,9 @@ a::selection {
 	color: var(--clr-tertiary-main);
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
+
+	&-small {
+		@extend .tagline; 
+		font-size: var(--tagline-small-font-size);
+	}
 }
