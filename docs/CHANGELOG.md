@@ -1,3 +1,10 @@
+# [3.17.0](https://github.com/emerald-dao/component-library/compare/v3.16.1...v3.17.0) (2022-12-22)
+
+
+### Features
+
+* Add active class tu nav links ([934211b](https://github.com/emerald-dao/component-library/commit/934211b7e5292e4e5c4ddaed9b15da7644a9f3d3))
+
 ## [3.16.1](https://github.com/emerald-dao/component-library/compare/v3.16.0...v3.16.1) (2022-12-19)
 
 
