@@ -16,3 +16,4 @@ export { default as ProgressStep } from './components/ProgressStep/ProgressStep.
 export { default as ProgressSteps } from './components/ProgressStep/ProgressSteps.svelte';
 export { default as Currency } from './components/Currency/Currency.svelte';
 export { default as ProgressBar } from './components/ProgressBar/ProgressBar.svelte';
+export { default as StatsSection } from './components/Sections/StatsSection.svelte';
