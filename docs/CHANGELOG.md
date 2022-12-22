@@ -1,3 +1,10 @@
+# [3.19.0](https://github.com/emerald-dao/component-library/compare/v3.18.0...v3.19.0) (2022-12-22)
+
+
+### Features
+
+* Modal component ([3d72292](https://github.com/emerald-dao/component-library/commit/3d722928b6d7379b14640e961786ca3a7b334d07))
+
 # [3.18.0](https://github.com/emerald-dao/component-library/compare/v3.17.0...v3.18.0) (2022-12-22)
 
 
