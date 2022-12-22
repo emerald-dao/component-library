@@ -5,14 +5,11 @@
 	color: var(--clr-heading-off);
 	text-decoration: none;
 	transition: 0.2s;
+	cursor: pointer;
 
 	&:hover {
 		color: var(--clr-heading-main);
 	}
-}
-
-.nav-link.avtive {
-	color: var(--clr-heading-main);
 }
 
 .header-link {
@@ -34,4 +31,8 @@
 	@include mxn.mq(medium) {
 		font-size: var(--font-size-5);
 	}
+}
+
+.nav-link.active {
+	color: var(--clr-heading-main);
 }
