@@ -1,3 +1,10 @@
+# [3.18.0](https://github.com/emerald-dao/component-library/compare/v3.17.0...v3.18.0) (2022-12-22)
+
+
+### Features
+
+* StatsSection component ([96fcea3](https://github.com/emerald-dao/component-library/commit/96fcea35bd0b8ae9ed9ebb852672590a5b8bf15b))
+
 # [3.17.0](https://github.com/emerald-dao/component-library/compare/v3.16.1...v3.17.0) (2022-12-22)
 
 
