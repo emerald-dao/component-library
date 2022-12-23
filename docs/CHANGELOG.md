@@ -1,3 +1,15 @@
+# [3.20.0](https://github.com/emerald-dao/component-library/compare/v3.19.0...v3.20.0) (2022-12-23)
+
+
+### Bug Fixes
+
+* Change title to span ([3b3eab6](https://github.com/emerald-dao/component-library/commit/3b3eab6edd446a121749d5a1b334ebdd2125db3d))
+
+
+### Features
+
+* PoweredByECDAO Component ([b2ce8c7](https://github.com/emerald-dao/component-library/commit/b2ce8c71c7d412a5cac483182817bf20c8b2668a))
+
 # [3.19.0](https://github.com/emerald-dao/component-library/compare/v3.18.0...v3.19.0) (2022-12-22)
 
 
