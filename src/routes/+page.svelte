@@ -4,7 +4,7 @@
 	import Icon from '@iconify/svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
-	import StatsSection from '$lib/components/Sections/StatsSection.svelte';
+	import PoweredByEcdao from '$lib/components/PoweredByECDAO/PoweredByECDAO.svelte';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -47,7 +47,7 @@
 		</div>
 	</div>
 </section>
-<StatsSection />
+<PoweredByEcdao />
 
 <style type="scss">
 	h1 {

@@ -17,5 +17,7 @@ export { default as ProgressSteps } from './components/ProgressStep/ProgressStep
 export { default as Currency } from './components/Currency/Currency.svelte';
 export { default as ProgressBar } from './components/ProgressBar/ProgressBar.svelte';
 export { default as StatsSection } from './components/Sections/StatsSection.svelte';
+export { default as PoweredByECDAO } from './components/PoweredByECDAO/PoweredByECDAO.svelte';
 export { default as Modal } from './components/Modal/Modal.svelte';
 export { getModal } from './components/Modal/Modal.svelte';
+
