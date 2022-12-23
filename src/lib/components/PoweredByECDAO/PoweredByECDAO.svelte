@@ -1,6 +1,6 @@
 <section>
 	<div class="container-small">
-		<h6 class="tagline-small">Powered by</h6>
+		<span class="tagline-small">Powered by</span>
 		<div class="emerald-container">
 			<img src="/PoweredByLogo.svg" alt="Logo" />
 			<h3 class="w-medium">Emerald City DAO</h3>
@@ -18,7 +18,7 @@
 		padding-block: var(--space-9);
 		padding-right: 2px;
 
-		h6 {
+		span {
 			margin-top: var(--space-4);
 			margin-bottom: -0.4em;
 		}
