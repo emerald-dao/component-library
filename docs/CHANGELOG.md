@@ -1,3 +1,10 @@
+# [3.21.0](https://github.com/emerald-dao/component-library/compare/v3.20.0...v3.21.0) (2022-12-26)
+
+
+### Features
+
+* Range component ([11aa5e9](https://github.com/emerald-dao/component-library/commit/11aa5e9b3c2f10506d52332323b1abaee44731ba))
+
 # [3.20.0](https://github.com/emerald-dao/component-library/compare/v3.19.0...v3.20.0) (2022-12-23)
 
 
