@@ -28,8 +28,7 @@
 
 <style type="scss">
 	.progressbar {
-		background-color: var(--clr-surface-primary);
-		border: 1px var(--clr-border-primary) solid;
+		background-color: var(--clr-surface-secondary);
 		border-radius: var(--radius-0);
 		height: var(--space-3);
 		width: 100%;

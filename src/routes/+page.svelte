@@ -1,4 +1,5 @@
 <script type="ts">
+	import Range from './../lib/components/Range/Range.svelte';
 	import HelperMessage from './../lib/components/Forms/HelperMessage.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
 	import Icon from '@iconify/svelte';
@@ -17,10 +18,13 @@
 			state: 'inactive'
 		}
 	];
+
+	let value = 5;
 </script>
 
 <section>
 	<div class="container-small column-6 align-center">
+		<Range bind:value id="basic-slider" min={0} max={10} suffix="%" />
 		<span class="tagline">Welcome to Emerald City</span>
 		<h1 class="display-small">Emerald City DAO Components</h1>
 		<ProgressBar

@@ -20,4 +20,4 @@ export { default as StatsSection } from './components/Sections/StatsSection.svel
 export { default as PoweredByECDAO } from './components/PoweredByECDAO/PoweredByECDAO.svelte';
 export { default as Modal } from './components/Modal/Modal.svelte';
 export { getModal } from './components/Modal/Modal.svelte';
-
+export { default as Range } from './components/Range/Range.svelte';
