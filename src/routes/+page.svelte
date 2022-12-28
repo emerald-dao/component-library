@@ -1,11 +1,10 @@
 <script type="ts">
 	import Range from './../lib/components/Range/Range.svelte';
-	import HelperMessage from './../lib/components/Forms/HelperMessage.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
-	import Icon from '@iconify/svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 	import PoweredByEcdao from '$lib/components/PoweredByECDAO/PoweredByECDAO.svelte';
+	import StatusCircle from '$lib/components/StatusCircle/StatusCircle.svelte';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -24,7 +23,7 @@
 
 <section>
 	<div class="container-small column-6 align-center">
-		<Currency amount={600000} currency="USD" color="heading" />
+		<Currency amount={600000} currency="USD" color="heading" fontSize="1.4rem" />
 		<Range bind:value id="basic-slider" min={0} max={10} suffix="%" />
 		<span class="tagline">Welcome to Emerald City</span>
 		<h1 class="display-small">Emerald City DAO Components</h1>
