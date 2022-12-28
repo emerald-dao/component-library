@@ -1,6 +1,4 @@
 <script type="ts">
-	import type { StatusStates } from '$lib/models/statusStates.type';
-
 	export let status: 'alert' | 'success' | 'active';
 	export let width: string = '1rem';
 </script>
