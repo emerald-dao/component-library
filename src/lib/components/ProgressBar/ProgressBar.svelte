@@ -1,7 +1,7 @@
 <script type="ts">
 	export let value: number;
 	export let max = 100;
-	export let size = 'md';
+	export let size: 'x-small' | 'small' | 'medium' | 'large' = 'medium';
 	export let labelText = '';
 	export let hideLabel = false;
 	export let helperText = '';
@@ -20,7 +20,7 @@
 		<div class="bar" style={`width: ${(capped / max) * 100}%`} class:full-bar={capped === max} />
 	</div>
 	{#if helperText}
-		<span class="xsmall">
+		<span>
 			{helperText}
 		</span>
 	{/if}
@@ -30,7 +30,6 @@
 	.progressbar {
 		background-color: var(--clr-surface-secondary);
 		border-radius: var(--radius-0);
-		height: var(--space-3);
 		width: 100%;
 
 		.bar {
@@ -42,5 +41,45 @@
 		.full-bar {
 			border-radius: var(--radius-0);
 		}
+	}
+
+	.size {
+		&-x-small {
+			font-size: var(--font-size-0);
+			.progressbar {
+				height: var(--space-1);
+			}
+		}
+
+		&-small {
+			font-size: var(--font-size-1);
+			.progressbar {
+				height: var(--space-2);
+			}
+		}
+
+		&-medium {
+			font-size: var(--font-size-2);
+			.progressbar {
+				height: var(--space-3);
+			}
+		}
+
+		&-large {
+			font-size: var(--font-size-2);
+			.progressbar {
+				height: var(--space-4);
+			}
+		}
+	}
+
+	label {
+		font-size: 1em;
+		line-height: normal;
+	}
+
+	span {
+		font-size: 0.8em;
+		line-height: normal;
 	}
 </style>

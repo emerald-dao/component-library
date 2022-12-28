@@ -32,6 +32,28 @@
 			max={100}
 			labelText="Amount Payed"
 			helperText={`$600 FUSD raised of $3000 FUSD`}
+			size="x-small"
+		/>
+		<ProgressBar
+			value={20}
+			max={100}
+			labelText="Amount Payed"
+			helperText={`$600 FUSD raised of $3000 FUSD`}
+			size="small"
+		/>
+		<ProgressBar
+			value={20}
+			max={100}
+			labelText="Amount Payed"
+			helperText={`$600 FUSD raised of $3000 FUSD`}
+			size="medium"
+		/>
+		<ProgressBar
+			value={20}
+			max={100}
+			labelText="Amount Payed"
+			helperText={`$600 FUSD raised of $3000 FUSD`}
+			size="large"
 		/>
 		<div class="row-8">
 			<div class="card column-3">
