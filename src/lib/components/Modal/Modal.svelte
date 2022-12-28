@@ -85,8 +85,8 @@
 			transition:fly={{ y: 30, duration: 500 }}
 			on:keydown
 		>
-			<div class="close-button" on:click={() => close()} on:keydown>
-				<Icon icon="tabler:x" color="var(--clr-primary-main" />
+			<div class="close-button header-link" on:click={() => close()} on:keydown>
+				<Icon icon="tabler:x" width="1rem" />
 			</div>
 			<div class="modal-content">
 				<slot />
@@ -110,11 +110,12 @@
 
 		.modal {
 			position: relative;
+			border-radius: var(--radius-3);
 
 			.close-button {
 				position: absolute;
-				top: 10%;
-				right: 10%;
+				top: var(--space-3);
+				right: var(--space-3);
 				cursor: pointer;
 			}
 
