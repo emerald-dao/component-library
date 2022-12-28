@@ -1,3 +1,10 @@
+# [3.26.0](https://github.com/emerald-dao/component-library/compare/v3.25.0...v3.26.0) (2022-12-28)
+
+
+### Features
+
+* Make different size of ProgressBar ([48e61c9](https://github.com/emerald-dao/component-library/commit/48e61c9a80da249b3de30409710020dd496bde2a))
+
 # [3.25.0](https://github.com/emerald-dao/component-library/compare/v3.24.0...v3.25.0) (2022-12-28)
 
 
