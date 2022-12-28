@@ -173,12 +173,6 @@
 		width: 100%;
 	}
 
-	.regular {
-	}
-
-	.extended {
-	}
-
 	// States: 'active' | 'disabled' | 'loading' | 'done'
 	.active {
 		cursor: pointer;
