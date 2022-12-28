@@ -7,6 +7,7 @@
 	export let type: 'generic' | 'ghost' | 'transparent' = 'generic';
 	export let color: 'primary' | 'secondary' | 'neutral' = 'primary';
 	export let size: 'x-small' | 'small' | 'medium' | 'large' | 'full-width' = 'medium';
+	export let width: 'full-width' | 'regular' | 'extended' = 'regular';
 	export let download = false;
 	export let form: string | undefined = undefined;
 	export let target: '_blank' | '_self' | '_parent' | '_top' | undefined = undefined;
@@ -22,7 +23,7 @@
 			on:mouseenter
 			on:mouseleave
 			{download}
-			class={`${state} ${color} ${type} ${size}`}
+			class={`${state} ${color} ${type} ${size} width-${width}`}
 		>
 			<slot>Download</slot>
 		</a>
@@ -34,7 +35,7 @@
 			on:focus
 			on:mouseenter
 			on:mouseleave
-			class={`${state} ${color} ${type} ${size}`}
+			class={`${state} ${color} ${type} ${size}  width-${width}`}
 			{target}
 		>
 			<slot>Link Button</slot>
@@ -48,7 +49,7 @@
 		on:mouseenter
 		on:mouseleave
 		{form}
-		class={`${state} ${color} ${type} ${size}`}
+		class={`${state} ${color} ${type} ${size}  width-${width}`}
 	>
 		{#if state === 'loading'}
 			<LoadingSpinner />
@@ -64,8 +65,7 @@
 	a {
 		font-family: var(--ff-mono);
 		--font-weight: 400;
-		padding: 0.4em 1.4em;
-		border-radius: 10px;
+		border-radius: var(--radius-1);
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -92,17 +92,17 @@
 	.primary {
 		background-color: var(--clr-primary-main);
 		color: var(--clr-primary-main);
-		border-color: var(--clr-primary-main);
+		border-color: var(--clr-primary-600);
 	}
 	.secondary {
 		background-color: var(--clr-secondary-main);
 		color: var(--clr-secondary-main);
-		border-color: var(--clr-secondary-main);
+		border-color: var(--clr-secondary-600);
 	}
 	.neutral {
 		background-color: var(--clr-shade-0);
 		color: var(--clr-shade-0);
-		border-color: var(--clr-shade-0);
+		border-color: var(--clr-text-main);
 	}
 
 	// Types: 'generic' | 'ghost' | 'transparent'
@@ -111,7 +111,7 @@
 	}
 	.ghost {
 		background: transparent;
-		border-width: 2px;
+		border-width: 1px;
 		border-style: solid;
 	}
 	.transparent {
@@ -128,21 +128,48 @@
 	// Sizes: 'x-small' | 'small' | 'medium' | 'large' | 'full-width'
 	.x-small {
 		font-size: var(--font-size-0);
-		min-width: 74px;
+		padding-block: 0;
+	}
+	.x-small.width-regular {
+		padding-inline: var(--space-2);
+	}
+	.x-small.width-extended {
+		padding-inline: var(--space-4);
 	}
 	.small {
 		font-size: var(--font-size-1);
-		min-width: 78px;
+		padding-block: var(--space-1);
+	}
+	.small.width-regular {
+		padding-inline: var(--space-3);
+	}
+	.small.width-extended {
+		padding-inline: var(--space-6);
 	}
 	.medium {
 		font-size: var(--font-size-2);
-		min-width: 82px;
+		padding-block: var(--space-1);
+	}
+	.medium.width-regular {
+		padding-inline: var(--space-3);
+	}
+	.medium.width-extended {
+		padding-inline: var(--space-7);
 	}
 	.large {
 		font-size: var(--font-size-3);
-		min-width: 86px;
+		padding-block: var(--space-2);
 	}
-	.full-width {
+	.large.width-regular {
+		padding-inline: var(--space-4);
+	}
+	.large.width-extended {
+		padding-inline: var(--space-9);
+	}
+
+	// Width
+	.full-width,
+	.width-full-width {
 		width: 100%;
 	}
 
