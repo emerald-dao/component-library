@@ -20,14 +20,18 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
-		align-items: center;
+		align-items: flex-start;
 		gap: 0.2em;
 		margin-top: 0.05em;
 
+		span {
+			width: 100%;
+			line-height: normal;
+			overflow-wrap: break-word;
+		}
 		.error {
 			color: var(--clr-alert-main);
 		}
-
 		.loading {
 			color: var(--clr-tertiary-main);
 		}

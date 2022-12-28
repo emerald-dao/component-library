@@ -1,4 +1,5 @@
 <script type="ts">
+	import InputWrapper from '$lib/components/Forms/InputWrapper.svelte';
 	import Range from './../lib/components/Range/Range.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
