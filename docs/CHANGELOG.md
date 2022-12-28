@@ -1,3 +1,10 @@
+## [3.21.2](https://github.com/emerald-dao/component-library/compare/v3.21.1...v3.21.2) (2022-12-28)
+
+
+### Bug Fixes
+
+* Fix close button in Modal ([73d5624](https://github.com/emerald-dao/component-library/commit/73d5624e05a20437cdcf0a7e7ea6af2c47169928))
+
 ## [3.21.1](https://github.com/emerald-dao/component-library/compare/v3.21.0...v3.21.1) (2022-12-28)
 
 
