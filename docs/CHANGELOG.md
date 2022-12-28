@@ -1,3 +1,10 @@
+## [3.27.1](https://github.com/emerald-dao/component-library/compare/v3.27.0...v3.27.1) (2022-12-28)
+
+
+### Bug Fixes
+
+* Fix HelperMessage styling ([b430559](https://github.com/emerald-dao/component-library/commit/b430559547be8fe25056a89e315dea1aaf288ba2))
+
 # [3.27.0](https://github.com/emerald-dao/component-library/compare/v3.26.0...v3.27.0) (2022-12-28)
 
 
