@@ -1,3 +1,10 @@
+# [3.24.0](https://github.com/emerald-dao/component-library/compare/v3.23.0...v3.24.0) (2022-12-28)
+
+
+### Features
+
+* Even better Currency component ([360089d](https://github.com/emerald-dao/component-library/commit/360089d0f65a51086eb849372ad812e8bc6e0f37))
+
 # [3.23.0](https://github.com/emerald-dao/component-library/compare/v3.22.0...v3.23.0) (2022-12-28)
 
 
