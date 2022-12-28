@@ -1,3 +1,15 @@
+# [3.22.0](https://github.com/emerald-dao/component-library/compare/v3.21.2...v3.22.0) (2022-12-28)
+
+
+### Bug Fixes
+
+* Button styles cleanup ([afcb739](https://github.com/emerald-dao/component-library/commit/afcb739ec327d8d9530375f424cd156c0f8cbb6d))
+
+
+### Features
+
+* Button improvements ([6e9f91d](https://github.com/emerald-dao/component-library/commit/6e9f91d9dd690f0125906cd35260230ffec48948))
+
 ## [3.21.2](https://github.com/emerald-dao/component-library/compare/v3.21.1...v3.21.2) (2022-12-28)
 
 
