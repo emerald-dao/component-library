@@ -1,3 +1,10 @@
+# [3.27.0](https://github.com/emerald-dao/component-library/compare/v3.26.0...v3.27.0) (2022-12-28)
+
+
+### Features
+
+* Make status icons optional in InputWrapper ([e33b087](https://github.com/emerald-dao/component-library/commit/e33b08722cd1d50d4a392f97b8dc895094ecb390))
+
 # [3.26.0](https://github.com/emerald-dao/component-library/compare/v3.25.0...v3.26.0) (2022-12-28)
 
 
