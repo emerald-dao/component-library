@@ -1,3 +1,10 @@
+## [3.21.1](https://github.com/emerald-dao/component-library/compare/v3.21.0...v3.21.1) (2022-12-28)
+
+
+### Bug Fixes
+
+* Clean console ([6be7434](https://github.com/emerald-dao/component-library/commit/6be7434e3243624d391f0d1ca6aee0e1c7392752))
+
 # [3.21.0](https://github.com/emerald-dao/component-library/compare/v3.20.0...v3.21.0) (2022-12-26)
 
 
