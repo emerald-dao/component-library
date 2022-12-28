@@ -1,3 +1,15 @@
+# [3.25.0](https://github.com/emerald-dao/component-library/compare/v3.24.0...v3.25.0) (2022-12-28)
+
+
+### Bug Fixes
+
+* Fix import in StatusCircle ([53ff217](https://github.com/emerald-dao/component-library/commit/53ff2179ddc887c02bc5b318f01f25bf52bee669))
+
+
+### Features
+
+* StatusCircle component ([7bc16eb](https://github.com/emerald-dao/component-library/commit/7bc16ebdf5b5434f2d4ecefe77f40835a0d0f04f))
+
 # [3.24.0](https://github.com/emerald-dao/component-library/compare/v3.23.0...v3.24.0) (2022-12-28)
 
 
