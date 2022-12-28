@@ -24,6 +24,7 @@
 
 <section>
 	<div class="container-small column-6 align-center">
+		<Currency amount={600000} currency="USD" color="heading" />
 		<Range bind:value id="basic-slider" min={0} max={10} suffix="%" />
 		<span class="tagline">Welcome to Emerald City</span>
 		<h1 class="display-small">Emerald City DAO Components</h1>
