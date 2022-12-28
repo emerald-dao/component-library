@@ -39,8 +39,6 @@
 	export let user: User | null;
 	export let mobileMenu = true;
 	export let sticky = true;
-
-	console.log($page);
 </script>
 
 <header class:sticky class="container-full">
