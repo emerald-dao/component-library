@@ -11,7 +11,7 @@
 
 <style type="scss">
 	.amount {
-		font-size: 1em;
+		color: var(--amount-text-color);
 	}
 
 	.currency {
