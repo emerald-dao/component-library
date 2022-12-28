@@ -14,6 +14,7 @@
 	export let errors: string[] | [];
 	export let isValid: boolean;
 	export let tooltip: string | undefined = undefined;
+	export let statusIcons = true;
 </script>
 
 {#if label}
@@ -37,15 +38,15 @@
 			{/if}
 		</div>
 	{/if}
-	{#if errors.length > 0}
+	{#if errors.length > 0 && statusIcons}
 		<div class="icon-wrapper-right" transition:fly|local={{ x: 4, duration: 400 }}>
 			<Icon icon="tabler:alert-circle" color="var(--clr-alert-main)" width="0.9em" />
 		</div>
-	{:else if isValid}
+	{:else if isValid && statusIcons}
 		<div class="icon-wrapper-right" transition:fly|local={{ x: 4, duration: 400 }}>
 			<Icon icon="tabler:check" color="var(--clr-success-main)" width="0.9em" />
 		</div>
-	{:else if pending}
+	{:else if pending && statusIcons}
 		<div class="icon-wrapper-right" transition:fly|local={{ x: 4, duration: 400 }}>
 			<Icon icon="tabler:loader-2" color="var(--clr-tertiary-main)" class="rotate" width="0.9em" />
 		</div>
