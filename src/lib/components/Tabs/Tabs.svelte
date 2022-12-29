@@ -1,7 +1,3 @@
-<script context="module">
-	export const TABS = {};
-</script>
-
 <script type="ts">
 	import { setContext, onDestroy } from 'svelte';
 	import { writable, type Writable } from 'svelte/store';
@@ -11,7 +7,7 @@
 	const selectedTab: Writable<HTMLElement | null> = writable(null);
 	const selectedPanel: Writable<HTMLElement | null> = writable(null);
 
-	setContext(TABS, {
+	setContext('TABS', {
 		registerTab: (tab: HTMLElement) => {
 			tabs.push(tab);
 			selectedTab.update((current) => current || tab);
