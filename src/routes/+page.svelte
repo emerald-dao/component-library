@@ -6,6 +6,7 @@
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 	import PoweredByEcdao from '$lib/components/PoweredByECDAO/PoweredByECDAO.svelte';
 	import StatusCircle from '$lib/components/StatusCircle/StatusCircle.svelte';
+	import { Tab, TabPanel, TabList, Tabs } from '$lib/index';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -110,6 +111,26 @@
 				</p>
 			</div>
 		</div>
+
+		<Tabs>
+			<TabList>
+				<Tab>One</Tab>
+				<Tab>Two</Tab>
+				<Tab>Three</Tab>
+			</TabList>
+
+			<TabPanel>
+				<h2>First panel</h2>
+			</TabPanel>
+
+			<TabPanel>
+				<h2>Second panel</h2>
+			</TabPanel>
+
+			<TabPanel>
+				<h2>Third panel</h2>
+			</TabPanel>
+		</Tabs>
 	</div>
 </section>
 <PoweredByEcdao />

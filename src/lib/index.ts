@@ -23,3 +23,6 @@ export { getModal } from './components/Modal/Modal.svelte';
 export { default as Range } from './components/Range/Range.svelte';
 export { default as StatusCircle } from './components/StatusCircle/StatusCircle.svelte';
 export { default as Tabs } from './components/Tabs/Tabs.svelte';
+export { default as TabList } from './components/Tabs/TabList.svelte';
+export { default as Tab } from './components/Tabs/Tab.svelte';
+export { default as TabPanel } from './components/Tabs/TabPanel.svelte';
