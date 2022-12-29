@@ -23,8 +23,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: var(--clr-surface-secondary);
-	border: 1px var(--clr-border-primary) solid;
+	background-color: var(--clr-border-primary);
 	transition: 0.4s;
 	border-radius: 34px;
 }
@@ -34,8 +33,8 @@
 	content: '';
 	height: 16px;
 	width: 16px;
-	left: 2px;
-	bottom: 2px;
+	left: 3px;
+	bottom: 3px;
 	background-color: var(--clr-background-primary);
 	transition: 0.1s;
 	border-radius: 50%;

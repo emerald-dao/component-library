@@ -22,3 +22,4 @@ export { default as Modal } from './components/Modal/Modal.svelte';
 export { getModal } from './components/Modal/Modal.svelte';
 export { default as Range } from './components/Range/Range.svelte';
 export { default as StatusCircle } from './components/StatusCircle/StatusCircle.svelte';
+export { default as Tabs } from './components/Tabs/Tabs.svelte';

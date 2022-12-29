@@ -24,6 +24,31 @@
 
 <section>
 	<div class="container-small column-6 align-center">
+		<label for="a">
+			<input type="checkbox" id="a" />
+			Hola
+		</label>
+		<label for="burn-tokens" class="switch">
+			<input type="checkbox" name="burn-tokens" id="burn-tokens" placeholder="e.g. 1.000.000" />
+			<span class="slider" />
+			<span class="label">Burn tokens</span>
+		</label>
+
+		<div class="column-4 align-start">
+			<label for="html">
+				<input type="radio" id="html" name="fav_language" value="HTML" />
+				HTML
+			</label>
+			<label for="css">
+				<input type="radio" id="css" name="fav_language" value="HTML" />
+				CSS
+			</label>
+			<label for="js">
+				<input type="radio" id="js" name="fav_language" value="HTML" />
+				JS
+			</label>
+		</div>
+
 		<Currency amount={600000} currency="USD" color="heading" fontSize="1.4rem" />
 		<Range bind:value id="basic-slider" min={0} max={10} suffix="%" />
 		<span class="tagline">Welcome to Emerald City</span>
