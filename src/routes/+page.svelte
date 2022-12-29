@@ -6,6 +6,7 @@
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 	import PoweredByEcdao from '$lib/components/PoweredByECDAO/PoweredByECDAO.svelte';
 	import StatusCircle from '$lib/components/StatusCircle/StatusCircle.svelte';
+	import { Tab, TabPanel, TabList, Tabs } from '$lib/index';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -24,6 +25,44 @@
 
 <section>
 	<div class="container-small column-6 align-center">
+		<label for="a">
+			<input type="checkbox" id="a" />
+			Hola
+		</label>
+
+		<label for="burn-tokens" class="switch">
+			<input type="checkbox" name="burn-tokens" id="burn-tokens" placeholder="e.g. 1.000.000" />
+			<span class="slider" />
+			Burn tokens
+		</label>
+
+		<div class="radio-tabs">
+			<label>
+				<input type="radio" id="html" name="fav_language" value="HTML" />
+				HTML
+			</label>
+
+			<label>
+				<input type="radio" id="js" name="fav_language" value="JS" />
+				JS
+			</label>
+		</div>
+
+		<div class="column-4 align-start">
+			<label>
+				<input type="radio" id="html" name="fav_language" value="HTML" />
+				HTML
+			</label>
+			<label>
+				<input type="radio" id="css" name="fav_language" value="CSS" />
+				CSS
+			</label>
+			<label>
+				<input type="radio" id="js" name="fav_language" value="JS" />
+				JS
+			</label>
+		</div>
+
 		<Currency amount={600000} currency="USD" color="heading" fontSize="1.4rem" />
 		<Range bind:value id="basic-slider" min={0} max={10} suffix="%" />
 		<span class="tagline">Welcome to Emerald City</span>
@@ -72,6 +111,26 @@
 				</p>
 			</div>
 		</div>
+
+		<Tabs>
+			<TabList>
+				<Tab>One</Tab>
+				<Tab>Two</Tab>
+				<Tab>Three</Tab>
+			</TabList>
+
+			<TabPanel>
+				<h4>First panel</h4>
+			</TabPanel>
+
+			<TabPanel>
+				<h4>Second panel</h4>
+			</TabPanel>
+
+			<TabPanel>
+				<h4>Third panel</h4>
+			</TabPanel>
+		</Tabs>
 	</div>
 </section>
 <PoweredByEcdao />
