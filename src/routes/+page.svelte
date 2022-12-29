@@ -28,10 +28,11 @@
 			<input type="checkbox" id="a" />
 			Hola
 		</label>
+
 		<label for="burn-tokens" class="switch">
 			<input type="checkbox" name="burn-tokens" id="burn-tokens" placeholder="e.g. 1.000.000" />
 			<span class="slider" />
-			<span class="label">Burn tokens</span>
+			Burn tokens
 		</label>
 
 		<div class="column-4 align-start">
