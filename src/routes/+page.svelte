@@ -6,7 +6,6 @@
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 	import PoweredByEcdao from '$lib/components/PoweredByECDAO/PoweredByECDAO.svelte';
 	import StatusCircle from '$lib/components/StatusCircle/StatusCircle.svelte';
-	import RadioTabs from '$lib/components/RadioTabs/RadioTabs.svelte';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -25,7 +24,6 @@
 
 <section>
 	<div class="container-small column-6 align-center">
-		<!-- <RadioTabs options /> -->
 		<label for="a">
 			<input type="checkbox" id="a" />
 			Hola
@@ -42,10 +40,7 @@
 				<input type="radio" id="html" name="fav_language" value="HTML" />
 				HTML
 			</label>
-			<label>
-				<input type="radio" id="css" name="fav_language" value="CSS" />
-				CSS
-			</label>
+
 			<label>
 				<input type="radio" id="js" name="fav_language" value="JS" />
 				JS
