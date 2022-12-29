@@ -8,13 +8,11 @@ label:has(input[type='checkbox'], input[type='radio']) {
 
 input[type='checkbox'],
 input[type='radio'] {
-	/* Remove most all native input styles */
 	appearance: none;
-	/* For iOS < 15 */
 	background-color: transparent;
-	/* Not removed via appearance */
 	margin: 0;
 	padding: 0;
+	cursor: pointer;
 
 	font: inherit;
 	width: var(--space-6);
@@ -61,4 +59,40 @@ input[type='radio']::before {
 
 input[type='radio']:checked::before {
 	transform: scale(1);
+}
+
+.radio-tabs {
+	display: flex;
+	flex-direction: row;
+
+	label {
+		border-style: solid;
+		border-color: var(--clr-border-primary);
+		border-width: 1px 0 1px 1px;
+		padding: var(--space-2) var(--space-4);
+		transition: 0.2s;
+		--font-weight: 400;
+
+		&:hover {
+			color: var(--clr-heading-main);
+		}
+
+		&:first-child {
+			border-radius: var(--radius-2) 0 0 var(--radius-2);
+		}
+
+		&:last-child {
+			border-radius: 0 var(--radius-2) var(--radius-2) 0;
+			border-width: 1px 1px 1px 1px;
+		}
+
+		&:has(input:checked) {
+			background-color: var(--clr-surface-primary);
+			color: var(--clr-heading-main);
+		}
+
+		input[type='radio'] {
+			display: none;
+		}
+	}
 }
