@@ -120,15 +120,15 @@
 			</TabList>
 
 			<TabPanel>
-				<h2>First panel</h2>
+				<h4>First panel</h4>
 			</TabPanel>
 
 			<TabPanel>
-				<h2>Second panel</h2>
+				<h4>Second panel</h4>
 			</TabPanel>
 
 			<TabPanel>
-				<h2>Third panel</h2>
+				<h4>Third panel</h4>
 			</TabPanel>
 		</Tabs>
 	</div>
