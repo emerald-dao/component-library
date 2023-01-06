@@ -67,10 +67,6 @@
 		align-items: flex-start;
 	}
 
-	label.disabled {
-		color: var(--clr-text-off);
-	}
-
 	.input-wrapper {
 		width: 100%;
 	}

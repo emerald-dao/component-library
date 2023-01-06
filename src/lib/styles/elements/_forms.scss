@@ -38,3 +38,7 @@ input[type='number'] {
 input:disabled {
 	color: var(--clr-text-off);
 }
+
+label.disabled {
+	color: var(--clr-text-off);
+}
