@@ -1,3 +1,10 @@
+# [3.29.0](https://github.com/emerald-dao/component-library/compare/v3.28.0...v3.29.0) (2023-01-06)
+
+
+### Features
+
+* Add InputWrapper and input disabled states ([8f50ca1](https://github.com/emerald-dao/component-library/commit/8f50ca197bfef85c5e732854de6200574a4dbb00))
+
 # [3.28.0](https://github.com/emerald-dao/component-library/compare/v3.27.1...v3.28.0) (2022-12-29)
 
 
