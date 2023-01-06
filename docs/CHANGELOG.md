@@ -1,3 +1,20 @@
+# [3.28.0](https://github.com/emerald-dao/component-library/compare/v3.27.1...v3.28.0) (2022-12-29)
+
+
+### Bug Fixes
+
+* Fix error in import ([d3795e4](https://github.com/emerald-dao/component-library/commit/d3795e4905cded87b8036c32f62217b2375856a4))
+* Reorder checkbox and radio elements ([844e65e](https://github.com/emerald-dao/component-library/commit/844e65e40d9dfb766fd3cdb759e9d0ef7210c70b))
+
+
+### Features
+
+* Checkbox and Radio elements ([626a33a](https://github.com/emerald-dao/component-library/commit/626a33afc85697812c59b8af20cb4f53a639bd9a))
+* radio-tabs elements ([dcc2719](https://github.com/emerald-dao/component-library/commit/dcc2719a6bb993ce2ecdaab2035f5115f66c3b7a))
+* Switch element improvements ([2c7a546](https://github.com/emerald-dao/component-library/commit/2c7a5466a59ea45b0142039f686e7305e92aa80b))
+* Tabs component ([c222d4e](https://github.com/emerald-dao/component-library/commit/c222d4e68ba432a3cbf4909a8355dc0cb975f65c))
+* Tabs component ([e16f576](https://github.com/emerald-dao/component-library/commit/e16f5763ff5c336672ca8d7d832ed2deef398d02))
+
 ## [3.27.1](https://github.com/emerald-dao/component-library/compare/v3.27.0...v3.27.1) (2022-12-28)
 
 
