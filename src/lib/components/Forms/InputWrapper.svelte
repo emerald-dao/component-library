@@ -15,10 +15,11 @@
 	export let isValid: boolean;
 	export let tooltip: string | undefined = undefined;
 	export let statusIcons = true;
+	export let disabled = false;
 </script>
 
 {#if label}
-	<label for={name} class="row-2">
+	<label for={name} class="row-2" class:disabled>
 		{label}
 		{#if tooltip}
 			<TooltipIcon {tooltip} width={0.75} />
@@ -64,6 +65,10 @@
 	label {
 		padding-bottom: 0.2em;
 		align-items: flex-start;
+	}
+
+	label.disabled {
+		color: var(--clr-text-off);
 	}
 
 	.input-wrapper {
