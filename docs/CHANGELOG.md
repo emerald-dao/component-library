@@ -1,3 +1,10 @@
+# [3.30.0](https://github.com/emerald-dao/component-library/compare/v3.29.0...v3.30.0) (2023-01-06)
+
+
+### Features
+
+* All labels change when disabled ([fd709f3](https://github.com/emerald-dao/component-library/commit/fd709f335e52c4c783c8fdcc58ce84d66decfee0))
+
 # [3.29.0](https://github.com/emerald-dao/component-library/compare/v3.28.0...v3.29.0) (2023-01-06)
 
 
