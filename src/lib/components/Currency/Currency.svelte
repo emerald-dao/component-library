@@ -6,7 +6,11 @@
 </script>
 
 <div style={`font-size: ${fontSize}; color: var(--clr-${color}-main)`}>
-	<span class="amount">{`$${amount.toLocaleString()}`}</span>
+	{#if amount >= 0}
+		<span class="amount">{`$${amount.toLocaleString()}`}</span>
+	{:else}
+		<span class="amount">{`-$${Math.abs(amount).toLocaleString()}`}</span>
+	{/if}
 	<span class="currency">{currency}</span>
 </div>
 
