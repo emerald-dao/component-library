@@ -1,3 +1,10 @@
+## [3.30.1](https://github.com/emerald-dao/component-library/compare/v3.30.0...v3.30.1) (2023-01-09)
+
+
+### Bug Fixes
+
+* Fix Currency component to display negative numbers correctly ([d537df1](https://github.com/emerald-dao/component-library/commit/d537df1789fc11b36f7f1aa3b536e2b58bf2452b))
+
 # [3.30.0](https://github.com/emerald-dao/component-library/compare/v3.29.0...v3.30.0) (2023-01-06)
 
 
