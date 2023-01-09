@@ -1,3 +1,10 @@
+## [3.30.2](https://github.com/emerald-dao/component-library/compare/v3.30.1...v3.30.2) (2023-01-09)
+
+
+### Bug Fixes
+
+* Make Currency component accept custom currencies ([57cc136](https://github.com/emerald-dao/component-library/commit/57cc136fc0e8bfeae1db0663c0174049fbdbd29a))
+
 ## [3.30.1](https://github.com/emerald-dao/component-library/compare/v3.30.0...v3.30.1) (2023-01-09)
 
 
