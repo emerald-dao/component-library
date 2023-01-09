@@ -1,6 +1,6 @@
 <script type="ts">
 	export let amount: number;
-	export let currency: 'FLOW' | 'FUSD' | 'USD';
+	export let currency: 'FLOW' | 'FUSD' | 'USD' | string;
 	export let fontSize: string = '1rem';
 	export let color: 'heading' | 'text' = 'text';
 </script>
