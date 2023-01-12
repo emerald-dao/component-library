@@ -1,3 +1,10 @@
+# [3.31.0](https://github.com/emerald-dao/component-library/compare/v3.30.2...v3.31.0) (2023-01-12)
+
+
+### Features
+
+* Container adjustments ([3559349](https://github.com/emerald-dao/component-library/commit/355934917879332bf37994b763839f92ffef31c3))
+
 ## [3.30.2](https://github.com/emerald-dao/component-library/compare/v3.30.1...v3.30.2) (2023-01-09)
 
 
