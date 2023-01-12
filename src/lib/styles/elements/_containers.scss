@@ -1,24 +1,24 @@
 .container {
-  width: min(90%, 75rem);
-  margin-inline: auto;
+	width: min(90%, 72rem);
+	margin-inline: auto;
 
-  &-small {
-    width: min(90%, 50rem);
-    margin-inline: auto;
-  }
+	&-small {
+		width: min(90%, 50rem);
+		margin-inline: auto;
+	}
 
-  &-large {
-    width: min(90%, 85rem);
-    margin-inline: auto;
-  }
+	&-large {
+		width: min(90%, 85rem);
+		margin-inline: auto;
+	}
 
-  &-medium {
-    width: min(90%, 70rem);
-    margin-inline: auto;
-  }
+	&-medium {
+		width: min(90%, 72rem);
+		margin-inline: auto;
+	}
 
-  &-full {
-    width: 90%;
-    margin-inline: auto;
-  }
+	&-full {
+		width: 90%;
+		margin-inline: auto;
+	}
 }

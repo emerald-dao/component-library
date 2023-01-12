@@ -41,7 +41,7 @@
 	export let sticky = true;
 </script>
 
-<header class:sticky class="container-full">
+<header class:sticky class="container">
 	<a href="/">
 		<slot name="logo">
 			<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
