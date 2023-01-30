@@ -1,3 +1,10 @@
+# [3.32.0](https://github.com/emerald-dao/component-library/compare/v3.31.0...v3.32.0) (2023-01-30)
+
+
+### Features
+
+* Add Modal background color prop ([8317f11](https://github.com/emerald-dao/component-library/commit/8317f11a38c78da01f035cf78f58fb0b3ab3d2ec))
+
 # [3.31.0](https://github.com/emerald-dao/component-library/compare/v3.30.2...v3.31.0) (2023-01-12)
 
 
