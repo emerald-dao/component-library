@@ -15,8 +15,6 @@
 	export function getModal(id = '') {
 		return modals[id];
 	}
-
-	export let background: string = 'var(--clr-background-secondary)';
 </script>
 
 <script lang="ts">
@@ -31,6 +29,7 @@
 	let closeCallback: ((retVal?: string) => void) | undefined;
 
 	export let id = '';
+	export let background: string = 'var(--clr-surface-secondary)';
 
 	function keyPress(ev: KeyboardEvent) {
 		//only respond if the current modal is the top one
