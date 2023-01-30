@@ -1,3 +1,10 @@
+## [3.32.1](https://github.com/emerald-dao/component-library/compare/v3.32.0...v3.32.1) (2023-01-30)
+
+
+### Bug Fixes
+
+* Fix Modal background color ([583f7fc](https://github.com/emerald-dao/component-library/commit/583f7fca6c0823191f344dc11bcbe1cf217c165e))
+
 # [3.32.0](https://github.com/emerald-dao/component-library/compare/v3.31.0...v3.32.0) (2023-01-30)
 
 
