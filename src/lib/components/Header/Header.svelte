@@ -45,7 +45,7 @@
 	<a href="/" style="text-decoration: none">
 		<slot name="logo">
 			<div class="row-3 align-center">
-				<img style={'width: 2.4rem'} src="/Vector.svg" alt="Emerald DAO Logo" />
+				<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
 				<span
 					class="w-medium"
 					style="text-decoration: none !important; color: var(--clr-heading-main); font-family: var(--font-heading); font-size: var(--font-size-4);"
