@@ -1,3 +1,10 @@
+## [3.32.2](https://github.com/emerald-dao/component-library/compare/v3.32.1...v3.32.2) (2023-01-30)
+
+
+### Bug Fixes
+
+* Fix Header logo ([2432067](https://github.com/emerald-dao/component-library/commit/24320671235da499ee7f080ce807ef660be5e857))
+
 ## [3.32.1](https://github.com/emerald-dao/component-library/compare/v3.32.0...v3.32.1) (2023-01-30)
 
 
