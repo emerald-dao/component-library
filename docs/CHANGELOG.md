@@ -1,3 +1,10 @@
+# [3.33.0](https://github.com/emerald-dao/component-library/compare/v3.32.2...v3.33.0) (2023-01-31)
+
+
+### Features
+
+* More options for Label ([fd2ee34](https://github.com/emerald-dao/component-library/commit/fd2ee344a726a6ed7d5ca2ae58692c1c4462e851))
+
 ## [3.32.2](https://github.com/emerald-dao/component-library/compare/v3.32.1...v3.32.2) (2023-01-30)
 
 
