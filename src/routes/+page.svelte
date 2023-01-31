@@ -30,6 +30,8 @@
 			Hola
 		</label>
 
+		<Label color="alert" size="xx-small">Holacomova</Label>
+
 		<label for="burn-tokens" class="switch">
 			<input type="checkbox" name="burn-tokens" id="burn-tokens" placeholder="e.g. 1.000.000" />
 			<span class="slider" />
