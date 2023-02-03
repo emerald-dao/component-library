@@ -1,3 +1,66 @@
+# [3.33.0](https://github.com/emerald-dao/component-library/compare/v3.32.2...v3.33.0) (2023-01-31)
+
+
+### Features
+
+* More options for Label ([fd2ee34](https://github.com/emerald-dao/component-library/commit/fd2ee344a726a6ed7d5ca2ae58692c1c4462e851))
+
+## [3.32.2](https://github.com/emerald-dao/component-library/compare/v3.32.1...v3.32.2) (2023-01-30)
+
+
+### Bug Fixes
+
+* Fix Header logo ([2432067](https://github.com/emerald-dao/component-library/commit/24320671235da499ee7f080ce807ef660be5e857))
+
+## [3.32.1](https://github.com/emerald-dao/component-library/compare/v3.32.0...v3.32.1) (2023-01-30)
+
+
+### Bug Fixes
+
+* Fix Modal background color ([583f7fc](https://github.com/emerald-dao/component-library/commit/583f7fca6c0823191f344dc11bcbe1cf217c165e))
+
+# [3.32.0](https://github.com/emerald-dao/component-library/compare/v3.31.0...v3.32.0) (2023-01-30)
+
+
+### Features
+
+* Add Modal background color prop ([8317f11](https://github.com/emerald-dao/component-library/commit/8317f11a38c78da01f035cf78f58fb0b3ab3d2ec))
+
+# [3.31.0](https://github.com/emerald-dao/component-library/compare/v3.30.2...v3.31.0) (2023-01-12)
+
+
+### Features
+
+* Container adjustments ([3559349](https://github.com/emerald-dao/component-library/commit/355934917879332bf37994b763839f92ffef31c3))
+
+## [3.30.2](https://github.com/emerald-dao/component-library/compare/v3.30.1...v3.30.2) (2023-01-09)
+
+
+### Bug Fixes
+
+* Make Currency component accept custom currencies ([57cc136](https://github.com/emerald-dao/component-library/commit/57cc136fc0e8bfeae1db0663c0174049fbdbd29a))
+
+## [3.30.1](https://github.com/emerald-dao/component-library/compare/v3.30.0...v3.30.1) (2023-01-09)
+
+
+### Bug Fixes
+
+* Fix Currency component to display negative numbers correctly ([d537df1](https://github.com/emerald-dao/component-library/commit/d537df1789fc11b36f7f1aa3b536e2b58bf2452b))
+
+# [3.30.0](https://github.com/emerald-dao/component-library/compare/v3.29.0...v3.30.0) (2023-01-06)
+
+
+### Features
+
+* All labels change when disabled ([fd709f3](https://github.com/emerald-dao/component-library/commit/fd709f335e52c4c783c8fdcc58ce84d66decfee0))
+
+# [3.29.0](https://github.com/emerald-dao/component-library/compare/v3.28.0...v3.29.0) (2023-01-06)
+
+
+### Features
+
+* Add InputWrapper and input disabled states ([8f50ca1](https://github.com/emerald-dao/component-library/commit/8f50ca197bfef85c5e732854de6200574a4dbb00))
+
 # [3.28.0](https://github.com/emerald-dao/component-library/compare/v3.27.1...v3.28.0) (2022-12-29)
 
 

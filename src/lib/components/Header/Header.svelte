@@ -41,10 +41,18 @@
 	export let sticky = true;
 </script>
 
-<header class:sticky class="container-full">
-	<a href="/">
+<header class:sticky class="container">
+	<a href="/" style="text-decoration: none">
 		<slot name="logo">
-			<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
+			<div class="row-3 align-center">
+				<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
+				<span
+					class="w-medium"
+					style="text-decoration: none !important; color: var(--clr-heading-main); font-family: var(--font-heading); font-size: var(--font-size-4);"
+				>
+					Emerald City
+				</span>
+			</div>
 		</slot>
 	</a>
 	{#if open && navElements && mobileMenu}
@@ -112,6 +120,7 @@
 		z-index: 99;
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 		justify-content: space-between;
 
 		.hamburger-wrapper {

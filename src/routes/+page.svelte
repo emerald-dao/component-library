@@ -1,5 +1,5 @@
 <script type="ts">
-	import InputWrapper from '$lib/components/Forms/InputWrapper.svelte';
+	import InputWrapper from './../lib/components/Forms/InputWrapper.svelte';
 	import Range from './../lib/components/Range/Range.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
@@ -29,6 +29,8 @@
 			<input type="checkbox" id="a" />
 			Hola
 		</label>
+
+		<Label color="alert" size="xx-small">Holacomova</Label>
 
 		<label for="burn-tokens" class="switch">
 			<input type="checkbox" name="burn-tokens" id="burn-tokens" placeholder="e.g. 1.000.000" />
@@ -61,6 +63,12 @@
 				<input type="radio" id="js" name="fav_language" value="JS" />
 				JS
 			</label>
+		</div>
+
+		<div>
+			<InputWrapper isValid={true} errors={[]} name="aaa" label="Holaa" disabled={true}>
+				<input type="date" disabled />
+			</InputWrapper>
 		</div>
 
 		<Currency amount={600000} currency="USD" color="heading" fontSize="1.4rem" />

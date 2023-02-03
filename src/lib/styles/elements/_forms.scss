@@ -34,3 +34,11 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
 	appearance: textfield;
 }
+
+input:disabled {
+	color: var(--clr-text-off);
+}
+
+label.disabled {
+	color: var(--clr-text-off);
+}

@@ -29,6 +29,7 @@
 	let closeCallback: ((retVal?: string) => void) | undefined;
 
 	export let id = '';
+	export let background: string = 'var(--clr-surface-secondary)';
 
 	function keyPress(ev: KeyboardEvent) {
 		//only respond if the current modal is the top one
@@ -84,6 +85,7 @@
 			on:click|stopPropagation={() => {}}
 			transition:fly={{ y: 30, duration: 500 }}
 			on:keydown
+			style={`background-color: ${background}`}
 		>
 			<div class="close-button header-link" on:click={() => close()} on:keydown>
 				<Icon icon="tabler:x" width="1rem" />
