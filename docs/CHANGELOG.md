@@ -1,3 +1,10 @@
+# [3.34.0](https://github.com/emerald-dao/component-library/compare/v3.33.0...v3.34.0) (2023-02-03)
+
+
+### Features
+
+* add showPercentage prop to ProgressBar ([89470fc](https://github.com/emerald-dao/component-library/commit/89470fce15d680cb340c8768b106d8e28b7ab34e))
+
 # [3.33.0](https://github.com/emerald-dao/component-library/compare/v3.32.2...v3.33.0) (2023-01-31)
 
 
