@@ -29,3 +29,9 @@
 	<slot />
 </main>
 <Footer />
+
+<style>
+	main {
+		background-color: var(--clr-background-secondary);
+	}
+</style>

@@ -13,7 +13,7 @@
 
 <div class="button-wrapper">
 	{#if user?.loggedIn}
-		<Button type="ghost" size="x-small" on:click={unauthenticate}>
+		<Button type="ghost" size="small" on:click={unauthenticate}>
 			<div class="button-content">
 				<div class="conection-circle pulse" />
 				<span class="user">
@@ -29,7 +29,7 @@
 			</div>
 		</Button>
 	{:else}
-		<Button size="small" color="neutral" on:click={logIn}
+		<Button size="small" color="primary" on:click={logIn}
 			>Connect<Icon icon="tabler:wallet" /></Button
 		>
 	{/if}
