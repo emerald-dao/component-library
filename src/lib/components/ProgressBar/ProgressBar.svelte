@@ -1,8 +1,10 @@
 <script type="ts">
 	export let value: number;
-	export let max = 100;
+	export let max: number;
+	export let min: number;
 	export let size: 'x-small' | 'small' | 'medium' | 'large' = 'medium';
 	export let labelText = '';
+	export let showPercentage = false;
 	export let hideLabel = false;
 	export let helperText = '';
 	export let id = 'id-' + Math.random().toString(36);
@@ -13,11 +15,18 @@
 </script>
 
 <div class={`size-${size} column-1`} style={`width: ${width}`}>
-	<label for={id} class:hide-label={hideLabel}>
-		{labelText}
+	<label class="label-wrapper" for={id} class:hide-label={hideLabel}>
+		<span> {labelText}</span>
+		{#if showPercentage}
+			<span class="percentage">{`${Math.round(((capped - min) / (max - min)) * 100)}%`}</span>
+		{/if}
 	</label>
 	<div class="progressbar" {id}>
-		<div class="bar" style={`width: ${(capped / max) * 100}%`} class:full-bar={capped === max} />
+		<div
+			class="bar"
+			style={`width: ${((capped - min) / (max - min)) * 100}%`}
+			class:full-bar={capped === max}
+		/>
 	</div>
 	{#if helperText}
 		<span>
@@ -27,6 +36,16 @@
 </div>
 
 <style type="scss">
+	.label-wrapper {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+
+		.percentage {
+			color: var(--clr-primary-main);
+		}
+	}
+
 	.progressbar {
 		background-color: var(--clr-surface-secondary);
 		border-radius: var(--radius-0);
@@ -74,6 +93,7 @@
 	}
 
 	label {
+		display: inline;
 		font-size: 1em;
 		line-height: normal;
 	}
