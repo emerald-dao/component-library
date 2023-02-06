@@ -1,3 +1,10 @@
+# [3.36.0](https://github.com/emerald-dao/component-library/compare/v3.35.0...v3.36.0) (2023-02-06)
+
+
+### Features
+
+* Add slot for extra commands in header ([7dbc375](https://github.com/emerald-dao/component-library/commit/7dbc3759a13737aaf6b48e4c89bbd6c3d1f526cd))
+
 # [3.35.0](https://github.com/emerald-dao/component-library/compare/v3.34.0...v3.35.0) (2023-02-06)
 
 
