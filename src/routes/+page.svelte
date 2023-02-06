@@ -76,8 +76,9 @@
 		<span class="tagline">Welcome to Emerald City</span>
 		<h1 class="display-small">Emerald City DAO Components</h1>
 		<ProgressBar
-			value={10}
-			max={100}
+			value={21}
+			min={20}
+			max={30}
 			labelText="Amount Payed"
 			helperText={`$600 FUSD raised of $3000 FUSD`}
 			size="x-small"
@@ -85,6 +86,7 @@
 		/>
 		<ProgressBar
 			value={20}
+			min={0}
 			max={100}
 			labelText="Amount Payed"
 			helperText={`$600 FUSD raised of $3000 FUSD`}
@@ -93,6 +95,7 @@
 		/>
 		<ProgressBar
 			value={50}
+			min={0}
 			max={100}
 			labelText="Amount Payed"
 			helperText={`$600 FUSD raised of $3000 FUSD`}
@@ -101,6 +104,7 @@
 		/>
 		<ProgressBar
 			value={20}
+			min={0}
 			max={100}
 			labelText="Amount Payed"
 			helperText={`$600 FUSD raised of $3000 FUSD`}

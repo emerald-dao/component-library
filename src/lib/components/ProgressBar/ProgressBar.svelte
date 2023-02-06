@@ -1,6 +1,7 @@
 <script type="ts">
 	export let value: number;
-	export let max = 100;
+	export let max: number;
+	export let min: number;
 	export let size: 'x-small' | 'small' | 'medium' | 'large' = 'medium';
 	export let labelText = '';
 	export let showPercentage = false;
@@ -17,11 +18,15 @@
 	<label class="label-wrapper" for={id} class:hide-label={hideLabel}>
 		<span> {labelText}</span>
 		{#if showPercentage}
-			<span class="percentage">{`${(capped / max) * 100}%`}</span>
+			<span class="percentage">{`${Math.round(((capped - min) / (max - min)) * 100)}%`}</span>
 		{/if}
 	</label>
 	<div class="progressbar" {id}>
-		<div class="bar" style={`width: ${(capped / max) * 100}%`} class:full-bar={capped === max} />
+		<div
+			class="bar"
+			style={`width: ${((capped - min) / (max - min)) * 100}%`}
+			class:full-bar={capped === max}
+		/>
 	</div>
 	{#if helperText}
 		<span>
