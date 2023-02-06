@@ -1,3 +1,10 @@
+# [3.37.0](https://github.com/emerald-dao/component-library/compare/v3.36.0...v3.37.0) (2023-02-06)
+
+
+### Features
+
+* Header improvements ([06f61b1](https://github.com/emerald-dao/component-library/commit/06f61b1a8e5a288c5c2b96943feecadbbbe88d18))
+
 # [3.36.0](https://github.com/emerald-dao/component-library/compare/v3.35.0...v3.36.0) (2023-02-06)
 
 
