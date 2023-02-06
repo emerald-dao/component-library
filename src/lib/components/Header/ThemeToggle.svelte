@@ -45,8 +45,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0.8em;
-		border-radius: 50%;
 		animation: show 0.5s forwards;
 		animation-delay: 1.5s;
 		z-index: 99;

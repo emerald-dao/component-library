@@ -81,7 +81,7 @@
 			</ul>
 		</nav>
 	{/if}
-	<Row gap={0.5}>
+	<div class="row-4 align-center">
 		<a
 			class="center"
 			href="https://discord.com/invite/emeraldcity"
@@ -91,6 +91,7 @@
 			<Icon icon="tabler:brand-discord" color="var(--clr-text-main)" />
 		</a>
 		<ThemeToggle {themeStore} />
+		<slot name="commands" />
 		<FlowConnect {logIn} {unauthenticate} {user} />
 		{#if navElements && mobileMenu}
 			<div class="hide-on-desktop hamburger-wrapper">
@@ -110,7 +111,7 @@
 			<!-- {/if} -->
 			<!-- {/await} -->
 		{/if}
-	</Row>
+	</div>
 </header>
 
 <style type="scss">
