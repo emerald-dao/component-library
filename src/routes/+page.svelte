@@ -1,4 +1,5 @@
 <script type="ts">
+	import DropZone from './../lib/components/DropZone/DropZone.svelte';
 	import InputWrapper from './../lib/components/Forms/InputWrapper.svelte';
 	import Range from './../lib/components/Range/Range.svelte';
 	import Label from '$lib/components/Label/Label.svelte';
@@ -21,16 +22,20 @@
 	];
 
 	let value = 5;
+	let file: File[];
 </script>
 
 <section>
-	<div class="container-small column-6 align-center">
-		<label for="a">
+	<div class="container-small column-6">
+		<!-- <label for="a">
 			<input type="checkbox" id="a" />
 			Hola
-		</label>
+		</label> -->
 
-		<Label color="alert" size="xx-small">Holacomova</Label>
+		<label for="logo">Logo</label>
+		<DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} />
+
+		<!-- <Label color="alert" size="xx-small">Holacomova</Label>
 
 		<label for="burn-tokens" class="switch">
 			<input type="checkbox" name="burn-tokens" id="burn-tokens" placeholder="e.g. 1.000.000" />
@@ -146,10 +151,11 @@
 				<h4>Third panel</h4>
 			</TabPanel>
 		</Tabs>
+	</div> -->
 	</div>
 </section>
-<PoweredByEcdao />
 
+<!-- <PoweredByEcdao /> -->
 <style type="scss">
 	h1 {
 		--font-weight: var(--font-weight-semibold);

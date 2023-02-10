@@ -80,6 +80,11 @@
 	};
 </script>
 
+<!-- Workaround to make css Container Queries work with Svelte -->
+<svelte:head>
+	<link rel="stylesheet" href="/src/lib/styles/container-queries.css" />
+</svelte:head>
+
 <div
 	class="drop-zone border-primary"
 	class:drop-zone-over={dragOver}
@@ -90,10 +95,11 @@
 	on:drop={handleFileDrop}
 	on:click={() => inputRef.click()}
 	ondragover="return false"
+	on:keydown
 >
 	{#if bindValue && bindValue.length > 2}
 		<div class="empty-all-wrapper">
-			<div on:click|stopPropagation={deleteAllFiles} class="empty-all-icon-wrapper">
+			<div on:click|stopPropagation={deleteAllFiles} class="empty-all-icon-wrapper" on:keydown>
 				<Icon icon="tabler:trash" color="var(--clr-font-text-soft)" />
 			</div>
 		</div>
@@ -104,8 +110,10 @@
 			<DropZoneFile {file} on:deleteFile={() => deleteFile(index)} />
 		{/each}
 	{:else}
-		<Icon icon="tabler:cloud-upload" color="var(--clr-text-off)" />
-		<span class="prompt text-small">{placeholder}</span>
+		<div class="column-3 align-center">
+			<Icon icon="tabler:cloud-upload" color="var(--clr-text-off)" />
+			<span class="prompt text-small">{placeholder}</span>
+		</div>
 	{/if}
 	{#if errors.length > 0}
 		{#each errors as error}
@@ -143,14 +151,12 @@
 
 <style type="scss">
 	.drop-zone {
-		width: 100%;
 		height: auto;
 		max-height: 16rem;
 		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-		align-items: center;
 		justify-content: flex-start;
 		text-align: center;
 		cursor: pointer;
