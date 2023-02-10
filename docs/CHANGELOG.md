@@ -1,3 +1,10 @@
+# [3.38.0](https://github.com/emerald-dao/component-library/compare/v3.37.0...v3.38.0) (2023-02-10)
+
+
+### Features
+
+* DropZone improvements ([8148ba6](https://github.com/emerald-dao/component-library/commit/8148ba6d1711e5aad6f9960b185f196937820c64))
+
 # [3.37.0](https://github.com/emerald-dao/component-library/compare/v3.36.0...v3.37.0) (2023-02-06)
 
 
