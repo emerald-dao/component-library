@@ -1,3 +1,10 @@
+## [3.38.1](https://github.com/emerald-dao/component-library/compare/v3.38.0...v3.38.1) (2023-02-10)
+
+
+### Bug Fixes
+
+* Fix container-queries.css imports ([843dda4](https://github.com/emerald-dao/component-library/commit/843dda4f233b4920aa74ff5d2120e24764321e72))
+
 # [3.38.0](https://github.com/emerald-dao/component-library/compare/v3.37.0...v3.38.0) (2023-02-10)
 
 
