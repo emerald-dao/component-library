@@ -1,7 +1,7 @@
 <script type="ts">
 	export let value: number;
 	export let max: number;
-	export let min: number;
+	export let min: number = 0;
 	export let size: 'x-small' | 'small' | 'medium' | 'large' = 'medium';
 	export let labelText = '';
 	export let showPercentage = false;
