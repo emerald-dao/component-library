@@ -1,3 +1,10 @@
+# [3.39.0](https://github.com/emerald-dao/component-library/compare/v3.38.2...v3.39.0) (2023-02-13)
+
+
+### Features
+
+* Add required signal to InputWrapper ([4f38f91](https://github.com/emerald-dao/component-library/commit/4f38f9100bd6eb17908ebab8531190239543a9ca))
+
 ## [3.38.2](https://github.com/emerald-dao/component-library/compare/v3.38.1...v3.38.2) (2023-02-13)
 
 
