@@ -11,11 +11,12 @@
 	export let iconText: string | null = null;
 	export let pending: boolean = false;
 	export let pendingMessage: string[] = [];
-	export let errors: string[] | [];
+	export let errors: string[] | [] = [];
 	export let isValid: boolean;
 	export let tooltip: string | undefined = undefined;
 	export let statusIcons = true;
 	export let disabled = false;
+	export let required = false;
 </script>
 
 {#if label}
@@ -23,6 +24,9 @@
 		{label}
 		{#if tooltip}
 			<TooltipIcon {tooltip} width={0.75} />
+		{/if}
+		{#if required}
+			<span class="required">*</span>
 		{/if}
 	</label>
 {/if}

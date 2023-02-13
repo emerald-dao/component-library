@@ -35,6 +35,10 @@
 		<label for="logo">Logo</label>
 		<DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} />
 
+		<InputWrapper name="hola" isValid={true} label="algo">
+			<input type="text" name="hola" required />
+		</InputWrapper>
+
 		<!-- <Label color="alert" size="xx-small">Holacomova</Label>
 
 		<label for="burn-tokens" class="switch">
