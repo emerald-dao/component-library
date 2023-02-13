@@ -1,3 +1,10 @@
+## [3.38.2](https://github.com/emerald-dao/component-library/compare/v3.38.1...v3.38.2) (2023-02-13)
+
+
+### Bug Fixes
+
+* Make ProgressBar min 0 by default ([f1efa69](https://github.com/emerald-dao/component-library/commit/f1efa695797c091bcdc0fb4814b4eadc36273359))
+
 ## [3.38.1](https://github.com/emerald-dao/component-library/compare/v3.38.0...v3.38.1) (2023-02-10)
 
 
