@@ -1,0 +1,13 @@
+select {
+	background-color: transparent;
+	color: var(--clr-text-main);
+	padding: 2px var(--space-2);
+	border-radius: var(--radius-1);
+	cursor: pointer;
+	border: 1px var(--clr-border-primary) solid;
+	transition: 0.3s;
+
+	&:hover {
+		border: 1px var(--clr-text-main) solid;
+	}
+}

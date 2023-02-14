@@ -26,3 +26,6 @@ export { default as Tabs } from './components/Tabs/Tabs.svelte';
 export { default as TabList } from './components/Tabs/TabList.svelte';
 export { default as Tab } from './components/Tabs/Tab.svelte';
 export { default as TabPanel } from './components/Tabs/TabPanel.svelte';
+export { default as Avatar } from './components/Avatar/Avatar.svelte';
+export { default as Dropdown } from './components/Dropdown/Dropdown.svelte';
+export { default as CopyToClipboard } from './components/CopyToClipboard/CopyToClipboard.svelte';

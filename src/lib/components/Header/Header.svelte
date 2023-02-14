@@ -1,15 +1,14 @@
 <script type="ts">
 	import { fly } from 'svelte/transition';
-	import type { User } from '../../models/user.interface';
-	import type { NavElement } from '../../models/navElement.interface';
-
+	import type { User } from '$lib/models/user.interface';
+	import type { NavElement } from '$lib/models/navElement.interface';
 	import { navigating, page } from '$app/stores';
-	import { Row } from '@mateoroldos/svelte.bones';
 	import Hamburger from './Hamburger.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import Icon from '@iconify/svelte';
 	import { FlowConnect } from '$lib/index';
 	import type { Writable } from 'svelte/store';
+	import Avatar from '../Avatar/Avatar.svelte';
 
 	// let findProfile = getFindProfile($user?.addr);
 
@@ -39,6 +38,7 @@
 	export let user: User | null;
 	export let mobileMenu = true;
 	export let sticky = true;
+	export let avatarDropDownNavigation: NavElement[] = [];
 </script>
 
 <header class:sticky>
@@ -93,22 +93,20 @@
 			</a>
 			<ThemeToggle {themeStore} />
 			<slot name="commands" />
-			<FlowConnect {logIn} {unauthenticate} {user} />
+			{#if !user?.addr}
+				<FlowConnect {logIn} {unauthenticate} {user} />
+			{/if}
 			{#if navElements && mobileMenu}
 				<div class="hide-on-desktop hamburger-wrapper">
 					<Hamburger {open} onClick={hamburgerClick} />
 				</div>
 			{/if}
-			{#if user?.loggedIn}
+			{#if user?.addr}
 				<!-- {#await findProfile then profile} -->
 				<!-- {#if profile}
 							<img class="avatar" src={profile.avatar} alt={`${profile.name} avatar`} />
 						{:else} -->
-				<img
-					class="avatar"
-					src="https://cdn-icons-png.flaticon.com/512/168/168734.png"
-					alt="default avatar"
-				/>
+				<Avatar navigation={avatarDropDownNavigation} {unauthenticate} walletAddress={user?.addr} />
 				<!-- {/if} -->
 				<!-- {/await} -->
 			{/if}
@@ -162,13 +160,6 @@
 						flex-direction: row;
 					}
 				}
-			}
-
-			.avatar {
-				height: 38px;
-				width: 38px;
-				border-radius: 0.6rem;
-				border: 2px var(--clr-primary-main) solid;
 			}
 		}
 	}

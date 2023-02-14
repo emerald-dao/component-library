@@ -1,19 +1,20 @@
 <script type="ts">
+	import type { User } from '$lib/models/user.interface';
 	import Icon from '@iconify/svelte';
 	import { Button } from '../../index';
 
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
 	// TODO: apply user interface
-	export let user: any;
+	export let user: User | null;
 	// export let getFindProfile: (address: string) => Promise<string>;
 
 	// let findProfile = getFindProfile(user?.addr);
 </script>
 
 <div class="button-wrapper">
-	{#if user?.loggedIn}
-		<Button type="ghost" size="small" on:click={unauthenticate}>
+	{#if user?.addr}
+		<Button type="ghost" color="neutral" size="x-small" on:click={unauthenticate}>
 			<div class="button-content">
 				<div class="conection-circle pulse" />
 				<span class="user">
