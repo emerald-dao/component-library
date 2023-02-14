@@ -26,7 +26,10 @@
 </script>
 
 <Dropdown width="250px">
-	<img class="avatar" src="/new-avatar.png" alt="default avatar" slot="parent" />
+	<div slot="parent" class="avatar-wrapper">
+		<img class="avatar" src="/new-avatar.png" alt="default avatar" />
+		<div class="connection-circle pulse" />
+	</div>
 	<div slot="dropdown" class="dropdown-wrapper">
 		<p class="small welcome-text">
 			<span class="off"> Welcome, </span>
@@ -50,7 +53,7 @@
 				{#each navigation as nav}
 					<a
 						data-sveltekit-preload-data="hover"
-						class="header-link row-2 align-center"
+						class="header-link row-2 align-center large"
 						href={nav.url}
 					>
 						{#if nav.icon}
@@ -99,11 +102,25 @@
 <div id="clipboard" />
 
 <style type="scss">
-	.avatar {
-		height: 38px;
-		width: 38px;
-		border-radius: 50%;
-		border: 1px var(--clr-text-main) solid;
+	.avatar-wrapper {
+		position: relative;
+
+		.connection-circle {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 11px;
+			width: 11px;
+			border-radius: 50%;
+			background-color: var(--clr-primary-main);
+			border: 2px var(--clr-background-primary) solid;
+		}
+
+		.avatar {
+			height: 38px;
+			width: 38px;
+			border-radius: 50%;
+		}
 	}
 
 	.dropdown-wrapper {
@@ -154,5 +171,9 @@
 
 	span.on {
 		color: var(--clr-heading-secondary);
+	}
+
+	.header-link.large {
+		font-size: var(--font-size-2);
 	}
 </style>
