@@ -1,3 +1,10 @@
+## [3.41.1](https://github.com/emerald-dao/component-library/compare/v3.41.0...v3.41.1) (2023-02-14)
+
+
+### Bug Fixes
+
+* Avatar Dropdown fix ([51a050a](https://github.com/emerald-dao/component-library/commit/51a050a9622d00cb67d1444d2766fa8ab7ee59f6))
+
 # [3.41.0](https://github.com/emerald-dao/component-library/compare/v3.40.0...v3.41.0) (2023-02-14)
 
 
