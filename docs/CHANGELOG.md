@@ -1,3 +1,10 @@
+# [3.40.0](https://github.com/emerald-dao/component-library/compare/v3.39.0...v3.40.0) (2023-02-14)
+
+
+### Features
+
+* Avatar dropdown ([ce0e02d](https://github.com/emerald-dao/component-library/commit/ce0e02d5d164cdb6085c81f88ad5a14cbffbeca1))
+
 # [3.39.0](https://github.com/emerald-dao/component-library/compare/v3.38.2...v3.39.0) (2023-02-13)
 
 
