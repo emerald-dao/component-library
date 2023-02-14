@@ -1,3 +1,10 @@
+# [3.41.0](https://github.com/emerald-dao/component-library/compare/v3.40.0...v3.41.0) (2023-02-14)
+
+
+### Features
+
+* More Avatar improvements ([13dd760](https://github.com/emerald-dao/component-library/commit/13dd760198c7e4e440980dfe1bd832145897db52))
+
 # [3.40.0](https://github.com/emerald-dao/component-library/compare/v3.39.0...v3.40.0) (2023-02-14)
 
 
