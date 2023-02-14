@@ -53,7 +53,7 @@
 				{#each navigation as nav}
 					<a
 						data-sveltekit-preload-data="hover"
-						class="header-link row-2 align-center large"
+						class="header-link row-2 align-center"
 						href={nav.url}
 					>
 						{#if nav.icon}
@@ -171,9 +171,5 @@
 
 	span.on {
 		color: var(--clr-heading-secondary);
-	}
-
-	.header-link.large {
-		font-size: var(--font-size-2);
 	}
 </style>
