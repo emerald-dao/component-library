@@ -39,6 +39,8 @@
 	export let mobileMenu = true;
 	export let sticky = true;
 	export let avatarDropDownNavigation: NavElement[] = [];
+	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
+	export let transactionInProgress: boolean;
 </script>
 
 <header class:sticky>
@@ -101,15 +103,21 @@
 					<Hamburger {open} onClick={hamburgerClick} />
 				</div>
 			{/if}
-			{#if user?.addr}
-				<!-- {#await findProfile then profile} -->
-				<!-- {#if profile}
+			<!-- {#if user?.addr} -->
+			<!-- {#await findProfile then profile} -->
+			<!-- {#if profile}
 							<img class="avatar" src={profile.avatar} alt={`${profile.name} avatar`} />
 						{:else} -->
-				<Avatar navigation={avatarDropDownNavigation} {unauthenticate} walletAddress={user?.addr} />
-				<!-- {/if} -->
-				<!-- {/await} -->
-			{/if}
+			<Avatar
+				navigation={avatarDropDownNavigation}
+				{unauthenticate}
+				walletAddress={user?.addr}
+				{network}
+				{transactionInProgress}
+			/>
+			<!-- {/if} -->
+			<!-- {/await} -->
+			<!-- {/if} -->
 		</div>
 	</div>
 </header>

@@ -8,6 +8,7 @@
 	import PoweredByEcdao from '$lib/components/PoweredByECDAO/PoweredByECDAO.svelte';
 	import StatusCircle from '$lib/components/StatusCircle/StatusCircle.svelte';
 	import { Tab, TabPanel, TabList, Tabs } from '$lib/index';
+	import FlowConnection from '$lib/components/FlowConnection/FlowConnection.svelte';
 
 	let stepss = [
 		{ name: 'a', state: 'inactive' },
@@ -31,6 +32,8 @@
 			<input type="checkbox" id="a" />
 			Hola
 		</label> -->
+
+		<FlowConnection network="testnet" transactionInProgress={true} />
 
 		<label for="logo">Logo</label>
 		<DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} />

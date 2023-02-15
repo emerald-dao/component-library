@@ -29,3 +29,4 @@ export { default as TabPanel } from './components/Tabs/TabPanel.svelte';
 export { default as Avatar } from './components/Avatar/Avatar.svelte';
 export { default as Dropdown } from './components/Dropdown/Dropdown.svelte';
 export { default as CopyToClipboard } from './components/CopyToClipboard/CopyToClipboard.svelte';
+export { default as FlowConnection } from './components/FlowConnection/FlowConnection.svelte';

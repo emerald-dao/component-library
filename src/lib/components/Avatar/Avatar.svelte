@@ -4,9 +4,11 @@
 	import CopyToClipboard from '../CopyToClipboard/CopyToClipboard.svelte';
 	import Dropdown from '../Dropdown/Dropdown.svelte';
 	import type { NavElement } from '$lib/models/navElement.interface';
+	import FlowConnection from '../FlowConnection/FlowConnection.svelte';
 
-	export let walletAddress: string | undefined;
-	export let flowConnectedNet: 'mainnet' | 'testnet' = 'mainnet';
+	export let walletAddress: string;
+	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
+	export let transactionInProgress: boolean;
 	export let navigation: NavElement[] = [];
 	export let unauthenticate: () => void;
 
@@ -25,31 +27,33 @@
 	};
 </script>
 
-<Dropdown width="250px">
+<Dropdown width="250px" rightOffset="-1rem">
 	<div slot="parent" class="avatar-wrapper">
 		<img class="avatar" src="/new-avatar.png" alt="default avatar" />
-		<div class="connection-circle pulse" />
+		<div class="connection-circle pulse" class:clr-tertiary={transactionInProgress} />
 	</div>
 	<div slot="dropdown" class="dropdown-wrapper">
-		<p class="small welcome-text">
-			<span class="off"> Welcome, </span>
-			<span
-				class="on address row-1 align-center"
-				on:click={copyToClipboard}
-				on:keydown
-				on:mouseenter={toggleAddressHover}
-				on:mouseleave={toggleAddressHover}
-			>
-				{walletAddress}
-				{#if walletAddressHover}
-					<div transition:fade|local={{ duration: 140 }} class="center">
-						<Icon icon="tabler:copy" color="var(--clr-text-off)" />
-					</div>
-				{/if}
-			</span>
-		</p>
+		<div class="dropdown-section">
+			<p class="small">
+				<span class="off"> Welcome, </span>
+				<span
+					class="on address row-1 align-center"
+					on:click={copyToClipboard}
+					on:keydown
+					on:mouseenter={toggleAddressHover}
+					on:mouseleave={toggleAddressHover}
+				>
+					{walletAddress}
+					{#if walletAddressHover}
+						<div transition:fade|local={{ duration: 140 }} class="center">
+							<Icon icon="tabler:copy" color="var(--clr-text-off)" />
+						</div>
+					{/if}
+				</span>
+			</p>
+		</div>
 		{#if navigation.length > 0}
-			<div class="commands column-1">
+			<div class="dropdown-section column-1">
 				{#each navigation as nav}
 					<a
 						data-sveltekit-preload-data="hover"
@@ -64,16 +68,10 @@
 				{/each}
 			</div>
 		{/if}
-		<div class="flow-connection-wrapper column-1">
-			<p class="small">
-				<span class="off xsmall"> Flow Blockchain connection: </span>
-				<span class="green row-1 align-center">
-					<Icon icon="svg-spinners:3-dots-move" />
-					{`Connected to ${flowConnectedNet}`}
-				</span>
-			</p>
+		<div class="dropdown-section">
+			<FlowConnection {network} {transactionInProgress} />
 		</div>
-		<div class="commands column-1">
+		<div class="dropdown-section column-1">
 			<a
 				class="header-link row-2 align-center"
 				href="https://find.xyz"
@@ -93,10 +91,12 @@
 				Ask for help
 			</a>
 		</div>
-		<a class="disconnect header-link row-2 align-center" href="" on:click={unauthenticate}>
-			<Icon icon="tabler:plug-connected-x" />
-			Disconnect
-		</a>
+		<div class="dropdown-section">
+			<a class="disconnect header-link row-2 align-center" href="" on:click={unauthenticate}>
+				<Icon icon="tabler:plug-connected-x" />
+				Disconnect
+			</a>
+		</div>
 	</div>
 </Dropdown>
 <div id="clipboard" />
@@ -114,6 +114,10 @@
 			border-radius: 50%;
 			background-color: var(--clr-primary-main);
 			border: 2px var(--clr-background-primary) solid;
+
+			&.clr-tertiary {
+				background-color: var(--clr-tertiary-main);
+			}
 		}
 
 		.avatar {
@@ -124,44 +128,21 @@
 	}
 
 	.dropdown-wrapper {
-		.welcome-text {
-			margin-bottom: var(--space-4);
-			display: flex;
-			flex-direction: column;
+		.dropdown-section {
+			padding: var(--space-4) var(--space-6);
+			border-top: 1px var(--clr-surface-secondary) solid;
+
+			&:first-child {
+				border-top: none;
+			}
 
 			.address {
 				cursor: pointer;
 			}
-		}
 
-		.commands {
-			margin-top: var(--space-4);
-			padding-top: var(--space-4);
-
-			&:has(:first-child) {
-				border-top: 1px var(--clr-surface-secondary) solid;
+			.disconnect:hover {
+				color: var(--clr-alert-main);
 			}
-		}
-	}
-
-	.flow-connection-wrapper {
-		font-size: var(--font-size-1);
-		margin-top: var(--space-4);
-		padding-top: var(--space-4);
-		border-top: 1px var(--clr-surface-secondary) solid;
-
-		.green {
-			color: var(--clr-primary-main);
-		}
-	}
-
-	.disconnect {
-		border-top: 1px var(--clr-surface-secondary) solid;
-		padding-top: var(--space-3);
-		margin-top: var(--space-4);
-
-		&:hover {
-			color: var(--clr-alert-main);
 		}
 	}
 

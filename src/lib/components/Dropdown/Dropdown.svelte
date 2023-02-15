@@ -2,6 +2,8 @@
 	import { fly } from 'svelte/transition';
 
 	export let width: string = 'fit-content';
+	export let rightOffset = '0rem';
+	export let topOffset = '3rem';
 
 	let dropDown: HTMLDivElement;
 	let displayDropDown = false;
@@ -27,7 +29,7 @@
 			class="drop-down"
 			bind:this={dropDown}
 			transition:fly|local={{ y: 15, duration: 400 }}
-			style={`width: ${width}`}
+			style={`width: ${width}; top: ${topOffset}; right: ${rightOffset};`}
 		>
 			<slot name="dropdown" />
 		</div>
@@ -44,12 +46,9 @@
 
 		.drop-down {
 			position: absolute;
-			top: 2.9rem;
-			right: 0;
 			width: fit-content;
 			background-color: var(--clr-surface-primary);
 			border-radius: var(--radius-2);
-			padding: var(--space-5) var(--space-6);
 			z-index: 999;
 			border: 1px var(--clr-border-primary) solid;
 		}
