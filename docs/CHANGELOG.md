@@ -1,3 +1,10 @@
+# [3.42.0](https://github.com/emerald-dao/component-library/compare/v3.41.1...v3.42.0) (2023-02-15)
+
+
+### Features
+
+* Dropdown improvements ([e6703f5](https://github.com/emerald-dao/component-library/commit/e6703f58af44e0473ab13a9057efe77da6435046))
+
 ## [3.41.1](https://github.com/emerald-dao/component-library/compare/v3.41.0...v3.41.1) (2023-02-14)
 
 
