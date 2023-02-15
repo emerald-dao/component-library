@@ -103,21 +103,21 @@
 					<Hamburger {open} onClick={hamburgerClick} />
 				</div>
 			{/if}
-			<!-- {#if user?.addr} -->
-			<!-- {#await findProfile then profile} -->
-			<!-- {#if profile}
+			{#if user?.addr}
+				<!-- {#await findProfile then profile} -->
+				<!-- {#if profile}
 							<img class="avatar" src={profile.avatar} alt={`${profile.name} avatar`} />
 						{:else} -->
-			<Avatar
-				navigation={avatarDropDownNavigation}
-				{unauthenticate}
-				walletAddress={user?.addr}
-				{network}
-				{transactionInProgress}
-			/>
-			<!-- {/if} -->
-			<!-- {/await} -->
-			<!-- {/if} -->
+				<Avatar
+					navigation={avatarDropDownNavigation}
+					{unauthenticate}
+					walletAddress={user.addr}
+					{network}
+					{transactionInProgress}
+				/>
+				<!-- {/if} -->
+				<!-- {/await} -->
+			{/if}
 		</div>
 	</div>
 </header>
