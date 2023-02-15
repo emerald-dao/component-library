@@ -1,3 +1,10 @@
+## [3.42.1](https://github.com/emerald-dao/component-library/compare/v3.42.0...v3.42.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* Header correction ([db37fb2](https://github.com/emerald-dao/component-library/commit/db37fb213d99309ad01e8aa84493b7b517f3ec03))
+
 # [3.42.0](https://github.com/emerald-dao/component-library/compare/v3.41.1...v3.42.0) (2023-02-15)
 
 
