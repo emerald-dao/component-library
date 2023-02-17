@@ -1,3 +1,10 @@
+## [3.43.1](https://github.com/emerald-dao/component-library/compare/v3.43.0...v3.43.1) (2023-02-17)
+
+
+### Bug Fixes
+
+* Scrollbar colors ([50390d4](https://github.com/emerald-dao/component-library/commit/50390d47e3da6317bb314f810c66afa392ef6497))
+
 # [3.43.0](https://github.com/emerald-dao/component-library/compare/v3.42.1...v3.43.0) (2023-02-17)
 
 
