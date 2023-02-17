@@ -1,3 +1,10 @@
+# [3.43.0](https://github.com/emerald-dao/component-library/compare/v3.42.1...v3.43.0) (2023-02-17)
+
+
+### Features
+
+* Allow to change Header and Footer log href ([6d646d1](https://github.com/emerald-dao/component-library/commit/6d646d10b1f3a6b054c415d7d6c17fcb57512360))
+
 ## [3.42.1](https://github.com/emerald-dao/component-library/compare/v3.42.0...v3.42.1) (2023-02-15)
 
 
