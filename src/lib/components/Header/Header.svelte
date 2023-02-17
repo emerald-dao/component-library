@@ -41,11 +41,12 @@
 	export let avatarDropDownNavigation: NavElement[] = [];
 	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
 	export let transactionInProgress: boolean;
+	export let logoHref = '/';
 </script>
 
 <header class:sticky>
 	<div class="container">
-		<a href="/" style="text-decoration: none">
+		<a href={logoHref} style="text-decoration: none">
 			<slot name="logo">
 				<div class="row-3 align-center">
 					<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />

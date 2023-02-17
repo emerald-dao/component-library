@@ -48,11 +48,12 @@
 			icon: 'tabler:brand-discord'
 		}
 	];
+	export let logoHref = '/';
 </script>
 
 <footer class="section">
 	<div class="container">
-		<a href="/">
+		<a href={logoHref}>
 			<slot name="logo">
 				<img class="logo" src="/ec-logo.png" alt="Emerald DAO Logo" />
 			</slot>
