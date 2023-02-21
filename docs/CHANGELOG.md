@@ -1,3 +1,10 @@
+# [3.44.0](https://github.com/emerald-dao/component-library/compare/v3.43.1...v3.44.0) (2023-02-21)
+
+
+### Features
+
+* Improve clickable cards ([b371f7d](https://github.com/emerald-dao/component-library/commit/b371f7dff8586d45164f5600eb1b1ca47e33419c))
+
 ## [3.43.1](https://github.com/emerald-dao/component-library/compare/v3.43.0...v3.43.1) (2023-02-17)
 
 
