@@ -1,17 +1,45 @@
 @use '../utils/utility-classes';
 
 .card {
-  border-radius: var(--radius-4);
-  padding: var(--space-8);
-  @extend .border-primary;
+	border-radius: var(--radius-4);
+	padding: var(--space-8);
+	transition: 0.4s;
+	@extend .border-primary;
 
-  &-primary {
-    @extend .card;
-    background-color: var(--clr-surface-primary);
-  }
+	&-primary {
+		@extend .card;
+		background-color: var(--clr-surface-primary);
+	}
 
-  &-secondary {
-    @extend .card;
-    background-color: var(--clr-surface-secondary);
-  }
+	&-secondary {
+		@extend .card;
+		background-color: var(--clr-surface-secondary);
+	}
+}
+
+a > .card,
+a.card {
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--clr-surface-primary);
+	}
+}
+
+a > .card-primary,
+a.card-primary {
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--clr-surface-secondary);
+	}
+}
+
+a > .card-secondary,
+a.card-secondary {
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--clr-surface-primary);
+	}
 }

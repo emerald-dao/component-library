@@ -28,6 +28,9 @@
 
 <section>
 	<div class="container-small column-6">
+		<a href="dwd" class="card-primary">
+			<h1>Card</h1>
+		</a>
 		<!-- <label for="a">
 			<input type="checkbox" id="a" />
 			Hola
