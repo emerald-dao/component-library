@@ -1,3 +1,10 @@
+# [3.45.0](https://github.com/emerald-dao/component-library/compare/v3.44.0...v3.45.0) (2023-02-23)
+
+
+### Features
+
+* Change labelColor in InputWrapper ([cf66a2c](https://github.com/emerald-dao/component-library/commit/cf66a2c73e56f738d2843f2ed75c629f31fbfca3))
+
 # [3.44.0](https://github.com/emerald-dao/component-library/compare/v3.43.1...v3.44.0) (2023-02-21)
 
 
