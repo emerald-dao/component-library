@@ -1,3 +1,10 @@
+# [3.46.0](https://github.com/emerald-dao/component-library/compare/v3.45.0...v3.46.0) (2023-02-23)
+
+
+### Features
+
+* Add more padding to label in InputWrapper ([a4f1aba](https://github.com/emerald-dao/component-library/commit/a4f1aba3ea72b71b6e681a93f3d3f54fd617b72e))
+
 # [3.45.0](https://github.com/emerald-dao/component-library/compare/v3.44.0...v3.45.0) (2023-02-23)
 
 
