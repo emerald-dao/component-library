@@ -68,7 +68,7 @@
 
 <style type="scss">
 	label {
-		padding-bottom: 0.2em;
+		padding-bottom: 6px;
 		align-items: flex-start;
 	}
 
