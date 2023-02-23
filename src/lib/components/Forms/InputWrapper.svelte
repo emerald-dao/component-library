@@ -17,10 +17,11 @@
 	export let statusIcons = true;
 	export let disabled = false;
 	export let required = false;
+	export let labelColor = 'var(--clr-text-main)';
 </script>
 
 {#if label}
-	<label for={name} class="row-2" class:disabled>
+	<label for={name} class="row-2" class:disabled style={`color: ${labelColor}`}>
 		{label}
 		{#if tooltip}
 			<TooltipIcon {tooltip} width={0.75} />
