@@ -7,15 +7,19 @@
 	import PoweredByEcdao from '$lib/components/PoweredByECDAO/PoweredByECDAO.svelte';
 	import StatusCircle from '$lib/components/StatusCircle/StatusCircle.svelte';
 	import { Tab, TabPanel, TabList, Tabs } from '$lib/index';
+	import Accordion from '$lib/components/Accordion/Accordion.svelte';
 
 	let stepss = [
-		{ name: 'a', state: 'inactive' },
 		{
-			name: 'a',
+			name: 'First step',
+			state: 'active'
+		},
+		{
+			name: 'Second step',
 			state: 'inactive'
 		},
 		{
-			name: 'a',
+			name: 'Third step',
 			state: 'inactive'
 		}
 	];
@@ -148,6 +152,23 @@
 		</Tabs>
 	</div>
 </section>
+<section class="container">
+	{#each stepss as step, i}
+		<div class="accordion">
+			<Accordion>
+				<div slot="header" class="text">
+					<div class="index-and-title-wrapper">
+						<span class="small">{i + 1}</span>
+						<span class="title-wrapper">{step.name}</span>
+					</div>
+				</div>
+				<div slot="open" class="details column-2">
+					<a href="/" target="_blank" rel="noreferrer" class="header-link"> {step.state} </a>
+				</div>
+			</Accordion>
+		</div>
+	{/each}
+</section>
 <PoweredByEcdao />
 
 <style type="scss">
@@ -155,5 +176,25 @@
 		--font-weight: var(--font-weight-semibold);
 		text-align: center;
 		margin-bottom: 2rem;
+	}
+	.accordion {
+		display: flex;
+		flex-direction: column;
+		border-inline: var(--border-width-primary) var(--clr-border-primary) solid;
+		border-bottom: var(--border-width-primary) var(--clr-border-primary) solid;
+
+		background: var(--clr-surface-primary);
+
+		&:first-child {
+			border-radius: var(--space-5) var(--space-5) 0 0;
+			border-top: var(--border-width-primary) var(--clr-border-primary) solid;
+		}
+
+		&:last-child {
+			border-radius: 0 0 var(--space-5) var(--space-5);
+		}
+		.text {
+			padding: var(--space-7);
+		}
 	}
 </style>
