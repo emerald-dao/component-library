@@ -9,11 +9,13 @@
 
 	export let name: string;
 	export let placeholder = 'Drop file here or click to upload';
-	export let accept: string; // Type of file we accept
+	export let accept: string[]; // Type of file we accept, it should be an array of this format: ['image/png', 'image/jpeg']
 	export let maxAmountOfFiles: number;
 	export let isDirectory: boolean = false;
 	export let multiple: boolean = false;
 	export let bindValue: File[] | undefined;
+
+	const acceptString = accept.join(', ');
 
 	export let validationFunction: (files: File[] | FileList) => Promise<true> = async (
 		files: File[] | FileList
@@ -23,7 +25,7 @@
 				reject(['Too many files']);
 			} else {
 				for (let i = 0; i < files.length; i++) {
-					if (files[i].type != accept) {
+					if (!accept.includes(files[i].type)) {
 						reject(['Wrong file type']);
 					}
 					continue;
@@ -134,7 +136,7 @@
 			{name}
 			id={name}
 			type="file"
-			{accept}
+			accept={acceptString}
 			bind:this={inputRef}
 			on:input={onInput}
 			{multiple}
@@ -145,7 +147,7 @@
 			{name}
 			id={name}
 			type="file"
-			{accept}
+			accept={acceptString}
 			bind:this={inputRef}
 			on:input={onInput}
 			{multiple}
