@@ -1,3 +1,10 @@
+# [3.47.0](https://github.com/emerald-dao/component-library/compare/v3.46.0...v3.47.0) (2023-02-24)
+
+
+### Features
+
+* Make DropZone accept various file types ([f5abe00](https://github.com/emerald-dao/component-library/commit/f5abe0034c8e4fb4f044447c3e02c10c8b235ffc))
+
 # [3.46.0](https://github.com/emerald-dao/component-library/compare/v3.45.0...v3.46.0) (2023-02-23)
 
 
