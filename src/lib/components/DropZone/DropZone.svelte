@@ -9,11 +9,13 @@
 
 	export let name: string;
 	export let placeholder = 'Drop file here or click to upload';
-	export let accept: string; // Type of file we accept
+	export let accept: string[]; // Type of file we accept, it should be an array of this format: ['image/png', 'image/jpeg']
 	export let maxAmountOfFiles: number;
 	export let isDirectory: boolean = false;
 	export let multiple: boolean = false;
 	export let bindValue: File[] | undefined;
+
+	const acceptString = accept.join(', ');
 
 	export let validationFunction: (files: File[] | FileList) => Promise<true> = async (
 		files: File[] | FileList
@@ -23,7 +25,7 @@
 				reject(['Too many files']);
 			} else {
 				for (let i = 0; i < files.length; i++) {
-					if (files[i].type != accept) {
+					if (!accept.includes(files[i].type)) {
 						reject(['Wrong file type']);
 					}
 					continue;
@@ -80,6 +82,15 @@
 	};
 </script>
 
+<!-- Workaround to make css Container Queries work with Svelte -->
+<svelte:head>
+	<link rel="stylesheet" href="./src/lib/styles/container-queries.css" />
+	<link
+		rel="stylesheet"
+		href="./node-modules/@emerald-dao/component-library/styles/container-queries.css"
+	/>
+</svelte:head>
+
 <div
 	class="drop-zone border-primary"
 	class:drop-zone-over={dragOver}
@@ -90,10 +101,11 @@
 	on:drop={handleFileDrop}
 	on:click={() => inputRef.click()}
 	ondragover="return false"
+	on:keydown
 >
 	{#if bindValue && bindValue.length > 2}
 		<div class="empty-all-wrapper">
-			<div on:click|stopPropagation={deleteAllFiles} class="empty-all-icon-wrapper">
+			<div on:click|stopPropagation={deleteAllFiles} class="empty-all-icon-wrapper" on:keydown>
 				<Icon icon="tabler:trash" color="var(--clr-font-text-soft)" />
 			</div>
 		</div>
@@ -104,8 +116,10 @@
 			<DropZoneFile {file} on:deleteFile={() => deleteFile(index)} />
 		{/each}
 	{:else}
-		<Icon icon="tabler:cloud-upload" color="var(--clr-text-off)" />
-		<span class="prompt text-small">{placeholder}</span>
+		<div class="column-3 align-center">
+			<Icon icon="tabler:cloud-upload" color="var(--clr-text-off)" />
+			<span class="prompt text-small">{placeholder}</span>
+		</div>
 	{/if}
 	{#if errors.length > 0}
 		{#each errors as error}
@@ -122,7 +136,7 @@
 			{name}
 			id={name}
 			type="file"
-			{accept}
+			accept={acceptString}
 			bind:this={inputRef}
 			on:input={onInput}
 			{multiple}
@@ -133,7 +147,7 @@
 			{name}
 			id={name}
 			type="file"
-			{accept}
+			accept={acceptString}
 			bind:this={inputRef}
 			on:input={onInput}
 			{multiple}
@@ -143,14 +157,12 @@
 
 <style type="scss">
 	.drop-zone {
-		width: 100%;
 		height: auto;
 		max-height: 16rem;
 		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-		align-items: center;
 		justify-content: flex-start;
 		text-align: center;
 		cursor: pointer;

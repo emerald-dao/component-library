@@ -1,3 +1,129 @@
+# [3.47.0](https://github.com/emerald-dao/component-library/compare/v3.46.0...v3.47.0) (2023-02-24)
+
+
+### Features
+
+* Make DropZone accept various file types ([f5abe00](https://github.com/emerald-dao/component-library/commit/f5abe0034c8e4fb4f044447c3e02c10c8b235ffc))
+
+# [3.46.0](https://github.com/emerald-dao/component-library/compare/v3.45.0...v3.46.0) (2023-02-23)
+
+
+### Features
+
+* Add more padding to label in InputWrapper ([a4f1aba](https://github.com/emerald-dao/component-library/commit/a4f1aba3ea72b71b6e681a93f3d3f54fd617b72e))
+
+# [3.45.0](https://github.com/emerald-dao/component-library/compare/v3.44.0...v3.45.0) (2023-02-23)
+
+
+### Features
+
+* Change labelColor in InputWrapper ([cf66a2c](https://github.com/emerald-dao/component-library/commit/cf66a2c73e56f738d2843f2ed75c629f31fbfca3))
+
+# [3.44.0](https://github.com/emerald-dao/component-library/compare/v3.43.1...v3.44.0) (2023-02-21)
+
+
+### Features
+
+* Improve clickable cards ([b371f7d](https://github.com/emerald-dao/component-library/commit/b371f7dff8586d45164f5600eb1b1ca47e33419c))
+
+## [3.43.1](https://github.com/emerald-dao/component-library/compare/v3.43.0...v3.43.1) (2023-02-17)
+
+
+### Bug Fixes
+
+* Scrollbar colors ([50390d4](https://github.com/emerald-dao/component-library/commit/50390d47e3da6317bb314f810c66afa392ef6497))
+
+# [3.43.0](https://github.com/emerald-dao/component-library/compare/v3.42.1...v3.43.0) (2023-02-17)
+
+
+### Features
+
+* Allow to change Header and Footer log href ([6d646d1](https://github.com/emerald-dao/component-library/commit/6d646d10b1f3a6b054c415d7d6c17fcb57512360))
+
+## [3.42.1](https://github.com/emerald-dao/component-library/compare/v3.42.0...v3.42.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* Header correction ([db37fb2](https://github.com/emerald-dao/component-library/commit/db37fb213d99309ad01e8aa84493b7b517f3ec03))
+
+# [3.42.0](https://github.com/emerald-dao/component-library/compare/v3.41.1...v3.42.0) (2023-02-15)
+
+
+### Features
+
+* Dropdown improvements ([e6703f5](https://github.com/emerald-dao/component-library/commit/e6703f58af44e0473ab13a9057efe77da6435046))
+
+## [3.41.1](https://github.com/emerald-dao/component-library/compare/v3.41.0...v3.41.1) (2023-02-14)
+
+
+### Bug Fixes
+
+* Avatar Dropdown fix ([51a050a](https://github.com/emerald-dao/component-library/commit/51a050a9622d00cb67d1444d2766fa8ab7ee59f6))
+
+# [3.41.0](https://github.com/emerald-dao/component-library/compare/v3.40.0...v3.41.0) (2023-02-14)
+
+
+### Features
+
+* More Avatar improvements ([13dd760](https://github.com/emerald-dao/component-library/commit/13dd760198c7e4e440980dfe1bd832145897db52))
+
+# [3.40.0](https://github.com/emerald-dao/component-library/compare/v3.39.0...v3.40.0) (2023-02-14)
+
+
+### Features
+
+* Avatar dropdown ([ce0e02d](https://github.com/emerald-dao/component-library/commit/ce0e02d5d164cdb6085c81f88ad5a14cbffbeca1))
+
+# [3.39.0](https://github.com/emerald-dao/component-library/compare/v3.38.2...v3.39.0) (2023-02-13)
+
+
+### Features
+
+* Add required signal to InputWrapper ([4f38f91](https://github.com/emerald-dao/component-library/commit/4f38f9100bd6eb17908ebab8531190239543a9ca))
+
+## [3.38.2](https://github.com/emerald-dao/component-library/compare/v3.38.1...v3.38.2) (2023-02-13)
+
+
+### Bug Fixes
+
+* Make ProgressBar min 0 by default ([f1efa69](https://github.com/emerald-dao/component-library/commit/f1efa695797c091bcdc0fb4814b4eadc36273359))
+
+## [3.38.1](https://github.com/emerald-dao/component-library/compare/v3.38.0...v3.38.1) (2023-02-10)
+
+
+### Bug Fixes
+
+* Fix container-queries.css imports ([843dda4](https://github.com/emerald-dao/component-library/commit/843dda4f233b4920aa74ff5d2120e24764321e72))
+
+# [3.38.0](https://github.com/emerald-dao/component-library/compare/v3.37.0...v3.38.0) (2023-02-10)
+
+
+### Features
+
+* DropZone improvements ([8148ba6](https://github.com/emerald-dao/component-library/commit/8148ba6d1711e5aad6f9960b185f196937820c64))
+
+# [3.37.0](https://github.com/emerald-dao/component-library/compare/v3.36.0...v3.37.0) (2023-02-06)
+
+
+### Features
+
+* Header improvements ([06f61b1](https://github.com/emerald-dao/component-library/commit/06f61b1a8e5a288c5c2b96943feecadbbbe88d18))
+
+# [3.36.0](https://github.com/emerald-dao/component-library/compare/v3.35.0...v3.36.0) (2023-02-06)
+
+
+### Features
+
+* Add slot for extra commands in header ([7dbc375](https://github.com/emerald-dao/component-library/commit/7dbc3759a13737aaf6b48e4c89bbd6c3d1f526cd))
+
+# [3.35.0](https://github.com/emerald-dao/component-library/compare/v3.34.0...v3.35.0) (2023-02-06)
+
+
+### Features
+
+* add min prop to ProgressBar ([05a1fb1](https://github.com/emerald-dao/component-library/commit/05a1fb1a6d50d37e64458156de1e8058745c09f1))
+
 # [3.34.0](https://github.com/emerald-dao/component-library/compare/v3.33.0...v3.34.0) (2023-02-03)
 
 

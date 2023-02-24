@@ -1,19 +1,20 @@
 <script type="ts">
+	import type { User } from '$lib/models/user.interface';
 	import Icon from '@iconify/svelte';
 	import { Button } from '../../index';
 
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
 	// TODO: apply user interface
-	export let user: any;
+	export let user: User | null;
 	// export let getFindProfile: (address: string) => Promise<string>;
 
 	// let findProfile = getFindProfile(user?.addr);
 </script>
 
 <div class="button-wrapper">
-	{#if user?.loggedIn}
-		<Button type="ghost" size="x-small" on:click={unauthenticate}>
+	{#if user?.addr}
+		<Button type="ghost" color="neutral" size="x-small" on:click={unauthenticate}>
 			<div class="button-content">
 				<div class="conection-circle pulse" />
 				<span class="user">
@@ -29,7 +30,7 @@
 			</div>
 		</Button>
 	{:else}
-		<Button size="small" color="neutral" on:click={logIn}
+		<Button size="small" color="primary" on:click={logIn}
 			>Connect<Icon icon="tabler:wallet" /></Button
 		>
 	{/if}
@@ -51,24 +52,6 @@
 				height: 0.5em;
 				border-radius: 99999px;
 				background-color: var(--clr-primary-main);
-			}
-			@keyframes pulse {
-				70% {
-					-webkit-transform: scale(1.1);
-					box-shadow: 0 0 0 1px var(--clr-primary-main-t6);
-				}
-				100% {
-					-webkit-transform: scale(1);
-					box-shadow: 0 0 0 3px var(--clr-primary-main-t9);
-				}
-			}
-
-			.pulse {
-				animation-name: pulse;
-				animation-iteration-count: infinite;
-				animation-timing-function: ease-out;
-				animation-duration: 1.3s;
-				animation-delay: 2s;
 			}
 
 			.disconnect {

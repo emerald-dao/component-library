@@ -6,6 +6,7 @@
 	import '@emerald-dao/design-system/build/variables-light.css';
 	import '@emerald-dao/design-system/build/variables.css';
 	import '$lib/styles/app.scss';
+	import Icon from '@iconify/svelte';
 
 	let navElements = [
 		{
@@ -21,8 +22,16 @@
 	];
 </script>
 
-<Header themeStore={theme} {navElements} />
+<Header themeStore={theme} {navElements}>
+	<Icon icon="material-symbols:translate-rounded" slot="commands" />
+</Header>
 <main>
 	<slot />
 </main>
 <Footer />
+
+<style>
+	main {
+		background-color: var(--clr-background-secondary);
+	}
+</style>
