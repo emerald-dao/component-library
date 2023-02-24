@@ -1,3 +1,10 @@
+# [3.48.0](https://github.com/emerald-dao/component-library/compare/v3.47.0...v3.48.0) (2023-02-24)
+
+
+### Features
+
+* Accordion component ([8e0199c](https://github.com/emerald-dao/component-library/commit/8e0199cc04d9bdf91351c645173721bee006f24a))
+
 # [3.47.0](https://github.com/emerald-dao/component-library/compare/v3.46.0...v3.47.0) (2023-02-24)
 
 
