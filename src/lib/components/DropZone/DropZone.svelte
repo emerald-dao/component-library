@@ -9,7 +9,7 @@
 
 	export let name: string;
 	export let placeholder = 'Drop file here or click to upload';
-	export let accept: string[]; // Type of file we accept, it should be an array of this format: ['image/png', 'image/jpeg']
+	export let accept: string[] = []; // Type of file we accept, it should be an array of this format: ['image/png', 'image/jpeg']
 	export let maxAmountOfFiles: number;
 	export let isDirectory: boolean = false;
 	export let multiple: boolean = false;
@@ -100,7 +100,6 @@
 	on:dragend={() => (dragOver = false)}
 	on:drop={handleFileDrop}
 	on:click={() => inputRef.click()}
-	ondragover="return false"
 	on:keydown
 >
 	{#if bindValue && bindValue.length > 2}
