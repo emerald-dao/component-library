@@ -1,3 +1,10 @@
+## [3.48.2](https://github.com/emerald-dao/component-library/compare/v3.48.1...v3.48.2) (2023-02-25)
+
+
+### Bug Fixes
+
+* DropZone join error ([d226de1](https://github.com/emerald-dao/component-library/commit/d226de1c7aa98e3805026eb1c3521ae647462026))
+
 ## [3.48.1](https://github.com/emerald-dao/component-library/compare/v3.48.0...v3.48.1) (2023-02-24)
 
 
