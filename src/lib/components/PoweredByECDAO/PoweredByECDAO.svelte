@@ -1,15 +1,15 @@
 <section>
-	<div class="container-small">
+	<a class="card container-small" href="https://docs.ecdao.org/" target="_blank" rel="noreferrer">
 		<span class="tagline-small">Powered by</span>
 		<div class="emerald-container">
 			<img src="/PoweredByLogo.svg" alt="Logo" />
 			<h3 class="w-medium">Emerald City DAO</h3>
 		</div>
-	</div>
+	</a>
 </section>
 
 <style type="scss">
-	.container-small {
+	.card {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
