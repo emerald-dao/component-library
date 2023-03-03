@@ -1,3 +1,10 @@
+# [3.49.0](https://github.com/emerald-dao/component-library/compare/v3.48.2...v3.49.0) (2023-03-03)
+
+
+### Features
+
+* PoweredByEcdao link to ecdao.org ([e1ddc86](https://github.com/emerald-dao/component-library/commit/e1ddc86f7856e548839241a78cd669a5d448c043))
+
 ## [3.48.2](https://github.com/emerald-dao/component-library/compare/v3.48.1...v3.48.2) (2023-02-25)
 
 
