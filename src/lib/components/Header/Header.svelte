@@ -6,9 +6,9 @@
 	import Hamburger from './Hamburger.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import Icon from '@iconify/svelte';
-	import { FlowConnect } from '$lib/index';
 	import type { Writable } from 'svelte/store';
 	import Avatar from '../Avatar/Avatar.svelte';
+	import FlowConnect from '../FlowConnect/FlowConnect.svelte';
 
 	// let findProfile = getFindProfile($user?.addr);
 
