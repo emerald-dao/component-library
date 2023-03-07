@@ -42,6 +42,8 @@
 	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
 	export let transactionInProgress: boolean;
 	export let logoHref = '/';
+	export let logoUrl: string;
+	export let logoText: string;
 </script>
 
 <header class:sticky>
@@ -49,12 +51,12 @@
 		<a href={logoHref} style="text-decoration: none">
 			<slot name="logo">
 				<div class="row-3 align-center">
-					<img style={'width: 3rem'} src="/ec-logo.png" alt="Emerald DAO Logo" />
+					<img style={'width: 3rem'} src={logoUrl} alt="Emerald DAO Logo" />
 					<span
 						class="w-medium"
 						style="text-decoration: none !important; color: var(--clr-heading-main); font-family: var(--font-heading); font-size: var(--font-size-4);"
 					>
-						Emerald City
+						{logoText}
 					</span>
 				</div>
 			</slot>

@@ -22,13 +22,13 @@
 	];
 </script>
 
-<Header themeStore={theme} {navElements}>
+<Header themeStore={theme} {navElements} logoUrl="/EA_Iso.svg" logoText="Emerald City">
 	<Icon icon="material-symbols:translate-rounded" slot="commands" />
 </Header>
 <main>
 	<slot />
 </main>
-<Footer />
+<Footer logoUrl="/EA_Iso.svg" logoText="Emerald City" />
 
 <style>
 	main {

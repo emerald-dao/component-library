@@ -49,13 +49,23 @@
 		}
 	];
 	export let logoHref = '/';
+	export let logoUrl: string;
+	export let logoText: string;
 </script>
 
 <footer class="section">
 	<div class="container">
 		<a href={logoHref}>
 			<slot name="logo">
-				<img class="logo" src="/ec-logo.png" alt="Emerald DAO Logo" />
+				<div class="row-3 align-center">
+					<img class="logo" src={logoUrl} alt="Emerald DAO Logo" />
+					<span
+						class="w-medium"
+						style="text-decoration: none !important; color: var(--clr-heading-main); font-family: var(--font-heading); font-size: var(--font-size-4);"
+					>
+						{logoText}
+					</span>
+				</div>
 			</slot>
 		</a>
 		<nav>
