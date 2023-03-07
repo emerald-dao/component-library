@@ -1,3 +1,10 @@
+# [3.50.0](https://github.com/emerald-dao/component-library/compare/v3.49.0...v3.50.0) (2023-03-07)
+
+
+### Features
+
+* Logo correction in Header and Footer ([6a7ce18](https://github.com/emerald-dao/component-library/commit/6a7ce18289b88838bf61963b7779a888e80048a3))
+
 # [3.49.0](https://github.com/emerald-dao/component-library/compare/v3.48.2...v3.49.0) (2023-03-03)
 
 
