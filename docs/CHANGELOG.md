@@ -1,3 +1,10 @@
+## [3.50.1](https://github.com/emerald-dao/component-library/compare/v3.50.0...v3.50.1) (2023-03-07)
+
+
+### Bug Fixes
+
+* Import bug in Header ([dad1f6b](https://github.com/emerald-dao/component-library/commit/dad1f6b8ebb99bd58b08af327df258f84c5c6505))
+
 # [3.50.0](https://github.com/emerald-dao/component-library/compare/v3.49.0...v3.50.0) (2023-03-07)
 
 
