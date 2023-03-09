@@ -1,3 +1,10 @@
+## [3.51.1](https://github.com/emerald-dao/component-library/compare/v3.51.0...v3.51.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* ProgressBar label alignment ([327fe5f](https://github.com/emerald-dao/component-library/commit/327fe5f8fffe64dbac6e9275d6eb6c9627bae2ac))
+
 # [3.51.0](https://github.com/emerald-dao/component-library/compare/v3.50.1...v3.51.0) (2023-03-09)
 
 
