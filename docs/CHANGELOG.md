@@ -1,3 +1,10 @@
+## [3.51.3](https://github.com/emerald-dao/component-library/compare/v3.51.2...v3.51.3) (2023-03-09)
+
+
+### Bug Fixes
+
+* Default logo and text for footer ([5939efb](https://github.com/emerald-dao/component-library/commit/5939efb159157a4d71f92ba1d46912fc5b93a6a7))
+
 ## [3.51.2](https://github.com/emerald-dao/component-library/compare/v3.51.1...v3.51.2) (2023-03-09)
 
 
