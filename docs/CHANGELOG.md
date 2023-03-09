@@ -1,3 +1,10 @@
+## [3.51.2](https://github.com/emerald-dao/component-library/compare/v3.51.1...v3.51.2) (2023-03-09)
+
+
+### Bug Fixes
+
+* Add default LogoUrl and LogoText ([1bda958](https://github.com/emerald-dao/component-library/commit/1bda9581b06cb1cae660aefaa796268ee76d4dac))
+
 ## [3.51.1](https://github.com/emerald-dao/component-library/compare/v3.51.0...v3.51.1) (2023-03-09)
 
 
