@@ -45,7 +45,9 @@
 	.label-wrapper {
 		display: flex;
 		width: 100%;
+		flex-direction: row;
 		justify-content: space-between;
+		align-items: flex-end;
 
 		.percentage {
 			color: var(--clr-primary-main);
