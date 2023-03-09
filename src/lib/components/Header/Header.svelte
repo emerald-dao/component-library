@@ -42,8 +42,8 @@
 	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
 	export let transactionInProgress: boolean;
 	export let logoHref = '/';
-	export let logoUrl: string;
-	export let logoText: string;
+	export let logoUrl: string = '/ec-logo.png';
+	export let logoText: string = 'Emerald City';
 </script>
 
 <header class:sticky>
