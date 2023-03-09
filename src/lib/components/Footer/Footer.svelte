@@ -49,8 +49,8 @@
 		}
 	];
 	export let logoHref = '/';
-	export let logoUrl: string;
-	export let logoText: string;
+	export let logoUrl: string = '/ec-logo.png';
+	export let logoText: string = 'Emerald City';
 </script>
 
 <footer class="section">
