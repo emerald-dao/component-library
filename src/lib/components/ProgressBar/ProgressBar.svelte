@@ -16,7 +16,13 @@
 
 <div class={`size-${size} column-1`} style={`width: ${width}`}>
 	<label class="label-wrapper" for={id} class:hide-label={hideLabel}>
-		<span> {labelText}</span>
+		{#if labelText.length > 0}
+			<span>{labelText}</span>
+		{:else}
+			<div>
+				<slot name="label" />
+			</div>
+		{/if}
 		{#if showPercentage}
 			<span class="percentage">{`${Math.round(((capped - min) / (max - min)) * 100)}%`}</span>
 		{/if}
