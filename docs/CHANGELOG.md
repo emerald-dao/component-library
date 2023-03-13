@@ -1,3 +1,10 @@
+# [3.52.0](https://github.com/emerald-dao/component-library/compare/v3.51.3...v3.52.0) (2023-03-13)
+
+
+### Features
+
+* Make money prefix optional in Currency component ([2c2029a](https://github.com/emerald-dao/component-library/commit/2c2029a34685fe845fc0247077ec23e119255200))
+
 ## [3.51.3](https://github.com/emerald-dao/component-library/compare/v3.51.2...v3.51.3) (2023-03-09)
 
 
