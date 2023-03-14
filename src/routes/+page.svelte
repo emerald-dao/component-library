@@ -10,6 +10,7 @@
 	import { Tab, TabPanel, TabList, Tabs } from '$lib/index';
 	import FlowConnection from '$lib/components/FlowConnection/FlowConnection.svelte';
 	import Accordion from '$lib/components/Accordion/Accordion.svelte';
+	import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte';
 
 	let stepss = [
 		{
@@ -184,6 +185,19 @@
 			</Accordion>
 		</div>
 	{/each}
+</section>
+<section>
+	<CodeBlock
+		language="javascript"
+		code={`
+		pub contract HelloWorld {
+			pub let greet: String
+	 
+			init() {
+		   		self.greet = "Hello World!"
+			}
+	 	}`}
+	/>
 </section>
 <PoweredByEcdao />
 
