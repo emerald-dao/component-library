@@ -31,3 +31,4 @@ export { default as Dropdown } from './components/Dropdown/Dropdown.svelte';
 export { default as CopyToClipboard } from './components/CopyToClipboard/CopyToClipboard.svelte';
 export { default as FlowConnection } from './components/FlowConnection/FlowConnection.svelte';
 export { default as Accordion } from './components/Accordion/Accordion.svelte';
+export { default as Divider } from './components/Divider/Divider.svelte';
