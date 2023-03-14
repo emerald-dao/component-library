@@ -1,3 +1,10 @@
+# [3.53.0](https://github.com/emerald-dao/component-library/compare/v3.52.0...v3.53.0) (2023-03-14)
+
+
+### Features
+
+* Add Divider component ([bc553c8](https://github.com/emerald-dao/component-library/commit/bc553c844a7b149d3be81b20438afbb759876c72))
+
 # [3.52.0](https://github.com/emerald-dao/component-library/compare/v3.51.3...v3.52.0) (2023-03-13)
 
 
