@@ -44,7 +44,7 @@
 		<FlowConnection network="testnet" transactionInProgress={true} />
 
 		<label for="logo">Logo</label>
-		<DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} />
+		<!-- <DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} /> -->
 
 		<InputWrapper name="hola" isValid={true} label="algo">
 			<input type="text" name="hola" required />
@@ -188,7 +188,7 @@
 </section>
 <section>
 	<CodeBlock
-		language="javascript"
+		language="swift"
 		code={`
 		pub contract HelloWorld {
 			pub let greet: String
