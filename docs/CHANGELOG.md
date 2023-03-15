@@ -1,3 +1,10 @@
+## [3.54.1](https://github.com/emerald-dao/component-library/compare/v3.54.0...v3.54.1) (2023-03-15)
+
+
+### Bug Fixes
+
+* CodeBlock component progress ([ad67fe4](https://github.com/emerald-dao/component-library/commit/ad67fe4ac7a5bb8e97c0089d63af389bc56d6f05))
+
 # [3.54.0](https://github.com/emerald-dao/component-library/compare/v3.53.0...v3.54.0) (2023-03-15)
 
 
