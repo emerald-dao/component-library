@@ -199,7 +199,7 @@
    			}		
 
    			pub fun decrement() {
-      			self.count = self.count - 1
+      			self.count = self.count - 2
    			}
 
    			pub fun get(): Int {

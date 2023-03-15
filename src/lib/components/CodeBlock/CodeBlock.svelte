@@ -8,8 +8,6 @@
 	import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 	import 'prismjs/components/prism-swift';
 
-	// import '/prism/prism.js';
-
 	export let codeBlockTitle: string;
 	export let codeStyle: string;
 	export let code: string;
