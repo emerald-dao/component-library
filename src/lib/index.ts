@@ -32,3 +32,4 @@ export { default as CopyToClipboard } from './components/CopyToClipboard/CopyToC
 export { default as FlowConnection } from './components/FlowConnection/FlowConnection.svelte';
 export { default as Accordion } from './components/Accordion/Accordion.svelte';
 export { default as Divider } from './components/Divider/Divider.svelte';
+export { default as CodeBlock } from './components/CodeBlock/CodeBlock.svelte';

@@ -10,6 +10,7 @@
 	import { Tab, TabPanel, TabList, Tabs } from '$lib/index';
 	import FlowConnection from '$lib/components/FlowConnection/FlowConnection.svelte';
 	import Accordion from '$lib/components/Accordion/Accordion.svelte';
+	import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte';
 
 	let stepss = [
 		{
@@ -43,7 +44,7 @@
 		<FlowConnection network="testnet" transactionInProgress={true} />
 
 		<label for="logo">Logo</label>
-		<DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} />
+		<!-- <DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} /> -->
 
 		<InputWrapper name="hola" isValid={true} label="algo">
 			<input type="text" name="hola" required />
@@ -184,6 +185,28 @@
 			</Accordion>
 		</div>
 	{/each}
+</section>
+<section class="container-small">
+	<CodeBlock
+		codeBlockTitle="Cadence"
+		codeStyle="swift"
+		code={`
+		pub contract Counter {
+   			pub var count: Int
+
+   			pub fun increment() {
+      			self.count = self.count + 1
+   			}		
+
+   			pub fun decrement() {
+      			self.count = self.count - 1
+   			}
+
+   			pub fun get(): Int {
+      			return self.count
+   			}
+		}`}
+	/>
 </section>
 <PoweredByEcdao />
 
