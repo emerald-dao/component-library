@@ -1,3 +1,10 @@
+# [3.55.0](https://github.com/emerald-dao/component-library/compare/v3.54.1...v3.55.0) (2023-03-15)
+
+
+### Features
+
+* Codeblock component (again) ([8c4d01a](https://github.com/emerald-dao/component-library/commit/8c4d01a4e71044c71d599266b7da15eedc64bdcd))
+
 ## [3.54.1](https://github.com/emerald-dao/component-library/compare/v3.54.0...v3.54.1) (2023-03-15)
 
 
