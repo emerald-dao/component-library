@@ -1,3 +1,10 @@
+# [3.54.0](https://github.com/emerald-dao/component-library/compare/v3.53.0...v3.54.0) (2023-03-15)
+
+
+### Features
+
+* TooltipIcon improvements ([f97b665](https://github.com/emerald-dao/component-library/commit/f97b665ba8ff64a88f68426265cdf530dc296b96))
+
 # [3.53.0](https://github.com/emerald-dao/component-library/compare/v3.52.0...v3.53.0) (2023-03-14)
 
 
