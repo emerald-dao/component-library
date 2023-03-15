@@ -3,9 +3,15 @@
 
 	export let tooltip: string;
 	export let width: number = 1;
+	export let backgroundColor = 'var(--clr-surface-primary)';
+	export let borderColor = 'var(--clr-border-primary)';
 </script>
 
-<div data-tooltip={tooltip} class="center">
+<div
+	data-tooltip={tooltip}
+	class="center"
+	style={`background-color: ${backgroundColor}; border-color:${borderColor}`}
+>
 	<Icon icon="tabler:question-mark" width={`${width}rem`} />
 </div>
 
@@ -15,7 +21,7 @@
 		aspect-ratio: 1/1;
 		width: fit-content;
 		padding: 0.1em;
-		background-color: var(--clr-surface-primary);
-		border: 1px var(--clr-border-primary) solid;
+		border-width: 1px;
+		border-style: solid;
 	}
 </style>
