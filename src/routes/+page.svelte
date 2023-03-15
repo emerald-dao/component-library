@@ -186,17 +186,25 @@
 		</div>
 	{/each}
 </section>
-<section>
+<section class="container-small">
 	<CodeBlock
 		language="swift"
 		code={`
-		pub contract HelloWorld {
-			pub let greet: String
-	 
-			init() {
-		   		self.greet = "Hello World!"
-			}
-	 	}`}
+		pub contract Counter {
+   			pub var count: Int
+
+   			pub fun increment() {
+      			self.count = self.count + 1
+   			}		
+
+   			pub fun decrement() {
+      			self.count = self.count - 1
+   			}
+
+   			pub fun get(): Int {
+      			return self.count
+   			}
+		}`}
 	/>
 </section>
 <PoweredByEcdao />
