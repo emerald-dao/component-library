@@ -6,13 +6,17 @@
 	import 'prismjs/plugins/line-numbers/prism-line-numbers';
 	import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 	import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
-	import 'prismjs/plugins/show-language/prism-show-language';
 	import 'prismjs/components/prism-swift';
 
 	// import '/prism/prism.js';
 
-	export let language: string;
+	export let codeBlockTitle: string;
+	export let codeStyle: string;
 	export let code: string;
+
+	if (codeStyle === 'cadence') {
+		codeStyle = 'swift';
+	}
 
 	onMount(() => {
 		Prism.highlightAll();
@@ -20,9 +24,10 @@
 </script>
 
 <div class="code" data-prismjs-copy-timeout="1000">
-	<pre class={`language-${language} line-numbers copy-to-clipboard`}>
-		<code class={`language-${language}`} data-prismjs-copy="Click to copy code!">
-			{@html Prism.highlight(code, Prism.languages[language])}
+	<div class="language-wrapper">{codeBlockTitle}</div>
+	<pre class={`language-${codeStyle} line-numbers copy-to-clipboard`}>
+		<code class={`language-${codeStyle}`} data-prismjs-copy="Click to copy code!">
+			{@html Prism.highlight(code, Prism.languages[codeStyle])}
 		</code>
 	</pre>
 </div>
@@ -38,12 +43,23 @@
 </svelte:head>
 
 <style>
+	.language-wrapper {
+		padding: var(--space-4);
+		border-right: 1px var(--clr-border-primary) solid;
+		border-top: 1px var(--clr-border-primary) solid;
+		border-left: 1px var(--clr-border-primary) solid;
+		border-top-right-radius: var(--radius-2);
+		border-top-left-radius: var(--radius-2);
+	}
+
 	pre {
-		border: 1px var(--clr-border-primary) solid;
-		border-radius: var(--radius-2);
+		border-right: 1px var(--clr-border-primary) solid;
+		border-bottom: 1px var(--clr-border-primary) solid;
+		border-left: 1px var(--clr-border-primary) solid;
+		border-bottom-right-radius: var(--radius-2);
+		border-bottom-left-radius: var(--radius-2);
 		padding: 0;
 		margin: 0;
-		background-color: var(--clr-surface-primary);
 	}
 
 	code[class*='language-'],

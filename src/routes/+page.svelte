@@ -188,7 +188,8 @@
 </section>
 <section class="container-small">
 	<CodeBlock
-		language="swift"
+		codeBlockTitle="Cadence"
+		codeStyle="swift"
 		code={`
 		pub contract Counter {
    			pub var count: Int
