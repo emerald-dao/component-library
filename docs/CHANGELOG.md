@@ -1,3 +1,10 @@
+## [3.55.1](https://github.com/emerald-dao/component-library/compare/v3.55.0...v3.55.1) (2023-03-16)
+
+
+### Bug Fixes
+
+* Make InputWapper icons fade ([3b4ab17](https://github.com/emerald-dao/component-library/commit/3b4ab1785d49b39b6bef26414811f8dcf8246e58))
+
 # [3.55.0](https://github.com/emerald-dao/component-library/compare/v3.54.1...v3.55.0) (2023-03-15)
 
 
