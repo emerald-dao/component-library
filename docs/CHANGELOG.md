@@ -1,3 +1,10 @@
+## [3.55.2](https://github.com/emerald-dao/component-library/compare/v3.55.1...v3.55.2) (2023-03-16)
+
+
+### Bug Fixes
+
+* Clean files ([75b8ed6](https://github.com/emerald-dao/component-library/commit/75b8ed6f3649f97ae227fcd989f1f743a27d9fe2))
+
 ## [3.55.1](https://github.com/emerald-dao/component-library/compare/v3.55.0...v3.55.1) (2023-03-16)
 
 
