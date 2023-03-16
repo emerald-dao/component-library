@@ -1,3 +1,10 @@
+## [3.55.3](https://github.com/emerald-dao/component-library/compare/v3.55.2...v3.55.3) (2023-03-16)
+
+
+### Bug Fixes
+
+* Fix CodeBlock ([725de1c](https://github.com/emerald-dao/component-library/commit/725de1cf6b9ab113c37b6ccf0aeff3bb9dd48133))
+
 ## [3.55.2](https://github.com/emerald-dao/component-library/compare/v3.55.1...v3.55.2) (2023-03-16)
 
 
