@@ -1,20 +1,15 @@
 <script type="ts">
 	import Prism from 'prismjs';
 	import { onMount } from 'svelte';
-	import 'prismjs/plugins/toolbar/prism-toolbar.css';
-	import 'prismjs/plugins/toolbar/prism-toolbar';
-	import 'prismjs/plugins/line-numbers/prism-line-numbers';
-	import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
-	import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
-	import 'prismjs/components/prism-swift';
+	import 'prismjs/plugins/toolbar/prism-toolbar.min.css';
+	import 'prismjs/plugins/toolbar/prism-toolbar.min';
+	import 'prismjs/plugins/line-numbers/prism-line-numbers.min';
+	import 'prismjs/plugins/line-numbers/prism-line-numbers.min.css';
+	import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min';
 
 	export let codeBlockTitle: string;
 	export let codeStyle: string;
 	export let code: string;
-
-	if (codeStyle === 'cadence') {
-		codeStyle = 'swift';
-	}
 
 	onMount(() => {
 		Prism.highlightAll();
@@ -25,7 +20,7 @@
 	<div class="language-wrapper">{codeBlockTitle}</div>
 	<pre class={`language-${codeStyle} line-numbers copy-to-clipboard`}>
 		<code class={`language-${codeStyle}`} data-prismjs-copy="Click to copy code!">
-			{@html Prism.highlight(code, Prism.languages[codeStyle])}
+			{@html Prism.highlight(code, Prism.languages[codeStyle], codeStyle)}
 		</code>
 	</pre>
 </div>
