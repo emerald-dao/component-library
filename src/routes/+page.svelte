@@ -12,6 +12,7 @@
 	import Accordion from '$lib/components/Accordion/Accordion.svelte';
 	import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte';
 	import ProgressSteps from '$lib/components/ProgressStep/ProgressSteps.svelte';
+	import Button from '$lib/components/Button/Button.svelte';
 
 	let stepss = [
 		{
@@ -34,6 +35,7 @@
 
 <section>
 	<div class="container-small column-6">
+		<Button state="loading" statusIconsPosition="right">Loading</Button>
 		<a href="dwd" class="card-primary">
 			<h1>Card</h1>
 		</a>
