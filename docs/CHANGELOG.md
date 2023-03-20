@@ -1,3 +1,10 @@
+# [3.57.0](https://github.com/emerald-dao/component-library/compare/v3.56.2...v3.57.0) (2023-03-20)
+
+
+### Features
+
+* Button improvements ([0109f2c](https://github.com/emerald-dao/component-library/commit/0109f2cf560c13ebdfa4fa759b69053311780e86))
+
 ## [3.56.2](https://github.com/emerald-dao/component-library/compare/v3.56.1...v3.56.2) (2023-03-20)
 
 
