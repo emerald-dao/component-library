@@ -1,3 +1,10 @@
+## [3.56.2](https://github.com/emerald-dao/component-library/compare/v3.56.1...v3.56.2) (2023-03-20)
+
+
+### Bug Fixes
+
+* Make Modal style optional ([800f6ac](https://github.com/emerald-dao/component-library/commit/800f6ac7ff9d985e9793c5e661c4e17d790b51e4))
+
 ## [3.56.1](https://github.com/emerald-dao/component-library/compare/v3.56.0...v3.56.1) (2023-03-20)
 
 
