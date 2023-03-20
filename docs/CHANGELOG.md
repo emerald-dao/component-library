@@ -1,3 +1,10 @@
+## [3.56.1](https://github.com/emerald-dao/component-library/compare/v3.56.0...v3.56.1) (2023-03-20)
+
+
+### Bug Fixes
+
+* Modal corrections ([e6db22b](https://github.com/emerald-dao/component-library/commit/e6db22b63e0326ed12621f6d8e1cf5e20ee8f4e5))
+
 # [3.56.0](https://github.com/emerald-dao/component-library/compare/v3.55.3...v3.56.0) (2023-03-20)
 
 
