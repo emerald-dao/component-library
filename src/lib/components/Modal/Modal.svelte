@@ -81,7 +81,7 @@
 <div class="topModal" bind:this={topDiv} on:click={() => close()} on:keydown class:visible>
 	{#if visible}
 		<div
-			class="modal card-secondary"
+			class="modal"
 			on:click|stopPropagation={() => {}}
 			transition:fly={{ y: 30, duration: 500 }}
 			on:keydown
