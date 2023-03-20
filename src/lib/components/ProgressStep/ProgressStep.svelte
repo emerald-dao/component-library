@@ -27,8 +27,8 @@
 		<div
 			class={`line line-${state}`}
 			class:line-transparent={position === 'first' && cutLineEnds}
-			style={`min-height: ${direction.includes('column') ? `1.5px` : `${gap}rem`}; min-width:  ${
-				direction.includes('row') ? `1.5px` : `${gap}rem`
+			style={`min-height: ${direction.includes('column') ? `2px` : `${gap}rem`}; min-width:  ${
+				direction.includes('row') ? `2px` : `${gap}rem`
 			};`}
 		/>
 		<div
@@ -36,17 +36,17 @@
 			style={`min-width: ${diameter}rem; min-height: ${diameter}rem; max-width: ${diameter}rem; max-height: ${diameter}rem`}
 		>
 			{#if state === 'loading'}
-				<Icon icon="tabler:loader" class="rotate" color="var(--clr-primary-main)" />
-			{:else if state === 'error'}
-				<Icon icon="tabler:x" color="var(--clr-alert-main)" />
+				<Icon icon="tabler:loader-2" class="rotate" color="var(--clr-heading-inverse)" />
+			{:else if state === 'success'}
+				<Icon icon="tabler:check" color="var(--clr-heading-inverse)" />
 			{/if}
 		</div>
 		<div
 			class="line"
 			class:line-success={state === 'success'}
 			class:line-transparent={position === 'last' && cutLineEnds}
-			style={`min-height: ${direction.includes('column') ? `1.5px` : `${gap}rem`}; min-width:  ${
-				direction.includes('row') ? `1.5px` : `${gap}rem`
+			style={`min-height: ${direction.includes('column') ? `2px` : `${gap}rem`}; min-width:  ${
+				direction.includes('row') ? `2px` : `${gap}rem`
 			};`}
 		/>
 	</div>
@@ -61,8 +61,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+
 			.name {
-				color: var(--clr-heading-off);
+				color: var(--clr-text-off);
 				transition: 0.3s;
 				height: fit-content;
 
@@ -96,23 +97,24 @@
 			.circle {
 				border-radius: 100%;
 				background-color: var(--clr-surface-secondary);
-				border: 1.5px var(--clr-surface-primary) solid;
 				transition: 0.3s;
+				margin: 5px;
+				padding: 0.2em;
 
 				&-success {
 					background-color: var(--clr-primary-main);
 				}
 
 				&-active {
-					border: 1.5px var(--clr-primary-main) solid;
+					background-color: var(--clr-primary-main);
 				}
 
 				&-loading {
-					border: 1.5px var(--clr-primary-main) solid;
+					background-color: var(--clr-tertiary-main);
 				}
 
 				&-error {
-					border: 1.5px var(--clr-alert-main) solid;
+					background-color: var(--clr-alert-main);
 				}
 			}
 

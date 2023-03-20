@@ -3,8 +3,8 @@
 	import { onMount } from 'svelte';
 	import 'prismjs/plugins/toolbar/prism-toolbar.min.css';
 	import 'prismjs/plugins/toolbar/prism-toolbar.min';
-	import 'prismjs/plugins/line-numbers/prism-line-numbers.min';
 	import 'prismjs/plugins/line-numbers/prism-line-numbers.min.css';
+	import 'prismjs/plugins/line-numbers/prism-line-numbers.min';
 	import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min';
 
 	export let codeBlockTitle: string;

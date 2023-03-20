@@ -11,15 +11,16 @@
 	import FlowConnection from '$lib/components/FlowConnection/FlowConnection.svelte';
 	import Accordion from '$lib/components/Accordion/Accordion.svelte';
 	import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte';
+	import ProgressSteps from '$lib/components/ProgressStep/ProgressSteps.svelte';
 
 	let stepss = [
 		{
 			name: 'First step',
-			state: 'active'
+			state: 'success'
 		},
 		{
 			name: 'Second step',
-			state: 'inactive'
+			state: 'loading'
 		},
 		{
 			name: 'Third step',
@@ -36,6 +37,7 @@
 		<a href="dwd" class="card-primary">
 			<h1>Card</h1>
 		</a>
+		<ProgressSteps steps={stepss} direction="column" />
 		<!-- <label for="a">
 			<input type="checkbox" id="a" />
 			Hola
@@ -189,7 +191,7 @@
 <section class="container-small">
 	<CodeBlock
 		codeBlockTitle="Cadence"
-		codeStyle="swift"
+		codeStyle="js"
 		code={`
 		pub contract Counter {
    			pub var count: Int
