@@ -30,6 +30,7 @@
 
 	export let id = '';
 	export let background: string = 'var(--clr-surface-secondary)';
+	export let unstyled = false;
 
 	function keyPress(ev: KeyboardEvent) {
 		//only respond if the current modal is the top one
@@ -82,6 +83,7 @@
 	{#if visible}
 		<div
 			class="modal"
+			class:card-primary={!unstyled}
 			on:click|stopPropagation={() => {}}
 			transition:fly={{ y: 30, duration: 500 }}
 			on:keydown
@@ -112,7 +114,6 @@
 
 		.modal {
 			position: relative;
-			border-radius: var(--radius-3);
 
 			.close-button {
 				position: absolute;
