@@ -1,3 +1,10 @@
+# [3.56.0](https://github.com/emerald-dao/component-library/compare/v3.55.3...v3.56.0) (2023-03-20)
+
+
+### Features
+
+* ProgressSteps improvements ([80875df](https://github.com/emerald-dao/component-library/commit/80875df16dec4d1374a2736af158acf2143223c8))
+
 ## [3.55.3](https://github.com/emerald-dao/component-library/compare/v3.55.2...v3.55.3) (2023-03-16)
 
 
