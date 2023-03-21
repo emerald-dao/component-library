@@ -1,3 +1,10 @@
+# [3.62.0](https://github.com/emerald-dao/component-library/compare/v3.61.0...v3.62.0) (2023-03-21)
+
+
+### Features
+
+* Add notifications to Avatar ([692b104](https://github.com/emerald-dao/component-library/commit/692b104c4a80fbd97cdc3b561970f4db2a134a71))
+
 # [3.61.0](https://github.com/emerald-dao/component-library/compare/v3.60.2...v3.61.0) (2023-03-21)
 
 
