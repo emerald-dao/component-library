@@ -81,23 +81,23 @@
 						title="Finalized"
 						description="The consensus nodes have finalized the block that the transaction is included in."
 					/>
-				{:else if transactionStatus.status === 3 && transactionStatus.statusCode === '0'}
+				{:else if transactionStatus.status === 3 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Executed"
 						description="The execution nodes have produced a result for the transaction."
 					/>
-				{:else if transactionStatus.status === 4 && transactionStatus.statusCode === '0'}
+				{:else if transactionStatus.status === 4 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Sealed"
 						description="The verification nodes have verified the transaction, and the seal is included in the latest block."
 						icon="ion:checkmark-circle"
 					/>
-				{:else if transactionStatus.status === 5 && transactionStatus.statusCode === '0'}
+				{:else if transactionStatus.status === 5 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Expired"
 						description="The transaction was submitted past its expiration block height."
 					/>
-				{:else if transactionStatus.errorMessage && transactionStatus.statusCode === '1'}
+				{:else if transactionStatus.errorMessage && Number(transactionStatus.statusCode) === 1}
 					<TransactionModalMessage
 						title="Failed"
 						description="Transaction execution failed."
