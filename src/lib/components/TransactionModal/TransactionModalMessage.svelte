@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 	import Icon from '@iconify/svelte';
 
 	export let title: string;
@@ -7,7 +8,7 @@
 	export let error: boolean = false;
 </script>
 
-<div class="column-2">
+<div class="column-2" in:fade|local={{ duration: 400 }}>
 	<span class="transaction-status">
 		{#if icon && error}
 			<Icon {icon} color="var(--clr-alert-main)" />

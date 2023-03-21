@@ -1,7 +1,7 @@
 <script type="ts">
 	import Icon from '@iconify/svelte';
 	import { createEventDispatcher } from 'svelte';
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import TransactionModalMessage from './TransactionModalMessage.svelte';
 
 	/** https://developers.flow.com/tools/fcl-js/reference/api#transactionstatusobject */
@@ -57,7 +57,11 @@
 			<div class="logo-wrapper" class:error>
 				<img class="pulse" src={dappLogo} alt="Dapp Logo" />
 				<div class="logo-border" />
-				<div class="logo-border secondary" class:rotate={!error} class:rotate-slow={error} />
+				{#if error}
+					<div class="logo-border secondary rotate-slow" in:fade|local={{ duration: 500 }} />
+				{:else}
+					<div class="logo-border secondary rotate" in:fade|local={{ duration: 500 }} />
+				{/if}
 			</div>
 
 			{#if transactionName === 'IPFS'}
