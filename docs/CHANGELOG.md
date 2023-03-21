@@ -1,3 +1,10 @@
+# [3.59.0](https://github.com/emerald-dao/component-library/compare/v3.58.0...v3.59.0) (2023-03-21)
+
+
+### Features
+
+* More TransactionModal improvements ([a02df5e](https://github.com/emerald-dao/component-library/commit/a02df5eba2dd882e7e09fe47647797c97603e6db))
+
 # [3.58.0](https://github.com/emerald-dao/component-library/compare/v3.57.0...v3.58.0) (2023-03-21)
 
 
