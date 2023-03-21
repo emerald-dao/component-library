@@ -3,8 +3,6 @@
 
 	export let title: string;
 	export let description: string;
-	export let progress: string | undefined | false = undefined;
-	export let progressMessage: string = 'Loading';
 	export let icon: string | undefined = undefined;
 	export let error: boolean = false;
 </script>
@@ -12,7 +10,7 @@
 <div class="column-2">
 	<span class="transaction-status">
 		{#if icon && error}
-			<Icon {icon} color="red" />
+			<Icon {icon} color="var(--clr-alert-main)" />
 		{:else}
 			<Icon {icon} />
 		{/if}
@@ -21,18 +19,9 @@
 	<span class="transaction-detail">
 		{description}
 	</span>
-	{#if progress}
-		<progress min="0" max="100" value={progress}>{progressMessage}</progress>
-	{/if}
 </div>
 
 <style type="scss">
-	progress {
-		accent-color: var(--clr-accent-main);
-		height: 20px;
-		margin-top: 2rem;
-	}
-
 	.transaction-detail {
 		color: var(--clr-text-off);
 		font-size: var(--font-size-1);

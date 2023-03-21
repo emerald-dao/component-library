@@ -1,98 +1,110 @@
 <script type="ts">
+	import Icon from '@iconify/svelte';
+	import { createEventDispatcher } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import TransactionModalMessage from './TransactionModalMessage.svelte';
 
-	interface FlowTransaction {
+	/** https://developers.flow.com/tools/fcl-js/reference/api#transactionstatusobject */
+	type TransactionStatusObject = {
 		blockId: string;
+		events: EventObject[];
+		status: TrnsactionStatus;
+		statusString: '' | 'UNKNOWN' | 'PENDING' | 'FINALIZED' | 'EXECUTED' | 'SEALED' | 'EXPIRED';
 		errorMessage: string;
-		events: {}[];
-		status: number | '';
-		statusCode: number | '';
-		statusString: string;
-	}
+		statusCode: string;
+	};
+
+	/** https://developers.flow.com/tools/fcl-js/reference/api#event-object */
+	type EventObject = {
+		blockId: string;
+		blockHeight: number;
+		blockTimestamp: string;
+		type: string;
+		transactionId: string;
+		transactionIndex: number;
+		eventIndex: number;
+		data: unknown;
+	};
+
+	type TrnsactionStatus = -1 | 0 | 1 | 2 | 3 | 4 | 5;
+
+	const dispatch = createEventDispatcher();
 
 	export let dappLogo = '/flow-logo.png';
 	export let transactionName = 'Flow';
-	export let transactionStatus: FlowTransaction;
+	export let transactionStatus: TransactionStatusObject;
 	export let transactionInProgress = false;
 	export let border = true;
+
+	$: error = transactionStatus.errorMessage && transactionStatus.statusCode === '1';
 </script>
 
 {#if transactionInProgress}
 	<div class="main-wrapper">
 		<article transition:fly={{ x: 100, duration: 800 }} class:border class="column-10 align-center">
+			<!-- Add a close button if error is true, this fires a close event -->
+			{#if error}
+				<button on:click={() => dispatch('close')} class="close">
+					<Icon icon="tabler:x" />
+				</button>
+			{/if}
+
 			<div class="column align-center">
 				<span class="subtitle small">{transactionName}</span>
 				<h4 class="h5">Transaction</h4>
 			</div>
 
-			<div class="logo-wrapper">
+			<div class="logo-wrapper" class:error>
 				<img class="pulse" src={dappLogo} alt="Dapp Logo" />
-				<div class="logo-border rotate " />
-				<div class="logo-border rotate secondary" />
+				<div class="logo-border" />
+				<div class="logo-border secondary" class:rotate={!error} class:rotate-slow={error} />
 			</div>
 
 			{#if transactionName === 'IPFS'}
 				<TransactionModalMessage
 					title="Uploading Assets"
 					description="Uploading your assets to IPFS."
-					progressMessage="Uploading..."
 				/>
 			{:else if transactionName === 'Flow'}
 				{#if transactionStatus.status < 0}
 					<TransactionModalMessage
 						title="Initializing"
 						description="Waiting for transaction approval."
-						progressMessage="Initializing..."
 					/>
 				{:else if transactionStatus.status < 2}
 					<TransactionModalMessage
 						title="Pending"
 						description="The transaction has been received by a collector but not yet finalized in a block."
-						progressMessage="Executing"
 					/>
 				{:else if transactionStatus.status === 2}
 					<TransactionModalMessage
 						title="Finalized"
 						description="The consensus nodes have finalized the block that the transaction is included in."
-						progressMessage="Executing..."
 					/>
-				{:else if transactionStatus.status === 3 && transactionStatus.statusCode === 0}
+				{:else if transactionStatus.status === 3 && transactionStatus.statusCode === '0'}
 					<TransactionModalMessage
 						title="Executed"
 						description="The execution nodes have produced a result for the transaction."
-						progressMessage="Sealing..."
-						progress="80"
 					/>
-				{:else if transactionStatus.status === 4 && transactionStatus.statusCode === 0}
+				{:else if transactionStatus.status === 4 && transactionStatus.statusCode === '0'}
 					<TransactionModalMessage
 						title="Sealed"
 						description="The verification nodes have verified the transaction, and the seal is included in the latest block."
-						progressMessage="Sealing..."
-						progress="100"
 						icon="ion:checkmark-circle"
 					/>
-				{:else if transactionStatus.status === 5 && transactionStatus.statusCode === 0}
+				{:else if transactionStatus.status === 5 && transactionStatus.statusCode === '0'}
 					<TransactionModalMessage
 						title="Expired"
 						description="The transaction was submitted past its expiration block height."
-						progress={false}
 					/>
-				{:else if transactionStatus.errorMessage && transactionStatus.statusCode === 1}
+				{:else if transactionStatus.errorMessage && transactionStatus.statusCode === '1'}
 					<TransactionModalMessage
 						title="Failed"
-						description={transactionStatus.errorMessage}
-						progress={false}
-						icon="ion:close-circle"
+						description="Transaction execution failed."
 						error={true}
 					/>
 				{:else}
-					<TransactionModalMessage
-						title="Error"
-						description="An error occured."
-						progress={false}
-						error={true}
-					/>
+					<TransactionModalMessage title="Error" description="An error occured." error={true} />
 				{/if}
 			{/if}
 		</article>
@@ -119,6 +131,22 @@
 			z-index: 9999;
 			border-radius: var(--radius-7);
 			width: 25ch;
+
+			.close {
+				position: absolute;
+				top: 6px;
+				right: 8px;
+				padding: 0.5rem;
+				background-color: transparent;
+				border: none;
+				cursor: pointer;
+				color: var(--clr-text-off);
+				transition: color 0.2s ease-in-out;
+
+				&:hover {
+					color: var(--clr-heading-main);
+				}
+			}
 
 			.subtitle {
 				color: var(--clr-text-off);
@@ -163,6 +191,20 @@
 					width: 70px;
 					height: 70px;
 				}
+
+				&.error {
+					.logo-border {
+						border-color: var(--clr-alert-badge);
+
+						&.secondary {
+							background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='#FF5C5C' stroke-width='14' stroke-dasharray='20%25%2c 80%25' stroke-dashoffset='86' stroke-linecap='round'/%3e%3c/svg%3e");
+						}
+					}
+
+					img {
+						border-color: var(--clr-alert-badge);
+					}
+				}
 			}
 		}
 	}
@@ -206,6 +248,13 @@
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		animation-duration: 3.5s;
+	}
+
+	.rotate-slow {
+		animation-name: rotate;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-duration: 20s;
 	}
 
 	.border {
