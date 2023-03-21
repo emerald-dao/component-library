@@ -1,3 +1,10 @@
+## [3.60.1](https://github.com/emerald-dao/component-library/compare/v3.60.0...v3.60.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* transactionStatus string to number correction ([c77d8fa](https://github.com/emerald-dao/component-library/commit/c77d8fa9cd0e39634b05e5ed99ffc96619542c82))
+
 # [3.60.0](https://github.com/emerald-dao/component-library/compare/v3.59.0...v3.60.0) (2023-03-21)
 
 
