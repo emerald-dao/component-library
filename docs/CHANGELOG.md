@@ -1,3 +1,10 @@
+# [3.60.0](https://github.com/emerald-dao/component-library/compare/v3.59.0...v3.60.0) (2023-03-21)
+
+
+### Features
+
+* Best TransactionModal animation ([d584415](https://github.com/emerald-dao/component-library/commit/d584415ec771a5826ea53ff2e6ea410d40fca69e))
+
 # [3.59.0](https://github.com/emerald-dao/component-library/compare/v3.58.0...v3.59.0) (2023-03-21)
 
 
