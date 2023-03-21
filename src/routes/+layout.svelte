@@ -7,6 +7,7 @@
 	import '@emerald-dao/design-system/build/variables.css';
 	import '$lib/styles/app.scss';
 	import Icon from '@iconify/svelte';
+	import TransactionModal from '$lib/components/TransactionModal/TransactionModal.svelte';
 
 	let navElements = [
 		{
@@ -20,8 +21,18 @@
 			prefetch: true
 		}
 	];
+
+	let dummyTransaction = {
+		blockId: '',
+		events: [],
+		status: -1,
+		statusString: '',
+		errorMessage: '',
+		statusCode: ''
+	};
 </script>
 
+<TransactionModal transactionInProgress={true} transactionStatus={dummyTransaction} />
 <Header themeStore={theme} {navElements} logoUrl="/EA_Iso.svg" logoText="Emerald City">
 	<Icon icon="material-symbols:translate-rounded" slot="commands" />
 </Header>

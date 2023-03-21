@@ -101,7 +101,7 @@
 
 <style type="scss">
 	.topModal {
-		z-index: 9999;
+		z-index: 999;
 		position: fixed;
 		top: 0;
 		left: 0;
