@@ -243,6 +243,18 @@
 		}
 	}
 
+	@keyframes sillyRotate {
+		0% {
+			-webkit-transform: rotate(0deg);
+		}
+		50% {
+			-webkit-transform: rotate(50deg);
+		}
+		100% {
+			-webkit-transform: rotate(0deg);
+		}
+	}
+
 	.rotate {
 		animation-name: rotate;
 		animation-iteration-count: infinite;
@@ -251,10 +263,10 @@
 	}
 
 	.rotate-slow {
-		animation-name: rotate;
+		animation-name: sillyRotate;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-in-out;
-		animation-duration: 20s;
+		animation-duration: 12s;
 	}
 
 	.border {
