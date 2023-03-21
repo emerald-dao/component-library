@@ -1,3 +1,10 @@
+## [3.60.2](https://github.com/emerald-dao/component-library/compare/v3.60.1...v3.60.2) (2023-03-21)
+
+
+### Bug Fixes
+
+* More typing corrections in TransactionModal ([9a8162b](https://github.com/emerald-dao/component-library/commit/9a8162bfa89f82e22bd3828f3f01230b3acc0a79))
+
 ## [3.60.1](https://github.com/emerald-dao/component-library/compare/v3.60.0...v3.60.1) (2023-03-21)
 
 
