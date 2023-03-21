@@ -1,3 +1,10 @@
+## [3.62.1](https://github.com/emerald-dao/component-library/compare/v3.62.0...v3.62.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* Add notificationsNumber prop to Header ([c3ca32f](https://github.com/emerald-dao/component-library/commit/c3ca32f2e9ab908b1ecf8375226d628ff741976a))
+
 # [3.62.0](https://github.com/emerald-dao/component-library/compare/v3.61.0...v3.62.0) (2023-03-21)
 
 
