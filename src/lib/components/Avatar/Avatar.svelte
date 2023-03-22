@@ -5,6 +5,7 @@
 	import Dropdown from '../Dropdown/Dropdown.svelte';
 	import type { NavElement } from '$lib/models/navElement.interface';
 	import FlowConnection from '../FlowConnection/FlowConnection.svelte';
+	import AlertNumber from '../AlertNumber/AlertNumber.svelte';
 
 	export let walletAddress: string;
 	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
@@ -70,6 +71,9 @@
 							<Icon icon={nav.icon} />
 						{/if}
 						{nav.name}
+						{#if nav.notifications && nav.notifications > 0}
+							<AlertNumber number={nav.notifications} />
+						{/if}
 					</a>
 				{/each}
 			</div>
