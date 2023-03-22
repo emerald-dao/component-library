@@ -1,3 +1,10 @@
+# [3.65.0](https://github.com/emerald-dao/component-library/compare/v3.64.0...v3.65.0) (2023-03-22)
+
+
+### Features
+
+* Even better animations ([22d8c21](https://github.com/emerald-dao/component-library/commit/22d8c21633e6fdc4f168ca8b7adbc914a42dd1c9))
+
 # [3.64.0](https://github.com/emerald-dao/component-library/compare/v3.63.0...v3.64.0) (2023-03-22)
 
 
