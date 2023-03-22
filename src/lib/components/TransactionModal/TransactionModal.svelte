@@ -42,7 +42,7 @@
 {#if transactionInProgress}
 	<div class="main-wrapper">
 		<article transition:fly={{ x: 100, duration: 800 }} class:border class="column-10 align-center">
-			<!-- Add a close button if error is true, this fires a close event -->
+			<button on:click={() => (transactionStatus.errorMessage = 'aa')}>a</button>
 			{#if error}
 				<button on:click={() => dispatch('close')} class="close">
 					<Icon icon="tabler:x" />
@@ -57,12 +57,9 @@
 			<div class="logo-wrapper" class:error>
 				<img class="pulse" src={dappLogo} alt="Dapp Logo" />
 				<div class="logo-border" />
-				<div
-					class="logo-border secondary"
-					class:rotate={!error}
-					class:rotate-slow={error}
-					in:fade|local={{ duration: 500 }}
-				/>
+				<div class="wrapp" class:rotate-reverse={error}>
+					<div class="logo-border secondary rotate" in:fade|local={{ duration: 500 }} />
+				</div>
 			</div>
 
 			{#if transactionName === 'IPFS'}
@@ -178,6 +175,7 @@
 						background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='#3AE8C6' stroke-width='14' stroke-dasharray='20%25%2c 80%25' stroke-dashoffset='86' stroke-linecap='round'/%3e%3c/svg%3e");
 						border-radius: 100px;
 						border: none;
+						transition: all 0.5s ease-out;
 					}
 				}
 
@@ -233,30 +231,12 @@
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-in-out;
 		animation-duration: 8s;
-		animation-delay: 1s;
+		animation-delay: 2s;
 	}
 
 	@keyframes rotate {
-		0% {
-			-webkit-transform: rotate(0deg) scale(1);
-		}
-		50% {
-			-webkit-transform: rotate(180deg) scale(0.95);
-		}
 		100% {
-			-webkit-transform: rotate(360deg) scale(1);
-		}
-	}
-
-	@keyframes sillyRotate {
-		0% {
-			-webkit-transform: rotate(0deg);
-		}
-		50% {
-			-webkit-transform: rotate(50deg);
-		}
-		100% {
-			-webkit-transform: rotate(0deg);
+			-webkit-transform: rotate(360deg);
 		}
 	}
 
@@ -265,13 +245,20 @@
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		animation-duration: 3.5s;
+		animation-direction: normal;
 	}
 
-	.rotate-slow {
-		animation-name: sillyRotate;
+	.rotate-reverse {
+		animation-name: rotate;
 		animation-iteration-count: infinite;
-		animation-timing-function: ease-in-out;
-		animation-duration: 12s;
+		animation-timing-function: linear;
+		animation-duration: 3.2s;
+		animation-direction: reverse;
+		width: 120px;
+		height: 120px;
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 
 	.border {

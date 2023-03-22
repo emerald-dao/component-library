@@ -38,13 +38,13 @@
 		status: '4',
 		statusString: 'SEALED',
 		statusCode: '1',
-		errorMessage:
-			'execution error code 1052: [Error Code: 1052] error caused by: 1 error occurred:\n\t* transaction execute failed: [Error Code: 1101] cadence runtime error: Execution failed:\nerror: invalid argument at index 2: decodeing argument failed: [Error Code: 1052] transaction arguments are invalid: (argument is not json decodable: failed to decode JSON-Cadence value: invalid UFix64: out of range)\n--> e70c7b5b81797adbb31c8d686ccb22e88afbbf73aa6dcd4b67cf4bf16b077f6a\n\n\n',
+		errorMessage: '',
 		events: []
 	};
 </script>
 
 <section>
+	<button on:click={() => (dummyTransaction.errorMessage = 'aa')}>a</button>
 	<TransactionModal transactionInProgress={true} transactionStatus={dummyTransaction} />
 	<div class="container-small column-6">
 		<Button state="loading" statusIconsPosition="right">Loading</Button>
