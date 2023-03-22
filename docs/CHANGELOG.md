@@ -1,3 +1,10 @@
+# [3.63.0](https://github.com/emerald-dao/component-library/compare/v3.62.1...v3.63.0) (2023-03-22)
+
+
+### Features
+
+* Add AlertNumber component and optional notifactions to NavElements ([0b167fa](https://github.com/emerald-dao/component-library/commit/0b167fadfbea2addb5086b3bf6de9ca9c61b841b))
+
 ## [3.62.1](https://github.com/emerald-dao/component-library/compare/v3.62.0...v3.62.1) (2023-03-21)
 
 
