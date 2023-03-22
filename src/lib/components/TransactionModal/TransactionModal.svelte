@@ -57,11 +57,12 @@
 			<div class="logo-wrapper" class:error>
 				<img class="pulse" src={dappLogo} alt="Dapp Logo" />
 				<div class="logo-border" />
-				{#if error}
-					<div class="logo-border secondary rotate-slow" in:fade|local={{ duration: 500 }} />
-				{:else}
-					<div class="logo-border secondary rotate" in:fade|local={{ duration: 500 }} />
-				{/if}
+				<div
+					class="logo-border secondary"
+					class:rotate={!error}
+					class:rotate-slow={error}
+					in:fade|local={{ duration: 500 }}
+				/>
 			</div>
 
 			{#if transactionName === 'IPFS'}
