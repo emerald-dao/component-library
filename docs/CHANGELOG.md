@@ -1,3 +1,10 @@
+## [3.65.1](https://github.com/emerald-dao/component-library/compare/v3.65.0...v3.65.1) (2023-03-22)
+
+
+### Bug Fixes
+
+* Clean TransactionModal component ([13527a7](https://github.com/emerald-dao/component-library/commit/13527a751c22daeca543eb356b1c04a9a2f78be9))
+
 # [3.65.0](https://github.com/emerald-dao/component-library/compare/v3.64.0...v3.65.0) (2023-03-22)
 
 
