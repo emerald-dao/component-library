@@ -42,7 +42,6 @@
 {#if transactionInProgress}
 	<div class="main-wrapper">
 		<article transition:fly={{ x: 100, duration: 800 }} class:border class="column-10 align-center">
-			<button on:click={() => (transactionStatus.errorMessage = 'aa')}>a</button>
 			{#if error}
 				<button on:click={() => dispatch('close')} class="close">
 					<Icon icon="tabler:x" />
