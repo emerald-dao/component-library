@@ -1,3 +1,10 @@
+# [3.66.0](https://github.com/emerald-dao/component-library/compare/v3.65.1...v3.66.0) (2023-03-23)
+
+
+### Features
+
+* Add succes colors to TransactionModal ([c734577](https://github.com/emerald-dao/component-library/commit/c734577ca7f34ecd96181a37a793358216a74b32))
+
 ## [3.65.1](https://github.com/emerald-dao/component-library/compare/v3.65.0...v3.65.1) (2023-03-22)
 
 
