@@ -37,6 +37,7 @@
 	export let border = true;
 
 	$: error = transactionStatus.errorMessage && Number(transactionStatus.statusCode) === 1;
+	$: success = true;
 </script>
 
 {#if transactionInProgress}
@@ -53,10 +54,14 @@
 				<h4 class="h5">Transaction</h4>
 			</div>
 
-			<div class="logo-wrapper" class:error>
+			<div class="logo-wrapper" class:error class:success>
 				<img class="pulse" src={dappLogo} alt="Dapp Logo" />
 				<div class="logo-border" />
-				<div class="wrapp" class:rotate-reverse={error}>
+				<div
+					class="inverse-rotation-wrapper"
+					class:rotate-reverse={error}
+					class:rotate-slow={success}
+				>
 					<div class="logo-border secondary rotate" in:fade|local={{ duration: 500 }} />
 				</div>
 			</div>
@@ -91,7 +96,7 @@
 					<TransactionModalMessage
 						title="Sealed"
 						description="The verification nodes have verified the transaction, and the seal is included in the latest block."
-						icon="ion:checkmark-circle"
+						icon="tabler:circle-check-filled"
 					/>
 				{:else if transactionStatus.status === 5 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
@@ -161,7 +166,7 @@
 					width: 120px;
 					height: 120px;
 					padding: 10px;
-					border: 7px solid var(--clr-neutral-badge);
+					border: 7px solid var(--clr-tertiary-badge);
 
 					&.secondary {
 						position: absolute;
@@ -171,7 +176,7 @@
 						margin-right: auto;
 						margin-top: auto;
 						margin-bottom: auto;
-						background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='#3AE8C6' stroke-width='14' stroke-dasharray='20%25%2c 80%25' stroke-dashoffset='86' stroke-linecap='round'/%3e%3c/svg%3e");
+						background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='#ff66c4' stroke-width='14' stroke-dasharray='20%25%2c 80%25' stroke-dashoffset='86' stroke-linecap='round'/%3e%3c/svg%3e");
 						border-radius: 100px;
 						border: none;
 						transition: all 0.5s ease-out;
@@ -188,7 +193,7 @@
 					margin-right: auto;
 					margin-top: auto;
 					margin-bottom: auto;
-					border: 4px solid var(--clr-border-primary);
+					border: 4px solid var(--clr-tertiary-badge);
 					border-radius: 50%;
 					width: 70px;
 					height: 70px;
@@ -205,6 +210,20 @@
 
 					img {
 						border-color: var(--clr-alert-badge);
+					}
+				}
+
+				&.success {
+					.logo-border {
+						border-color: var(--clr-primary-badge);
+
+						&.secondary {
+							background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='#3AE8C6' stroke-width='14' stroke-dasharray='20%25%2c 80%25' stroke-dashoffset='86' stroke-linecap='round'/%3e%3c/svg%3e");
+						}
+					}
+
+					img {
+						border-color: var(--clr-primary-badge);
 					}
 				}
 			}
@@ -247,17 +266,28 @@
 		animation-direction: normal;
 	}
 
-	.rotate-reverse {
-		animation-name: rotate;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-duration: 3.2s;
-		animation-direction: reverse;
+	.inverse-rotation-wrapper {
 		width: 120px;
 		height: 120px;
 		position: absolute;
 		top: 0;
 		right: 0;
+
+		&.rotate-reverse {
+			animation-name: rotate;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-duration: 3.2s;
+			animation-direction: reverse;
+		}
+
+		&.rotate-slow {
+			animation-name: rotate;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-duration: 4.6s;
+			animation-direction: reverse;
+		}
 	}
 
 	.border {
