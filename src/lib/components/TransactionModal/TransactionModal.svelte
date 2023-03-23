@@ -37,7 +37,7 @@
 	export let border = true;
 
 	$: error = transactionStatus.errorMessage && Number(transactionStatus.statusCode) === 1;
-	$: success = true;
+	$: success = transactionStatus.status === 4 && Number(transactionStatus.statusCode) === 0;
 </script>
 
 {#if transactionInProgress}
