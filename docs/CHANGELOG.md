@@ -1,3 +1,10 @@
+## [3.66.1](https://github.com/emerald-dao/component-library/compare/v3.66.0...v3.66.1) (2023-03-23)
+
+
+### Bug Fixes
+
+* Fix success status in TransactionModal ([4e32fe1](https://github.com/emerald-dao/component-library/commit/4e32fe196e214e06089eac7eb0ed6bff3bb6abfb))
+
 # [3.66.0](https://github.com/emerald-dao/component-library/compare/v3.65.1...v3.66.0) (2023-03-23)
 
 
