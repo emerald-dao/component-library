@@ -1,3 +1,157 @@
+## [3.66.1](https://github.com/emerald-dao/component-library/compare/v3.66.0...v3.66.1) (2023-03-23)
+
+
+### Bug Fixes
+
+* Fix success status in TransactionModal ([4e32fe1](https://github.com/emerald-dao/component-library/commit/4e32fe196e214e06089eac7eb0ed6bff3bb6abfb))
+
+# [3.66.0](https://github.com/emerald-dao/component-library/compare/v3.65.1...v3.66.0) (2023-03-23)
+
+
+### Features
+
+* Add succes colors to TransactionModal ([c734577](https://github.com/emerald-dao/component-library/commit/c734577ca7f34ecd96181a37a793358216a74b32))
+
+## [3.65.1](https://github.com/emerald-dao/component-library/compare/v3.65.0...v3.65.1) (2023-03-22)
+
+
+### Bug Fixes
+
+* Clean TransactionModal component ([13527a7](https://github.com/emerald-dao/component-library/commit/13527a751c22daeca543eb356b1c04a9a2f78be9))
+
+# [3.65.0](https://github.com/emerald-dao/component-library/compare/v3.64.0...v3.65.0) (2023-03-22)
+
+
+### Features
+
+* Even better animations ([22d8c21](https://github.com/emerald-dao/component-library/commit/22d8c21633e6fdc4f168ca8b7adbc914a42dd1c9))
+
+# [3.64.0](https://github.com/emerald-dao/component-library/compare/v3.63.0...v3.64.0) (2023-03-22)
+
+
+### Features
+
+* Better TransactionModal animation ([731b2c9](https://github.com/emerald-dao/component-library/commit/731b2c9f24196fdc99cda440b0d4082e13fd1fcb))
+
+# [3.63.0](https://github.com/emerald-dao/component-library/compare/v3.62.1...v3.63.0) (2023-03-22)
+
+
+### Features
+
+* Add AlertNumber component and optional notifactions to NavElements ([0b167fa](https://github.com/emerald-dao/component-library/commit/0b167fadfbea2addb5086b3bf6de9ca9c61b841b))
+
+## [3.62.1](https://github.com/emerald-dao/component-library/compare/v3.62.0...v3.62.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* Add notificationsNumber prop to Header ([c3ca32f](https://github.com/emerald-dao/component-library/commit/c3ca32f2e9ab908b1ecf8375226d628ff741976a))
+
+# [3.62.0](https://github.com/emerald-dao/component-library/compare/v3.61.0...v3.62.0) (2023-03-21)
+
+
+### Features
+
+* Add notifications to Avatar ([692b104](https://github.com/emerald-dao/component-library/commit/692b104c4a80fbd97cdc3b561970f4db2a134a71))
+
+# [3.61.0](https://github.com/emerald-dao/component-library/compare/v3.60.2...v3.61.0) (2023-03-21)
+
+
+### Features
+
+* Better animations for TransactionModal ([227e613](https://github.com/emerald-dao/component-library/commit/227e6134f67c0461589068d01cab122c6bda1534))
+
+## [3.60.2](https://github.com/emerald-dao/component-library/compare/v3.60.1...v3.60.2) (2023-03-21)
+
+
+### Bug Fixes
+
+* More typing corrections in TransactionModal ([9a8162b](https://github.com/emerald-dao/component-library/commit/9a8162bfa89f82e22bd3828f3f01230b3acc0a79))
+
+## [3.60.1](https://github.com/emerald-dao/component-library/compare/v3.60.0...v3.60.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* transactionStatus string to number correction ([c77d8fa](https://github.com/emerald-dao/component-library/commit/c77d8fa9cd0e39634b05e5ed99ffc96619542c82))
+
+# [3.60.0](https://github.com/emerald-dao/component-library/compare/v3.59.0...v3.60.0) (2023-03-21)
+
+
+### Features
+
+* Best TransactionModal animation ([d584415](https://github.com/emerald-dao/component-library/commit/d584415ec771a5826ea53ff2e6ea410d40fca69e))
+
+# [3.59.0](https://github.com/emerald-dao/component-library/compare/v3.58.0...v3.59.0) (2023-03-21)
+
+
+### Features
+
+* More TransactionModal improvements ([a02df5e](https://github.com/emerald-dao/component-library/commit/a02df5eba2dd882e7e09fe47647797c97603e6db))
+
+# [3.58.0](https://github.com/emerald-dao/component-library/compare/v3.57.0...v3.58.0) (2023-03-21)
+
+
+### Features
+
+* Better TransactionModal ([9b24006](https://github.com/emerald-dao/component-library/commit/9b2400696b4af8f896d3e54dfec9b495c4eb9aff))
+
+# [3.57.0](https://github.com/emerald-dao/component-library/compare/v3.56.2...v3.57.0) (2023-03-20)
+
+
+### Features
+
+* Button improvements ([0109f2c](https://github.com/emerald-dao/component-library/commit/0109f2cf560c13ebdfa4fa759b69053311780e86))
+
+## [3.56.2](https://github.com/emerald-dao/component-library/compare/v3.56.1...v3.56.2) (2023-03-20)
+
+
+### Bug Fixes
+
+* Make Modal style optional ([800f6ac](https://github.com/emerald-dao/component-library/commit/800f6ac7ff9d985e9793c5e661c4e17d790b51e4))
+
+## [3.56.1](https://github.com/emerald-dao/component-library/compare/v3.56.0...v3.56.1) (2023-03-20)
+
+
+### Bug Fixes
+
+* Modal corrections ([e6db22b](https://github.com/emerald-dao/component-library/commit/e6db22b63e0326ed12621f6d8e1cf5e20ee8f4e5))
+
+# [3.56.0](https://github.com/emerald-dao/component-library/compare/v3.55.3...v3.56.0) (2023-03-20)
+
+
+### Features
+
+* ProgressSteps improvements ([80875df](https://github.com/emerald-dao/component-library/commit/80875df16dec4d1374a2736af158acf2143223c8))
+
+## [3.55.3](https://github.com/emerald-dao/component-library/compare/v3.55.2...v3.55.3) (2023-03-16)
+
+
+### Bug Fixes
+
+* Fix CodeBlock ([725de1c](https://github.com/emerald-dao/component-library/commit/725de1cf6b9ab113c37b6ccf0aeff3bb9dd48133))
+
+## [3.55.2](https://github.com/emerald-dao/component-library/compare/v3.55.1...v3.55.2) (2023-03-16)
+
+
+### Bug Fixes
+
+* Clean files ([75b8ed6](https://github.com/emerald-dao/component-library/commit/75b8ed6f3649f97ae227fcd989f1f743a27d9fe2))
+
+## [3.55.1](https://github.com/emerald-dao/component-library/compare/v3.55.0...v3.55.1) (2023-03-16)
+
+
+### Bug Fixes
+
+* Make InputWapper icons fade ([3b4ab17](https://github.com/emerald-dao/component-library/commit/3b4ab1785d49b39b6bef26414811f8dcf8246e58))
+
+# [3.55.0](https://github.com/emerald-dao/component-library/compare/v3.54.1...v3.55.0) (2023-03-15)
+
+
+### Features
+
+* Codeblock component (again) ([8c4d01a](https://github.com/emerald-dao/component-library/commit/8c4d01a4e71044c71d599266b7da15eedc64bdcd))
+
 ## [3.54.1](https://github.com/emerald-dao/component-library/compare/v3.54.0...v3.54.1) (2023-03-15)
 
 

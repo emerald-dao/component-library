@@ -3,4 +3,5 @@ export interface NavElement {
 	url: string;
 	prefetch: boolean;
 	icon?: string;
+	notifications?: number;
 }

@@ -11,6 +11,7 @@
 	export let download = false;
 	export let form: string | undefined = undefined;
 	export let target: '_blank' | '_self' | '_parent' | '_top' | undefined = undefined;
+	export let statusIconsPosition: 'left' | 'right' = 'right';
 </script>
 
 {#if href}
@@ -51,12 +52,21 @@
 		{form}
 		class={`${state} ${color} ${type} ${size}  width-${width}`}
 	>
-		{#if state === 'loading'}
-			<LoadingSpinner />
-		{:else if state === 'done'}
-			<Icon icon="ion:checkmark-circle" width="1.4em" />
+		{#if statusIconsPosition === 'left'}
+			{#if state === 'loading'}
+				<LoadingSpinner />
+			{:else if state === 'done'}
+				<Icon icon="ion:checkmark-circle" width="1.4em" />
+			{/if}
 		{/if}
 		<slot>Normal Button</slot>
+		{#if statusIconsPosition === 'right'}
+			{#if state === 'loading'}
+				<LoadingSpinner />
+			{:else if state === 'done'}
+				<Icon icon="ion:checkmark-circle" width="1.4em" />
+			{/if}
+		{/if}
 	</button>
 {/if}
 

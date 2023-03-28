@@ -1,9 +1,11 @@
 <script type="ts">
 	import { fly } from 'svelte/transition';
+	import { navigating } from '$app/stores';
 
 	export let width: string = 'fit-content';
 	export let rightOffset = '0rem';
 	export let topOffset = '3rem';
+	export let closeOnNavigating = true;
 
 	let dropDown: HTMLDivElement;
 	let displayDropDown = false;
@@ -17,6 +19,8 @@
 			displayDropDown = false;
 		}
 	};
+
+	$: if ($navigating && closeOnNavigating) displayDropDown = false;
 </script>
 
 <svelte:window on:click={handleWindowClick} />

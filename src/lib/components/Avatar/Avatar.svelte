@@ -5,12 +5,14 @@
 	import Dropdown from '../Dropdown/Dropdown.svelte';
 	import type { NavElement } from '$lib/models/navElement.interface';
 	import FlowConnection from '../FlowConnection/FlowConnection.svelte';
+	import AlertNumber from '../AlertNumber/AlertNumber.svelte';
 
 	export let walletAddress: string;
 	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
 	export let transactionInProgress: boolean;
 	export let navigation: NavElement[] = [];
 	export let unauthenticate: () => void;
+	export let notificationsNumber: number = 0;
 
 	let walletAddressHover = false;
 
@@ -31,6 +33,11 @@
 	<div slot="parent" class="avatar-wrapper">
 		<img class="avatar" src="/new-avatar.png" alt="default avatar" />
 		<div class="connection-circle pulse" class:clr-tertiary={transactionInProgress} />
+		{#if notificationsNumber > 0}
+			<div class="notification-number">
+				{notificationsNumber}
+			</div>
+		{/if}
 	</div>
 	<div slot="dropdown" class="dropdown-wrapper">
 		<div class="dropdown-section">
@@ -64,6 +71,9 @@
 							<Icon icon={nav.icon} />
 						{/if}
 						{nav.name}
+						{#if nav.notifications && nav.notifications > 0}
+							<AlertNumber number={nav.notifications} />
+						{/if}
 					</a>
 				{/each}
 			</div>
@@ -104,6 +114,7 @@
 <style type="scss">
 	.avatar-wrapper {
 		position: relative;
+		width: fit-content;
 
 		.connection-circle {
 			position: absolute;
@@ -124,6 +135,21 @@
 			height: 38px;
 			width: 38px;
 			border-radius: 50%;
+		}
+
+		.notification-number {
+			position: absolute;
+			top: -1px;
+			right: 0;
+			height: 12px;
+			width: 12px;
+			border-radius: 50%;
+			background-color: var(--clr-alert-main);
+			color: var(--clr-background-primary);
+			font-size: 0.5em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 

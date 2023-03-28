@@ -44,6 +44,7 @@
 	export let logoHref = '/';
 	export let logoUrl: string = '/ec-logo.png';
 	export let logoText: string = 'Emerald City';
+	export let notificationsNumber: number = 0;
 </script>
 
 <header class:sticky>
@@ -117,6 +118,7 @@
 					walletAddress={user.addr}
 					{network}
 					{transactionInProgress}
+					{notificationsNumber}
 				/>
 				<!-- {/if} -->
 				<!-- {/await} -->

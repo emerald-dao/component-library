@@ -7,6 +7,8 @@
 	import '@emerald-dao/design-system/build/variables.css';
 	import '$lib/styles/app.scss';
 	import Icon from '@iconify/svelte';
+	import TransactionModal from '$lib/components/TransactionModal/TransactionModal.svelte';
+	import Avatar from '$lib/components/Avatar/Avatar.svelte';
 
 	let navElements = [
 		{
