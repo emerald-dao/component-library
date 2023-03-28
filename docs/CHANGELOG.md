@@ -1,3 +1,10 @@
+## [3.66.2](https://github.com/emerald-dao/component-library/compare/v3.66.1...v3.66.2) (2023-03-28)
+
+
+### Bug Fixes
+
+* body style correction ([3e7085c](https://github.com/emerald-dao/component-library/commit/3e7085cc704b6d345b26753118ee4bacf2023131))
+
 ## [3.66.1](https://github.com/emerald-dao/component-library/compare/v3.66.0...v3.66.1) (2023-03-23)
 
 
