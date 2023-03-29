@@ -1,8 +1,10 @@
+@use '../utils/mixins' as mxn;
+
 body {
   min-height: 100vh;
   background-color: var(--clr-background-primary);
   
-  @include mq(medium) {
+  @include mxn.mq(medium) {
     display: grid;
     grid-template-rows: auto 1fr auto;
   }
