@@ -20,50 +20,57 @@
 	export let labelColor = 'var(--clr-text-main)';
 </script>
 
-{#if label}
-	<label for={name} class="row-2" class:disabled style={`color: ${labelColor}`}>
-		{label}
-		{#if tooltip}
-			<TooltipIcon {tooltip} width={0.75} />
-		{/if}
-		{#if required}
-			<span class="required">*</span>
-		{/if}
-	</label>
-{/if}
-<div class="input-wrapper">
-	<slot />
-	{#if icon || iconUrl || iconText}
-		<div class="icon-wrapper-left solid">
-			{#if icon}
-				<Icon {icon} />
-			{:else if iconUrl}
-				<img src={iconUrl} alt="Form helper icon" />
-			{:else if iconText}
-				<span class="icon-text">{iconText}</span>
+<div>
+	{#if label}
+		<label for={name} class="row-2" class:disabled style={`color: ${labelColor}`}>
+			{label}
+			{#if tooltip}
+				<TooltipIcon {tooltip} width={0.75} />
 			{/if}
-		</div>
+			{#if required}
+				<span class="required">*</span>
+			{/if}
+		</label>
 	{/if}
-	{#if errors.length > 0 && statusIcons}
-		<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
-			<Icon icon="tabler:alert-circle" color="var(--clr-alert-main)" width="0.9em" />
-		</div>
-	{:else if isValid && statusIcons}
-		<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
-			<Icon icon="tabler:check" color="var(--clr-success-main)" width="0.9em" />
-		</div>
-	{:else if pending && statusIcons}
-		<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
-			<Icon icon="tabler:loader-2" color="var(--clr-tertiary-main)" class="rotate" width="0.9em" />
-		</div>
-	{/if}
-</div>
-<div class="helper-wrapper">
-	{#if errors.length > 0}
-		<HelperMessage message={errors[0]} type="error" />
-	{:else if pending}
-		<HelperMessage message={pendingMessage} type="loading" />
-	{/if}
+	<div class="input-wrapper">
+		<slot />
+		{#if icon || iconUrl || iconText}
+			<div class="icon-wrapper-left solid">
+				{#if icon}
+					<Icon {icon} />
+				{:else if iconUrl}
+					<img src={iconUrl} alt="Form helper icon" />
+				{:else if iconText}
+					<span class="icon-text">{iconText}</span>
+				{/if}
+			</div>
+		{/if}
+		{#if errors.length > 0 && statusIcons}
+			<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
+				<Icon icon="tabler:alert-circle" color="var(--clr-alert-main)" width="0.9em" />
+			</div>
+		{:else if isValid && statusIcons}
+			<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
+				<Icon icon="tabler:check" color="var(--clr-success-main)" width="0.9em" />
+			</div>
+		{:else if pending && statusIcons}
+			<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
+				<Icon
+					icon="tabler:loader-2"
+					color="var(--clr-tertiary-main)"
+					class="rotate"
+					width="0.9em"
+				/>
+			</div>
+		{/if}
+	</div>
+	<div class="helper-wrapper">
+		{#if errors.length > 0}
+			<HelperMessage message={errors[0]} type="error" />
+		{:else if pending}
+			<HelperMessage message={pendingMessage} type="loading" />
+		{/if}
+	</div>
 </div>
 
 <style type="scss">
