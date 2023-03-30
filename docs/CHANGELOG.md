@@ -1,3 +1,10 @@
+## [3.66.4](https://github.com/emerald-dao/component-library/compare/v3.66.3...v3.66.4) (2023-03-30)
+
+
+### Bug Fixes
+
+* Wrapp InputWrapper in a div to make styling more robust ([4d1b8ac](https://github.com/emerald-dao/component-library/commit/4d1b8acd4e6ea0620f175ae731e65f51502f563a))
+
 ## [3.66.3](https://github.com/emerald-dao/component-library/compare/v3.66.2...v3.66.3) (2023-03-29)
 
 
