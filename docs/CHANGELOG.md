@@ -1,3 +1,10 @@
+# [3.68.0](https://github.com/emerald-dao/component-library/compare/v3.67.0...v3.68.0) (2023-04-03)
+
+
+### Features
+
+* Add line-height to ProgressSteps ([5b79c68](https://github.com/emerald-dao/component-library/commit/5b79c681eaa685a1d8d81d48295bce60e1aeabea))
+
 # [3.67.0](https://github.com/emerald-dao/component-library/compare/v3.66.4...v3.67.0) (2023-04-03)
 
 
