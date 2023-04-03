@@ -1,3 +1,10 @@
+# [3.67.0](https://github.com/emerald-dao/component-library/compare/v3.66.4...v3.67.0) (2023-04-03)
+
+
+### Features
+
+* Add open prop to accordion ([215cfe0](https://github.com/emerald-dao/component-library/commit/215cfe0cbb2957c31778d47d2006857258b849e6))
+
 ## [3.66.4](https://github.com/emerald-dao/component-library/compare/v3.66.3...v3.66.4) (2023-03-30)
 
 
