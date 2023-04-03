@@ -9,6 +9,7 @@
 	export let diameter: number;
 	export let url: string | null = null;
 	export let fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
+	export let lineHeight: string | undefined;
 	export let gap: number;
 	export let cutLineEnds: boolean;
 </script>
@@ -17,10 +18,14 @@
 	<div class="text-wrapper">
 		{#if url}
 			<a href={url}>
-				<span class={`name name-${state} ${fontSize}`}>{stepName}</span>
+				<span class={`name name-${state} ${fontSize}`} style={`line-height: ${lineHeight}`}
+					>{stepName}</span
+				>
 			</a>
 		{:else}
-			<span class={`name name-${state} ${fontSize}`}>{stepName}</span>
+			<span class={`name name-${state} ${fontSize}`} style={`line-height: ${lineHeight}`}
+				>{stepName}</span
+			>
 		{/if}
 	</div>
 	<div class="secondary-wrapper">

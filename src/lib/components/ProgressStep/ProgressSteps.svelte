@@ -6,6 +6,7 @@
 	export let direction: Direction = 'row';
 	export let diameter: number = 1.4;
 	export let fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' = 'medium';
+	export let lineHeight: string | undefined = undefined;
 	export let gap: number = 2;
 	export let cutLineEnds = true;
 
@@ -45,6 +46,7 @@
 			{fontSize}
 			{gap}
 			{cutLineEnds}
+			{lineHeight}
 		/>
 	{/each}
 </div>
