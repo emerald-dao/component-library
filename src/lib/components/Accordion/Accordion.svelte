@@ -6,9 +6,9 @@
 
 <div on:click={handleClick} on:keydown>
 	<div>
-		<slot name="header" />
+		<slot name="header" {open} />
 		{#if open}
-			<slot name="open" />
+			<slot name="open" {open} />
 		{/if}
 	</div>
 </div>
