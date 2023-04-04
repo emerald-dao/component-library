@@ -79,15 +79,17 @@
 				</CommandIcons>
 			</div>
 			{#if user?.addr}
-				<Avatar
-					navigation={avatarDropDownNavigation}
-					{unauthenticate}
-					walletAddress={user.addr}
-					findProfile={getFindProfile(user.addr)}
-					{network}
-					{transactionInProgress}
-					{notificationsNumber}
-				/>
+				{#await getFindProfile(user.addr) then findProfile}
+					<Avatar
+						navigation={avatarDropDownNavigation}
+						{unauthenticate}
+						walletAddress={user.addr}
+						{findProfile}
+						{network}
+						{transactionInProgress}
+						{notificationsNumber}
+					/>
+				{/await}
 			{/if}
 			{#if !user?.addr}
 				<FlowConnect
