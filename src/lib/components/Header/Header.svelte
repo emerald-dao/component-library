@@ -1,6 +1,6 @@
 <script type="ts">
 	import { fly } from 'svelte/transition';
-	import type { User } from '$lib/models/user.interface';
+	import type { User, FindProfile } from '$lib/models/user.interface';
 	import type { NavElement } from '$lib/models/navElement.interface';
 	import { navigating } from '$app/stores';
 	import Hamburger from './Hamburger.svelte';
@@ -16,6 +16,7 @@
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
 	export let user: User | null;
+	export let getFindProfile: (address: string) => FindProfile | null;
 	export let mobileMenu = true;
 	export let sticky = true;
 	export let avatarDropDownNavigation: NavElement[] = [];
@@ -82,6 +83,7 @@
 					navigation={avatarDropDownNavigation}
 					{unauthenticate}
 					walletAddress={user.addr}
+					findProfile={() => getFindProfile(user.addr)}
 					{network}
 					{transactionInProgress}
 					{notificationsNumber}

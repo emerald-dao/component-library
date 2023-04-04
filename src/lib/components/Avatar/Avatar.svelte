@@ -6,13 +6,17 @@
 	import type { NavElement } from '$lib/models/navElement.interface';
 	import FlowConnection from '../FlowConnection/FlowConnection.svelte';
 	import AlertNumber from '../AlertNumber/AlertNumber.svelte';
+	import type { FindProfile } from '$lib/models/user.interface';
 
 	export let walletAddress: string;
+	export let findProfile: FindProfile | null;
 	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
 	export let transactionInProgress: boolean;
 	export let navigation: NavElement[] = [];
 	export let unauthenticate: () => void;
 	export let notificationsNumber: number = 0;
+
+	console.log(findProfile)
 
 	let walletAddressHover = false;
 
@@ -31,7 +35,7 @@
 
 <Dropdown width="250px" rightOffset="-1rem">
 	<div slot="parent" class="avatar-wrapper">
-		<img class="avatar" src="/new-avatar.png" alt="default avatar" />
+		<img class="avatar" src={findProfile ? findProfile.avatar : "/new-avatar.png"} alt="default avatar" />
 		<div class="connection-circle pulse" class:clr-tertiary={transactionInProgress} />
 		{#if notificationsNumber > 0}
 			<div class="notification-number">
@@ -50,7 +54,11 @@
 					on:mouseenter={toggleAddressHover}
 					on:mouseleave={toggleAddressHover}
 				>
-					{walletAddress}
+					{#if findProfile}
+						{findProfile.name}
+					{:else}
+						{walletAddress}
+					{/if}
 					{#if walletAddressHover}
 						<div transition:fade|local={{ duration: 140 }} class="center">
 							<Icon icon="tabler:copy" color="var(--clr-text-off)" />

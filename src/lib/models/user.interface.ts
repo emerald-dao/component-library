@@ -7,3 +7,8 @@ export interface User {
 	loggedIn: boolean;
 	services: [];
 }
+
+export interface FindProfile {
+	name: string;
+	avatar: string;
+}
