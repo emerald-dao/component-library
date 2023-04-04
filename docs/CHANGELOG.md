@@ -1,3 +1,17 @@
+# [3.69.0](https://github.com/emerald-dao/component-library/compare/v3.68.0...v3.69.0) (2023-04-04)
+
+
+### Bug Fixes
+
+* Homepage cleanup ([529a81f](https://github.com/emerald-dao/component-library/commit/529a81f9088ccc23dbb17f7baf2d7802cf402755))
+
+
+### Features
+
+* Button improvements ([dc074f9](https://github.com/emerald-dao/component-library/commit/dc074f9eda6b205e682207e1e4b4176bdff0cf5e))
+* Footer improvements ([dabb08e](https://github.com/emerald-dao/component-library/commit/dabb08ef9f64e089a525096f2367bc985f9ab3b7))
+* Header and Footer responsive improvements ([07a21b2](https://github.com/emerald-dao/component-library/commit/07a21b2e35e6c62f9b0fd0ca6dd6d14ca5810cc7))
+
 # [3.68.0](https://github.com/emerald-dao/component-library/compare/v3.67.0...v3.68.0) (2023-04-03)
 
 
