@@ -2,39 +2,19 @@
 	import { fly } from 'svelte/transition';
 	import type { User } from '$lib/models/user.interface';
 	import type { NavElement } from '$lib/models/navElement.interface';
-	import { navigating, page } from '$app/stores';
+	import { navigating } from '$app/stores';
 	import Hamburger from './Hamburger.svelte';
-	import ThemeToggle from './ThemeToggle.svelte';
-	import Icon from '@iconify/svelte';
 	import type { Writable } from 'svelte/store';
 	import Avatar from '../Avatar/Avatar.svelte';
 	import FlowConnect from '../FlowConnect/FlowConnect.svelte';
+	import CommandIcons from '../Footer/CommandIcons.svelte';
+	import MainNavElements from './MainNavElements.svelte';
+	import Logo from '../Logo/Logo.svelte';
 
-	// let findProfile = getFindProfile($user?.addr);
-
-	// Mobile menu functions
-	let open = false;
-	let hamburgerClick = () => {
-		open = !open;
-
-		if (open) {
-			document.body.style.overflowY = 'hidden';
-		} else {
-			document.body.style.overflowY = 'scroll';
-		}
-	};
-	let onPageChange = () => {
-		open = false;
-		document.body.style.overflowY = 'scroll';
-	};
-	$: if ($navigating) onPageChange();
-
-	// Props
 	export let navElements: NavElement[] | undefined = undefined;
 	export let themeStore: Writable<'dark' | 'light'>;
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
-	// export let getFindProfile: (address: string) => Promise<string>;
 	export let user: User | null;
 	export let mobileMenu = true;
 	export let sticky = true;
@@ -45,73 +25,58 @@
 	export let logoUrl: string = '/ec-logo.png';
 	export let logoText: string = 'Emerald City';
 	export let notificationsNumber: number = 0;
+
+	let screenWidth: number;
+
+	let mobileMenuOpen = false;
+
+	let hamburgerClick = () => {
+		mobileMenuOpen = !mobileMenuOpen;
+
+		if (mobileMenuOpen) {
+			document.body.style.overflowY = 'hidden';
+		} else {
+			document.body.style.overflowY = 'scroll';
+		}
+	};
+
+	let onPageChange = () => {
+		mobileMenuOpen = false;
+		document.body.style.overflowY = 'scroll';
+	};
+
+	$: if ($navigating) onPageChange();
 </script>
 
 <header class:sticky>
 	<div class="container">
 		<a href={logoHref} style="text-decoration: none">
 			<slot name="logo">
-				<div class="row-3 align-center">
-					<img style={'width: 3rem'} src={logoUrl} alt="Emerald DAO Logo" />
-					<span
-						class="w-medium"
-						style="text-decoration: none !important; color: var(--clr-heading-main); font-family: var(--font-heading); font-size: var(--font-size-4);"
-					>
-						{logoText}
-					</span>
-				</div>
+				<Logo imageSrc={logoUrl} text={logoText} hideTextOnMobile={true} />
 			</slot>
 		</a>
-		{#if open && navElements && mobileMenu}
+		{#if mobileMenuOpen && mobileMenu}
 			<nav class="hide-on-desktop-flex" transition:fly={{ x: -20, duration: 500 }}>
-				<ul>
-					{#each navElements as navElement}
-						<a class="header-link" href={navElement.url}>
-							<li>{navElement.name}</li>
-						</a>
-					{/each}
-				</ul>
+				{#if navElements}
+					<MainNavElements {navElements} />
+				{/if}
+				<CommandIcons {themeStore}>
+					<slot name="commands" />
+				</CommandIcons>
 			</nav>
 		{/if}
 		{#if navElements}
 			<nav class="hide-on-mobile-flex">
-				<ul>
-					{#each navElements as navElement}
-						<a
-							class="header-link"
-							href={navElement.url}
-							class:active={navElement.url === $page.url.pathname}
-						>
-							<li>{navElement.name}</li>
-						</a>
-					{/each}
-				</ul>
+				<MainNavElements {navElements} />
 			</nav>
 		{/if}
-		<div class="row-4 align-center">
-			<a
-				class="center"
-				href="https://discord.com/invite/emeraldcity"
-				target="_blank"
-				rel="noreferrer"
-			>
-				<Icon icon="tabler:brand-discord" color="var(--clr-text-main)" />
-			</a>
-			<ThemeToggle {themeStore} />
-			<slot name="commands" />
-			{#if !user?.addr}
-				<FlowConnect {logIn} {unauthenticate} {user} />
-			{/if}
-			{#if navElements && mobileMenu}
-				<div class="hide-on-desktop hamburger-wrapper">
-					<Hamburger {open} onClick={hamburgerClick} />
-				</div>
-			{/if}
+		<div class="right-wrapper">
+			<div class="hide-on-mobile">
+				<CommandIcons {themeStore}>
+					<slot name="commands" />
+				</CommandIcons>
+			</div>
 			{#if user?.addr}
-				<!-- {#await findProfile then profile} -->
-				<!-- {#if profile}
-							<img class="avatar" src={profile.avatar} alt={`${profile.name} avatar`} />
-						{:else} -->
 				<Avatar
 					navigation={avatarDropDownNavigation}
 					{unauthenticate}
@@ -120,12 +85,25 @@
 					{transactionInProgress}
 					{notificationsNumber}
 				/>
-				<!-- {/if} -->
-				<!-- {/await} -->
+			{/if}
+			{#if !user?.addr}
+				<FlowConnect
+					{logIn}
+					{unauthenticate}
+					{user}
+					buttonSize={screenWidth > 600 ? 'small' : 'x-small'}
+				/>
+			{/if}
+			{#if navElements && mobileMenu}
+				<div class="hide-on-desktop hamburger-wrapper">
+					<Hamburger open={mobileMenuOpen} onClick={hamburgerClick} />
+				</div>
 			{/if}
 		</div>
 	</div>
 </header>
+
+<svelte:window bind:innerWidth={screenWidth} />
 
 <style type="scss">
 	header {
@@ -141,10 +119,6 @@
 			align-items: center;
 			justify-content: space-between;
 
-			.hamburger-wrapper {
-				z-index: 999;
-			}
-
 			nav {
 				position: fixed;
 				top: 0;
@@ -155,23 +129,30 @@
 				align-items: center;
 				justify-content: center;
 				z-index: 999;
+				flex-direction: column;
+				gap: var(--space-14);
 
 				@include mq(medium) {
 					position: relative;
 					width: auto;
 					height: auto;
 					background-color: transparent;
+					gap: 0;
+				}
+			}
+
+			.right-wrapper {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: var(--space-1);
+
+				@include mq(medium) {
+					gap: var(--space-5);
 				}
 
-				ul {
-					display: flex;
-					flex-direction: column;
-					list-style: none;
-					gap: 4rem;
-
-					@include mq(medium) {
-						flex-direction: row;
-					}
+				.hamburger-wrapper {
+					z-index: 999;
 				}
 			}
 		}

@@ -7,6 +7,7 @@
 	export let unauthenticate: () => void;
 	// TODO: apply user interface
 	export let user: User | null;
+	export let buttonSize: 'small' | 'x-small' = 'small';
 	// export let getFindProfile: (address: string) => Promise<string>;
 
 	// let findProfile = getFindProfile(user?.addr);
@@ -30,9 +31,10 @@
 			</div>
 		</Button>
 	{:else}
-		<Button size="small" color="primary" on:click={logIn}
-			>Connect<Icon icon="tabler:wallet" /></Button
-		>
+		<Button size={buttonSize} color="primary" on:click={logIn}>
+			Connect
+			<Icon icon="tabler:wallet" />
+		</Button>
 	{/if}
 </div>
 

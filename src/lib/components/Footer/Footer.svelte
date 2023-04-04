@@ -4,6 +4,7 @@
 	import type { SocialElement } from '../../models/socialElement.interface';
 	import Icon from '@iconify/svelte';
 	import Button from '../Button/Button.svelte';
+	import Logo from '../Logo/Logo.svelte';
 
 	export let navElements: NavElement[] | undefined = undefined;
 	export let emeraldTools: EmeraldTool[] = [
@@ -58,15 +59,7 @@
 	<div class="container">
 		<a href={logoHref}>
 			<slot name="logo">
-				<div class="row-3 align-center">
-					<img class="logo" src={logoUrl} alt="Emerald DAO Logo" />
-					<span
-						class="w-medium"
-						style="text-decoration: none !important; color: var(--clr-heading-main); font-family: var(--font-heading); font-size: var(--font-size-4);"
-					>
-						{logoText}
-					</span>
-				</div>
+				<Logo imageSrc={logoUrl} text={logoText} />
 			</slot>
 		</a>
 		<nav>
@@ -137,9 +130,6 @@
 				row-gap: 2rem;
 			}
 
-			.logo {
-				width: 3rem;
-			}
 			nav {
 				margin-bottom: 3rem;
 
@@ -164,11 +154,13 @@
 
 			.socials {
 				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
+				flex-direction: column;
+				gap: var(--space-4);
 
 				@include mq(medium) {
 					grid-area: 2 / 1 / 3 / 5;
+					flex-direction: row;
+					justify-content: space-between;
 				}
 			}
 

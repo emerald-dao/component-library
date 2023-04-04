@@ -140,6 +140,7 @@
 	.x-small {
 		font-size: var(--font-size-0);
 		padding-block: 0;
+		border-radius: 6px;
 	}
 	.x-small.width-regular {
 		padding-inline: var(--space-2);

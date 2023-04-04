@@ -12,7 +12,7 @@
 		class:open
 		viewBox="0 0 100 100"
 		fill="none"
-		stroke="var(--clr-heading-main)"
+		stroke="var(--clr-text-main)"
 		stroke-width="3"
 		{width}
 	>

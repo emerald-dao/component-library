@@ -10,12 +10,18 @@
 
 	onMount(() => {
 		let html = document.querySelector('html');
-		html.setAttribute('data-theme', $themeStore);
+
+		if (html) {
+			html.setAttribute('data-theme', $themeStore);
+		}
 
 		toggleTheme = () => {
 			let newTheme: 'light' | 'dark' = $themeStore === 'light' ? 'dark' : 'light';
 			$themeStore = newTheme;
-			html.setAttribute('data-theme', $themeStore);
+
+			if (html) {
+				html.setAttribute('data-theme', $themeStore);
+			}
 		};
 	});
 </script>
