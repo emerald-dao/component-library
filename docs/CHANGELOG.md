@@ -1,3 +1,15 @@
+# [3.70.0](https://github.com/emerald-dao/component-library/compare/v3.69.0...v3.70.0) (2023-04-04)
+
+
+### Bug Fixes
+
+* Center align MainNavElements ([61bed32](https://github.com/emerald-dao/component-library/commit/61bed32dd1721b81cc68671112cb1ee3e7597221))
+
+
+### Features
+
+* Add width prop to header ([c13276f](https://github.com/emerald-dao/component-library/commit/c13276f2dd549eb4dc7aad812ea812325e5071dd))
+
 # [3.69.0](https://github.com/emerald-dao/component-library/compare/v3.68.0...v3.69.0) (2023-04-04)
 
 
