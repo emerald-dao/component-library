@@ -19,6 +19,7 @@
 		list-style: none;
 		gap: 4rem;
 		padding: 0;
+		align-items: center;
 
 		li {
 			font-size: var(--font-size-3);
