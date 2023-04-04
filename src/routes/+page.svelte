@@ -1,13 +1,6 @@
 <script type="ts">
-	import DropZone from './../lib/components/DropZone/DropZone.svelte';
 	import InputWrapper from './../lib/components/Forms/InputWrapper.svelte';
-	import Range from './../lib/components/Range/Range.svelte';
-	import Label from '$lib/components/Label/Label.svelte';
-	import Currency from '$lib/components/Currency/Currency.svelte';
-	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 	import PoweredByEcdao from '$lib/components/PoweredByECDAO/PoweredByECDAO.svelte';
-	import StatusCircle from '$lib/components/StatusCircle/StatusCircle.svelte';
-	import { Tab, TabPanel, TabList, Tabs } from '$lib/index';
 	import FlowConnection from '$lib/components/FlowConnection/FlowConnection.svelte';
 	import Accordion from '$lib/components/Accordion/Accordion.svelte';
 	import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte';
@@ -32,30 +25,14 @@
 
 	let value = 5;
 	let file: File[];
-
-	let dummyTransaction = {
-		blockId: '',
-		status: '4',
-		statusString: 'SEALED',
-		statusCode: '1',
-		errorMessage: '',
-		events: []
-	};
 </script>
 
 <section>
-	<button on:click={() => (dummyTransaction.errorMessage = 'aa')}>a</button>
-	<TransactionModal transactionInProgress={true} transactionStatus={dummyTransaction} />
 	<div class="container-small column-6">
 		<Button state="loading" statusIconsPosition="right">Loading</Button>
 		<a href="dwd" class="card-primary">
 			<h1>Card</h1>
 		</a>
-		<ProgressSteps steps={stepss} direction="column" />
-		<!-- <label for="a">
-			<input type="checkbox" id="a" />
-			Hola
-		</label> -->
 
 		<FlowConnection network="testnet" transactionInProgress={true} />
 
