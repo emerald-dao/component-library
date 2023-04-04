@@ -3,6 +3,7 @@
 	import type { EmeraldTool } from '../../models/emeraldTool.interface';
 	import type { SocialElement } from '../../models/socialElement.interface';
 	import Icon from '@iconify/svelte';
+	import Button from '../Button/Button.svelte';
 
 	export let navElements: NavElement[] | undefined = undefined;
 	export let emeraldTools: EmeraldTool[] = [
@@ -43,8 +44,8 @@
 			icon: 'tabler:brand-github'
 		},
 		{
-			name: 'GitHub',
-			url: 'https://github.com/emerald-dao',
+			name: 'Discord',
+			url: 'https://discord.com/invite/emeraldcity',
 			icon: 'tabler:brand-discord'
 		}
 	];
@@ -101,11 +102,23 @@
 			</ul>
 		</nav>
 		<div class="socials">
-			{#each socials as social}
-				<a href={social.url} target="_blank" rel="noreferrer" class="nav-link">
-					<Icon icon={social.icon} width="1.2rem" href={social.url} />
-				</a>
-			{/each}
+			<div class="row-5 align-center">
+				{#each socials as social}
+					<a href={social.url} target="_blank" rel="noreferrer" class="nav-link">
+						<Icon icon={social.icon} width="1.2rem" href={social.url} />
+					</a>
+				{/each}
+			</div>
+			<Button
+				color="neutral"
+				type="ghost"
+				size="small"
+				width="extended"
+				href="https://discord.com/invite/emeraldcity"
+			>
+				Join the community
+				<Icon icon="tabler:brand-discord" />
+			</Button>
 		</div>
 	</div>
 </footer>
@@ -113,6 +126,7 @@
 <style type="scss">
 	footer {
 		background-color: var(--clr-background-secondary);
+		border-top: 0.5px var(--clr-border-primary) solid;
 
 		.container {
 			@include mq(medium) {
@@ -151,10 +165,9 @@
 			.socials {
 				display: flex;
 				flex-direction: row;
-				gap: 1rem;
+				justify-content: space-between;
 
 				@include mq(medium) {
-					justify-content: flex-end;
 					grid-area: 2 / 1 / 3 / 5;
 				}
 			}
