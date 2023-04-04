@@ -1,3 +1,10 @@
+## [3.72.1](https://github.com/emerald-dao/component-library/compare/v3.72.0...v3.72.1) (2023-04-04)
+
+
+### Bug Fixes
+
+* findprofile ([812b13a](https://github.com/emerald-dao/component-library/commit/812b13a1676069da2c2975b89f6c7523d82a153d))
+
 # [3.72.0](https://github.com/emerald-dao/component-library/compare/v3.71.0...v3.72.0) (2023-04-04)
 
 
