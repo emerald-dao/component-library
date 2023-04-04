@@ -83,7 +83,7 @@
 					navigation={avatarDropDownNavigation}
 					{unauthenticate}
 					walletAddress={user.addr}
-					findProfile={() => getFindProfile(user.addr)}
+					findProfile={getFindProfile(user.addr)}
 					{network}
 					{transactionInProgress}
 					{notificationsNumber}
