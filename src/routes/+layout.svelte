@@ -28,7 +28,7 @@
 <main>
 	<slot />
 </main>
-<Footer logoUrl="/EA_Iso.svg" logoText="Emerald City" />
+<Footer logoUrl="/EA_Iso.svg" logoText="Emerald City" {navElements} />
 
 <style>
 	main {

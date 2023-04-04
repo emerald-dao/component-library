@@ -56,44 +56,38 @@
 </script>
 
 <footer class="section">
-	<div class="container">
-		<a href={logoHref}>
-			<slot name="logo">
-				<Logo imageSrc={logoUrl} text={logoText} />
-			</slot>
-		</a>
-		<nav>
-			{#if navElements}
-				<h5 class="text-small">Pages</h5>
-				<ul>
-					{#each navElements as navElement}
-						<a class="header-link" href={navElement.url}>
-							<li>{navElement.name}</li>
-						</a>
-					{/each}
-				</ul>
-			{/if}
-		</nav>
-		<nav>
-			<h5 class="text-small">Emerald City Tools</h5>
-			<ul>
-				{#each emeraldTools as tool}
-					<a class="header-link" href={tool.url} target="_blank" rel="noreferrer">
-						<li>{tool.name}</li>
-					</a>
-				{/each}
-			</ul>
-		</nav>
-		<nav>
-			<h5 class="text-small">Emerald City Tools</h5>
-			<ul>
-				{#each emeraldTools as tool}
-					<a class="header-link" href={tool.url} target="_blank" rel="noreferrer">
-						<li>{tool.name}</li>
-					</a>
-				{/each}
-			</ul>
-		</nav>
+	<div class="container container-small">
+		<div class="main-wrapper">
+			<a href={logoHref}>
+				<slot name="logo">
+					<Logo imageSrc={logoUrl} text={logoText} />
+				</slot>
+			</a>
+			<div class="navs-wrapper">
+				<nav>
+					{#if navElements}
+						<h5 class="text-small">Pages</h5>
+						<ul>
+							{#each navElements as navElement}
+								<a class="header-link" href={navElement.url}>
+									<li>{navElement.name}</li>
+								</a>
+							{/each}
+						</ul>
+					{/if}
+				</nav>
+				<nav>
+					<h5 class="text-small">Emerald City Tools</h5>
+					<ul>
+						{#each emeraldTools as tool}
+							<a class="header-link" href={tool.url} target="_blank" rel="noreferrer">
+								<li>{tool.name}</li>
+							</a>
+						{/each}
+					</ul>
+				</nav>
+			</div>
+		</div>
 		<div class="socials">
 			<div class="row-5 align-center">
 				{#each socials as social}
@@ -105,7 +99,7 @@
 			<Button
 				color="neutral"
 				type="ghost"
-				size="small"
+				size="x-small"
 				width="extended"
 				href="https://discord.com/invite/emeraldcity"
 			>
@@ -118,36 +112,49 @@
 
 <style type="scss">
 	footer {
-		background-color: var(--clr-background-secondary);
 		border-top: 0.5px var(--clr-border-primary) solid;
 
 		.container {
 			@include mq(medium) {
 				display: grid;
-				grid-template-columns: repeat(4, 1fr);
 				grid-template-rows: repeat(2, auto);
-				column-gap: 7rem;
-				row-gap: 2rem;
+				row-gap: var(--space-2);
 			}
 
-			nav {
-				margin-bottom: 3rem;
-
+			.main-wrapper {
 				@include mq(medium) {
-					margin-bottom: none;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
 				}
 
-				h5 {
-					color: var(--clr-heading-main);
-				}
+				.navs-wrapper {
+					@include mq(medium) {
+						display: flex;
+						flex-direction: row;
+						gap: var(--space-18);
+					}
 
-				ul {
-					list-style: none;
-					padding: 0;
-					text-align: left;
+					nav {
+						margin-bottom: 3rem;
 
-					li {
-						margin-top: 1rem;
+						@include mq(medium) {
+							margin-bottom: none;
+						}
+
+						h5 {
+							color: var(--clr-heading-main);
+						}
+
+						ul {
+							list-style: none;
+							padding: 0;
+							text-align: left;
+
+							li {
+								margin-top: 1rem;
+							}
+						}
 					}
 				}
 			}
@@ -156,9 +163,10 @@
 				display: flex;
 				flex-direction: column;
 				gap: var(--space-4);
+				border-top: 1px var(--clr-neutral-badge) solid;
+				padding-top: var(--space-10);
 
 				@include mq(medium) {
-					grid-area: 2 / 1 / 3 / 5;
 					flex-direction: row;
 					justify-content: space-between;
 				}
