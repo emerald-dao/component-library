@@ -25,6 +25,7 @@
 	export let logoUrl: string = '/ec-logo.png';
 	export let logoText: string = 'Emerald City';
 	export let notificationsNumber: number = 0;
+	export let width: 'small' | 'medium' | 'large' | 'full' = 'medium';
 
 	let screenWidth: number;
 
@@ -49,7 +50,7 @@
 </script>
 
 <header class:sticky>
-	<div class="container">
+	<div class={`container-${width} main-container`}>
 		<a href={logoHref} style="text-decoration: none">
 			<slot name="logo">
 				<Logo imageSrc={logoUrl} text={logoText} hideTextOnMobile={true} />
@@ -111,7 +112,7 @@
 		z-index: 999;
 		border-bottom: 0.1px var(--clr-border-primary) solid;
 
-		.container {
+		.main-container {
 			padding: 0.6rem 0 0.6rem 0;
 			z-index: 99;
 			display: flex;
