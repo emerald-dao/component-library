@@ -1,3 +1,10 @@
+# [3.71.0](https://github.com/emerald-dao/component-library/compare/v3.70.0...v3.71.0) (2023-04-04)
+
+
+### Features
+
+* More Footer improvements ([08d770b](https://github.com/emerald-dao/component-library/commit/08d770b2506d3680fa51e96b5b853aaee93bafab))
+
 # [3.70.0](https://github.com/emerald-dao/component-library/compare/v3.69.0...v3.70.0) (2023-04-04)
 
 
