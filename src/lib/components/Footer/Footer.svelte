@@ -25,14 +25,28 @@
 			url: 'https://bot.ecdao.org/'
 		},
 		{
-			name: 'Geeft',
-			url: 'https://geeft.ecdao.org/'
+			name: 'Link',
+			url: 'https://link.ecdao.org/'
 		},
 		{
-			name: 'Drizzle',
-			url: 'https://www.drizzle33.app/'
+			name: 'Run',
+			url: 'https://run.ecdao.org/'
 		}
 	];
+	export let thirtyThreeLabs: EmeraldTool[] = [
+		{
+			name: 'Drizzle',
+			url: 'https://drizzle33.app/'
+		},
+		{
+			name: 'Flowview',
+			url: 'https://flowview.app/'
+		},
+		{
+			name: 'Bayou',
+			url: 'https://bayou33.app/'
+		}
+	]
 	export let socials: SocialElement[] = [
 		{
 			name: 'Twitter',
@@ -80,6 +94,16 @@
 					<h5 class="text-small">Emerald City Tools</h5>
 					<ul>
 						{#each emeraldTools as tool}
+							<a class="header-link" href={tool.url} target="_blank" rel="noreferrer">
+								<li>{tool.name}</li>
+							</a>
+						{/each}
+					</ul>
+				</nav>
+				<nav>
+					<h5 class="text-small">33 Labs Tools</h5>
+					<ul>
+						{#each thirtyThreeLabs as tool}
 							<a class="header-link" href={tool.url} target="_blank" rel="noreferrer">
 								<li>{tool.name}</li>
 							</a>

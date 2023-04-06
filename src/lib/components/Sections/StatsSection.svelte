@@ -3,9 +3,9 @@
 	export let background: string = 'transparent';
 	export let bordersColor: string = 'transparent';
 	export let data: Data = {
-		data1: { title: 'Something', stat: '50M' },
-		data2: { title: 'Something', stat: '190+' },
-		data3: { title: 'Something', stat: '3.7B' }
+		data1: { title: 'students', stat: '1k+' },
+		data2: { title: 'hours of content', stat: '100+' },
+		data3: { title: 'idiots', stat: '17k+' }
 	};
 
 	interface StatData {
