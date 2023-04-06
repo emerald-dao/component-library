@@ -62,6 +62,11 @@
 			name: 'Discord',
 			url: 'https://discord.com/invite/emeraldcity',
 			icon: 'tabler:brand-discord'
+		},
+		{
+			name: 'Website',
+			url: 'https://ecdao.org',
+			icon: 'tabler:brand-world'
 		}
 	];
 	export let logoHref = '/';
