@@ -1,3 +1,10 @@
+# [3.73.0](https://github.com/emerald-dao/component-library/compare/v3.72.2...v3.73.0) (2023-04-06)
+
+
+### Features
+
+* update stats ([1a1af43](https://github.com/emerald-dao/component-library/commit/1a1af43e55cc71d7ad2ebee479d666d334c77918))
+
 ## [3.72.2](https://github.com/emerald-dao/component-library/compare/v3.72.1...v3.72.2) (2023-04-04)
 
 
