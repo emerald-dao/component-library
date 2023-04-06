@@ -1,3 +1,10 @@
+## [3.73.1](https://github.com/emerald-dao/component-library/compare/v3.73.0...v3.73.1) (2023-04-06)
+
+
+### Bug Fixes
+
+* add world ([d14cbee](https://github.com/emerald-dao/component-library/commit/d14cbee2b36f2b2554862650bfb5bd5019d144af))
+
 # [3.73.0](https://github.com/emerald-dao/component-library/compare/v3.72.2...v3.73.0) (2023-04-06)
 
 
