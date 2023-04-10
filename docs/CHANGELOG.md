@@ -1,3 +1,10 @@
+# [3.74.0](https://github.com/emerald-dao/component-library/compare/v3.73.1...v3.74.0) (2023-04-10)
+
+
+### Features
+
+* InputWrapper improvements ([84911b2](https://github.com/emerald-dao/component-library/commit/84911b2a1d31c4d372db4a75100b1d562bccba58))
+
 ## [3.73.1](https://github.com/emerald-dao/component-library/compare/v3.73.0...v3.73.1) (2023-04-06)
 
 
