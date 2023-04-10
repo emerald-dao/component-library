@@ -18,6 +18,7 @@
 	export let disabled = false;
 	export let required = false;
 	export let labelColor = 'var(--clr-text-main)';
+	export let prefix: string | null = null;
 </script>
 
 <div>
@@ -33,18 +34,23 @@
 		</label>
 	{/if}
 	<div class="input-wrapper">
-		<slot />
 		{#if icon || iconUrl || iconText}
-			<div class="icon-wrapper-left solid">
+			<div class="icon-wrapper-left">
 				{#if icon}
 					<Icon {icon} />
 				{:else if iconUrl}
 					<img src={iconUrl} alt="Form helper icon" />
 				{:else if iconText}
-					<span class="icon-text">{iconText}</span>
+					<span>{iconText}</span>
 				{/if}
 			</div>
 		{/if}
+		{#if prefix}
+			<span class="prefix">
+				{prefix}
+			</span>
+		{/if}
+		<slot />
 		{#if errors.length > 0 && statusIcons}
 			<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
 				<Icon icon="tabler:alert-circle" color="var(--clr-alert-main)" width="0.9em" />
@@ -81,73 +87,66 @@
 
 	.input-wrapper {
 		width: 100%;
+		border: 1px var(--clr-border-primary) solid;
+		border-radius: var(--radius-1);
+		display: flex;
+		flex-direction: row;
+		transition: 0.2s;
+
+		.icon-wrapper-left,
+		.icon-wrapper-right,
+		.prefix {
+			color: var(--clr-text-off);
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			padding-inline: 0.5rem;
+			transition: 0.2s;
+		}
+
+		.icon-wrapper-left,
+		.prefix {
+			border-right: 1px var(--clr-border-primary) solid;
+			justify-content: center;
+		}
+
+		.icon-wrapper-left {
+			min-width: 3rem;
+
+			img {
+				width: 26px;
+			}
+
+			span {
+				font-size: var(--font-size-1);
+			}
+		}
+
+		.prefix {
+			font-size: var(--font-size-1);
+			background-color: var(--clr-neutral-badge);
+		}
+
+		&:has(input:focus) {
+			border-color: var(--clr-text-main);
+
+			.icon-wrapper-left {
+				border-right-color: var(--clr-text-main);
+				color: var(--clr-text-main);
+			}
+		}
+
+		:global(input) {
+			display: flex;
+			flex: 1;
+			border: none;
+			padding-inline: var(--space-2) var(--space-1);
+		}
 	}
 
 	.helper-wrapper {
 		min-height: 1.4rem;
 		display: flex;
 		flex-direction: column;
-	}
-
-	.input-wrapper {
-		position: relative;
-
-		.icon-wrapper-left,
-		.icon-wrapper-right {
-			position: absolute;
-			color: var(--clr-neutral-500);
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: auto;
-			max-width: 3.4rem;
-			min-width: 3rem;
-			top: 0;
-			padding: 0.5rem;
-		}
-
-		.icon-wrapper-left {
-			left: 0;
-
-			.icon-text {
-				font-size: 10px;
-				--font-weight: 700;
-			}
-
-			img {
-				width: 26px;
-			}
-		}
-
-		.icon-wrapper-right {
-			right: 0;
-			padding-right: 0.8rem;
-			justify-content: flex-end;
-		}
-
-		:global(input:not(:focus) ~ .solid.icon-wrapper-left) {
-			border-radius: 0.6rem 0 0 0.6rem;
-			border-right: 1px var(--clr-border-primary) solid;
-		}
-		:global(input:not(:focus) ~ .solid.icon-wrapper-right) {
-			border-radius: 0 0.6rem 0.6rem 0;
-			border-left: 1px var(--clr-border-primary) solid;
-		}
-	}
-
-	:global(input:focus ~ .solid) {
-		border-right: 1px var(--clr-text-main) solid;
-	}
-
-	.input-wrapper:has(.icon-wrapper-left) {
-		:global(input) {
-			padding-left: 3.6rem;
-		}
-	}
-	.input-wrapper:has(.icon-wrapper-right) {
-		:global(input) {
-			padding-right: 3.6rem;
-		}
 	}
 </style>

@@ -39,7 +39,14 @@
 		<label for="logo">Logo</label>
 		<!-- <DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} /> -->
 
-		<InputWrapper name="hola" isValid={true} label="algo">
+		<InputWrapper
+			name="hola"
+			isValid={true}
+			label="algo"
+			prefix="https://"
+			iconText="tabler:brand-discord"
+			icon="tabler:brand-discord"
+		>
 			<input type="text" name="hola" required />
 		</InputWrapper>
 
