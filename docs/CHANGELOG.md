@@ -1,3 +1,15 @@
+# [3.76.0](https://github.com/emerald-dao/component-library/compare/v3.75.0...v3.76.0) (2023-04-11)
+
+
+### Bug Fixes
+
+* Control all border in InputWrapper ([d276f00](https://github.com/emerald-dao/component-library/commit/d276f00c15e4d53712c3a41a10dc7ca57c17cc40))
+
+
+### Features
+
+* Make default InputWrapper have a border ([66cf017](https://github.com/emerald-dao/component-library/commit/66cf0177f25369ae19fe534bac1bea59884605f1))
+
 # [3.75.0](https://github.com/emerald-dao/component-library/compare/v3.74.1...v3.75.0) (2023-04-11)
 
 
