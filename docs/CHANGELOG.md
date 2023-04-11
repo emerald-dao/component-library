@@ -1,3 +1,10 @@
+## [3.74.1](https://github.com/emerald-dao/component-library/compare/v3.74.0...v3.74.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* PoweredByECDAO style in mobile ([23a070e](https://github.com/emerald-dao/component-library/commit/23a070edcaa09ea39215cf2ed3d4caa9d96717a3))
+
 # [3.74.0](https://github.com/emerald-dao/component-library/compare/v3.73.1...v3.74.0) (2023-04-10)
 
 
