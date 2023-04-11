@@ -47,7 +47,7 @@
 			iconText="tabler:brand-discord"
 			icon="tabler:brand-discord"
 		>
-			<input type="text" name="hola" required />
+			<input type="text" name="hola" required disabled />
 		</InputWrapper>
 
 		<!-- <Label color="alert" size="xx-small">Holacomova</Label>
