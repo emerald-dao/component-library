@@ -19,7 +19,7 @@
 	export let required = false;
 	export let labelColor = 'var(--clr-text-main)';
 	export let prefix: string | null = null;
-	export let hasBorder = false;
+	export let hasBorder = true;
 </script>
 
 <div>
