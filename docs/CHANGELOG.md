@@ -1,3 +1,10 @@
+# [3.75.0](https://github.com/emerald-dao/component-library/compare/v3.74.1...v3.75.0) (2023-04-11)
+
+
+### Features
+
+* Add hasBorder prop to InputWrapper ([3755cf5](https://github.com/emerald-dao/component-library/commit/3755cf5a512fd57dfb4cd1235ce61ddb58474abd))
+
 ## [3.74.1](https://github.com/emerald-dao/component-library/compare/v3.74.0...v3.74.1) (2023-04-11)
 
 
