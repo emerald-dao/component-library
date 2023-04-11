@@ -19,7 +19,7 @@
 	export let required = false;
 	export let labelColor = 'var(--clr-text-main)';
 	export let prefix: string | null = null;
-	export let hasBorder = true;
+	export let hasBorder = false;
 </script>
 
 <div>
@@ -153,5 +153,11 @@
 
 	.no-border {
 		border: none;
+
+		.icon-wrapper-left,
+		.icon-wrapper-right,
+		.prefix {
+			border: none;
+		}
 	}
 </style>
