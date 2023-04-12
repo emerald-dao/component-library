@@ -34,3 +34,4 @@ export { default as Accordion } from './components/Accordion/Accordion.svelte';
 export { default as Divider } from './components/Divider/Divider.svelte';
 export { default as CodeBlock } from './components/CodeBlock/CodeBlock.svelte';
 export { default as AlertNumber } from './components/AlertNumber/AlertNumber.svelte';
+export { default as ErrorPage } from './components/ErrorPage/ErrorPage.svelte';
