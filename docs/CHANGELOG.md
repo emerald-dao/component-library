@@ -1,3 +1,15 @@
+# [3.77.0](https://github.com/emerald-dao/component-library/compare/v3.76.0...v3.77.0) (2023-04-12)
+
+
+### Bug Fixes
+
+* Edit body base styles ([ad6e23b](https://github.com/emerald-dao/component-library/commit/ad6e23b07730460d8dd48166a9510e7d91ba04f8))
+
+
+### Features
+
+* Add ErrorPage component ([eea3fa4](https://github.com/emerald-dao/component-library/commit/eea3fa4bf373d8ea17dd68db5bab087a5cef9e56))
+
 # [3.76.0](https://github.com/emerald-dao/component-library/compare/v3.75.0...v3.76.0) (2023-04-11)
 
 
