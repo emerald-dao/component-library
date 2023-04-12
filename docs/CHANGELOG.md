@@ -1,3 +1,10 @@
+## [3.77.1](https://github.com/emerald-dao/component-library/compare/v3.77.0...v3.77.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* Fix discord invite link in error page ([97da023](https://github.com/emerald-dao/component-library/commit/97da023aded3e43ca200b41bbdad03850fc2e356))
+
 # [3.77.0](https://github.com/emerald-dao/component-library/compare/v3.76.0...v3.77.0) (2023-04-12)
 
 
