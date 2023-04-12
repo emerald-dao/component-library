@@ -22,7 +22,12 @@
 		<p>
 			<em>Join us on Discord to build together the future #onFlow</em>
 		</p>
-		<Button href="/" type="ghost" width="extended" color="neutral">
+		<Button
+			href="https://discord.com/invite/emeraldcity"
+			type="ghost"
+			width="extended"
+			color="neutral"
+		>
 			<Icon icon="tabler:brand-discord" />
 			Emerald City DAO
 		</Button>
