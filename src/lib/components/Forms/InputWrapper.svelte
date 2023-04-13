@@ -19,6 +19,7 @@
 	export let required = false;
 	export let labelColor = 'var(--clr-text-main)';
 	export let prefix: string | null = null;
+	export let hasBorder = true;
 </script>
 
 <div>
@@ -33,7 +34,7 @@
 			{/if}
 		</label>
 	{/if}
-	<div class="input-wrapper">
+	<div class="input-wrapper" class:no-border={!hasBorder}>
 		{#if icon || iconUrl || iconText}
 			<div class="icon-wrapper-left">
 				{#if icon}
@@ -148,5 +149,15 @@
 		min-height: 1.4rem;
 		display: flex;
 		flex-direction: column;
+	}
+
+	.no-border {
+		border: none;
+
+		.icon-wrapper-left,
+		.icon-wrapper-right,
+		.prefix {
+			border: none;
+		}
 	}
 </style>

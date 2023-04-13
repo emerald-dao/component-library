@@ -1,3 +1,48 @@
+## [3.77.1](https://github.com/emerald-dao/component-library/compare/v3.77.0...v3.77.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* Fix discord invite link in error page ([97da023](https://github.com/emerald-dao/component-library/commit/97da023aded3e43ca200b41bbdad03850fc2e356))
+
+# [3.77.0](https://github.com/emerald-dao/component-library/compare/v3.76.0...v3.77.0) (2023-04-12)
+
+
+### Bug Fixes
+
+* Edit body base styles ([ad6e23b](https://github.com/emerald-dao/component-library/commit/ad6e23b07730460d8dd48166a9510e7d91ba04f8))
+
+
+### Features
+
+* Add ErrorPage component ([eea3fa4](https://github.com/emerald-dao/component-library/commit/eea3fa4bf373d8ea17dd68db5bab087a5cef9e56))
+
+# [3.76.0](https://github.com/emerald-dao/component-library/compare/v3.75.0...v3.76.0) (2023-04-11)
+
+
+### Bug Fixes
+
+* Control all border in InputWrapper ([d276f00](https://github.com/emerald-dao/component-library/commit/d276f00c15e4d53712c3a41a10dc7ca57c17cc40))
+
+
+### Features
+
+* Make default InputWrapper have a border ([66cf017](https://github.com/emerald-dao/component-library/commit/66cf0177f25369ae19fe534bac1bea59884605f1))
+
+# [3.75.0](https://github.com/emerald-dao/component-library/compare/v3.74.1...v3.75.0) (2023-04-11)
+
+
+### Features
+
+* Add hasBorder prop to InputWrapper ([3755cf5](https://github.com/emerald-dao/component-library/commit/3755cf5a512fd57dfb4cd1235ce61ddb58474abd))
+
+## [3.74.1](https://github.com/emerald-dao/component-library/compare/v3.74.0...v3.74.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* PoweredByECDAO style in mobile ([23a070e](https://github.com/emerald-dao/component-library/commit/23a070edcaa09ea39215cf2ed3d4caa9d96717a3))
+
 # [3.74.0](https://github.com/emerald-dao/component-library/compare/v3.73.1...v3.74.0) (2023-04-10)
 
 
