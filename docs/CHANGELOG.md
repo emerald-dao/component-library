@@ -1,3 +1,10 @@
+## [3.77.2](https://github.com/emerald-dao/component-library/compare/v3.77.1...v3.77.2) (2023-04-13)
+
+
+### Bug Fixes
+
+* PoweredByEcdao style ([f7f248f](https://github.com/emerald-dao/component-library/commit/f7f248fa9b21260c8ece96be27fbb31d260682e4))
+
 ## [3.77.1](https://github.com/emerald-dao/component-library/compare/v3.77.0...v3.77.1) (2023-04-12)
 
 
