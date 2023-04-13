@@ -1,10 +1,10 @@
 <section>
 	<a class="card container-small" href="https://docs.ecdao.org/" target="_blank" rel="noreferrer">
-		<div>
+		<span class="tagline-small">Powered by</span>
+		<div class="image-wrapper">
 			<img src="/PoweredByLogo.svg" alt="Logo" />
 		</div>
-		<div class="emerald-container">
-			<span class="tagline-small">Powered by</span>
+		<div class="emerald-wrapper">
 			<h3 class="w-medium">Emerald City DAO</h3>
 		</div>
 	</a>
@@ -12,24 +12,42 @@
 
 <style type="scss">
 	.card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		display: grid;
+		grid-template-areas:
+			'top'
+			'middle'
+			'bottom';
 		padding: var(--space-5);
+		justify-content: center;
 
 		@include mq(small) {
-			flex-direction: row;
-			justify-content: center;
-			border-radius: var(--radius-5);
-			border: 1px solid var(--clr-border-primary);
-			padding-block: var(--space-9);
-			padding: var(--space-8);
+			display: grid;
+			grid-template-areas:
+				'Top Top'
+				'Left Right';
 		}
 
 		span {
+			text-align: center;
 			margin-bottom: var(--space-1);
+			grid-area: middle;
+			margin-top: 0px;
+
 			@include mq(small) {
-				margin-bottom: -0.4em;
+				height: min-content;
+				grid-area: Top;
+				margin-bottom: 0;
+				margin-top: var(--space-4);
+			}
+		}
+		.image-wrapper {
+			display: flex;
+			justify-content: center;
+			grid-area: top;
+			margin-bottom: var(--space-1);
+
+			@include mq(small) {
+				grid-area: Left;
 			}
 		}
 
@@ -38,14 +56,14 @@
 			letter-spacing: 0.12em;
 		}
 
-		.emerald-container {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+		.emerald-wrapper {
+			grid-area: bottom;
 			text-align: center;
 
 			@include mq(small) {
+				grid-area: Right;
 				text-align: left;
+				margin-top: var(--space-6);
 			}
 		}
 	}
