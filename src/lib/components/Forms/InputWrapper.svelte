@@ -20,6 +20,7 @@
 	export let labelColor = 'var(--clr-text-main)';
 	export let prefix: string | null = null;
 	export let hasBorder = true;
+	export let hasStatusMessage = true;
 </script>
 
 <div>
@@ -71,13 +72,15 @@
 			</div>
 		{/if}
 	</div>
-	<div class="helper-wrapper">
-		{#if errors.length > 0}
-			<HelperMessage message={errors[0]} type="error" />
-		{:else if pending}
-			<HelperMessage message={pendingMessage} type="loading" />
-		{/if}
-	</div>
+	{#if hasStatusMessage}
+		<div class="helper-wrapper">
+			{#if errors.length > 0}
+				<HelperMessage message={errors[0]} type="error" />
+			{:else if pending}
+				<HelperMessage message={pendingMessage} type="loading" />
+			{/if}
+		</div>
+	{/if}
 </div>
 
 <style type="scss">
