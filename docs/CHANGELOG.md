@@ -1,3 +1,10 @@
+# [3.78.0](https://github.com/emerald-dao/component-library/compare/v3.77.2...v3.78.0) (2023-04-14)
+
+
+### Features
+
+* Make HelperMessage optional in InputWrapper ([9ce04d6](https://github.com/emerald-dao/component-library/commit/9ce04d6af33144f181d2f91a93c1a0d9ea077915))
+
 ## [3.77.2](https://github.com/emerald-dao/component-library/compare/v3.77.1...v3.77.2) (2023-04-13)
 
 
