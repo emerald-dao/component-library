@@ -1,3 +1,10 @@
+## [3.78.1](https://github.com/emerald-dao/component-library/compare/v3.78.0...v3.78.1) (2023-04-19)
+
+
+### Bug Fixes
+
+* Header page active when selected ([4b30337](https://github.com/emerald-dao/component-library/commit/4b3033763e958f79bf68b926048d571c3db85e33))
+
 # [3.78.0](https://github.com/emerald-dao/component-library/compare/v3.77.2...v3.78.0) (2023-04-14)
 
 
