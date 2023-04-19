@@ -1,4 +1,5 @@
 <script type="ts">
+	import { page } from '$app/stores';
 	import type { NavElement } from '$lib/models/navElement.interface';
 
 	export let navElements: NavElement[];
@@ -6,7 +7,11 @@
 
 <ul>
 	{#each navElements as navElement}
-		<a class="header-link" href={navElement.url}>
+		<a
+			class="header-link"
+			class:active={navElement.url === $page.url.pathname}
+			href={navElement.url}
+		>
 			<li>{navElement.name}</li>
 		</a>
 	{/each}
