@@ -1,3 +1,10 @@
+# [3.79.0](https://github.com/emerald-dao/component-library/compare/v3.78.1...v3.79.0) (2023-05-02)
+
+
+### Features
+
+* add title to button ([1279194](https://github.com/emerald-dao/component-library/commit/12791941c2feff65c9ba78db87818deb4c9bdc65))
+
 ## [3.78.1](https://github.com/emerald-dao/component-library/compare/v3.78.0...v3.78.1) (2023-04-19)
 
 
