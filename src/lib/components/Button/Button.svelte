@@ -12,6 +12,7 @@
 	export let form: string | undefined = undefined;
 	export let target: '_blank' | '_self' | '_parent' | '_top' | undefined = undefined;
 	export let statusIconsPosition: 'left' | 'right' = 'right';
+	export let title: string = '';
 </script>
 
 {#if href}
@@ -49,6 +50,7 @@
 		on:focus
 		on:mouseenter
 		on:mouseleave
+		{title}
 		{form}
 		class={`${state} ${color} ${type} ${size}  width-${width}`}
 	>
