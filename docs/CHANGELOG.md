@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/emerald-dao/component-library/compare/v4.0.2...v4.0.3) (2023-05-03)
+
+
+### Bug Fixes
+
+* CSS imports in Storybook ([d078291](https://github.com/emerald-dao/component-library/commit/d0782916a679b8019fa6f55984b0a3e7a47b8821))
+
 ## [4.0.2](https://github.com/emerald-dao/component-library/compare/v4.0.1...v4.0.2) (2023-05-03)
 
 
