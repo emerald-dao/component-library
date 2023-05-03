@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/emerald-dao/component-library/compare/v4.0.3...v4.1.0) (2023-05-03)
+
+
+### Features
+
+* Add svelteOptions to Storybook main.js ([bbde0ac](https://github.com/emerald-dao/component-library/commit/bbde0acd3065ac3306e0f946b1447b2ba3c03086))
+
 ## [4.0.3](https://github.com/emerald-dao/component-library/compare/v4.0.2...v4.0.3) (2023-05-03)
 
 
