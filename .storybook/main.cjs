@@ -1,6 +1,3 @@
-const sveltePreprocess = require('svelte-preprocess');
-const path = require('path');
-const { loadConfigFromFile, mergeConfig } = require('vite');
 module.exports = {
 	stories: [
 		'../src/**/*.stories.mdx',
