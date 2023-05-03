@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/emerald-dao/component-library/compare/v4.0.1...v4.0.2) (2023-05-03)
+
+
+### Bug Fixes
+
+* Fix Github pages storybook deployment ([6560ff6](https://github.com/emerald-dao/component-library/commit/6560ff629b8c9e909cae976035a7a5b94f64597b))
+
 ## [4.0.1](https://github.com/emerald-dao/component-library/compare/v4.0.0...v4.0.1) (2023-05-03)
 
 
