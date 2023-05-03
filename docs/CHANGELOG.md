@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/emerald-dao/component-library/compare/v4.0.0...v4.0.1) (2023-05-03)
+
+
+### Bug Fixes
+
+* GH actions Storybook build ([d4c1dc3](https://github.com/emerald-dao/component-library/commit/d4c1dc3b597c0d2a294a9bc5d2ac6cae39ba088d))
+
 # [4.0.0](https://github.com/emerald-dao/component-library/compare/v3.79.0...v4.0.0) (2023-05-03)
 
 
