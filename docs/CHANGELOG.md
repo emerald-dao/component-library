@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/emerald-dao/component-library/compare/v4.1.0...v4.2.0) (2023-05-23)
+
+
+### Features
+
+* Disable buttons when state = "disabled" ([0876836](https://github.com/emerald-dao/component-library/commit/087683682253ee75ddf35f5c8bd9be525893e7fd))
+
 # [4.1.0](https://github.com/emerald-dao/component-library/compare/v4.0.3...v4.1.0) (2023-05-03)
 
 
