@@ -1,3 +1,3 @@
-# Emerald DAO Component Library
+# Emerald City DAO Component Library
 
-Reusable Svelte components for creating dapps in the Flow Blockchain.
+Reusable Svelte components for creating DApps in the Flow Blockchain.
