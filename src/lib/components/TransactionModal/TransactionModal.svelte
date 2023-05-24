@@ -80,22 +80,22 @@
 				{:else if transactionStatus.status < 2}
 					<TransactionModalMessage
 						title="Pending"
-						description="The transaction has been received by a collector but not yet finalized in a block."
+						description="The transaction has been received and is pending."
 					/>
 				{:else if transactionStatus.status === 2}
 					<TransactionModalMessage
 						title="Finalized"
-						description="The consensus nodes have finalized the block that the transaction is included in."
+						description="The transaction has been received and is pending."
 					/>
 				{:else if transactionStatus.status === 3 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Executed"
-						description="The execution nodes have produced a result for the transaction."
+						description="The transaction is almost complete."
 					/>
 				{:else if transactionStatus.status === 4 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Sealed"
-						description="The verification nodes have verified the transaction, and the seal is included in the latest block."
+						description="The transaction is complete! Please do not refresh the page."
 						icon="tabler:circle-check-filled"
 					/>
 				{:else if transactionStatus.status === 5 && Number(transactionStatus.statusCode) === 0}
