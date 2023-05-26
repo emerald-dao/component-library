@@ -1,3 +1,10 @@
+# [4.4.0](https://github.com/emerald-dao/component-library/compare/v4.3.0...v4.4.0) (2023-05-26)
+
+
+### Features
+
+* disable button if loading ([dd787cb](https://github.com/emerald-dao/component-library/commit/dd787cbff8b8b007fca272108a3dab525602ec19))
+
 # [4.3.0](https://github.com/emerald-dao/component-library/compare/v4.2.1...v4.3.0) (2023-05-25)
 
 
