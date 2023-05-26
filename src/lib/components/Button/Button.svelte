@@ -53,7 +53,7 @@
 		{title}
 		{form}
 		class={`${state} ${color} ${type} ${size}  width-${width}`}
-		disabled={state === 'disabled'}
+		disabled={state === 'disabled' || state === 'loading'}
 	>
 		{#if statusIconsPosition === 'left'}
 			{#if state === 'loading'}
