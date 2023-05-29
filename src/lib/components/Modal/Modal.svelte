@@ -31,6 +31,7 @@
 	export let id = '';
 	export let background: string = 'var(--clr-surface-secondary)';
 	export let unstyled = false;
+	export let overflowVisible = false;
 
 	function keyPress(ev: KeyboardEvent) {
 		//only respond if the current modal is the top one
@@ -92,7 +93,7 @@
 			<div class="close-button header-link" on:click={() => close()} on:keydown>
 				<Icon icon="tabler:x" width="1rem" />
 			</div>
-			<div class="modal-content">
+			<div class="modal-content" class:overflow-visible={overflowVisible}>
 				<slot />
 			</div>
 		</div>
@@ -126,6 +127,10 @@
 				max-width: calc(100vw - 20px);
 				max-height: calc(100vh - 20px);
 				overflow: auto;
+
+				&.overflow-visible {
+					overflow: visible;
+				}
 			}
 		}
 	}
