@@ -1,3 +1,10 @@
+# [4.5.0](https://github.com/emerald-dao/component-library/compare/v4.4.0...v4.5.0) (2023-05-29)
+
+
+### Features
+
+* Improve tooltip ([189687b](https://github.com/emerald-dao/component-library/commit/189687b728dfef3d8439d1f3343d290e704394e1))
+
 # [4.4.0](https://github.com/emerald-dao/component-library/compare/v4.3.0...v4.4.0) (2023-05-26)
 
 
