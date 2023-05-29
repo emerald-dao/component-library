@@ -1,3 +1,10 @@
+# [4.6.0](https://github.com/emerald-dao/component-library/compare/v4.5.0...v4.6.0) (2023-05-29)
+
+
+### Features
+
+* Add option to make overflow visible in Modal ([4a660a6](https://github.com/emerald-dao/component-library/commit/4a660a690235bdf0ca7d1d02ac6679ede732cf16))
+
 # [4.5.0](https://github.com/emerald-dao/component-library/compare/v4.4.0...v4.5.0) (2023-05-29)
 
 
