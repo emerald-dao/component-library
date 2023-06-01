@@ -1,3 +1,10 @@
+## [4.6.1](https://github.com/emerald-dao/component-library/compare/v4.6.0...v4.6.1) (2023-06-01)
+
+
+### Bug Fixes
+
+* DropZone improvements ([d20e4d6](https://github.com/emerald-dao/component-library/commit/d20e4d6b63de5deef16f562a10f80ac811205c1a))
+
 # [4.6.0](https://github.com/emerald-dao/component-library/compare/v4.5.0...v4.6.0) (2023-05-29)
 
 
