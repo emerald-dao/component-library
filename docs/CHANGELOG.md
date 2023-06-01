@@ -1,3 +1,10 @@
+# [4.7.0](https://github.com/emerald-dao/component-library/compare/v4.6.1...v4.7.0) (2023-06-01)
+
+
+### Features
+
+* Add optional target blank for nav elements ([eeabe19](https://github.com/emerald-dao/component-library/commit/eeabe19f3c530e75e5625fbdf2ac3415805cd82b))
+
 ## [4.6.1](https://github.com/emerald-dao/component-library/compare/v4.6.0...v4.6.1) (2023-06-01)
 
 
