@@ -4,4 +4,5 @@ export interface NavElement {
 	prefetch: boolean;
 	icon?: string;
 	notifications?: number;
+	target?: '_blank' | '_self' | '_parent' | '_top';
 }

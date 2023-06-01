@@ -11,6 +11,7 @@
 			class="header-link"
 			class:active={navElement.url === $page.url.pathname}
 			href={navElement.url}
+			target={navElement.target}
 		>
 			<li>{navElement.name}</li>
 		</a>
