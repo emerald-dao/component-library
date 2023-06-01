@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
-import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,12 +11,12 @@ const config = {
 
 	preprocess: [
 		preprocess({
+			preserve: ['ld+json'],
 			postcss: true,
 			scss: {
 				prependData: `@import './src/lib/styles/utils/mixins';`
 			}
-		}),
-		sveltePreprocess()
+		})
 	]
 };
 

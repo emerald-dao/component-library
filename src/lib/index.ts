@@ -36,3 +36,4 @@ export { default as CodeBlock } from './components/CodeBlock/CodeBlock.svelte';
 export { default as AlertNumber } from './components/AlertNumber/AlertNumber.svelte';
 export { default as ErrorPage } from './components/ErrorPage/ErrorPage.svelte';
 export { default as CurrencyInput } from './components/CurrencyInput/CurrencyInput.svelte';
+export { default as Seo } from './components/SEO/Seo.svelte';
