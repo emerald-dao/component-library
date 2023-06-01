@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/emerald-dao/component-library/compare/v4.7.0...v5.0.0) (2023-06-01)
+
+
+### Features
+
+* Seo.svelte component ([068bda1](https://github.com/emerald-dao/component-library/commit/068bda106f776029e72b4672dc9a3edbf0f089ea))
+
+
+### BREAKING CHANGES
+
+* I changed the svelte.config. Deleted an extra sveltePreprocess()
+
 # [4.7.0](https://github.com/emerald-dao/component-library/compare/v4.6.1...v4.7.0) (2023-06-01)
 
 
