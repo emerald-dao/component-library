@@ -82,15 +82,6 @@
 	};
 </script>
 
-<!-- Workaround to make css Container Queries work with Svelte -->
-<svelte:head>
-	<link rel="stylesheet" href="./src/lib/styles/container-queries.css" />
-	<link
-		rel="stylesheet"
-		href="./node-modules/@emerald-dao/component-library/styles/container-queries.css"
-	/>
-</svelte:head>
-
 <div
 	class="drop-zone border-primary"
 	class:drop-zone-over={dragOver}
