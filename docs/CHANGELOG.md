@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/emerald-dao/component-library/compare/v5.0.0...v5.0.1) (2023-06-04)
+
+
+### Bug Fixes
+
+* only show create profile if no profile ([9765b4b](https://github.com/emerald-dao/component-library/commit/9765b4ba59fed9c1848ed5b5f9366bccdab76c20))
+
 # [5.0.0](https://github.com/emerald-dao/component-library/compare/v4.7.0...v5.0.0) (2023-06-01)
 
 
