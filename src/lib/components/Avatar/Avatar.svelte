@@ -16,7 +16,7 @@
 	export let unauthenticate: () => void;
 	export let notificationsNumber: number = 0;
 
-	console.log(findProfile)
+	console.log(findProfile);
 
 	let walletAddressHover = false;
 
@@ -35,7 +35,11 @@
 
 <Dropdown width="250px" rightOffset="-1rem">
 	<div slot="parent" class="avatar-wrapper">
-		<img class="avatar" src={findProfile ? findProfile.avatar : "/new-avatar.png"} alt="default avatar" />
+		<img
+			class="avatar"
+			src={findProfile ? findProfile.avatar : '/new-avatar.png'}
+			alt="default avatar"
+		/>
 		<div class="connection-circle pulse" class:clr-tertiary={transactionInProgress} />
 		{#if notificationsNumber > 0}
 			<div class="notification-number">
@@ -90,15 +94,17 @@
 			<FlowConnection {network} {transactionInProgress} />
 		</div>
 		<div class="dropdown-section column-1">
-			<a
-				class="header-link row-2 align-center"
-				href="https://find.xyz"
-				target="_blank"
-				rel="noreferrer"
-			>
-				<Icon icon="tabler:user-circle" />
-				Create profile
-			</a>
+			{#if !findProfile}
+				<a
+					class="header-link row-2 align-center"
+					href="https://find.xyz"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<Icon icon="tabler:user-circle" />
+					Create profile
+				</a>
+			{/if}
 			<a
 				class="header-link row-2 align-center"
 				href="https://discord.com/invite/emeraldcity"
