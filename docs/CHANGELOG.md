@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/emerald-dao/component-library/compare/v5.0.1...v5.1.0) (2023-06-06)
+
+
+### Features
+
+* Add decimal numbers to Currency input and make symbol optional ([7ac3df5](https://github.com/emerald-dao/component-library/commit/7ac3df588eb4d506dbbe475333685445834005a8))
+
 ## [5.0.1](https://github.com/emerald-dao/component-library/compare/v5.0.0...v5.0.1) (2023-06-04)
 
 
