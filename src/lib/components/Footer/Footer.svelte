@@ -84,7 +84,7 @@
 					</slot>
 				</a>
 				<p class="small" style="color: var(--clr-text-off)">
-					Built by Emerald City DAO. <a
+					Built by Emerald City DAO.<br /><a
 						class="header-link"
 						href="https://discord.com/invite/emeraldcity">Join us</a
 					> on our mission to build the future #onFlow
