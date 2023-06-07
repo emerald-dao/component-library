@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/emerald-dao/component-library/compare/v5.1.0...v5.2.0) (2023-06-07)
+
+
+### Features
+
+* Improve address copy UX ([9873d3f](https://github.com/emerald-dao/component-library/commit/9873d3ff6c590705570c7f2ab2eeecd5bbdd5367))
+
 # [5.1.0](https://github.com/emerald-dao/component-library/compare/v5.0.1...v5.1.0) (2023-06-06)
 
 
