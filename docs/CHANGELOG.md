@@ -1,3 +1,11 @@
+# [5.3.0](https://github.com/emerald-dao/component-library/compare/v5.2.0...v5.3.0) (2023-06-07)
+
+
+### Features
+
+* Break line in footer invitation ([c7191cf](https://github.com/emerald-dao/component-library/commit/c7191cf010395aeaa4e37630bbbe5f1ad6aef2e7))
+* Footer improvements ([823241d](https://github.com/emerald-dao/component-library/commit/823241dbc69f2df41b7c305c98a6d77bdabff100))
+
 # [5.2.0](https://github.com/emerald-dao/component-library/compare/v5.1.0...v5.2.0) (2023-06-07)
 
 
