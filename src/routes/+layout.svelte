@@ -7,7 +7,6 @@
 	import '@emerald-dao/design-system/build/variables.css';
 	import '$lib/styles/app.scss';
 	import Icon from '@iconify/svelte';
-	import { page } from '$app/stores';
 
 	let navElements = [
 		{

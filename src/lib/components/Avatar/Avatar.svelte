@@ -1,5 +1,5 @@
 <script type="ts">
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import Icon from '@iconify/svelte';
 	import CopyToClipboard from '../CopyToClipboard/CopyToClipboard.svelte';
 	import Dropdown from '../Dropdown/Dropdown.svelte';
@@ -16,19 +16,25 @@
 	export let unauthenticate: () => void;
 	export let notificationsNumber: number = 0;
 
-	console.log(findProfile);
-
 	let walletAddressHover = false;
 
 	const toggleAddressHover = () => {
 		walletAddressHover = !walletAddressHover;
 	};
 
+	let copied = false;
 	const copyToClipboard = () => {
 		const app = new CopyToClipboard({
 			target: document.getElementById('clipboard') as Element,
 			props: { name: walletAddress }
 		});
+
+		copied = true;
+
+		setTimeout(() => {
+			copied = false;
+		}, 2000);
+
 		app.$destroy();
 	};
 </script>
@@ -50,7 +56,12 @@
 	<div slot="dropdown" class="dropdown-wrapper">
 		<div class="dropdown-section">
 			<p class="small">
-				<span class="off"> Welcome, </span>
+				<span class="off">
+					Welcome,
+					{#if findProfile}
+						mateor.find
+					{/if}
+				</span>
 				<span
 					class="on address row-1 align-center"
 					on:click={copyToClipboard}
@@ -58,14 +69,18 @@
 					on:mouseenter={toggleAddressHover}
 					on:mouseleave={toggleAddressHover}
 				>
-					{#if findProfile}
-						{findProfile.name}
-					{:else}
-						{walletAddress}
-					{/if}
+					{walletAddress}
 					{#if walletAddressHover}
-						<div transition:fade|local={{ duration: 140 }} class="center">
-							<Icon icon="tabler:copy" color="var(--clr-text-off)" />
+						<div transition:fade|local={{ duration: 140 }} class="row align-center">
+							{#if copied}
+								<div in:fly|local={{ x: 10, duration: 300 }} class="row align-center">
+									<Icon icon="tabler:check" color="var(--clr-primary-main)" />
+								</div>
+							{:else}
+								<div in:fly|local={{ x: 10, duration: 300 }} class="row align-center">
+									<Icon icon="tabler:copy" color="var(--clr-text-off)" />
+								</div>
+							{/if}
 						</div>
 					{/if}
 				</span>
