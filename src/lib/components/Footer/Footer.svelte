@@ -46,7 +46,7 @@
 			name: 'Bayou',
 			url: 'https://bayou33.app/'
 		}
-	]
+	];
 	export let socials: SocialElement[] = [
 		{
 			name: 'Twitter',
@@ -77,11 +77,19 @@
 <footer class="section">
 	<div class="container container-small">
 		<div class="main-wrapper">
-			<a href={logoHref}>
-				<slot name="logo">
-					<Logo imageSrc={logoUrl} text={logoText} />
-				</slot>
-			</a>
+			<div class="logo-wrapper column-4">
+				<a href={logoHref}>
+					<slot name="logo">
+						<Logo imageSrc={logoUrl} text={logoText} />
+					</slot>
+				</a>
+				<p class="small" style="color: var(--clr-text-off)">
+					Built by Emerald City DAO. <a
+						class="header-link"
+						href="https://discord.com/invite/emeraldcity">Join us</a
+					> on our mission to build the future #onFlow
+				</p>
+			</div>
 			<div class="navs-wrapper">
 				<nav>
 					{#if navElements}
@@ -151,17 +159,25 @@
 			}
 
 			.main-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: var(--space-10);
+
 				@include mq(medium) {
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
 				}
 
+				.logo-wrapper {
+					max-width: 264px;
+				}
+
 				.navs-wrapper {
 					@include mq(medium) {
 						display: flex;
 						flex-direction: row;
-						gap: var(--space-18);
+						gap: var(--space-15);
 					}
 
 					nav {
