@@ -1,3 +1,10 @@
+## [5.3.1](https://github.com/emerald-dao/component-library/compare/v5.3.0...v5.3.1) (2023-06-08)
+
+
+### Bug Fixes
+
+* no mateo! XD ([6884312](https://github.com/emerald-dao/component-library/commit/6884312b9c9140af0b05150add45454b802aa386))
+
 # [5.3.0](https://github.com/emerald-dao/component-library/compare/v5.2.0...v5.3.0) (2023-06-07)
 
 
