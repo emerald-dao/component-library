@@ -59,7 +59,7 @@
 				<span class="off">
 					Welcome,
 					{#if findProfile}
-						mateor.find
+						{findProfile.name}
 					{/if}
 				</span>
 				<span
