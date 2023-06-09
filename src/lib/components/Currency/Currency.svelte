@@ -8,9 +8,15 @@
 </script>
 
 <div style={`font-size: ${fontSize}; color: var(--clr-${color}-main)`}>
+	{#if amount < 0}
+		<span>-</span>
+	{/if}
+	{#if moneyPrefix}
+		<span class="prefix">$</span>
+	{/if}
 	{#if amount >= 0}
 		<span class="amount"
-			>{`${moneyPrefix ? '$' : ''}${amount.toLocaleString('en-US', {
+			>{`${amount.toLocaleString('en-US', {
 				style: 'decimal',
 				maximumFractionDigits: decimalNumbers,
 				minimumFractionDigits: decimalNumbers
@@ -18,7 +24,7 @@
 		>
 	{:else}
 		<span class="amount"
-			>{`-$${Math.abs(amount).toLocaleString('en-US', {
+			>{`${Math.abs(amount).toLocaleString('en-US', {
 				style: 'decimal',
 				maximumFractionDigits: decimalNumbers,
 				minimumFractionDigits: decimalNumbers
@@ -31,6 +37,10 @@
 </div>
 
 <style type="scss">
+	.prefix {
+		--font-weight: var(--font-weight-thin);
+	}
+
 	.currency {
 		font-size: 0.6em;
 	}
