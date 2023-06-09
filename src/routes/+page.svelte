@@ -7,6 +7,7 @@
 	import ProgressSteps from '$lib/components/ProgressStep/ProgressSteps.svelte';
 	import Button from '$lib/components/Button/Button.svelte';
 	import TransactionModal from '$lib/components/TransactionModal/TransactionModal.svelte';
+	import Currency from '$lib/components/Currency/Currency.svelte';
 
 	let stepss = [
 		{
@@ -29,6 +30,7 @@
 
 <section>
 	<div class="container-small column-6">
+		<Currency amount={786.0} moneyPrefix={true} fontSize="var(--font-size-3)" decimalNumbers={2} />
 		<Button state="loading" statusIconsPosition="right">Loading</Button>
 		<a href="dwd" class="card-primary">
 			<h1>Card</h1>

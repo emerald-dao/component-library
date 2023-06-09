@@ -7,7 +7,7 @@
 	export let decimalNumbers = 0;
 </script>
 
-<div style={`font-size: ${fontSize}; color: var(--clr-${color}-main)`}>
+<div class="main-wrapper" style={`font-size: ${fontSize}; color: var(--clr-${color}-main)`}>
 	{#if amount < 0}
 		<span>-</span>
 	{/if}
@@ -37,11 +37,18 @@
 </div>
 
 <style type="scss">
-	.prefix {
-		--font-weight: var(--font-weight-thin);
-	}
+	.main-wrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		gap: 0.12em;
 
-	.currency {
-		font-size: 0.6em;
+		.prefix {
+			--font-weight: var(--font-weight-thin);
+		}
+
+		.currency {
+			font-size: 0.6em;
+		}
 	}
 </style>
