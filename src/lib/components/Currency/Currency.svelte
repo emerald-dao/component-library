@@ -39,7 +39,7 @@
 <style type="scss">
 	.main-wrapper {
 		display: flex;
-		align-items: center;
+		align-items: baseline;
 		flex-direction: row;
 		gap: 0.12em;
 
