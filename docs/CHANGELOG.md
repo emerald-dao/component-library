@@ -1,3 +1,10 @@
+## [5.5.1](https://github.com/emerald-dao/component-library/compare/v5.5.0...v5.5.1) (2023-06-09)
+
+
+### Bug Fixes
+
+* Currency component alignement ([fbc25cc](https://github.com/emerald-dao/component-library/commit/fbc25cc4970638e7429599ec5ad85e265d089539))
+
 # [5.5.0](https://github.com/emerald-dao/component-library/compare/v5.4.0...v5.5.0) (2023-06-09)
 
 
