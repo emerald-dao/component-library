@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/emerald-dao/component-library/compare/v5.3.1...v5.4.0) (2023-06-09)
+
+
+### Features
+
+* Improve Currency component ([1b7d675](https://github.com/emerald-dao/component-library/commit/1b7d6755b33610d3917ecf485d4b44927424385a))
+
 ## [5.3.1](https://github.com/emerald-dao/component-library/compare/v5.3.0...v5.3.1) (2023-06-08)
 
 
