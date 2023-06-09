@@ -1,3 +1,10 @@
+## [5.5.2](https://github.com/emerald-dao/component-library/compare/v5.5.1...v5.5.2) (2023-06-09)
+
+
+### Bug Fixes
+
+* Currency corrections ([ceada03](https://github.com/emerald-dao/component-library/commit/ceada038feaf7a71808d39de3d30d846c835d4d2))
+
 ## [5.5.1](https://github.com/emerald-dao/component-library/compare/v5.5.0...v5.5.1) (2023-06-09)
 
 
