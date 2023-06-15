@@ -1,10 +1,15 @@
 <script type="ts">
-	export let amount: number;
+	export let amount: number | string;
 	export let currency: 'FLOW' | 'FUSD' | 'USD' | string | undefined = undefined;
 	export let fontSize: string = '1rem';
 	export let color: 'heading' | 'text' = 'text';
 	export let moneyPrefix = false;
 	export let decimalNumbers = 0;
+
+	// if amount is of type string convert it to number
+	if (typeof amount === 'string') {
+		amount = parseFloat(amount);
+	}
 </script>
 
 <div style={`font-size: ${fontSize}; color: var(--clr-${color}-main)`}>

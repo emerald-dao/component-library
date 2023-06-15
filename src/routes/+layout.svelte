@@ -22,7 +22,14 @@
 	];
 </script>
 
-<Header themeStore={theme} {navElements} logoUrl="/EA_Iso.svg" logoText="Emerald City">
+<Header
+	themeStore={theme}
+	{navElements}
+	logoUrl="/EA_Iso.svg"
+	logoText="Emerald City"
+	userName="aaa"
+	userAvatar="/ec-logo.png"
+>
 	<Icon icon="material-symbols:translate-rounded" slot="commands" />
 </Header>
 <main>
