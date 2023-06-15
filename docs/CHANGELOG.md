@@ -1,3 +1,10 @@
+# [5.7.0](https://github.com/emerald-dao/component-library/compare/v5.6.0...v5.7.0) (2023-06-15)
+
+
+### Features
+
+* Accept strings in Currency component ([6719760](https://github.com/emerald-dao/component-library/commit/6719760373bdee1e7c07348102acda5f1d252c4a))
+
 # [5.6.0](https://github.com/emerald-dao/component-library/compare/v5.5.2...v5.6.0) (2023-06-15)
 
 
