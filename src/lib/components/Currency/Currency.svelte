@@ -8,7 +8,7 @@
 
 	// if amount is of type string convert it to number
 	if (typeof amount === 'string') {
-		amount = parseFloat(amount);
+		amount = Number(amount);
 	}
 </script>
 
