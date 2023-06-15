@@ -1,3 +1,10 @@
+# [5.6.0](https://github.com/emerald-dao/component-library/compare/v5.5.2...v5.6.0) (2023-06-15)
+
+
+### Features
+
+* Add optional userName and userAvatar to Header ([6cd97b2](https://github.com/emerald-dao/component-library/commit/6cd97b2533943a18fe95a4388baf4a3f876859d8))
+
 ## [5.5.2](https://github.com/emerald-dao/component-library/compare/v5.5.1...v5.5.2) (2023-06-09)
 
 
