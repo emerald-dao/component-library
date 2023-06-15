@@ -15,6 +15,8 @@
 	export let navigation: NavElement[] = [];
 	export let unauthenticate: () => void;
 	export let notificationsNumber: number = 0;
+	export let userName: string | undefined = undefined;
+	export let userAvatar: string | undefined = undefined;
 
 	let walletAddressHover = false;
 
@@ -43,7 +45,7 @@
 	<div slot="parent" class="avatar-wrapper">
 		<img
 			class="avatar"
-			src={findProfile ? findProfile.avatar : '/new-avatar.png'}
+			src={findProfile ? findProfile.avatar : userAvatar ? userAvatar : '/new-avatar.png'}
 			alt="default avatar"
 		/>
 		<div class="connection-circle pulse" class:clr-tertiary={transactionInProgress} />
@@ -60,6 +62,8 @@
 					Welcome,
 					{#if findProfile}
 						{findProfile.name}
+					{:else if userName}
+						{userName}
 					{/if}
 				</span>
 				<span

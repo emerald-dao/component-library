@@ -27,6 +27,8 @@
 	export let logoText: string = 'Emerald City';
 	export let notificationsNumber: number = 0;
 	export let width: 'small' | 'medium' | 'large' | 'full' = 'medium';
+	export let userName: string | undefined = undefined;
+	export let userAvatar: string | undefined = undefined;
 
 	let screenWidth: number;
 
@@ -88,6 +90,8 @@
 						{network}
 						{transactionInProgress}
 						{notificationsNumber}
+						{userName}
+						{userAvatar}
 					/>
 				{/await}
 			{/if}
