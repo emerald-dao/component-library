@@ -1,3 +1,10 @@
+## [5.7.1](https://github.com/emerald-dao/component-library/compare/v5.7.0...v5.7.1) (2023-06-15)
+
+
+### Bug Fixes
+
+* currency number conversion ([4a000c3](https://github.com/emerald-dao/component-library/commit/4a000c32e8ab8f0c62a6afcdf124fe5e33ec133b))
+
 # [5.7.0](https://github.com/emerald-dao/component-library/compare/v5.6.0...v5.7.0) (2023-06-15)
 
 
