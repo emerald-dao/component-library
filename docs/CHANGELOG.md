@@ -1,3 +1,10 @@
+## [5.7.2](https://github.com/emerald-dao/component-library/compare/v5.7.1...v5.7.2) (2023-06-19)
+
+
+### Bug Fixes
+
+* Currency input improvements ([06019b6](https://github.com/emerald-dao/component-library/commit/06019b693249b9e6791073929a2cb76884a0d43a))
+
 ## [5.7.1](https://github.com/emerald-dao/component-library/compare/v5.7.0...v5.7.1) (2023-06-15)
 
 
