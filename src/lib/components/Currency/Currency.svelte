@@ -7,7 +7,7 @@
 	export let decimalNumbers = 0;
 
 	// if amount is of type string convert it to number
-	if (typeof amount === 'string') {
+	$: if (typeof amount === 'string') {
 		amount = Number(amount);
 	}
 </script>
