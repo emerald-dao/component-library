@@ -1,3 +1,10 @@
+# [5.8.0](https://github.com/emerald-dao/component-library/compare/v5.7.2...v5.8.0) (2023-06-28)
+
+
+### Features
+
+* Make ProgressBar colors editable ([40d90e4](https://github.com/emerald-dao/component-library/commit/40d90e421895dfc10f05bea25b3a24c1dab8fbb6))
+
 ## [5.7.2](https://github.com/emerald-dao/component-library/compare/v5.7.1...v5.7.2) (2023-06-19)
 
 
