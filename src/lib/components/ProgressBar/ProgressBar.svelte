@@ -20,7 +20,6 @@
 </script>
 
 <div class={`size-${size} column-1`} style={`width: ${width}`}>
-	{verticalLinePosition}
 	<label class="label-wrapper" for={id} class:hide-label={hideLabel}>
 		{#if labelText.length > 0}
 			<span>{labelText}</span>
