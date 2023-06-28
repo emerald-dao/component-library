@@ -11,12 +11,16 @@
 	export let width: string = '100%';
 	export let backgroundColor = 'var(--clr-surface-secondary)';
 	export let foregroundColor = 'var(--clr-primary-main)';
+	export let verticalLine: false | number = false;
+
+	$: verticalLinePosition = verticalLine ? `${(verticalLine * 100) / max}%` : null;
 
 	$: indeterminate = value === undefined;
 	$: capped = value > max ? max : value < 0 ? 0 : value;
 </script>
 
 <div class={`size-${size} column-1`} style={`width: ${width}`}>
+	{verticalLinePosition}
 	<label class="label-wrapper" for={id} class:hide-label={hideLabel}>
 		{#if labelText.length > 0}
 			<span>{labelText}</span>
@@ -30,6 +34,7 @@
 		{/if}
 	</label>
 	<div class="progressbar" {id} style={`background-color: ${backgroundColor}`}>
+		<div class="vertical-line" style={`left: ${verticalLinePosition};`} />
 		<div
 			class="bar"
 			style={`width: ${
@@ -61,6 +66,16 @@
 	.progressbar {
 		border-radius: var(--radius-0);
 		width: 100%;
+		position: relative;
+
+		.vertical-line {
+			position: absolute;
+			height: 40px;
+			width: 0px;
+			border-left: 1px dashed var(--clr-text-main);
+			top: 50%;
+			transform: translateY(-50%);
+		}
 
 		.bar {
 			height: 100%;

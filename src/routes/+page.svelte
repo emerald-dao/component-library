@@ -8,6 +8,7 @@
 	import Button from '$lib/components/Button/Button.svelte';
 	import TransactionModal from '$lib/components/TransactionModal/TransactionModal.svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
+	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 
 	let stepss = [
 		{
@@ -29,6 +30,15 @@
 </script>
 
 <section>
+	<ProgressBar
+		{value}
+		min={0}
+		max={10}
+		labelText="Amount Payed"
+		helperText={`$600 FUSD raised of $3000 FUSD`}
+		showPercentage={true}
+		verticalLine={7}
+	/>
 	<div class="container-small column-6">
 		<Currency
 			amount={'786.02302032'}
