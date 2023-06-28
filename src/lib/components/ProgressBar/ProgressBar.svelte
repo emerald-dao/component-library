@@ -9,6 +9,8 @@
 	export let helperText = '';
 	export let id = 'id-' + Math.random().toString(36);
 	export let width: string = '100%';
+	export let backgroundColor = 'var(--clr-surface-secondary)';
+	export let foregroundColor = 'var(--clr-primary-main)';
 
 	$: indeterminate = value === undefined;
 	$: capped = value > max ? max : value < 0 ? 0 : value;
@@ -27,10 +29,12 @@
 			<span class="percentage">{`${Math.round(((capped - min) / (max - min)) * 100)}%`}</span>
 		{/if}
 	</label>
-	<div class="progressbar" {id}>
+	<div class="progressbar" {id} style={`background-color: ${backgroundColor}`}>
 		<div
 			class="bar"
-			style={`width: ${((capped - min) / (max - min)) * 100}%`}
+			style={`width: ${
+				((capped - min) / (max - min)) * 100
+			}%; background-color: ${foregroundColor}`}
 			class:full-bar={capped === max}
 		/>
 	</div>
@@ -55,12 +59,10 @@
 	}
 
 	.progressbar {
-		background-color: var(--clr-surface-secondary);
 		border-radius: var(--radius-0);
 		width: 100%;
 
 		.bar {
-			background-color: var(--clr-primary-main);
 			height: 100%;
 			border-radius: var(--radius-0) 0 0 var(--radius-0);
 		}
