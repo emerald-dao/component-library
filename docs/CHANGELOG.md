@@ -1,3 +1,10 @@
+# [5.9.0](https://github.com/emerald-dao/component-library/compare/v5.8.0...v5.9.0) (2023-06-28)
+
+
+### Features
+
+* Add optional vertical line to ProgressBar ([db62f2d](https://github.com/emerald-dao/component-library/commit/db62f2d6d4f7da662ec4e85b38ad13974f5ffe66))
+
 # [5.8.0](https://github.com/emerald-dao/component-library/compare/v5.7.2...v5.8.0) (2023-06-28)
 
 
