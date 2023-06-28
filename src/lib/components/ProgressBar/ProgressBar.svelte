@@ -12,6 +12,7 @@
 	export let backgroundColor = 'var(--clr-surface-secondary)';
 	export let foregroundColor = 'var(--clr-primary-main)';
 	export let verticalLine: false | number = false;
+	export let vergicalLineHeight = '40px';
 
 	$: verticalLinePosition = verticalLine ? `${(verticalLine * 100) / max}%` : null;
 
@@ -34,7 +35,10 @@
 	</label>
 	<div class="progressbar" {id} style={`background-color: ${backgroundColor}`}>
 		{#if verticalLine !== false}
-			<div class="vertical-line" style={`left: ${verticalLinePosition};`} />
+			<div
+				class="vertical-line"
+				style={`left: ${verticalLinePosition}; height: ${vergicalLineHeight}`}
+			/>
 		{/if}
 		<div
 			class="bar"
@@ -71,7 +75,6 @@
 
 		.vertical-line {
 			position: absolute;
-			height: 40px;
 			width: 0px;
 			border-left: 1px dashed var(--clr-text-main);
 			top: 50%;
