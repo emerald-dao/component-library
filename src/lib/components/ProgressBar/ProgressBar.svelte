@@ -34,7 +34,9 @@
 		{/if}
 	</label>
 	<div class="progressbar" {id} style={`background-color: ${backgroundColor}`}>
-		<div class="vertical-line" style={`left: ${verticalLinePosition};`} />
+		{#if verticalLine !== false}
+			<div class="vertical-line" style={`left: ${verticalLinePosition};`} />
+		{/if}
 		<div
 			class="bar"
 			style={`width: ${
