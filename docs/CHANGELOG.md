@@ -1,3 +1,10 @@
+## [5.10.1](https://github.com/emerald-dao/component-library/compare/v5.10.0...v5.10.1) (2023-06-28)
+
+
+### Bug Fixes
+
+* Typo correction ([ce5ac66](https://github.com/emerald-dao/component-library/commit/ce5ac665c8b7b9da8d80db772609c9abcf08c478))
+
 # [5.10.0](https://github.com/emerald-dao/component-library/compare/v5.9.2...v5.10.0) (2023-06-28)
 
 
