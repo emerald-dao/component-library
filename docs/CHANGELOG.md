@@ -1,3 +1,10 @@
+# [5.10.0](https://github.com/emerald-dao/component-library/compare/v5.9.2...v5.10.0) (2023-06-28)
+
+
+### Features
+
+* Make verticalLineHeight editable in ProgressBar ([0d33860](https://github.com/emerald-dao/component-library/commit/0d3386040a05480b0b3e68d1ec4507498c3a352e))
+
 ## [5.9.2](https://github.com/emerald-dao/component-library/compare/v5.9.1...v5.9.2) (2023-06-28)
 
 
