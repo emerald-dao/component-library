@@ -1,3 +1,10 @@
+## [5.9.2](https://github.com/emerald-dao/component-library/compare/v5.9.1...v5.9.2) (2023-06-28)
+
+
+### Bug Fixes
+
+* Clean ProgressBar component ([62d3d66](https://github.com/emerald-dao/component-library/commit/62d3d66b9e81071066b6e5aff50c576ddb706a5b))
+
 ## [5.9.1](https://github.com/emerald-dao/component-library/compare/v5.9.0...v5.9.1) (2023-06-28)
 
 
