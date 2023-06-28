@@ -12,7 +12,7 @@
 	export let backgroundColor = 'var(--clr-surface-secondary)';
 	export let foregroundColor = 'var(--clr-primary-main)';
 	export let verticalLine: false | number = false;
-	export let vergicalLineHeight = '40px';
+	export let verticalLineHeight = '40px';
 
 	$: verticalLinePosition = verticalLine ? `${(verticalLine * 100) / max}%` : null;
 
@@ -37,7 +37,7 @@
 		{#if verticalLine !== false}
 			<div
 				class="vertical-line"
-				style={`left: ${verticalLinePosition}; height: ${vergicalLineHeight}`}
+				style={`left: ${verticalLinePosition}; height: ${verticalLineHeight}`}
 			/>
 		{/if}
 		<div
