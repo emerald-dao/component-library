@@ -1,3 +1,10 @@
+## [5.9.1](https://github.com/emerald-dao/component-library/compare/v5.9.0...v5.9.1) (2023-06-28)
+
+
+### Bug Fixes
+
+* Hide vertical line in progress bar when not in use ([5a6263a](https://github.com/emerald-dao/component-library/commit/5a6263aa4a7b00241c7c26ebc772ab4227d16235))
+
 # [5.9.0](https://github.com/emerald-dao/component-library/compare/v5.8.0...v5.9.0) (2023-06-28)
 
 
