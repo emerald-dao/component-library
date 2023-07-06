@@ -1,3 +1,10 @@
+# [5.13.0](https://github.com/emerald-dao/component-library/compare/v5.12.0...v5.13.0) (2023-07-06)
+
+
+### Features
+
+* Select input improvements ([f28cebc](https://github.com/emerald-dao/component-library/commit/f28cebc5a7b6e50a83d3e25ef8fa94a4023cacdf))
+
 # [5.12.0](https://github.com/emerald-dao/component-library/compare/v5.11.0...v5.12.0) (2023-07-06)
 
 
