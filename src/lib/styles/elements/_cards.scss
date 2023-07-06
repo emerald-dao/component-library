@@ -1,10 +1,12 @@
 @use '../utils/utility-classes';
+@use './shadows';
 
 .card {
 	border-radius: var(--radius-4);
 	padding: var(--space-8);
 	transition: 0.4s;
 	@extend .border-primary;
+	@extend .shadow-small;
 
 	&-primary {
 		@extend .card;
@@ -20,26 +22,35 @@
 a > .card,
 a.card {
 	text-decoration: none;
+	transition: 0.4s;
+	@extend .shadow-large;
 
 	&:hover {
 		background-color: var(--clr-surface-primary);
+		@extend .shadow-small;
 	}
 }
 
 a > .card-primary,
 a.card-primary {
 	text-decoration: none;
+	transition: 0.4s;
+	@extend .shadow-large;
 
 	&:hover {
 		background-color: var(--clr-surface-secondary);
+		@extend .shadow-small;
 	}
 }
 
 a > .card-secondary,
 a.card-secondary {
 	text-decoration: none;
+	transition: 0.4s;
+	@extend .shadow-large;
 
 	&:hover {
 		background-color: var(--clr-surface-primary);
+		@extend .shadow-small;
 	}
 }

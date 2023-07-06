@@ -1,0 +1,24 @@
+.shadow-xlarge {
+	box-shadow: var(--shadow-xlarge-x) var(--shadow-xlarge-y) var(--shadow-xlarge-blur)
+		var(--shadow-xlarge-spread) var(--shadow-xlarge-color);
+}
+
+.shadow-large {
+	box-shadow: var(--shadow-large-x) var(--shadow-large-y) var(--shadow-large-blur)
+		var(--shadow-large-spread) var(--shadow-large-color);
+}
+
+.shadow-medium {
+	box-shadow: var(--shadow-medium-x) var(--shadow-medium-y) var(--shadow-medium-blur)
+		var(--shadow-medium-spread) var(--shadow-medium-color);
+}
+
+.shadow-small {
+	box-shadow: var(--shadow-small-x) var(--shadow-small-y) var(--shadow-small-blur)
+		var(--shadow-small-spread) var(--shadow-small-color);
+}
+
+.shadow-xsmall {
+	box-shadow: var(--shadow-xsmall-x) var(--shadow-xsmall-y) var(--shadow-xsmall-blur)
+		var(--shadow-xsmall-spread) var(--shadow-xsmall-color);
+}
