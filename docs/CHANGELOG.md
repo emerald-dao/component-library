@@ -1,3 +1,10 @@
+# [5.12.0](https://github.com/emerald-dao/component-library/compare/v5.11.0...v5.12.0) (2023-07-06)
+
+
+### Features
+
+* Update shadows on light theme ([725d1d4](https://github.com/emerald-dao/component-library/commit/725d1d4517722c91b0abceb381fe676ea3a6bf35))
+
 # [5.11.0](https://github.com/emerald-dao/component-library/compare/v5.10.1...v5.11.0) (2023-07-06)
 
 
