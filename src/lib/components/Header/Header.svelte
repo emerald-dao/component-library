@@ -12,7 +12,7 @@
 	import Logo from '../Logo/Logo.svelte';
 
 	export let navElements: NavElement[] | undefined = undefined;
-	export let themeStore: Writable<'dark' | 'light'>;
+	export let themeStore: Writable<'dark' | 'light'> | undefined = undefined;
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
 	export let user: User | null;

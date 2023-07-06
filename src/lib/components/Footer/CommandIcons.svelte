@@ -3,13 +3,15 @@
 	import type { Writable } from 'svelte/store';
 	import ThemeToggle from '../Header/ThemeToggle.svelte';
 
-	export let themeStore: Writable<'dark' | 'light'>;
+	export let themeStore: Writable<'dark' | 'light'> | undefined = undefined;
 </script>
 
 <div class="row-4 align-center justify-center">
 	<a class="center" href="https://discord.com/invite/emeraldcity" target="_blank" rel="noreferrer">
 		<Icon icon="tabler:brand-discord" color="var(--clr-text-main)" />
 	</a>
-	<ThemeToggle {themeStore} />
+	{#if themeStore}
+		<ThemeToggle {themeStore} />
+	{/if}
 	<slot />
 </div>
