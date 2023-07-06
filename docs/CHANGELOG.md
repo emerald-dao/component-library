@@ -1,3 +1,10 @@
+# [5.11.0](https://github.com/emerald-dao/component-library/compare/v5.10.1...v5.11.0) (2023-07-06)
+
+
+### Features
+
+* Make ThemeToggle optional ([26739b7](https://github.com/emerald-dao/component-library/commit/26739b7d1694e7d5dd9e4958a595a09ed4d07c68))
+
 ## [5.10.1](https://github.com/emerald-dao/component-library/compare/v5.10.0...v5.10.1) (2023-06-28)
 
 
