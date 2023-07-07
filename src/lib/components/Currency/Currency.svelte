@@ -5,6 +5,7 @@
 	export let color: 'heading' | 'text' = 'text';
 	export let moneyPrefix = false;
 	export let decimalNumbers = 0;
+	export let thinCurrency = true;
 
 	// if amount is of type string convert it to number
 	$: if (typeof amount === 'string') {
@@ -38,7 +39,7 @@
 			>
 		{/if}
 		{#if currency}
-			<span class="currency">{currency}</span>
+			<span class="currency" class:thin={thinCurrency}>{currency}</span>
 		{/if}
 	</span>
 </div>
@@ -51,7 +52,10 @@
 
 		.currency {
 			font-size: 1.4em;
-			--font-weight: var(--font-weight-thin);
+
+			&.thin {
+				--font-weight: var(--font-weight-thin);
+			}
 		}
 	}
 </style>
