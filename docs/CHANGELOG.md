@@ -1,3 +1,10 @@
+# [5.14.0](https://github.com/emerald-dao/component-library/compare/v5.13.0...v5.14.0) (2023-07-07)
+
+
+### Features
+
+* add thinCurrency prop to Currency.svelte ([83a8da4](https://github.com/emerald-dao/component-library/commit/83a8da4f91cbb06fe27be72e526ad698e01cc835))
+
 # [5.13.0](https://github.com/emerald-dao/component-library/compare/v5.12.0...v5.13.0) (2023-07-06)
 
 
