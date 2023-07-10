@@ -1,3 +1,10 @@
+# [5.15.0](https://github.com/emerald-dao/component-library/compare/v5.14.0...v5.15.0) (2023-07-10)
+
+
+### Features
+
+* Allow CurrencyInput disabling ([d86368e](https://github.com/emerald-dao/component-library/commit/d86368e45cc7243d98533ebdd87ba96835adc8d9))
+
 # [5.14.0](https://github.com/emerald-dao/component-library/compare/v5.13.0...v5.14.0) (2023-07-07)
 
 
