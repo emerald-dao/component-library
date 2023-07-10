@@ -13,6 +13,7 @@
 	export let fontColor: string | undefined = undefined;
 	export let errors: string[] = [];
 	export let tooltip: string | undefined = undefined;
+	export let disabled = false;
 
 	const dispatch = createEventDispatcher();
 
@@ -53,6 +54,7 @@
 			bind:value={amountValue}
 			bind:this={amountInput}
 			on:input={handleChange}
+			{disabled}
 			style={`font-size: ${fontSize}; color: ${fontColor}`}
 		/>
 	</div>
