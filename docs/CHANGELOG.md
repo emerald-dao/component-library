@@ -1,3 +1,10 @@
+## [5.15.1](https://github.com/emerald-dao/component-library/compare/v5.15.0...v5.15.1) (2023-07-10)
+
+
+### Bug Fixes
+
+* CurrencyInput width correction ([45241d8](https://github.com/emerald-dao/component-library/commit/45241d87e74f476b94a539d51f65270b18e266bc))
+
 # [5.15.0](https://github.com/emerald-dao/component-library/compare/v5.14.0...v5.15.0) (2023-07-10)
 
 
