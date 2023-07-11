@@ -1,3 +1,10 @@
+# [5.16.0](https://github.com/emerald-dao/component-library/compare/v5.15.1...v5.16.0) (2023-07-11)
+
+
+### Features
+
+* Add ConnectWalletPage component ([82e71d2](https://github.com/emerald-dao/component-library/commit/82e71d2f485e294800fb2e322c8ee47953a8fb25))
+
 ## [5.15.1](https://github.com/emerald-dao/component-library/compare/v5.15.0...v5.15.1) (2023-07-10)
 
 
