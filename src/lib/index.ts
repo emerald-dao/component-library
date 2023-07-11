@@ -37,3 +37,4 @@ export { default as AlertNumber } from './components/AlertNumber/AlertNumber.sve
 export { default as ErrorPage } from './components/ErrorPage/ErrorPage.svelte';
 export { default as CurrencyInput } from './components/CurrencyInput/CurrencyInput.svelte';
 export { default as Seo } from './components/SEO/Seo.svelte';
+export { default as ConnectWalletPage } from './components/ConnectWalletPage/ConnectWalletPage.svelte';
