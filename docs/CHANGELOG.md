@@ -1,3 +1,10 @@
+# [5.17.0](https://github.com/emerald-dao/component-library/compare/v5.16.0...v5.17.0) (2023-08-01)
+
+
+### Features
+
+* UserProfileLabel component ([c1df096](https://github.com/emerald-dao/component-library/commit/c1df096577829302d248bfd07f1528dd45182d92))
+
 # [5.16.0](https://github.com/emerald-dao/component-library/compare/v5.15.1...v5.16.0) (2023-07-11)
 
 
