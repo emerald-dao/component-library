@@ -9,7 +9,7 @@
 	import TransactionModal from '$lib/components/TransactionModal/TransactionModal.svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
-	import UserProfileLabel from '$lib/components/UserProifleLabel/UserProfileLabel.svelte';
+	import UserProfileLabel from '$lib/components/UserProfileLabel/UserProfileLabel.svelte';
 
 	let stepss = [
 		{
