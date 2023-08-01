@@ -9,6 +9,7 @@
 	import TransactionModal from '$lib/components/TransactionModal/TransactionModal.svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
+	import UserProfileLabel from '$lib/components/UserProifleLabel/UserProfileLabel.svelte';
 
 	let stepss = [
 		{
@@ -39,6 +40,7 @@
 		showPercentage={true}
 		verticalLine={7}
 	/>
+	<UserProfileLabel address="0x01cf0e2f2f715450" />
 	<div class="container-small column-6">
 		<Currency
 			amount={'786.02302032'}
