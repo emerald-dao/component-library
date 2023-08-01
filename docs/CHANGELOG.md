@@ -1,3 +1,10 @@
+## [5.17.1](https://github.com/emerald-dao/component-library/compare/v5.17.0...v5.17.1) (2023-08-01)
+
+
+### Bug Fixes
+
+* Export UserProfileLabel ([899ee81](https://github.com/emerald-dao/component-library/commit/899ee8141e4ef19f5290fe8b7ac9692302efa56d))
+
 # [5.17.0](https://github.com/emerald-dao/component-library/compare/v5.16.0...v5.17.0) (2023-08-01)
 
 
