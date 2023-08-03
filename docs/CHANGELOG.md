@@ -1,3 +1,10 @@
+# [5.19.0](https://github.com/emerald-dao/component-library/compare/v5.18.0...v5.19.0) (2023-08-03)
+
+
+### Features
+
+* Make ConnectWalletPage responsive ([7aabaf0](https://github.com/emerald-dao/component-library/commit/7aabaf0e3000091abe963ff98f7ddde54af0c599))
+
 # [5.18.0](https://github.com/emerald-dao/component-library/compare/v5.17.1...v5.18.0) (2023-08-03)
 
 
