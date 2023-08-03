@@ -1,3 +1,10 @@
+# [5.18.0](https://github.com/emerald-dao/component-library/compare/v5.17.1...v5.18.0) (2023-08-03)
+
+
+### Features
+
+* Improve scrollbar colors ([b78cf40](https://github.com/emerald-dao/component-library/commit/b78cf407eda1eb8df94d9e9b9d7b19245aa81e63))
+
 ## [5.17.1](https://github.com/emerald-dao/component-library/compare/v5.17.0...v5.17.1) (2023-08-01)
 
 
