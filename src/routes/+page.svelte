@@ -10,6 +10,7 @@
 	import Currency from '$lib/components/Currency/Currency.svelte';
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 	import UserProfileLabel from '$lib/components/UserProfileLabel/UserProfileLabel.svelte';
+	import ConnectWalletPage from '$lib/components/ConnectWalletPage/ConnectWalletPage.svelte';
 
 	let stepss = [
 		{
@@ -30,6 +31,7 @@
 	let file: File[];
 </script>
 
+<ConnectWalletPage />
 <section>
 	<ProgressBar
 		{value}

@@ -35,10 +35,14 @@
 
 <style lang="scss">
 	section {
-		display: grid;
-		grid-template-columns: 2fr 3fr;
 		flex: 1;
 		padding: 0;
+		display: flex;
+
+		@include mq(medium) {
+			display: grid;
+			grid-template-columns: 2fr 3fr;
+		}
 
 		& > div {
 			display: flex;
@@ -49,13 +53,26 @@
 
 			&:first-child {
 				background-color: var(--clr-background-secondary);
-				border-right: 0.5px solid var(--clr-border-primary);
-				align-items: flex-start;
 				padding: var(--space-20);
+				align-items: center;
+				text-align: center;
+				width: 100%;
+
+				@include mq(medium) {
+					text-align: left;
+					align-items: flex-start;
+					border-right: 0.5px solid var(--clr-border-primary);
+				}
 			}
 
 			&:last-child {
 				padding: var(--space-22);
+				display: none;
+
+				@include mq(medium) {
+					display: block;
+				}
+
 				& > p {
 					color: var(--clr-text-main);
 
