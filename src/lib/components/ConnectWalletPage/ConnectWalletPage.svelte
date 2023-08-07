@@ -70,7 +70,10 @@
 				display: none;
 
 				@include mq(medium) {
-					display: block;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
 				}
 
 				& > p {
