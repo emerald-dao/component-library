@@ -1,3 +1,10 @@
+# [5.20.0](https://github.com/emerald-dao/component-library/compare/v5.19.0...v5.20.0) (2023-08-07)
+
+
+### Features
+
+* Improve ConnectWalletPage styling ([3626604](https://github.com/emerald-dao/component-library/commit/3626604de2eebfa23e1160dcdec6e25cbdea9d46))
+
 # [5.19.0](https://github.com/emerald-dao/component-library/compare/v5.18.0...v5.19.0) (2023-08-03)
 
 
