@@ -16,7 +16,7 @@
 	interface Data {
 		data1: StatData;
 		data2: StatData;
-		data3: StatData;
+		data3?: StatData;
 	}
 </script>
 
