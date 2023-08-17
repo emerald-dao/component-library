@@ -1,3 +1,10 @@
+# [5.21.0](https://github.com/emerald-dao/component-library/compare/v5.20.0...v5.21.0) (2023-08-17)
+
+
+### Features
+
+* make StatsSection third stat optional ([760c899](https://github.com/emerald-dao/component-library/commit/760c899897398eb42cbb220753cc96098ce4200d))
+
 # [5.20.0](https://github.com/emerald-dao/component-library/compare/v5.19.0...v5.20.0) (2023-08-07)
 
 
