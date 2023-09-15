@@ -1,3 +1,10 @@
+# [5.23.0](https://github.com/emerald-dao/component-library/compare/v5.22.0...v5.23.0) (2023-09-15)
+
+
+### Features
+
+* Input placeholder even softer ([bc2b719](https://github.com/emerald-dao/component-library/commit/bc2b71963b7673eb04c06450dc18e2c2fbd7c1e7))
+
 # [5.22.0](https://github.com/emerald-dao/component-library/compare/v5.21.0...v5.22.0) (2023-09-15)
 
 
