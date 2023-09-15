@@ -1,3 +1,10 @@
+# [5.22.0](https://github.com/emerald-dao/component-library/compare/v5.21.0...v5.22.0) (2023-09-15)
+
+
+### Features
+
+* Soften input placeholder type ([d7947b6](https://github.com/emerald-dao/component-library/commit/d7947b6b3056ff1cabce0cde4f4a5eae12fe3043))
+
 # [5.21.0](https://github.com/emerald-dao/component-library/compare/v5.20.0...v5.21.0) (2023-08-17)
 
 
