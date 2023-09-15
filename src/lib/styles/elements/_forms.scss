@@ -20,6 +20,7 @@ textarea {
 
 	&::placeholder {
 		color: var(--clr-text-off);
+		opacity: 0.6;
 	}
 
 	&:focus {
