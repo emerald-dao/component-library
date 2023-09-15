@@ -1,3 +1,10 @@
+# [5.24.0](https://github.com/emerald-dao/component-library/compare/v5.23.0...v5.24.0) (2023-09-15)
+
+
+### Features
+
+* Improve InputWrapper transitions ([830cdf8](https://github.com/emerald-dao/component-library/commit/830cdf85d0e893cac9004c135fd77249041fda7d))
+
 # [5.23.0](https://github.com/emerald-dao/component-library/compare/v5.22.0...v5.23.0) (2023-09-15)
 
 
