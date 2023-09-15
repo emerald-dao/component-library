@@ -18,6 +18,10 @@ textarea {
 	color: var(--clr-text-main);
 	--font-weight: var(--font-weight-light);
 
+	&::placeholder {
+		color: var(--clr-text-off);
+	}
+
 	&:focus {
 		border-color: var(--clr-text-main);
 		outline: none;
