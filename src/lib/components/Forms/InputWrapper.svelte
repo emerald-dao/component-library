@@ -54,15 +54,15 @@
 		{/if}
 		<slot />
 		{#if errors.length > 0 && statusIcons}
-			<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
+			<div class="icon-wrapper-right" in:fade|local={{ duration: 400 }}>
 				<Icon icon="tabler:alert-circle" color="var(--clr-alert-main)" width="0.9em" />
 			</div>
 		{:else if isValid && statusIcons}
-			<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
+			<div class="icon-wrapper-right" in:fade|local={{ duration: 400 }}>
 				<Icon icon="tabler:check" color="var(--clr-success-main)" width="0.9em" />
 			</div>
 		{:else if pending && statusIcons}
-			<div class="icon-wrapper-right" transition:fade|local={{ duration: 400 }}>
+			<div class="icon-wrapper-right" in:fade|local={{ duration: 400 }}>
 				<Icon
 					icon="tabler:loader-2"
 					color="var(--clr-tertiary-main)"
