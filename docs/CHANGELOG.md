@@ -1,3 +1,10 @@
+# [5.25.0](https://github.com/emerald-dao/component-library/compare/v5.24.0...v5.25.0) (2023-09-25)
+
+
+### Features
+
+* Delete discord icon from header default commands ([bba5738](https://github.com/emerald-dao/component-library/commit/bba5738719ed32d34df494f06a4db4d54202a881))
+
 # [5.24.0](https://github.com/emerald-dao/component-library/compare/v5.23.0...v5.24.0) (2023-09-15)
 
 
