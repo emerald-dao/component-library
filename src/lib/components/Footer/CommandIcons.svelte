@@ -7,9 +7,6 @@
 </script>
 
 <div class="row-4 align-center justify-center">
-	<a class="center" href="https://discord.com/invite/emeraldcity" target="_blank" rel="noreferrer">
-		<Icon icon="tabler:brand-discord" color="var(--clr-text-main)" />
-	</a>
 	{#if themeStore}
 		<ThemeToggle {themeStore} />
 	{/if}
