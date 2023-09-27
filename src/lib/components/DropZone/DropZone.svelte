@@ -102,7 +102,7 @@
 	{/if}
 
 	{#if bindValue && bindValue.length > 0}
-		{#each bindValue as file, index}
+		{#each bindValue as file, index (file)}
 			<DropZoneFile {file} on:deleteFile={() => deleteFile(index)} />
 		{/each}
 	{:else}
