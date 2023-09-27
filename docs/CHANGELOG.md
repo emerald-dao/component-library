@@ -1,3 +1,10 @@
+## [5.25.1](https://github.com/emerald-dao/component-library/compare/v5.25.0...v5.25.1) (2023-09-27)
+
+
+### Bug Fixes
+
+* Update image on DropZone when image si changed ([94aa45c](https://github.com/emerald-dao/component-library/commit/94aa45c50657b56edf89878af6799b42f31dba2a))
+
 # [5.25.0](https://github.com/emerald-dao/component-library/compare/v5.24.0...v5.25.0) (2023-09-25)
 
 
