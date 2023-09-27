@@ -83,10 +83,11 @@
 						<Logo imageSrc={logoUrl} text={logoText} />
 					</slot>
 				</a>
-				<p class="small" style="color: var(--clr-text-off)">
+				<p class="small">
 					Built by Emerald City DAO.<br /><a
-						class="header-link"
-						href="https://discord.com/invite/emeraldcity">Join us</a
+						class="w-medium"
+						href="https://discord.com/invite/emeraldcity"
+						target="_blank">Join us</a
 					> on our mission to build the future #onFlow
 				</p>
 			</div>

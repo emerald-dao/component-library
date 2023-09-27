@@ -4,13 +4,10 @@
 	import FlowConnection from '$lib/components/FlowConnection/FlowConnection.svelte';
 	import Accordion from '$lib/components/Accordion/Accordion.svelte';
 	import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte';
-	import ProgressSteps from '$lib/components/ProgressStep/ProgressSteps.svelte';
 	import Button from '$lib/components/Button/Button.svelte';
-	import TransactionModal from '$lib/components/TransactionModal/TransactionModal.svelte';
 	import Currency from '$lib/components/Currency/Currency.svelte';
 	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
 	import UserProfileLabel from '$lib/components/UserProfileLabel/UserProfileLabel.svelte';
-	import ConnectWalletPage from '$lib/components/ConnectWalletPage/ConnectWalletPage.svelte';
 
 	let stepss = [
 		{
@@ -31,7 +28,6 @@
 	let file: File[];
 </script>
 
-<ConnectWalletPage />
 <section>
 	<ProgressBar
 		{value}
@@ -58,8 +54,6 @@
 		<FlowConnection network="testnet" transactionInProgress={true} />
 
 		<label for="logo">Logo</label>
-		<!-- <DropZone name="logo" accept="image/png" maxAmountOfFiles={1} bind:bindValue={file} /> -->
-
 		<InputWrapper
 			name="hola"
 			isValid={true}
@@ -70,124 +64,6 @@
 		>
 			<input type="text" name="hola" required disabled />
 		</InputWrapper>
-
-		<!-- <Label color="alert" size="xx-small">Holacomova</Label>
-
-		<label for="burn-tokens" class="switch">
-			<input type="checkbox" name="burn-tokens" id="burn-tokens" placeholder="e.g. 1.000.000" />
-			<span class="slider" />
-			Burn tokens
-		</label>
-
-		<div class="radio-tabs">
-			<label>
-				<input type="radio" id="html" name="fav_language" value="HTML" />
-				HTML
-			</label>
-
-			<label>
-				<input type="radio" id="js" name="fav_language" value="JS" />
-				JS
-			</label>
-		</div>
-
-		<div class="column-4 align-start">
-			<label>
-				<input type="radio" id="html" name="fav_language" value="HTML" />
-				HTML
-			</label>
-			<label>
-				<input type="radio" id="css" name="fav_language" value="CSS" />
-				CSS
-			</label>
-			<label>
-				<input type="radio" id="js" name="fav_language" value="JS" />
-				JS
-			</label>
-		</div>
-
-		<div>
-			<InputWrapper isValid={true} errors={[]} name="aaa" label="Holaa" disabled={true}>
-				<input type="date" disabled />
-			</InputWrapper>
-		</div>
-
-		<Currency amount={600000} currency="USD" color="heading" fontSize="1.4rem" />
-		<Range bind:value id="basic-slider" min={0} max={10} suffix="%" />
-		<span class="tagline">Welcome to Emerald City</span>
-		<h1 class="display-small">Emerald City DAO Components</h1>
-		<ProgressBar
-			value={21}
-			min={20}
-			max={30}
-			labelText="Amount Payed"
-			helperText={`$600 FUSD raised of $3000 FUSD`}
-			size="x-small"
-			showPercentage={true}
-		/>
-		<ProgressBar
-			value={20}
-			min={0}
-			max={100}
-			labelText="Amount Payed"
-			helperText={`$600 FUSD raised of $3000 FUSD`}
-			size="small"
-			showPercentage={true}
-		/>
-		<ProgressBar
-			value={50}
-			min={0}
-			max={100}
-			labelText="Amount Payed"
-			helperText={`$600 FUSD raised of $3000 FUSD`}
-			size="medium"
-			showPercentage={true}
-		/>
-		<ProgressBar
-			value={20}
-			min={0}
-			max={100}
-			labelText="Amount Payed"
-			helperText={`$600 FUSD raised of $3000 FUSD`}
-			size="large"
-		/>
-		<div class="row-8">
-			<div class="card column-3">
-				<Label size="x-small" iconLeft="tabler:diamond">Flow Blockchain</Label>
-				<h4 class="w-medium">Emerald City DAO</h4>
-				<p class="small">
-					Here you'll find a collection of the components used in Emerald City Dao projects.
-				</p>
-			</div>
-			<div class="card column-3">
-				<Label size="x-small" iconLeft="tabler:diamond">Flow Blockchain</Label>
-				<h4 class="w-medium">Emerald City DAO</h4>
-				<p class="small">
-					Here you'll find a collection of the components used in Emerald City Dao projects.
-				</p>
-			</div>
-		</div>
-
-		<Tabs>
-			<TabList>
-				<Tab>One</Tab>
-				<Tab>Two</Tab>
-				<Tab>Three</Tab>
-			</TabList>
-
-			<TabPanel>
-				<h4>First panel</h4>
-			</TabPanel>
-
-			<TabPanel>
-				<h4>Second panel</h4>
-			</TabPanel>
-
-			<TabPanel>
-				<h4>Third panel</h4>
-			</TabPanel>
-		</Tabs>
-	</div> -->
 	</div>
 </section>
 <section class="container">
@@ -231,7 +107,6 @@
 </section>
 <PoweredByEcdao />
 
-<!-- <PoweredByEcdao /> -->
 <style type="scss">
 	h1 {
 		--font-weight: var(--font-weight-semibold);
