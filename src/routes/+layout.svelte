@@ -25,7 +25,6 @@
 <Header
 	themeStore={theme}
 	{navElements}
-	logoUrl="/EA_Iso.svg"
 	logoText="Emerald City"
 	userName="aaa"
 	userAvatar="/ec-logo.png"
@@ -35,7 +34,7 @@
 <main>
 	<slot />
 </main>
-<Footer logoUrl="/EA_Iso.svg" logoText="Emerald City" {navElements} />
+<Footer logoText="Emerald City" {navElements} />
 
 <style>
 	main {

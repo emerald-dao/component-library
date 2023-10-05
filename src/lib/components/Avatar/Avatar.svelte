@@ -6,17 +6,14 @@
 	import type { NavElement } from '$lib/models/navElement.interface';
 	import FlowConnection from '../FlowConnection/FlowConnection.svelte';
 	import AlertNumber from '../AlertNumber/AlertNumber.svelte';
-	import type { FindProfile } from '$lib/models/user.interface';
+	import type { Profile } from '../UserProfileLabel/profile.interface';
 
-	export let walletAddress: string;
-	export let findProfile: FindProfile | null;
 	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
 	export let transactionInProgress: boolean;
 	export let navigation: NavElement[] = [];
 	export let unauthenticate: () => void;
 	export let notificationsNumber: number = 0;
-	export let userName: string | undefined = undefined;
-	export let userAvatar: string | undefined = undefined;
+	export let profile: Profile;
 
 	let walletAddressHover = false;
 
@@ -28,7 +25,7 @@
 	const copyToClipboard = () => {
 		const app = new CopyToClipboard({
 			target: document.getElementById('clipboard') as Element,
-			props: { name: walletAddress }
+			props: { name: profile.address }
 		});
 
 		copied = true;
@@ -43,11 +40,7 @@
 
 <Dropdown width="250px" rightOffset="-1rem">
 	<div slot="parent" class="avatar-wrapper">
-		<img
-			class="avatar"
-			src={findProfile ? findProfile.avatar : userAvatar ? userAvatar : '/new-avatar.png'}
-			alt="default avatar"
-		/>
+		<img class="avatar" src={profile.avatar ?? '/new-avatar.png'} alt="default avatar" />
 		<div class="connection-circle pulse" class:clr-tertiary={transactionInProgress} />
 		{#if notificationsNumber > 0}
 			<div class="notification-number">
@@ -60,10 +53,10 @@
 			<p class="small">
 				<span class="off">
 					Welcome,
-					{#if findProfile}
-						{findProfile.name}
-					{:else if userName}
-						{userName}
+					{#if profile.name}
+						{profile.name}
+					{:else}
+						Anonymus User
 					{/if}
 				</span>
 				<span
@@ -73,7 +66,7 @@
 					on:mouseenter={toggleAddressHover}
 					on:mouseleave={toggleAddressHover}
 				>
-					{walletAddress}
+					{profile.address}
 					{#if walletAddressHover}
 						<div transition:fade|local={{ duration: 140 }} class="row align-center">
 							{#if copied}
@@ -113,7 +106,7 @@
 			<FlowConnection {network} {transactionInProgress} />
 		</div>
 		<div class="dropdown-section column-1">
-			{#if !findProfile}
+			{#if profile.type !== 'find'}
 				<a
 					class="header-link row-2 align-center"
 					href="https://find.xyz"

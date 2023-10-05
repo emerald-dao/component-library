@@ -1,6 +1,6 @@
 <script type="ts">
 	import { fly } from 'svelte/transition';
-	import type { User, FindProfile } from '$lib/models/user.interface';
+	import type { User } from '$lib/models/user.interface';
 	import type { NavElement } from '$lib/models/navElement.interface';
 	import { navigating } from '$app/stores';
 	import Hamburger from './Hamburger.svelte';
@@ -10,34 +10,41 @@
 	import CommandIcons from '../Footer/CommandIcons.svelte';
 	import MainNavElements from './MainNavElements.svelte';
 	import Logo from '../Logo/Logo.svelte';
+	import type { Profile } from '../UserProfileLabel/profile.interface';
 
-	export let navElements: NavElement[] | undefined = undefined;
-	export let themeStore: Writable<'dark' | 'light'> | undefined = undefined;
+	export let navElements: NavElement[] = [];
+	export let avatarDropDownNavigation: NavElement[] = [];
+
+	export let themeStore: Writable<'dark' | 'light'> | null = null;
+
+	export let user: User | null;
+	export let profile: Profile | null;
+
 	export let logIn: () => void;
 	export let unauthenticate: () => void;
-	export let user: User | null;
-	export let getFindProfile: (address: string) => FindProfile | null;
+
 	export let mobileMenu = true;
 	export let sticky = true;
-	export let avatarDropDownNavigation: NavElement[] = [];
+
 	export let network: 'testnet' | 'mainnet' | 'emulator' | undefined;
+
 	export let transactionInProgress: boolean;
+
 	export let logoHref = '/';
 	export let logoUrl: string = '/ec-logo.png';
 	export let logoText: string = 'Emerald City';
+
 	export let notificationsNumber: number = 0;
+
 	export let width: 'small' | 'medium' | 'large' | 'full' = 'medium';
-	export let userName: string | undefined = undefined;
-	export let userAvatar: string | undefined = undefined;
 
 	let screenWidth: number;
-
-	let mobileMenuOpen = false;
+	let isMobileMenuOpen = false;
 
 	let hamburgerClick = () => {
-		mobileMenuOpen = !mobileMenuOpen;
+		isMobileMenuOpen = !isMobileMenuOpen;
 
-		if (mobileMenuOpen) {
+		if (isMobileMenuOpen) {
 			document.body.style.overflowY = 'hidden';
 		} else {
 			document.body.style.overflowY = 'scroll';
@@ -45,7 +52,7 @@
 	};
 
 	let onPageChange = () => {
-		mobileMenuOpen = false;
+		isMobileMenuOpen = false;
 		document.body.style.overflowY = 'scroll';
 	};
 
@@ -59,9 +66,9 @@
 				<Logo imageSrc={logoUrl} text={logoText} hideTextOnMobile={true} />
 			</slot>
 		</a>
-		{#if mobileMenuOpen && mobileMenu}
+		{#if isMobileMenuOpen && mobileMenu}
 			<nav class="hide-on-desktop-flex" transition:fly={{ x: -20, duration: 500 }}>
-				{#if navElements}
+				{#if navElements.length > 0}
 					<MainNavElements {navElements} />
 				{/if}
 				<CommandIcons {themeStore}>
@@ -69,7 +76,7 @@
 				</CommandIcons>
 			</nav>
 		{/if}
-		{#if navElements}
+		{#if navElements.length > 0}
 			<nav class="hide-on-mobile-flex">
 				<MainNavElements {navElements} />
 			</nav>
@@ -80,20 +87,15 @@
 					<slot name="commands" />
 				</CommandIcons>
 			</div>
-			{#if user?.addr}
-				{#await getFindProfile(user.addr) then findProfile}
-					<Avatar
-						navigation={avatarDropDownNavigation}
-						{unauthenticate}
-						walletAddress={user.addr}
-						{findProfile}
-						{network}
-						{transactionInProgress}
-						{notificationsNumber}
-						{userName}
-						{userAvatar}
-					/>
-				{/await}
+			{#if user?.addr && profile}
+				<Avatar
+					navigation={avatarDropDownNavigation}
+					{unauthenticate}
+					{network}
+					{transactionInProgress}
+					{notificationsNumber}
+					{profile}
+				/>
 			{/if}
 			{#if !user?.addr}
 				<FlowConnect
@@ -105,7 +107,7 @@
 			{/if}
 			{#if navElements && mobileMenu}
 				<div class="hide-on-desktop hamburger-wrapper">
-					<Hamburger open={mobileMenuOpen} onClick={hamburgerClick} />
+					<Hamburger open={isMobileMenuOpen} onClick={hamburgerClick} />
 				</div>
 			{/if}
 		</div>
