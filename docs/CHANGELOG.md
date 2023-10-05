@@ -1,3 +1,15 @@
+# [6.0.0](https://github.com/emerald-dao/component-library/compare/v5.26.0...v6.0.0) (2023-10-05)
+
+
+### Code Refactoring
+
+* Header refactor ([b94a408](https://github.com/emerald-dao/component-library/commit/b94a408bbb1d0c90eb6d509192dfb26edf3fb847))
+
+
+### BREAKING CHANGES
+
+* Change header props
+
 # [5.26.0](https://github.com/emerald-dao/component-library/compare/v5.25.1...v5.26.0) (2023-09-27)
 
 
