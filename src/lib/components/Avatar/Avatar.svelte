@@ -36,11 +36,15 @@
 
 		app.$destroy();
 	};
+
+	function handleImgError(e) {
+		e.target.src = '/new-avatar.png';
+	}
 </script>
 
 <Dropdown width="250px" rightOffset="-1rem">
 	<div slot="parent" class="avatar-wrapper">
-		<img class="avatar" src={profile.avatar ?? '/new-avatar.png'} alt="default avatar" />
+		<img class="avatar" src={profile.avatar ?? '/new-avatar.png'} on:error={(e) => handleImgError(e)} alt="default avatar" />
 		<div class="connection-circle pulse" class:clr-tertiary={transactionInProgress} />
 		{#if notificationsNumber > 0}
 			<div class="notification-number">
