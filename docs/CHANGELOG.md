@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/emerald-dao/component-library/compare/v6.0.0...v6.0.1) (2023-10-15)
+
+
+### Bug Fixes
+
+* handle .find img error on avatar ([8171c4f](https://github.com/emerald-dao/component-library/commit/8171c4f3644a033fa6ceb47e0c3266f91090ef13))
+
 # [6.0.0](https://github.com/emerald-dao/component-library/compare/v5.26.0...v6.0.0) (2023-10-05)
 
 
