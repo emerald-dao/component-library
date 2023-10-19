@@ -34,8 +34,16 @@
 	export let transactionName = 'Flow';
 	export let transactionStatus: TransactionStatusObject;
 	export let transactionInProgress = false;
-	export let transactionId: string | undefined = undefined;
+	export let transactionId: string = '';
+	export let network: 'mainnet' | 'testnet' | 'emulator' = 'mainnet';
 	export let border = true;
+
+	let transactionLink = '';
+	if (transactionId && network === 'testnet') {
+		transactionLink = `https://testnet.flowdiver.io/tx/${transactionId}`;
+	} else if (transactionId && network === 'mainnet') {
+		transactionLink = `https://flowdiver.io/tx/${transactionId}`;
+	}
 
 	$: error = transactionStatus.errorMessage && Number(transactionStatus.statusCode) === 1;
 	$: success = transactionStatus.status === 4 && Number(transactionStatus.statusCode) === 0;
@@ -82,38 +90,38 @@
 					<TransactionModalMessage
 						title="Pending"
 						description="The transaction has been received and is pending."
-						{transactionId}
+						{transactionLink}
 					/>
 				{:else if transactionStatus.status === 2}
 					<TransactionModalMessage
 						title="Finalized"
 						description="The transaction has been received and is pending."
-						{transactionId}
+						{transactionLink}
 					/>
 				{:else if transactionStatus.status === 3 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Executed"
 						description="The transaction is almost complete."
-						{transactionId}
+						{transactionLink}
 					/>
 				{:else if transactionStatus.status === 4 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Sealed"
 						description="The transaction is complete! Please do not refresh the page."
 						icon="tabler:circle-check-filled"
-						{transactionId}
+						{transactionLink}
 					/>
 				{:else if transactionStatus.status === 5 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Expired"
 						description="The transaction was submitted past its expiration block height."
-						{transactionId}
+						{transactionLink}
 					/>
 				{:else if transactionStatus.errorMessage && Number(transactionStatus.statusCode) === 1}
 					<TransactionModalMessage
 						title="Failed"
 						description="Transaction execution failed."
-						{transactionId}
+						{transactionLink}
 						error={true}
 					/>
 				{:else}
