@@ -34,6 +34,7 @@
 	export let transactionName = 'Flow';
 	export let transactionStatus: TransactionStatusObject;
 	export let transactionInProgress = false;
+	export let transactionId: string | undefined = undefined;
 	export let border = true;
 
 	$: error = transactionStatus.errorMessage && Number(transactionStatus.statusCode) === 1;
@@ -81,32 +82,38 @@
 					<TransactionModalMessage
 						title="Pending"
 						description="The transaction has been received and is pending."
+						{transactionId}
 					/>
 				{:else if transactionStatus.status === 2}
 					<TransactionModalMessage
 						title="Finalized"
 						description="The transaction has been received and is pending."
+						{transactionId}
 					/>
 				{:else if transactionStatus.status === 3 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Executed"
 						description="The transaction is almost complete."
+						{transactionId}
 					/>
 				{:else if transactionStatus.status === 4 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Sealed"
 						description="The transaction is complete! Please do not refresh the page."
 						icon="tabler:circle-check-filled"
+						{transactionId}
 					/>
 				{:else if transactionStatus.status === 5 && Number(transactionStatus.statusCode) === 0}
 					<TransactionModalMessage
 						title="Expired"
 						description="The transaction was submitted past its expiration block height."
+						{transactionId}
 					/>
 				{:else if transactionStatus.errorMessage && Number(transactionStatus.statusCode) === 1}
 					<TransactionModalMessage
 						title="Failed"
 						description="Transaction execution failed."
+						{transactionId}
 						error={true}
 					/>
 				{:else}

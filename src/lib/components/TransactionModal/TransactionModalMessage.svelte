@@ -6,6 +6,7 @@
 	export let description: string;
 	export let icon: string | undefined = undefined;
 	export let error: boolean = false;
+	export let transactionId: string | undefined = undefined;
 </script>
 
 <div class="column-2" in:fade|local={{ duration: 400 }}>
@@ -20,6 +21,11 @@
 	<span class="transaction-detail">
 		{description}
 	</span>
+	{#if transactionId}
+		<a href={`https://www.flowdiver.io/tx/${transactionId}`} target="_blank" rel="noreferrer">
+			View your transaction
+		</a>
+	{/if}
 </div>
 
 <style type="scss">
