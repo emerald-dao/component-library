@@ -1,3 +1,10 @@
+## [6.1.3](https://github.com/emerald-dao/component-library/compare/v6.1.2...v6.1.3) (2023-10-19)
+
+
+### Bug Fixes
+
+* smaller and centered view transaction link ([6e33a0f](https://github.com/emerald-dao/component-library/commit/6e33a0f1b11330300a15c0bda728baf089b85715))
+
 ## [6.1.2](https://github.com/emerald-dao/component-library/compare/v6.1.1...v6.1.2) (2023-10-19)
 
 
