@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/emerald-dao/component-library/compare/v6.0.1...v6.1.0) (2023-10-19)
+
+
+### Features
+
+* add transactionId/flowdiver to transaction modal ([fdb1b01](https://github.com/emerald-dao/component-library/commit/fdb1b0173f626d70132a305c2cb17a93091fdfd3))
+
 ## [6.0.1](https://github.com/emerald-dao/component-library/compare/v6.0.0...v6.0.1) (2023-10-15)
 
 
