@@ -1,3 +1,10 @@
+## [6.1.2](https://github.com/emerald-dao/component-library/compare/v6.1.1...v6.1.2) (2023-10-19)
+
+
+### Bug Fixes
+
+* transactionLink in TransactionModal ([a381cb8](https://github.com/emerald-dao/component-library/commit/a381cb8f0b422eade994352679fca3a43eabe42f))
+
 ## [6.1.1](https://github.com/emerald-dao/component-library/compare/v6.1.0...v6.1.1) (2023-10-19)
 
 
