@@ -38,13 +38,11 @@
 	export let network: 'mainnet' | 'testnet' | 'emulator' = 'mainnet';
 	export let border = true;
 
-	let transactionLink = '';
-	if (transactionId && network === 'testnet') {
-		transactionLink = `https://testnet.flowdiver.io/tx/${transactionId}`;
-	} else if (transactionId && network === 'mainnet') {
-		transactionLink = `https://flowdiver.io/tx/${transactionId}`;
-	}
-
+	$: transactionLink = transactionId && network === 'mainnet' ? 
+		`https://flowdiver.io/tx/${transactionId}` : 
+		transactionId && network === 'testnet' ? 
+		`https://testnet.flowdiver.io/tx/${transactionId}` : 
+		''
 	$: error = transactionStatus.errorMessage && Number(transactionStatus.statusCode) === 1;
 	$: success = transactionStatus.status === 4 && Number(transactionStatus.statusCode) === 0;
 </script>
