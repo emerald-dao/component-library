@@ -22,7 +22,7 @@
 		{description}
 	</span>
 	{#if transactionLink}
-		<a href={transactionLink} target="_blank" rel="noreferrer">View your transaction</a>
+		<a href={transactionLink} target="_blank" rel="noreferrer" class="small">View your transaction</a>
 	{/if}
 </div>
 
@@ -46,6 +46,10 @@
 
 	span {
 		max-width: 20ch;
+		text-align: center;
+	}
+
+	a {
 		text-align: center;
 	}
 </style>
