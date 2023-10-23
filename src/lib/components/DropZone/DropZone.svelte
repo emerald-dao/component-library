@@ -32,7 +32,7 @@
 					if (maxFileSizeInMB) {
 						const fileSize = Number((files[i].size / (1024 * 1024)).toFixed(2));
 						if (fileSize > maxFileSizeInMB) {
-							reject([`The max file size is ${maxFileSizeInMB}mb, and your file is ${fileSize}mb.`])
+							reject([`The max file size is ${maxFileSizeInMB}mb, but your file is ${fileSize}mb. You can use ezgif.com/optimize to try and reduce your file size.`])
 						}
 					}
 					continue;
