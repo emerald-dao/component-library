@@ -14,7 +14,7 @@
 	export let isDirectory: boolean = false;
 	export let multiple: boolean = false;
 	export let bindValue: File[] | undefined;
-	export let maxFileSizeInMB: number | undefined;
+	export let maxFileSizeInMB: number | undefined = undefined;
 
 	const acceptString = accept.join(', ');
 
