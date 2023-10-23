@@ -1,3 +1,10 @@
+## [6.2.2](https://github.com/emerald-dao/component-library/compare/v6.2.1...v6.2.2) (2023-10-23)
+
+
+### Bug Fixes
+
+* give default undefined to maxFileSizeInMB ([7c8b151](https://github.com/emerald-dao/component-library/commit/7c8b151be1dc006ba580fcfea800902a1fb6c6dc))
+
 ## [6.2.1](https://github.com/emerald-dao/component-library/compare/v6.2.0...v6.2.1) (2023-10-23)
 
 
