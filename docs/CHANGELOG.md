@@ -1,3 +1,10 @@
+# [6.2.0](https://github.com/emerald-dao/component-library/compare/v6.1.3...v6.2.0) (2023-10-23)
+
+
+### Features
+
+* optional maxFileSizeInMB to DropZone.svelte ([9ea5f35](https://github.com/emerald-dao/component-library/commit/9ea5f35bfa6bcf5ce724c4c3dd274c8e16881dfb))
+
 ## [6.1.3](https://github.com/emerald-dao/component-library/compare/v6.1.2...v6.1.3) (2023-10-19)
 
 
