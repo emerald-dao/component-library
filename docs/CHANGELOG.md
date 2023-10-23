@@ -1,3 +1,10 @@
+## [6.2.1](https://github.com/emerald-dao/component-library/compare/v6.2.0...v6.2.1) (2023-10-23)
+
+
+### Bug Fixes
+
+* round fileSize in DropZone.svelte ([a2a9d4b](https://github.com/emerald-dao/component-library/commit/a2a9d4b4a99da4b009c3872ff6f362abf00a820f))
+
 # [6.2.0](https://github.com/emerald-dao/component-library/compare/v6.1.3...v6.2.0) (2023-10-23)
 
 
