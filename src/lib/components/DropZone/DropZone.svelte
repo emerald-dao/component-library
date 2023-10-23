@@ -30,7 +30,7 @@
 						reject(['Wrong file type']);
 					}
 					if (maxFileSizeInMB) {
-						const fileSize = files[i].size / (1024*1024);
+						const fileSize = Number((files[i].size / (1024 * 1024)).toFixed(2));
 						if (fileSize > maxFileSizeInMB) {
 							reject([`The max file size is ${maxFileSizeInMB}mb, and your file is ${fileSize}mb.`])
 						}
