@@ -1,3 +1,10 @@
+## [6.2.3](https://github.com/emerald-dao/component-library/compare/v6.2.2...v6.2.3) (2023-10-23)
+
+
+### Bug Fixes
+
+* add helper message to DropZone.svelte ([01418f6](https://github.com/emerald-dao/component-library/commit/01418f641039744cae9a9ed6cd89fc572af7cb58))
+
 ## [6.2.2](https://github.com/emerald-dao/component-library/compare/v6.2.1...v6.2.2) (2023-10-23)
 
 
