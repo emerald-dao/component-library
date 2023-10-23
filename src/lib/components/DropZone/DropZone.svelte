@@ -14,6 +14,7 @@
 	export let isDirectory: boolean = false;
 	export let multiple: boolean = false;
 	export let bindValue: File[] | undefined;
+	export let maxFileSizeInMB: number | undefined;
 
 	const acceptString = accept.join(', ');
 
@@ -27,6 +28,12 @@
 				for (let i = 0; i < files.length; i++) {
 					if (!accept.includes(files[i].type)) {
 						reject(['Wrong file type']);
+					}
+					if (maxFileSizeInMB) {
+						const fileSize = files[i].size / (1024*1024);
+						if (fileSize > maxFileSizeInMB) {
+							reject([`The max file size is ${maxFileSizeInMB}mb, and your file is ${fileSize}mb.`])
+						}
 					}
 					continue;
 				}
