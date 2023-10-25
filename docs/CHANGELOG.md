@@ -1,3 +1,10 @@
+# [6.3.0](https://github.com/emerald-dao/component-library/compare/v6.2.3...v6.3.0) (2023-10-25)
+
+
+### Features
+
+* CodeBlock improvements ([e2565c7](https://github.com/emerald-dao/component-library/commit/e2565c72f429302a8c3769281295e2c1834ffeba))
+
 ## [6.2.3](https://github.com/emerald-dao/component-library/compare/v6.2.2...v6.2.3) (2023-10-23)
 
 
