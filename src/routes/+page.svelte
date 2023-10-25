@@ -85,8 +85,7 @@
 </section>
 <section class="container-small">
 	<CodeBlock
-		codeBlockTitle="Cadence"
-		codeStyle="js"
+		lang="cadence"
 		code={`
 		pub contract Counter {
    			pub var count: Int
