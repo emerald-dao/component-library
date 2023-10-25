@@ -1,3 +1,10 @@
+## [6.4.1](https://github.com/emerald-dao/component-library/compare/v6.4.0...v6.4.1) (2023-10-25)
+
+
+### Bug Fixes
+
+* CodeBlock cleanup ([b5267be](https://github.com/emerald-dao/component-library/commit/b5267be736d5fc9b71e917589d6bdceaa4dd2369))
+
 # [6.4.0](https://github.com/emerald-dao/component-library/compare/v6.3.0...v6.4.0) (2023-10-25)
 
 
