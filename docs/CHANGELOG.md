@@ -1,3 +1,10 @@
+# [6.4.0](https://github.com/emerald-dao/component-library/compare/v6.3.0...v6.4.0) (2023-10-25)
+
+
+### Features
+
+* Update packages ([a5d2865](https://github.com/emerald-dao/component-library/commit/a5d28654c7388fd86d2cc22afa99e9e090804923))
+
 # [6.3.0](https://github.com/emerald-dao/component-library/compare/v6.2.3...v6.3.0) (2023-10-25)
 
 
