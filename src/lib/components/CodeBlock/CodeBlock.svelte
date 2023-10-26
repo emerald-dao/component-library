@@ -9,6 +9,7 @@
 	import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 
 	export let code: string;
+	export let codeTitle: string | undefined = undefined;
 	export let lang: string;
 
 	const decodedCode = decodeURIComponent(code);
@@ -21,7 +22,7 @@
 </script>
 
 <div class="code" data-prismjs-copy-timeout="1000">
-	<div class="language-wrapper">{lang}</div>
+	<div class="language-wrapper">{codeTitle || lang}</div>
 	<pre class={`language-${formatLang} line-numbers copy-to-clipboard`}>
 		<code class={`language-${formatLang}`} data-prismjs-copy="Click to copy code!">
 			{decodedCode}
