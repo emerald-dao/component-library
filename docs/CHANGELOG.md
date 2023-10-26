@@ -1,3 +1,10 @@
+## [6.4.2](https://github.com/emerald-dao/component-library/compare/v6.4.1...v6.4.2) (2023-10-26)
+
+
+### Bug Fixes
+
+* add codeTitle back to CodeBlock ([cc8f791](https://github.com/emerald-dao/component-library/commit/cc8f7916b34601aeee544f8311bdb2137588ee65))
+
 ## [6.4.1](https://github.com/emerald-dao/component-library/compare/v6.4.0...v6.4.1) (2023-10-25)
 
 
