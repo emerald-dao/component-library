@@ -7,12 +7,13 @@
 	export let state: 'on' | 'off' = 'on';
 	export let iconLeft: string | undefined = undefined;
 	export let iconRight: string | undefined = undefined;
+	export let iconColor: string = color;
 	export let hasBorder = true;
 </script>
 
 <div class={`center ${color} ${size} ${state}`} class:no-border={!hasBorder}>
 	{#if iconLeft}
-		<Icon icon={iconLeft} />
+		<Icon icon={iconLeft} color={iconColor} />
 	{/if}
 	<slot />
 	{#if iconRight}
