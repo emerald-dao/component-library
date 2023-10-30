@@ -1,3 +1,10 @@
+# [6.5.0](https://github.com/emerald-dao/component-library/compare/v6.4.2...v6.5.0) (2023-10-30)
+
+
+### Features
+
+* add iconColor to Label ([5b2992a](https://github.com/emerald-dao/component-library/commit/5b2992a24a7d818b9798aa487f630462d201b48c))
+
 ## [6.4.2](https://github.com/emerald-dao/component-library/compare/v6.4.1...v6.4.2) (2023-10-26)
 
 
