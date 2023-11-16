@@ -1,3 +1,10 @@
+## [6.5.1](https://github.com/emerald-dao/component-library/compare/v6.5.0...v6.5.1) (2023-11-16)
+
+
+### Bug Fixes
+
+* try to update themetoggle for cookies ([9ff953b](https://github.com/emerald-dao/component-library/commit/9ff953b74b6e709fc4d46cf9a4b32a51580f2a9e))
+
 # [6.5.0](https://github.com/emerald-dao/component-library/compare/v6.4.2...v6.5.0) (2023-10-30)
 
 
