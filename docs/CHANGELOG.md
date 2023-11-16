@@ -1,3 +1,10 @@
+## [6.5.6](https://github.com/emerald-dao/component-library/compare/v6.5.5...v6.5.6) (2023-11-16)
+
+
+### Bug Fixes
+
+* add persistentWritable ([cd50409](https://github.com/emerald-dao/component-library/commit/cd50409c836f5540fe00424d8f9451d02c4d8b3a))
+
 ## [6.5.5](https://github.com/emerald-dao/component-library/compare/v6.5.4...v6.5.5) (2023-11-16)
 
 
