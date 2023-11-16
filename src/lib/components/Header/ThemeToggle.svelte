@@ -1,29 +1,30 @@
 <script type="ts">
 	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
+	import type { Writable } from 'svelte/store';
 	import { fly } from 'svelte/transition';
-	import Cookies from 'js-cookie';
 
-	let theme: 'light' | 'dark';
+	export let themeStore: Writable<'dark' | 'light'>;
 
 	let toggleTheme: () => void;
 
 	onMount(() => {
 		let html = document.querySelector('html');
+		if (html) {
+			html.setAttribute('data-theme', $themeStore);
+		}
 
 		toggleTheme = () => {
-			let currentTheme = Cookies.get('theme');
-			theme = currentTheme === 'light' ? 'dark' : 'light';
-
+			let newTheme: 'light' | 'dark' = $themeStore === 'light' ? 'dark' : 'light';
+			$themeStore = newTheme;
 			if (html) {
-				html.setAttribute('data-theme', theme);
-				Cookies.set('theme', theme);
+				html.setAttribute('data-theme', $themeStore);
 			}
 		};
 	});
 </script>
 
-{#if theme === 'light'}
+{#if $themeStore === 'light'}
 	<a
 		class="theme-toggle"
 		href="/"
