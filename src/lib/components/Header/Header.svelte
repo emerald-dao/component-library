@@ -15,8 +15,6 @@
 	export let navElements: NavElement[] = [];
 	export let avatarDropDownNavigation: NavElement[] = [];
 
-	export let themeStore: Writable<'dark' | 'light'> | null = null;
-
 	export let user: User | null;
 	export let profile: Profile | null;
 
@@ -71,7 +69,7 @@
 				{#if navElements.length > 0}
 					<MainNavElements {navElements} />
 				{/if}
-				<CommandIcons {themeStore}>
+				<CommandIcons>
 					<slot name="commands" />
 				</CommandIcons>
 			</nav>
@@ -83,7 +81,7 @@
 		{/if}
 		<div class="right-wrapper">
 			<div class="hide-on-mobile">
-				<CommandIcons {themeStore}>
+				<CommandIcons>
 					<slot name="commands" />
 				</CommandIcons>
 			</div>
