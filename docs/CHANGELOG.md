@@ -1,3 +1,10 @@
+## [6.5.3](https://github.com/emerald-dao/component-library/compare/v6.5.2...v6.5.3) (2023-11-16)
+
+
+### Bug Fixes
+
+* attempt to fix flashbang on Theme loading ([8904b3d](https://github.com/emerald-dao/component-library/commit/8904b3d5a90427b384f8c4e60797e159df4b6e9d))
+
 ## [6.5.2](https://github.com/emerald-dao/component-library/compare/v6.5.1...v6.5.2) (2023-11-16)
 
 
