@@ -73,6 +73,7 @@
 		"@mateoroldos/svelte.bones": "^1.2.0",
 		"@types/prismjs": "^1.26.0",
 		"cssnano": "^5.1.14",
+		"devalue": "^4.3.2",
 		"js-cookie": "^3.0.5",
 		"prismjs": "^1.29.0"
 	},
