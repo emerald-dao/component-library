@@ -1,3 +1,10 @@
+## [6.5.4](https://github.com/emerald-dao/component-library/compare/v6.5.3...v6.5.4) (2023-11-16)
+
+
+### Bug Fixes
+
+* remove themestore ([4d3c159](https://github.com/emerald-dao/component-library/commit/4d3c159a8b302b57d6a38a44506ae8a4cf766ed7))
+
 ## [6.5.3](https://github.com/emerald-dao/component-library/compare/v6.5.2...v6.5.3) (2023-11-16)
 
 
