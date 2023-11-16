@@ -6,47 +6,59 @@
 
 	export let themeStore: Writable<'dark' | 'light'>;
 
-	let toggleTheme: () => void;
+	// let toggleTheme: () => void;
 
-	onMount(() => {
-		let html = document.querySelector('html');
+	// onMount(() => {
+	// 	let html = document.querySelector('html');
 
-		if (html) {
-			html.setAttribute('data-theme', $themeStore);
-		}
+	// 	if (html) {
+	// 		html.setAttribute('data-theme', $themeStore);
+	// 	}
 
-		toggleTheme = () => {
-			let newTheme: 'light' | 'dark' = $themeStore === 'light' ? 'dark' : 'light';
-			$themeStore = newTheme;
+	// 	toggleTheme = () => {
+	// 		let newTheme: 'light' | 'dark' = $themeStore === 'light' ? 'dark' : 'light';
+	// 		$themeStore = newTheme;
 
-			if (html) {
-				html.setAttribute('data-theme', $themeStore);
-			}
-		};
-	});
+	// 		if (html) {
+	// 			html.setAttribute('data-theme', $themeStore);
+	// 		}
+	// 	};
+	// });
 </script>
 
-{#if $themeStore === 'light'}
-	<a
-		class="theme-toggle"
-		href="/"
-		on:click|preventDefault={toggleTheme}
-		in:fly={{ y: 10, duration: 500 }}
-	>
-		<Icon icon="tabler:sun" color="var(--clr-text-main)" />
-	</a>
-{:else}
-	<a
-		class="theme-toggle"
-		href="/"
-		on:click|preventDefault={toggleTheme}
-		in:fly={{ y: 10, duration: 500 }}
-	>
-		<Icon icon="tabler:moon" color="var(--clr-text-main)" />
-	</a>
-{/if}
+<form method="POST">
+	{#if $themeStore === 'light'}
+		<button
+			formaction="/?/setTheme&theme=light"
+			class="theme-toggle"
+			in:fly={{ y: 10, duration: 500 }}
+		>
+			<Icon icon="tabler:sun" color="var(--clr-text-main)" />
+		</button>
+	{:else}
+		<button
+			class="theme-toggle"
+			formaction="/?/setTheme&theme=dark"
+			in:fly={{ y: 10, duration: 500 }}
+		>
+			<Icon icon="tabler:moon" color="var(--clr-text-main)" />
+		</button>
+	{/if}
+</form>
 
 <style>
+	button,
+	input[type='submit'],
+	input[type='reset'] {
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
+	}
+
 	.theme-toggle {
 		display: flex;
 		align-items: center;
