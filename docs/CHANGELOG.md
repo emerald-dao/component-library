@@ -1,3 +1,10 @@
+## [6.5.5](https://github.com/emerald-dao/component-library/compare/v6.5.4...v6.5.5) (2023-11-16)
+
+
+### Bug Fixes
+
+* revert back to old way ([2ad468b](https://github.com/emerald-dao/component-library/commit/2ad468bce42c647221c384d069c757ab8c1f9d64))
+
 ## [6.5.4](https://github.com/emerald-dao/component-library/compare/v6.5.3...v6.5.4) (2023-11-16)
 
 
