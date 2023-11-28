@@ -1,3 +1,10 @@
+## [6.5.8](https://github.com/emerald-dao/component-library/compare/v6.5.7...v6.5.8) (2023-11-28)
+
+
+### Bug Fixes
+
+* discord invite ([cb2fa7d](https://github.com/emerald-dao/component-library/commit/cb2fa7ddd351c9249bf8f94985d90debfd3a5837))
+
 ## [6.5.7](https://github.com/emerald-dao/component-library/compare/v6.5.6...v6.5.7) (2023-11-16)
 
 
