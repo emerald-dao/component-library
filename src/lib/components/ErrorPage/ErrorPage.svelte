@@ -23,7 +23,7 @@
 			<em>Join us on Discord to build together the future #onFlow</em>
 		</p>
 		<Button
-			href="https://discord.com/invite/emeraldcity"
+			href="https://discord.gg/emerald-city-906264258189332541"
 			type="ghost"
 			width="extended"
 			color="neutral"

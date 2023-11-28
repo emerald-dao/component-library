@@ -123,7 +123,7 @@
 			{/if}
 			<a
 				class="header-link row-2 align-center"
-				href="https://discord.com/invite/emeraldcity"
+				href="https://discord.gg/emerald-city-906264258189332541"
 				target="_blank"
 				rel="noreferrer"
 			>

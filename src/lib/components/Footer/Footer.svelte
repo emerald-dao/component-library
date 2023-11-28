@@ -60,7 +60,7 @@
 		},
 		{
 			name: 'Discord',
-			url: 'https://discord.com/invite/emeraldcity',
+			url: 'https://discord.gg/emerald-city-906264258189332541',
 			icon: 'tabler:brand-discord'
 		},
 		{
@@ -86,7 +86,7 @@
 				<p class="small">
 					Built by Emerald City DAO.<br /><a
 						class="w-medium"
-						href="https://discord.com/invite/emeraldcity"
+						href="https://discord.gg/emerald-city-906264258189332541"
 						target="_blank">Join us</a
 					> on our mission to build the future #onFlow
 				</p>
@@ -139,7 +139,7 @@
 				type="ghost"
 				size="x-small"
 				width="extended"
-				href="https://discord.com/invite/emeraldcity"
+				href="https://discord.gg/emerald-city-906264258189332541"
 			>
 				Join the community
 				<Icon icon="tabler:brand-discord" />

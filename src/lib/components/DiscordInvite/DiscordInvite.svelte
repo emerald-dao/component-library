@@ -17,7 +17,7 @@
 		</p>
 		<Button
 			target="_blank"
-			href="https://discord.com/invite/emeraldcity"
+			href="https://discord.gg/emerald-city-906264258189332541"
 			color={background ? 'neutral' : undefined}
 			size="large"
 		>
