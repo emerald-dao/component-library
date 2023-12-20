@@ -1,3 +1,11 @@
+# [6.6.0](https://github.com/emerald-dao/component-library/compare/v6.5.8...v6.6.0) (2023-12-20)
+
+
+### Features
+
+* Add Tailwind and shadcn-svelte ([c54431c](https://github.com/emerald-dao/component-library/commit/c54431c6f91db45d9824e361fcced648b7dec192))
+* Update node version on release.yml ([1da817e](https://github.com/emerald-dao/component-library/commit/1da817e4dac397829c3e9fe56e4fdffc69a46698))
+
 ## [6.5.8](https://github.com/emerald-dao/component-library/compare/v6.5.7...v6.5.8) (2023-11-28)
 
 
