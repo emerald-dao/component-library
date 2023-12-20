@@ -1,5 +1,5 @@
 <script type="ts">
-	import '../app.postcss';
+	import "../app.pcss";
 	import { Header, Footer } from '$lib/index';
 	import { theme } from '$lib/store/ThemeStore';
 	import '@emerald-dao/design-system/build/variables-dark.css';
@@ -26,8 +26,6 @@
 	themeStore={theme}
 	{navElements}
 	logoText="Emerald City"
-	userName="aaa"
-	userAvatar="/ec-logo.png"
 >
 	<Icon icon="material-symbols:translate-rounded" slot="commands" />
 </Header>

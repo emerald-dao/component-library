@@ -1,3 +1,4 @@
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 
@@ -16,7 +17,8 @@ const config = {
 			scss: {
 				prependData: `@import './src/lib/styles/utils/mixins';`
 			}
-		})
+		}),
+		vitePreprocess({})
 	]
 };
 
